@@ -1,0 +1,17 @@
+{
+  "iteration": "iteration1",
+  "participants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "pathways": [
+    "CurrentTrends",
+    "GlobalSustainability",
+    "NationalCommitments"
+  ],
+  "status": "OPEN",
+  "updated_at_utc": "2026-10-01T14:14:32.461200+00:00"
+}
