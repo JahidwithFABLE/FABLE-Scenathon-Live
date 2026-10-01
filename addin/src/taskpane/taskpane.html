@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>FABLE Scenathon Trade</title>
+
+    <script
+        src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"
+        type="text/javascript">
+    </script>
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- ==================================================
+             HEADER
+             ================================================== -->
+
+        <header class="header">
+
+            <div class="logo-wrap">
+                <img
+                    src="../../assets/fable-logo-full.png"
+                    alt="FABLE Consortium"
+                    class="fable-full-logo"
+                />
+            </div>
+
+            <h1>
+                Scenathon Trade Adjustment
+            </h1>
+
+            <p class="description">
+                Share your SCENATHON trade report and inject
+                completed global trade-adjustment results back
+                into the current FABLE-C workbook.
+            </p>
+
+        </header>
+
+
+        <!-- ==================================================
+             USER
+             ================================================== -->
+
+        <section class="card">
+
+            <label
+                for="userName"
+                class="field-label">
+                Your name
+            </label>
+
+            <input
+                id="userName"
+                class="text-input"
+                type="text"
+                autocomplete="name"
+                placeholder="Enter your name"
+                maxlength="100"
+            />
+
+            <p class="field-help">
+                Used to identify your runs and iterations in the
+                FABLE trade adjustment workflow.
+            </p>
+
+        </section>
+
+
+        <!-- ==================================================
+             SHARE ACTION
+             ================================================== -->
+
+        <section class="card">
+
+            <button
+                id="shareButton"
+                class="primary-button"
+                type="button"
+                disabled>
+                Share your SCENATHON report
+            </button>
+
+            <button
+                id="injectButton"
+                class="secondary-button"
+                type="button"
+                disabled>
+                Inject adjusted trade
+            </button>
+
+            <p class="action-help">
+                Injection uses the latest completed backend run
+                for this workbook location. The add-in validates
+                every Pathway + Product + Year key before writing.
+            </p>
+
+            <div
+                id="status"
+                class="status"
+                role="status"
+                aria-live="polite">
+                Connecting to Excel...
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESULT
+             ================================================== -->
+
+        <section
+            id="result"
+            class="result-card"
+            hidden>
+
+            <div class="result-header">
+
+                <div
+                    class="success-icon"
+                    aria-hidden="true">
+                    ✓
+                </div>
+
+                <div>
+                    <h2>
+                        SCENATHON report ready
+                    </h2>
+
+                    <p>
+                        The required trade data has been read
+                        successfully.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- ==============================================
+                 SUMMARY
+                 ============================================== -->
+
+            <div class="summary">
+
+                <div class="summary-row">
+                    <span>User</span>
+                    <strong id="summaryUser">
+                        —
+                    </strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Pathway</span>
+                    <strong id="summaryPathway">
+                        —
+                    </strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Rows</span>
+                    <strong id="summaryRows">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- ==============================================
+                 PREVIEW
+                 ============================================== -->
+
+            <div class="preview-section">
+
+                <h3>
+                    Report preview
+                </h3>
+
+                <p class="preview-description">
+                    First five rows of the SCENATHON trade data.
+                </p>
+
+
+                <div class="table-wrapper">
+
+                    <table class="preview-table">
+
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Product</th>
+                                <th>Year</th>
+                                <th>Imports</th>
+                                <th>Exports</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="previewBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <p
+                    id="previewCount"
+                    class="preview-count">
+                </p>
+
+            </div>
+
+
+            <!-- ==============================================
+                 PRIVACY
+                 ============================================== -->
+
+            <div class="privacy-note">
+
+                <strong>
+                    Data sharing
+                </strong>
+
+                <p>
+                    Only Location, Product, Year,
+                    Import_quantity and Export_quantity are
+                    prepared for sharing.
+                </p>
+
+                <p>
+                    The Excel workbook itself is not uploaded.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             INJECTION RESULT
+             ================================================== -->
+
+        <section
+            id="injectionResult"
+            class="result-card"
+            hidden>
+
+            <div class="result-header">
+
+                <div
+                    class="success-icon"
+                    aria-hidden="true">
+                    ✓
+                </div>
+
+                <div>
+                    <h2>
+                        Adjusted trade injected
+                    </h2>
+
+                    <p>
+                        FullDataTradeAdj was updated, S12 was
+                        enabled for the selected pathway, and
+                        FinalTradeAdj was verified.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="summary">
+
+                <div class="summary-row">
+                    <span>Run</span>
+                    <strong id="injectRunId">—</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Iteration</span>
+                    <strong id="injectIteration">—</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Country</span>
+                    <strong id="injectCountry">—</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Rows written</span>
+                    <strong id="injectRows">—</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>S12 pathway</span>
+                    <strong id="injectPathway">—</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>FinalTradeAdj verified</span>
+                    <strong id="injectVerified">—</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

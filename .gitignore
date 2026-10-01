@@ -1,0 +1,56 @@
+﻿# ==================================================
+# FABLE Scenathon Trade Adjustment System
+# ==================================================
+
+# ---------- Secrets ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ---------- Runtime databases / data ----------
+*.db
+*.sqlite
+*.sqlite3
+backend/data/
+data/
+
+# ---------- Node / Office Add-in ----------
+node_modules/
+dist/
+
+# ---------- Logs ----------
+*.log
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+
+# ---------- Temporary files ----------
+*.tmp
+*.bak
+~$*
+
+# ---------- Development packages / backups ----------
+*.zip
+backup_*
+_phase*/
+archive/
+archieve/
