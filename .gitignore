@@ -54,3 +54,5 @@ backup_*
 _phase*/
 archive/
 archieve/
+
+.streamlit/
