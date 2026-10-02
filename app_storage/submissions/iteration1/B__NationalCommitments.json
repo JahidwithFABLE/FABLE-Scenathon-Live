@@ -1,0 +1,7094 @@
+{
+  "iteration": "iteration1",
+  "username": "Jahid",
+  "participant": "B",
+  "pathway": "NationalCommitments",
+  "submitted_at_utc": "2026-10-02T09:58:34.335995+00:00",
+  "row_count": 1012,
+  "rows": [
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 0.001,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 224.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 368.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 343.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 232.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 245.7870546314,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 251.6479267783,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 254.0924713406,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 257.1211638943,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 270.163541773,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 281.3427228119,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3566.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4545.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4782.5293364485
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6028.5925985665
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5133.3215862609
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5130.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5130.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5130.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5130.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5130.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5130.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 62.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 71.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 103.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1232.9070933204
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1290.3966623525
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1275.9925893933
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1868.9895143834
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1427.997446709
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1428.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1428.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1428.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1428.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1428.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1428.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 24.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 17.1032928929,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 18.2146307716,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 19.1683143665,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 20.2598786787,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 21.2875536841,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 22.1684179745,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.2158165559
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 133.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 4.2655764663,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 4.3834683307,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 4.4439120107,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 4.5167293988,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 4.7458388611,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 4.9422184002,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 40.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 69.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 74.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 62.3926708446,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 54.5895458334,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 44.8616906053,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 33.9980125339,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 35.7225494016,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 37.2007238596,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 105.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 28.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 44.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 48.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 90.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 58.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 61.4467636579,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 62.9119816946,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 63.5231178352,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 64.2802909736,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 67.5408854433,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 70.335680703,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 12.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 12.8462292081,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 13.8448199034,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 14.7436486444,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 15.7686876242,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 16.5685485907,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 17.2541437048,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 89.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 221.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 155.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 131.3010626923,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 115.3275744933,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 95.3545765217,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 73.0531880769,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 76.7587845735,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 79.9350101421,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 107.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 54.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 7.52787222,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 10.0785469469,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0037593985
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 24.716692014,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 28.5691953404,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 30.5228748955,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 32.2229380474,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 34.1618818112,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 35.6822992469,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 36.949478523,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 115.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 86.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 39.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 71.605730202,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 79.2104975849,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 86.4912161089,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 94.757190606,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 99.5637147671,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 103.6835926196,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 8.4754156769,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 8.6775147165,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 8.7618093566,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 8.8662470308,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 9.3159841991,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 9.7014732004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 5.9144023065,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 6.413758483,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 6.8716921711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 7.3932069194,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 7.7682246617,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 8.0896684408,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 1.49,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 1.527,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 0.884,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 0.867,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 0.867,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 0.99705,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 1.06641,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 1.1271,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 1.19646,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 1.25715,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 1.30917,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 0.083,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 0.003,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 0.067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 0.067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 0.067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 0.07705,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 0.08241,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 0.0871,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 0.09246,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 0.09715,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 0.10117,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 38.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 97.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 225.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 224.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 237.4027543484,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 243.1165928459,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 245.5366620051,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 248.5282630452,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 261.1347691417,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 271.9403457959,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 24.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 115.8881461676
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 34.8481432361,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 55.5492957746,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 71.6390323416,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 80.7711088988,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 89.7524233958,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 99.9300547713,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 104.9989705931,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 109.3437555831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 1.248114604,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 1.3874099517,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 1.5218243222,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 1.6743438121,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 1.7592742953,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 1.8320718524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 8.1904761905,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 4.8200727046,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 5.4375556801,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 5.7662181139,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 6.0587074386,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 6.3094125739,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 4.2,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 5.1500731653,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 4.592,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 2.233,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 0.789,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 0.789,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 0.789,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 0.90735,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 0.97047,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 1.0257,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 1.08882,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 1.14405,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 1.19139,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 2.1586176931,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 2.2331736032,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 2.2803530452,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 2.3358530792,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 2.4543383803,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 2.5558972098,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6103.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4473.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1365.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1014.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 431.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 1.15,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 1.23,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 1.3,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 1.38,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 1.45,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 1.51,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 311.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 313.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 457.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 56.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 193.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 170.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 211.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 346.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 197.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 374.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0134175022
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 3.3006996791,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 7.3876928187,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 8.3055555556,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 8.8833333333,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 9.3888888889,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 9.9666666667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 10.4722222222,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 10.9055555556,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 10.1538461538,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 14.3181818182,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 65.333711816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 102.3387082285,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 59.5344768439,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 80.3120946789,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 89.2469650383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 97.8645359299,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 107.643196558,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 113.1033587023,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 117.7834976831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 27.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 27.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 29.9826647025,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 20.0074469686,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 37.0071364853,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 46.3484066306,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 51.4842988655,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 56.4347483365,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 62.0524400333,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 65.2000275712,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 67.8979597466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 37.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 35.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 132.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 74.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 135.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 31.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 34.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 231.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 276.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 328.5257118949,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 360.4045116922,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 390.4537834144,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 424.6071356846,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 446.145178799,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 464.6063586114,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 17.57,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 11.887,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 9.0106209669,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 8.1914736063,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 11.4680630488,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 13.0392457421,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 13.9463237068,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 14.7400169258,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 15.6470948905,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 16.4407881096,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 17.1210965831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 114.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 123.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 124.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 120.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 80.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 105.8387616384,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 116.2971871502,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 126.1876350084,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 137.4262849151,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 144.3971834252,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 150.3722392911,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 18.813,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 13.121,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 14.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 331.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 118.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 192.6668291494
+    },
+    {
+      "Location": "Australia",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 158.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 2.9507862613,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 2.4249562489,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 1.8377304072,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 2.0108499384,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 1.9309486163,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 3.3725768024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 3.6884828266,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 3.0311953112,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 2.297163009,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 2.5135624229,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 4.215721003,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 2.4136857704,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 17.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 38.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 188.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 235.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 194.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 205.5288301659,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 210.4297318749,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 212.4738768969,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 215.0064904978,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 225.9126168274,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 235.2607251099,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 254.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 303.2401837479,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 368.3144899352,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 164.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 216.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 271.8114966451,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 333.730340241,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 386.9971089898,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 403.0107824653,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 33.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 192.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 330.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 363.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 393.2593794971,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 407.6798305845,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 417.2081623413,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 428.3681384913,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 450.0969571104,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 468.7216587839,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1503.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 649.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 412.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 781.5974464701
+    },
+    {
+      "Location": "Australia",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1223.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.1629889344
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.7047657613
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.2746359282
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.2518935481
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16.2213284574
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14.8348210084
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16.7684695735
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.6906901566
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.1484493063
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 42.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 86.2860391141
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 136.9944097829
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 167.0074235368
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 164.2000029866
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 163.9010327982
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 163.6074766494
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 163.2657755455
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 163.0620769939
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 162.8853376724
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3224.255
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1680.346
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1076.0899423139
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2757.0134601589
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1661.9819687189
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1651.4963506959
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1651.0905721389
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1650.7210636503
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1650.3221308851
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1650.0990915748
+    },
+    {
+      "Location": "Australia",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1649.9132279959
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 909.454671681
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 126.0630237974,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 229.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 267.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 379.0000776639,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 442.3059340621,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 476.5275168419,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 507.295926912,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 542.3876468585,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 569.9000597886,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 593.4821280145,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 2.3333333333,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 4.6666666667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 4.6666666667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 4.6666666667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 4.6666666667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 5.8245348189,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 6.4745797746,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 7.1018468368,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 7.8136044566,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 8.2099467116,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 8.5496686445,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 3.7443438121,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 4.1622298551,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 4.5654729665,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 5.0230314364,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 5.277822886,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 5.4962155572,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.175,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.04,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 814.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 210.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 297.5425006432
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1535.5458967826
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 154.6618875155,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 116.8903854712,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 0.6369876378,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 2.6470329519,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 6.270768956,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 7.4729238597,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 8.1088515786,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 8.6980521326,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 9.3685219868,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 9.775227806,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 10.1144052151,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 25.9070467607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 77.5531599566,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 80.7482543887,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 85.3702359903,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 88.3764595565,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 100.6292323096,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 106.4243743596,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 111.3290092711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 116.948277438,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 121.2305668155,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 124.6740757219,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0883138116
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 15.0761674461,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 33.173701437,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 30.0667887254,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 21.0137847638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 25.1173381511,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 27.3621700741,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 29.4426284024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 31.8102013317,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 33.4598116252,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 34.8787277867,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 8.431442006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 7.3769656532,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 6.0623906223,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 4.5943260181,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 4.8273715408,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 5.0271248459,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3396.6919493711
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3167.6590850783
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3746.8988040478
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3506.7490922989
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3314.5433208376
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3063.6222044479
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3058.5321939963
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3054.0922703071
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3049.0168606771
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3044.5223016557
+    },
+    {
+      "Location": "Australia",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3040.6698224945
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.3180077519
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.3907637762
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.307751938
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.7849095607
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 31.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 37.6860465116,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 52.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 74.6727272727,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 87.7217190606,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 94.6111492755,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 100.8273648327,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 107.9151571818,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 113.3891144301,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 118.0810777859,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 1.8063307494,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 4.8699712644,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 16.3555555556,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 5.9726238235,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 6.5352622997,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 22.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 10.9608746078,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 9.5900553491,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 7.881107809,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 6.275583003,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 10.727,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 10.56,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 56.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 102.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 476.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 607.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 652.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 690.7463776711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 707.2174493941,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 714.0874625608,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 722.5991330133,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 759.2527122241,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 790.6700658334,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 4.3799393393,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 4.5669461575,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 4.7024715498,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 4.859818018,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 5.1063305262,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 5.3176269617,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 114.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 381.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 553.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 458.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 485.2175475052,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 496.7877175191,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 501.6135856638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 507.5926425155,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 533.3400953967,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 555.4093407235,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18010.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14232.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15797.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16550.9186898812
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9418.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Australia",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ]
+}
