@@ -1,10 +1,15 @@
 {
   "iteration": "iteration1",
   "engine_version": "1.0.0",
-  "run_at_utc": "2026-10-02T10:00:33.141498+00:00",
+  "run_at_utc": "2026-10-02T11:56:05.929409+00:00",
+  "status": "PROVISIONAL",
+  "complete": true,
+  "expected_reports": 15,
   "reports_used": 15,
+  "submitted_reports": 15,
   "input_rows": 15213,
   "adjusted_rows": 15213,
+  "analytics_rows": 3069,
   "blocker_count": 13,
   "published_participants": 5,
   "published_files": [
@@ -33,5 +38,6 @@
       "rows": 3036,
       "path": "app_storage/results/iteration1/E_adjusted_trade.csv"
     }
-  ]
+  ],
+  "analytics_path": "app_storage/results/iteration1/_analytics.csv"
 }
