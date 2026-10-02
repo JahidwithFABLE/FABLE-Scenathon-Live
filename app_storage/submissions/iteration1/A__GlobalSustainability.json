@@ -1,0 +1,7094 @@
+{
+  "iteration": "iteration1",
+  "username": "Jahid",
+  "participant": "A",
+  "pathway": "GlobalSustainability",
+  "submitted_at_utc": "2026-10-02T09:54:17.107837+00:00",
+  "row_count": 1012,
+  "rows": [
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 573.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 310.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 223.2293980953
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 265.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 265.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 234.4971698571
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 210.3584851188
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 190.8481969228
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 174.9447395045
+    },
+    {
+      "Location": "Argentina",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 161.6277306016
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 340.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 302.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 351.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 427.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 468.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 503.9889366807,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 540.6715218607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 576.7503714787,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 611.6619136563,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 644.3988191759,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 677.6865255491,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 384.3378078478
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 655.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1302.9955792683
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2323.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2865.2748085139
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2813.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2489.209580408
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2232.9751646759
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2025.8716148823
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1857.0549140607
+    },
+    {
+      "Location": "Argentina",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1715.6936082347
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 263.0495291902
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 198.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 326.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 383.5210918114
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 422.4901263598
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 422.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 373.4256818102
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 334.9859649816
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 303.9167513261
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 278.5912455505
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 257.3845370334
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 353.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 733.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 300.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 209.9952410817
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 762.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 739.9791494339
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 675.1537537536
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 607.5239647055
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 552.9458956547
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 508.5751965242
+    },
+    {
+      "Location": "Argentina",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 471.5242180625
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 40.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 116.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 119.3522626505,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 122.7880803611,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 125.9395645734,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 128.7387735551,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 131.0352895682,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 132.823510051,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 206.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 72.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 72.0050003982
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 63.7124386027
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.154003504
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 51.853095013
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 47.532155639
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.9139494465
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 26.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 246.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 214.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 176.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 176.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 155.7415165844
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 139.709786343
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 126.7520100317
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 116.1897137841
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 107.345209758
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 28.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 25.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 50.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 50.4160419817,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 51.8751172395,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 53.2181641136,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 54.4166493398,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 55.407069677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 56.1647521478,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 12.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 22.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 22.635773951,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 23.247114295,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 23.7835204734,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 24.2315043825,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 24.5627040518,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 24.8899892522,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 4.1155952638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 4.233452455,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 4.3411776121,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 4.4364132927,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 4.5139680793,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 4.5754448018,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 38.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 40.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 84.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 83.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 96.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 98.7742863314,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 101.6328827549,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 104.2641582633,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 106.6122109514,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 108.552626306,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 110.0370654324,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10911.5095055827
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14717.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17576.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16785.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36965.7045848538
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23456.9423441102
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25921.5236315031
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 27903.8545996044
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29535.1388223957
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30941.672870748
+    },
+    {
+      "Location": "Argentina",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 32159.6489779584
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14.2974824243
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.3933222977
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.2
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.074
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.067
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.516
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 116.881
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 116.881
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 103.4274102267
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 92.780792827
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 84.175577753
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 77.1611928227
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 71.2875878507
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.6980373353
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.2078091877
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.6419661942
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.1019100273
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.173605013
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.4097893109
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.4780875294
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.5626538505
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.8383844111
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.253326392
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.7773225302
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.3792018019
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.9995886109
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.9990859888
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 1.028898816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 1.058675862,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 1.0860849819,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 1.1105438641,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 1.130756524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 1.1462194316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 304.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 643.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 589.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 482.3037160566
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 440.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 440.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 389.3537914609
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 349.2744658576
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 316.8800250793
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 290.4742844603
+    },
+    {
+      "Location": "Argentina",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 268.363024395
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 114.0467614093
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 325.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 279.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 312.0439446922
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 337.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 337.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 298.2096084598
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 267.5124886227
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 242.7012919358
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 222.4768951434
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 205.541680048
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 108.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 4.1155952638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 4.2267480536,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 4.3242764497,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 4.4057280696,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 4.4659461912,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 4.5254525913,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 228.0438485955
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 245.9548464619
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 671.0242745293
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 799.9679492601
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 961.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 959.5629182891
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 849.2255013648
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 761.909968862
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 691.3376743969
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 633.8141459564
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 585.6471614038
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 27.7773138675
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.9725597642
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.7222618235
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.2279985191
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 50.0355
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.5141333981
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 41.7172091158
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.4188801367
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 32.2255049094
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.919420704
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 26.2904713584
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.98707569
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 55.0137659592
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 67.9933101691
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 67.0088475697
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 55.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 54.8946736013
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.5837769819
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.5897928671
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39.5535654866
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.2637716134
+    },
+    {
+      "Location": "Argentina",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33.5091804155
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 274.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1001.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 694.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 854.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1024.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1024.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 906.1324601272
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 812.8569387231
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 737.4662401847
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 676.0128801984
+    },
+    {
+      "Location": "Argentina",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 624.553947683
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1252.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2098.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1595.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1811.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1964.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2068.748820364
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2352.3458234096
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2532.2398774675
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2680.2768787962
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2807.9180831158
+    },
+    {
+      "Location": "Argentina",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2918.4478902961
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.2631578947
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.6546849418
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.3814168127
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.1605456255
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.980506485
+    },
+    {
+      "Location": "Argentina",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.8297478936
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.972765903
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.8848949806
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.7938056042
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.7201818752
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.6601688283
+    },
+    {
+      "Location": "Argentina",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.6099159645
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 23.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 23.6646727669,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 24.3423516162,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 24.9617712695,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 25.509376433,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 25.9553164562,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 26.3088076105,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.3822541411
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 4.1155952638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 4.2342772517,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 4.3432638797,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 4.4402178857,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 4.5199549131,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 4.5816799188,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.2916666667
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.0144478844
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 26.3154929577
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.1187980433
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.835
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.9640548253
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.144250438
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.4816368766
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.9415194549
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.4892436808
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 61.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 85.3226091327
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.3570733024
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 52.2769406828
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.9892173911
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.591359014
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39.3206837356
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 35.8704828956
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33.0619209173
+    },
+    {
+      "Location": "Argentina",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.712179012
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.1013210798
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31.1119927498
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.9633797444
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.8905135633
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16.8643838274
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.2667128004
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.9809019574
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.9394233053
+    },
+    {
+      "Location": "Argentina",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0718056551
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 100.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 331.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 321.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 139.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 167.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 167.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 147.777461759
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 132.565535905
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 120.2703731551
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 110.2481943292
+    },
+    {
+      "Location": "Argentina",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 101.8559660772
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 3.0866964479,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 3.1760275861,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 3.2582549457,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 3.3316315922,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 3.3922695721,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 3.4386582948,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.2662721893
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 76.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 71.1756864836
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 56.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 56.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.5541189132
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.4531138364
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.3301850101
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36.9694543859
+    },
+    {
+      "Location": "Argentina",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 34.1552940139
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 2.0577976319,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 2.1173517241,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 2.1721699638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 2.2210877282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 2.261513048,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 2.2924388632,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 2.0577976319,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 2.1173517241,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 2.1721699638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 2.2210877282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 2.261513048,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 2.2924388632,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 69.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 80.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 49.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 50.4160419817,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 51.777663657,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 52.9723865088,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 53.970168852,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 54.7078408425,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 55.4367942436,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 80.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 25.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 49.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.8848949806
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.7938056042
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.7201818752
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.6601688283
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.6099159645
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 222.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 302.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 295.2310463659
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 417.4949026895
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 417.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 369.0012069073
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 331.0169369605
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 300.3158419502
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 275.2904014089
+    },
+    {
+      "Location": "Argentina",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 254.3349572108
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68.7489986649
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 129.0505485893
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 129.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 114.1514524965
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 102.4009229446
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 92.9034618983
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 85.1617788531
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.6791594249
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 3.0866964479,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 3.1750893412,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 3.2558832091,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 3.3273099695,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 3.3854760595,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 3.4315836014,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.425
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.008
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0029377203
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33.2371494052
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.0067155067
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0432146701
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.4946952718
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.2430918781
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.2228700814
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.3685713971
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 683.56053551
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 512.67040162
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 686.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 464.6608499859
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 479.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 479.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 423.864695704
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 380.2328844222
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 344.9671182114
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 316.2208687647
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 292.1497470119
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.029,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 767.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 322.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1659.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1042.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 462.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 462.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 408.8214810339
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.7381891505
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 332.7240263333
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 304.9979986833
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 281.7811756148
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3930.9979849381
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9286.5659603634
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13699.8834802339
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11759.9287936652
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1133.647045008
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18164.3988251879
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20123.2640358885
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21696.6985274947
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23002.1701803445
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24136.7589206945
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25127.8285093142
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12930.6815032128
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20795.0359973759
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24953.4782114234
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 27611.2013489687
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24502.897028821
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33041.20047455
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 36563.6036552949
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39384.4106197837
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 41713.3132021334
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43727.7745852258
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45478.3135642699
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3355.6913390258
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4954.7910863334
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4466.8039110162
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5124.2564689683
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4823.4609785702
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6872.6652176018
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7953.6808681438
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8816.0486395107
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9525.1150456382
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10132.2527703817
+    },
+    {
+      "Location": "Argentina",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10656.6899148711
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 1.028898816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 1.058675862,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 1.0860849819,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 1.1105438641,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 1.130756524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 1.1462194316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 230.9613144836
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 597.9757920059
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 368.0011124413
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 206.0166922711
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.9592677346
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 215.737633074
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 191.0397908145
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 171.5068430461
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 155.7301553789
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 142.8817753535
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 132.1318752858
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1907.284090271
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1091.1734875523
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 533.3003878551
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.6252431462
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 531.5278549378
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 569.1413271624
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 508.6069732996
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 460.3690461145
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 421.0162054958
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 388.496400221
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 361.0510650029
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1565.3706498473
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1198.9216029629
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 566.2632735857
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 430.2249159291
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 400.7615987919
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 390.0820490989
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 345.828967905
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 310.8479887819
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 282.610867038
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 259.6345793446
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 240.4235047536
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 269.8262903395
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 95.1836766209
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31.3758964339
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 61.471020198
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 206.6337466284
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 204.1944207526
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 180.8354462133
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 162.3506434785
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 147.4110668305
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 135.2355782588
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 125.041396855
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 2.0577976319,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 2.1162311881,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 2.1693383933,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 2.2159305496,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 2.2534105786,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 2.284001401,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 96.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 124.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.0218084863
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 61.9168371293
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 56.1741862641
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 51.4931686089
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 47.5734452337
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.951
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 90.955
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.879
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 37.44569
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.65922
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.65922
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 38.6338246346
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 34.656933512
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31.4425789285
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.8224561127
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 26.6284552771
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 122.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 83.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 181.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 278.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 286.0338708348,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 293.7589897276,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 300.5372132542,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 306.1981008339,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 310.3832602903,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 314.5189550962,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0018380789
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 96.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 52.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 52.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 46.0145389908
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 41.2778914195
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 37.4494575094
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 34.3287790726
+    },
+    {
+      "Location": "Argentina",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31.7156301558
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11478.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10531.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5203.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5018.9965777395
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11126.3082971184
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11101.0515829942
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9822.3342845819
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8811.2422068619
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7994.0188145017
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7327.8739943382
+    },
+    {
+      "Location": "Argentina",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6770.0672063294
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Argentina",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ]
+}
