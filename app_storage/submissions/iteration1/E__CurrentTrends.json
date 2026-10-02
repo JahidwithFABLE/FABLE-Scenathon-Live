@@ -1,0 +1,7094 @@
+{
+  "iteration": "iteration1",
+  "username": "Jahid",
+  "participant": "E",
+  "pathway": "CurrentTrends",
+  "submitted_at_utc": "2026-10-02T09:53:16.105450+00:00",
+  "row_count": 1012,
+  "rows": [
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 731.0039534253
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1479.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1912.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1057.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.6670386268
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.0
+    },
+    {
+      "Location": "China",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1222.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 593.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 375.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 702.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 1128.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 1793.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 1700.310232232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 1592.5486833342,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 1476.5946380095,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 1358.218234531,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 1239.5526181619,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 1119.0164501179,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 2087.4007805656,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 2220.6998333851,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 2179.7658415483,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 7282.6915730611,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 5643.4221380869,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 5567.633579671,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 5459.7495079378,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 5308.4041485639,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 5129.2917082987,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 4927.0727126495,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 4691.9110066167,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 404.8789657128
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 745.5177982313
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 835.1582205138
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 364.7145455106
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.162520102
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 98.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 71.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 297.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 1059.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 3531.0000329384,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 3375.0428913526,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 3167.0636658641,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 2921.8076858649,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 2652.7425901488,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 2366.6399597462,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 2063.7337023972,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 2616.4157321104,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 14637.8128932833,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 31807.1982120381,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 57122.1165778383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 34788.1506235264,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 32456.101807222,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 30332.7394581711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 27877.7600442541,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 25218.5554209741,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 22417.393236428,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 19474.3044959458,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 98.1397931509
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 125.8985235619
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 86.8734558282
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 793.8789162024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 3092.5758245455,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 3098.9571691518,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 3137.9212424263,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 3148.4521375173,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 3137.9191069775,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 3107.8539555878,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 3050.6290936045,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 627.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 401.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 625.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 325.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 1777.0000069357,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 1789.1594858036,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 1781.8242124887,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 1759.5183947391,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 1726.8419746205,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 1684.9262428469,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 1629.9471020107,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 5.6903921916,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 5.3303236024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 4.9428023282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 4.5471312673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 4.1504434258,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 3.7474349768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 1.988351433,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 1.9557661052,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 1.9079053075,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 1.8502321414,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 1.7842744702,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 1.7062982039,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 51.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 79.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 83.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 142.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 164.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 168.0156960899,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 165.2622358912,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 161.2179984847,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 156.3446159457,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 150.771192728,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 144.1821982293,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 45.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 101.1466666667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 166.3689320388,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 367.4474053296,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 734.6255835668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 702.3086098411,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 663.5619690547,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 621.0800959891,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 577.1670858189,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 532.6443940985,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 486.7425720258,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 103.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 134.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 317.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 153.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 169.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 181.0125853648,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 190.8000730226,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 198.5435985592,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 204.5512779249,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 208.8135747408,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 210.7115130496,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 18.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 37.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 123.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 264.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 262.4623891582,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 258.1611258892,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 251.8435005914,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 244.2306426607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 235.5242300603,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 225.2313629144,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5508.5121030134
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.2132095825
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 8149.9665824372,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 12855.6578518774,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 32906.4678987594,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 33608.4931364652,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 34753.1604237617,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 35576.3746108188,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 36142.2071300493,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 36455.6858560608,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 36418.2484597629,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 1984.8137483466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 569.8655741371,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 2175.454759662,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 2308.6567763797,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 2033.2321191931,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 1752.1509659824,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 1475.3044452678,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 1207.2411968467,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 948.8049932843,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0414733866
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0410939568
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.3534713072
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.811453614
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 2.1942402966,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.7169715004
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 16.8116862071,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 10.8785586988,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 66.0267388366,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 384.3275238192,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 762.6942241719,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 1150.8220507373,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 1541.087564828,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 1925.4998956007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 2289.6590237436,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 12.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 14.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 12.3249577742,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 11.5407738369,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 10.6973917374,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 9.8366792435,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 8.974130421,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 8.0983443849,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 20.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 68.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 107.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 106.8048937004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 105.4756394562,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 103.305249905,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 100.5808393736,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 97.379455488,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 93.4911497764,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 363.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 850.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 284.073744749
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 445.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 1289.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 1223.8831048556,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 1147.8627311048,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 1065.8511399938,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 981.9804162879,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 897.769998811,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 812.0504438955,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 157.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 126.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 165.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0002012466
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "China",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 74.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 86.0187236916
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0028136109
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0
+    },
+    {
+      "Location": "China",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 59.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 526.3217813535
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 732.868767666
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 621.3270317971
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 356.6373787048
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 890.2991286351,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 854.0890534631,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 826.4046971617,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 792.8599754612,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 756.0046194075,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 716.6544234167,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 673.5048840153,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 7.0024076443,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.6601977396
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 71.1522511593,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 127.447429974,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 270.6303975147,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 318.480205768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 327.0336009287,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 332.6563815736,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 336.0086104788,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 337.1573409428,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 335.1744105308,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 26.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 28.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 29.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0026204015
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "China",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 1564.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 1582.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 9211.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 15515.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 23477.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 24497.9090547348,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 25232.1484993159,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 25719.7211938767,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 26011.1140194128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 26111.9511776465,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 25951.425628935,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.6223974701
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.8751814539
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.5870350385
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.4259730029
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 41.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 47.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 84.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 246.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 390.0000073668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 402.1343984057,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 409.6149611816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 413.2219049561,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 413.8579599321,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 411.6762817638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 405.6246545209,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 333.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 281.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 396.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 633.4415193587,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 858.3270080216,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 1066.2942807532,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 1255.5931867907,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 1423.9687962387,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 1565.0842354518,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 16.1529924925,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 54.453029757,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 136.6813321145,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 233.0648484052,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 471.9837564371,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 473.7343143248,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 479.2244751073,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 480.3804892894,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 478.3328454403,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 473.3183693803,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 464.1799438863,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 3.8325417419,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16.1470576496
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23.0599861551
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 56.2357164452,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 69.2330124972,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 47.2368186658,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 82.3159343002,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 86.5092613431,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 89.8134879247,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 92.3724019354,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 94.1835224263,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 94.9678381377,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 3.2160042024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 3.3924126991,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 3.5323777231,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 3.6413361518,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 3.7190892264,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 3.7545846978,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 31.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 53.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 70.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 69.2131369456,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 72.5847480649,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 75.1938111432,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 77.1636407428,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 78.49491153,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 78.9590603356,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 122.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 520.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 584.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 794.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0384965244
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0
+    },
+    {
+      "Location": "China",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 775.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 135.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 82.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 434.018244776
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 267.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0049780789
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "China",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 853.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 831.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 1242.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 1734.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 1360.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 2176.5040509128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 2150.8398462745,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 2107.9421954657,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 2053.6427247237,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 1989.497286991,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 1911.1995592626,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 1941.2834466537,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 5033.1515765902,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 6003.0210679162,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 6241.1001478869,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 6784.4840272775,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 6772.6411684057,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 6908.3087015927,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 6979.3101745662,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 7000.5941963963,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 6974.4904860908,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 6882.883619259,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 48.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 262.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 506.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 645.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 757.9861653483,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 770.8776809592,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 767.408959951,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 757.5485232493,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 743.2784277342,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 725.0842229164,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 701.3177077719,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 106.331982033,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 279.1304453303,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 673.3179068432,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 1213.5450155741,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 3503.8749511734,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 3532.9486524589,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 3664.6066923592,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 3760.0968894101,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 3826.2731535892,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 3863.5802758712,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 3861.1363254903,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 24.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 23.8602171962,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 23.4691932627,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 22.8948636901,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 22.2027856964,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 21.4112936418,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 20.4755784468,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 61.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 89.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 64.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 110.2154098127
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1085271318
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "China",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 85.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 50.4439552376
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 265.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 251.2395238585,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 235.2542359069,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 218.0622161859,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 200.5169230399,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 182.9341970438,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 165.0816355383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 314.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 189.9751249326
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 364.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 1152.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 5182.0000117142,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 5839.3011992311,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 6419.8221537268,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 6922.3865655884,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 7352.8601969627,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 7707.6650455292,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 7960.7863712097,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 726.0394607224,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 861.3718595586,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 1031.5415393794,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 929.0285138928,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 1029.2190995616,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 1001.1328505324,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 1031.7118437281,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 1052.3123104946,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 1064.9954048946,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 1069.9842702375,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 1064.3606197667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 16.392375683,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31.8232239557
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.8394401394
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 21.5026947502,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 57.1602881759,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 58.8185528687,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 62.7755317054,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 66.0328080101,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 68.6798778315,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 70.704940653,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 71.8895922696,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 355.4780987317,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 209.7895049256,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 1047.8308841342,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 901.6214948476,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 1971.2664979502,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 2054.1061894458,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 2069.7865979658,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 2067.1075642877,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 2050.985533145,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 2022.4298750789,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 1976.5118431519,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 2503.1476546727,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 282.686655433,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 1618.3489846469,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 5026.0189405425,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 3521.3391291524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 3791.442591505,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 4120.5973962396,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 4416.7469488799,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 4683.0992232604,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 4916.1833655309,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 5097.7448160707,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3697.5494931179
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 384.6064957397,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 427.8914790468,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 5265.6465456387,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 1558.6435993365,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 1590.882382978,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 1625.2148514165,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 1644.0203090128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 1650.8062236016,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 1646.1255529128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 1625.7091316435,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 941.121,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 1192.88236,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 1257.66745,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 1250.3424382332,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 1229.851685175,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 1199.7552014692,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 1163.4883695718,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 1122.0119614892,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 1072.9778555175,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 6.2272717309,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 6.5861436891,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 65.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 146.3046955624,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 411.4030987395,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 814.8322797891,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 1017.9742771924,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 1076.2481095012,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 1130.7251555265,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 1173.3324165983,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 1205.9297773957,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 1228.4975707974,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 1237.4611692852,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.2864962979
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.1236322745
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.2213256033
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0701897749
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.357044363
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0376168718
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 21.5596250955,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 65.6492562042,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 123.1153100072,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 12910.0256594235,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 5407.0282280127,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 4717.5385650098,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 4043.7717233036,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 3275.1229837363,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 2441.7979898711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 1565.0266876045,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 663.6423527506,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 12486.9169306949,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 28853.0797460928,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 57214.9992894106,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 113163.0839089908,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 160089.9304501283,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 170865.0719150014,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 172337.8827488592,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 172332.9033487466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 171252.1463589368,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 169171.5862706877,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 165668.6220874501,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 472.3492819545,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 1728.5145619223,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 1325.7306260331,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 982.5131138669,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 1247.6097046724,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 1586.8265469163,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 1567.8052417945,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 1536.1181436601,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 1496.027872852,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 1448.682465431,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 1390.9661176546,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 186.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 283.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 348.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 468.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.3013561406
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.6971858359
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 3.1521406262,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 1.0452212789,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 5.0527696564,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 161.9626469306,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 1125.1469686043,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 4000.6004469428,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 8189.8437682985,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 12617.2173764799,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 17187.0474131235,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 21796.622752427,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 26266.8653488697,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 716.7364582069,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 1686.9885459068,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 2233.5197380374,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 5403.45159704,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 5577.3240950517,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 6421.9045031071,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 6706.1259611031,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 6921.937285466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 7081.1186649778,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 7183.9583410838,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 7209.7291975499,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 40.8832336852,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 24.9839542662,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 151.0707164649,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 669.5988989163,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 1948.8157965876,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 1986.9544222104,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 1997.0871389501,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 1989.8048611483,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 1969.9268050097,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 1938.4837140253,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 1890.8279795338,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.6228832592
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 110.9533125248
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 137.4388422152
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.521011921
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 260.3298077207
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 266.2148294426
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 262.826580282
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 260.1688324089
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 258.1404773411
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 256.7575227371
+    },
+    {
+      "Location": "China",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 256.2717936352
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.3568049989
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.8414368962
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 208.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 264.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 261.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 274.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 277.0
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 158.819
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.71578
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.22755
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 601.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2377.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3972.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3870.0427264492
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0900446356
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0
+    },
+    {
+      "Location": "China",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3393.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2304.1220695538
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4707.2775295375
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5882.4306536909
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6707.6704605164
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6665.9250139666
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6620.5716441975
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6513.601382445
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6429.2535203882
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6364.2298730197
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6318.7621460552
+    },
+    {
+      "Location": "China",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6299.8992718922
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 2128.5922509626,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 4353.2585424768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 2674.4163697457,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 5597.2458004709,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 15686.1356699094,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 16240.3190109152,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 16858.9222218972,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 17315.9692762809,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 17641.8552109255,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 17837.974842519,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 17854.2042028603,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "China",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ]
+}
