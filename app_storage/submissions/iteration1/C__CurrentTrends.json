@@ -1,0 +1,7094 @@
+{
+  "iteration": "iteration1",
+  "username": "Jahid",
+  "participant": "C",
+  "pathway": "CurrentTrends",
+  "submitted_at_utc": "2026-10-02T09:52:30.537440+00:00",
+  "row_count": 1012,
+  "rows": [
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 1.045,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 185.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 187.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 89.1188605577
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.7903833583
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.7122809021
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.9911874374
+    },
+    {
+      "Location": "Brazil",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 72.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 212.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 80.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.6616783643
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.163024221
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.9437351772
+    },
+    {
+      "Location": "Brazil",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 928.0024507331,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 963.8600095952,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 1487.9332284593,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 1495.9508638071,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 2208.4669319232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 2272.7514752803,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 2332.4704552809,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 2385.9904958199,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 2422.2100528989,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 2432.4639851327,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 2438.9740184412,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 75.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 99.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 177.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.5323936453
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.3581650893
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28.9803412065
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 493.8142291509
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1863.8440087263
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1560.763205717
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1669.4639004964
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2563.9675044356
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3041.59291726
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3458.4470185215
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3974.4152327936
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4517.0372437216
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5194.2731591048
+    },
+    {
+      "Location": "Brazil",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5775.3228908839
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 35.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 95.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 133.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 133.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 133.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 130.8554605114
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 130.056412306
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 132.9098407057
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 133.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 43.2910097058,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 31.6408093482,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 18.580992572,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.8548807865
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.8008098553
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.9938989951
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 961.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3022.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3818.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4200.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4042.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4042.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4042.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3976.825348775
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3952.5414927886
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4039.2599709207
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4042.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 56.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 75.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 75.2217664193,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 75.1856377809,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 74.6385757337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 73.5928086879,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 72.060270682,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 70.1391500727,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 50.9355246523,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 41.9220779221,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 25.8843115827,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 56.0158667196,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 68.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 75.59360372,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 83.2984017231,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 90.7522450998,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 97.8253781484,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 104.3784621839,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 110.3974106719,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 0.9992354221,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 5.0267265136,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 4.9653126222,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 4.8623750413,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 4.7307523662,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 4.5783618882,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 4.3935230028,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1131.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1624.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2053.7427074126
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2263.8043604559
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2672.9708385946
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2668.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2668.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2624.9802153715
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2608.9511882137
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2666.1913909986
+    },
+    {
+      "Location": "Brazil",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2668.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 1742.4633128672,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 567.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10399.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28558.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 32979.4120535567
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53140.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 61720.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 73168.3718765519
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 85089.163284265
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 99594.9398446025
+    },
+    {
+      "Location": "Brazil",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112310.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 551.2643178808,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 875.2313178808,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 873.333,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 1002.8870344371,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 966.4557503311,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 1003.7377248287,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 1027.1605898171,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 1027.741639844,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 1032.3559649007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 1059.5336007304,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 1059.1657832631,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 772.4135032525,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 32.6120993495
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 249.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 1.1207462981,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 1.2435513788,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 1.3629265762,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 1.4767908084,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 1.5829106305,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 1.6809523008,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 42.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.7334273492
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.6341032754
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.988792931
+    },
+    {
+      "Location": "Brazil",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 0.04,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 1.419,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 0.825,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 1.238,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 1.238,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 1.238,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 1.2705576069,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 1.3002068853,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 1.3222521918,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 1.3363448305,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 1.3420948305,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 1.3407199008,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 50.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 94.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 55.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 264.1026755799
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 264.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 264.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 259.7431697369
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 258.1570890886
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 263.8210371903
+    },
+    {
+      "Location": "Brazil",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 264.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 47.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 65.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 93.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 70.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 76.2166824568,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 82.4731433064,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 88.4253137234,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 93.970109909,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 98.9965998821,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 103.5126031652,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 5.9350961538,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 77.0131814049
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 156.1831563749
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 373.0574471533
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 370.4821783129
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 370.5186448093
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 364.5791698896
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 362.3861228028
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 370.3687394153
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 370.6497295116
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23.9983150268
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 58.9857259404
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 66.9863796941
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 66.5276281791
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 66.5346871811
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 65.4687509989
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 65.0756663458
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 66.5099865672
+    },
+    {
+      "Location": "Brazil",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 66.5613465303
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 12.124,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 0.191,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 10.861,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 10.861,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 10.861,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 11.1466285688,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 11.4067423113,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 11.6001462481,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 11.7237812635,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 11.774226134,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 11.762163847,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 129.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 107.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 63.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 99.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 137.742590012
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 136.9014866379
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 139.9050954797
+    },
+    {
+      "Location": "Brazil",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 1491.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 92.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 2486.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 1782.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 2842.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 2993.7554818321,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 3142.4288830117,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 3275.8579582886,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 3391.7749363165,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 3487.7202385626,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 3565.4150838253,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 2.0525971032,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 2.1004957759,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 2.1361101645,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 2.1588769475,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 2.1681661236,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 2.1659449124,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 3.2027362386,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 3.4042046309,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 3.5908029306,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 3.7593267415,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 3.9063155831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 4.0329929639,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 125.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 161.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 110.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 18.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 18.4733739287,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 18.9044619835,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 19.2249914802,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 19.4298925276,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 19.513495112,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 19.493504212,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.7903833583
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.7122809021
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.9911874374
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.039563638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0245901639,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.3137254902,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 14.0190047169,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 11.7439943061,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 0.0073326916,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 0.0093983384,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 0.0096176547,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 0.0097807242,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 0.0098849677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 0.0099275006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 0.0099173302,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 50.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 56.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 291.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 334.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 473.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 469.6918391358,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 464.5375492063,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 456.0258081873,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 444.3234100574,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 429.601223768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 412.5441402701,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 27.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 27.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 56.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 58.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 110.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 108.2376542617,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 107.049879204,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 105.0883997725,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 102.3916526348,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 98.999013511,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 95.0683113942,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12425.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11936.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7411.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11038.6913129181
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9395.4285084671
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9388.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9388.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9236.6245359474
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9180.2225468331
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9381.6359740236
+    },
+    {
+      "Location": "Brazil",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9388.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 199.488,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 390.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 455.5211705549,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 714.1170837205,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 771.6988340626,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 763.3712358151,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 740.9772679612,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 719.0095402816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 706.0729372512,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 678.5319330148,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 117.999972273,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 115.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 288.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 240.3942494607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 273.0956600701,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 291.4687886522,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 298.2704001848,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 302.1221242483,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 304.8881992792,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 307.8281473534,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 307.5641775666,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 31.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 22.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 41.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 34.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 41.9176472779,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 47.9827210745,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 53.9694272228,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 59.7729202257,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 65.2808900041,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 70.4594127067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 38.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 38.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 90.3431372549
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 90.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 90.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.5488078649
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 88.0080985529
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 89.9389899512
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 90.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 1.0029568856,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 1.0024751704,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 0.9951810098,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 0.9812374492,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 0.9608036091,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 0.9351886676,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.2905282895
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.0261815148
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.970172865
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 183.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 899.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 787.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 800.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1466.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1466.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1466.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1442.3616925542
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1433.5541386512
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1465.0062140944
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1466.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 156.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 208.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 664.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 778.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 962.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 1011.364789106,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 1059.5928048519,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 1102.6031719282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 1139.6664346802,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 1169.9907367248,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 1194.1866454985,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 15.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 112.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 31.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 4.5194358247,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 5.0488079775,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 5.5655073508,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 6.0605151592,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 6.5241572288,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 6.9545901818,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 1.9781918317,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.5342685644,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 1.0195210396,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 1.2263180693,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.3422091753,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 1.8063007161,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 1.8509300567,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 1.8184162146,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 1.8152918315,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 1.9154520449,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 1.9189175875,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 15.9376218324,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 17.1583201852,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 17.5600857478,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 17.8226224118,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 18.0001795792,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 18.1285026537,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 18.1129206572,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 1.6958665196,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 20.5827388594,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 31.9587628866,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 19.8563218391,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 5.1222448276,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 5.2323119664,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 5.3114028215,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 5.3582852816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 5.3715721891,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 5.356310583,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 874.5276442034,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 297.0093885974,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 473.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 803.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 524.0144860834
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 524.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 524.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 515.550836902
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 512.4027071304
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 523.6447859383
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 524.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 139.926,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 195.526,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 67.8874193631
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 67.4728755573
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68.9532256293
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 0.9930060024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 0.9821089835,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 0.9641137594,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 0.93937296,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 0.9082478304,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 0.8721863431,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.825
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 55.284
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 374.0047817143,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 53.696024945,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 0.9435298717,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.8710051435
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.8229420936
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.9945768846
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10752.4419984508
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22129.8725271281
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29021.5197344024
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 54076.4148157908
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82234.7968563849
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 97213.4324849792
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 111934.4127018994
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 128732.490254643
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 146451.9815530665
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 168590.6477466035
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 187655.0162608322
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9290.485
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14232.991
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14786.3815035206
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16891.0111458543
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18786.8024158767
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18119.5579888542
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18161.336834835
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17916.8336764491
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17847.4213299772
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18274.2497341273
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18317.6818013089
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1076.4381851715
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2818.6247838367
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1109.6216017466
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1030.7230138027
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.7809510719
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 89.35301686
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 198.382814136
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 341.5267927022
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 530.5432394379
+    },
+    {
+      "Location": "Brazil",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 738.8728533586
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6762.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18874.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28707.3866470962
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24505.0604374124
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31065.3622761734
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29023.9503862159
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29000.633819409
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28506.3395326682
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28302.5741157078
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28890.417028236
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 28874.9172989211
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 14.261976912,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.749827576
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 59.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 29.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 23.9124359741,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 61.9693678641,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 63.8895569335,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 63.1882348736,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 61.950856747,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 60.3320550686,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 58.432233673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 56.1149780729,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 8.5774104683,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 2.8621438263,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 2.8340425532,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 4.6955067921,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 7.0740740741,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 6.7436280291,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 6.6702427594,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 6.5486736375,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 6.3813040826,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 6.1705752791,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 5.9263115905,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0009875093
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0168440367
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.8065077153
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.7344131404
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.9918653268
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 16.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 32.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 34.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 47.2260308613
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 46.9376525616
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 47.9674613073
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 345.203
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 620.507
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 483.367
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 506.63649
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 503.15934
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 503.15934
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 503.15934
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 495.0462191452
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 492.0232975839
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 502.8182536014
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 503.15934
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 115.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 106.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 171.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 191.647616983,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 212.6472857803,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 233.0604445252,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 252.5312282433,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 270.6777178217,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 287.4428434446,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 103.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 146.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 370.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 416.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 321.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 359.7595617049,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 399.1799926051,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 437.4994309509,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 474.0498495094,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 508.1143124022,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 539.5856885715,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 7812.0166372242,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 5027.7421237332,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 6133.3627365433,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 3952.8585516201,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 6011.3328878282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 6447.2123804362,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 6882.2925985867,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 7296.6544876166,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 7671.5885399212,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 7990.7261137972,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 8278.7332569211,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Brazil",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ]
+}
