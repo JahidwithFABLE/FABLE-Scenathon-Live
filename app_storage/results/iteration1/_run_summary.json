@@ -1,0 +1,37 @@
+{
+  "iteration": "iteration1",
+  "engine_version": "1.0.0",
+  "run_at_utc": "2026-10-02T10:00:33.141498+00:00",
+  "reports_used": 15,
+  "input_rows": 15213,
+  "adjusted_rows": 15213,
+  "blocker_count": 13,
+  "published_participants": 5,
+  "published_files": [
+    {
+      "participant": "A",
+      "rows": 3036,
+      "path": "app_storage/results/iteration1/A_adjusted_trade.csv"
+    },
+    {
+      "participant": "B",
+      "rows": 3036,
+      "path": "app_storage/results/iteration1/B_adjusted_trade.csv"
+    },
+    {
+      "participant": "C",
+      "rows": 3036,
+      "path": "app_storage/results/iteration1/C_adjusted_trade.csv"
+    },
+    {
+      "participant": "D",
+      "rows": 3069,
+      "path": "app_storage/results/iteration1/D_adjusted_trade.csv"
+    },
+    {
+      "participant": "E",
+      "rows": 3036,
+      "path": "app_storage/results/iteration1/E_adjusted_trade.csv"
+    }
+  ]
+}
