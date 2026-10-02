@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import base64
 import csv
+import hashlib
 import io
 import json
 import os
@@ -12,6 +13,8 @@ from pathlib import Path
 from urllib.parse import quote
 
 import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
 import requests
 import streamlit as st
 
@@ -99,7 +102,7 @@ STORAGE_ROOT = get_secret(
 ADMIN_PASSWORD = get_secret(
     "admin",
     "password",
-    "fable-local-admin",
+    "",
 )
 
 
@@ -159,6 +162,36 @@ def result_folder(
     return storage_path(
         "results",
         safe_name(iteration_name),
+    )
+
+
+def analytics_path(
+    iteration_name: str,
+) -> str:
+
+    return (
+        f"{result_folder(iteration_name)}"
+        "/_analytics.csv"
+    )
+
+
+def run_summary_path(
+    iteration_name: str,
+) -> str:
+
+    return (
+        f"{result_folder(iteration_name)}"
+        "/_run_summary.json"
+    )
+
+
+def stale_marker_path(
+    iteration_name: str,
+) -> str:
+
+    return (
+        f"{result_folder(iteration_name)}"
+        "/_stale.json"
     )
 
 
@@ -921,25 +954,171 @@ def submission_path(
     )
 
 
+def _rows_hash(rows) -> str:
+
+    canonical = json.dumps(
+        rows,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+
+    return hashlib.sha256(
+        canonical.encode("utf-8")
+    ).hexdigest()
+
+
+def dataframe_report_hash(
+    df: pd.DataFrame,
+) -> str:
+
+    clean_df = df[
+        REQUIRED_COLUMNS
+    ].copy()
+
+    rows = json.loads(
+        clean_df.to_json(
+            orient="records"
+        )
+    )
+
+    return _rows_hash(rows)
+
+
+def get_submission_payload(
+    iteration: str,
+    participant: str,
+    pathway: str,
+):
+
+    return github_get_json(
+        submission_path(
+            iteration,
+            participant,
+            pathway,
+        )
+    )
+
+
+def iteration_has_published_results(
+    iteration: str,
+) -> bool:
+
+    return bool(
+        github_get_file(
+            run_summary_path(iteration)
+        )
+        or github_get_file(
+            analytics_path(iteration)
+        )
+    )
+
+
+def mark_iteration_results_stale(
+    iteration: str,
+    *,
+    reason: str,
+):
+
+    if not iteration_has_published_results(
+        iteration
+    ):
+        return
+
+    github_put_json(
+        stale_marker_path(iteration),
+        {
+            "iteration": iteration,
+            "stale": True,
+            "reason": reason,
+            "marked_at_utc": datetime.now(
+                timezone.utc
+            ).isoformat(),
+        },
+        (
+            "Mark trade adjustment results stale: "
+            f"{iteration}"
+        ),
+    )
+
+
+def clear_iteration_stale_marker(
+    iteration: str,
+):
+
+    github_delete_file(
+        stale_marker_path(iteration),
+        (
+            "Clear stale marker after trade "
+            f"adjustment rerun: {iteration}"
+        ),
+    )
+
+
+def load_stale_marker(
+    iteration: str,
+):
+
+    return github_get_json(
+        stale_marker_path(iteration)
+    )
+
+
 def save_submission(
     iteration: str,
     username: str,
     participant: str,
     pathway: str,
     df: pd.DataFrame,
+    *,
+    replace_existing: bool = False,
 ):
 
     clean_df = df[
         REQUIRED_COLUMNS
     ].copy()
 
-    # Convert through JSON to guarantee
-    # normal Python JSON-compatible values.
     rows = json.loads(
         clean_df.to_json(
             orient="records"
         )
     )
+
+    report_hash = _rows_hash(rows)
+
+    path = submission_path(
+        iteration,
+        participant,
+        pathway,
+    )
+
+    existing = github_get_json(path)
+
+    if existing:
+
+        old_hash = existing.get(
+            "report_hash"
+        )
+
+        if not old_hash:
+            old_hash = _rows_hash(
+                existing.get("rows", [])
+            )
+
+        if old_hash == report_hash:
+            return {
+                "path": path,
+                "status": "DUPLICATE",
+                "replaced": False,
+                "report_hash": report_hash,
+            }
+
+        if not replace_existing:
+            raise FileExistsError(
+                "A different report is already "
+                "submitted for this iteration, "
+                "participant and pathway."
+            )
 
     payload = {
         "iteration": iteration,
@@ -952,27 +1131,44 @@ def save_submission(
             ).isoformat()
         ),
         "row_count": len(rows),
+        "report_hash": report_hash,
         "rows": rows,
     }
-
-    path = submission_path(
-        iteration,
-        participant,
-        pathway,
-    )
 
     github_put_json(
         path,
         payload,
         (
-            "Submit SCENATHON report: "
-            f"{iteration} / "
-            f"{participant} / "
-            f"{pathway}"
+            (
+                "Replace SCENATHON report: "
+                if existing
+                else "Submit SCENATHON report: "
+            )
+            + f"{iteration} / "
+            + f"{participant} / "
+            + f"{pathway}"
         ),
     )
 
-    return path
+    mark_iteration_results_stale(
+        iteration,
+        reason=(
+            "A submission was replaced."
+            if existing
+            else "A new submission was added after a run."
+        ),
+    )
+
+    return {
+        "path": path,
+        "status": (
+            "REPLACED"
+            if existing
+            else "SUBMITTED"
+        ),
+        "replaced": bool(existing),
+        "report_hash": report_hash,
+    }
 
 
 def list_submission_payloads(
@@ -1107,7 +1303,7 @@ def result_path(
 
 
 # ============================================================
-# TRADE ENGINE — BUILD INPUT
+# TRADE ENGINE - BUILD INPUT
 # ============================================================
 
 def build_engine_rows(
@@ -1209,7 +1405,278 @@ def build_engine_rows(
 
 
 # ============================================================
-# TRADE ENGINE — RUN + PUBLISH RESULTS
+# ANALYTICS STORAGE + HELPERS
+# ============================================================
+
+def build_iteration_analytics(
+    adjusted_df: pd.DataFrame,
+    iteration: str,
+) -> pd.DataFrame:
+
+    required = [
+        "Pathway",
+        "Product",
+        "Year",
+        "ImportOriginal",
+        "ExportOriginal",
+        "ImportsAdj",
+        "ExportsAdj",
+    ]
+
+    missing = [
+        column
+        for column in required
+        if column not in adjusted_df.columns
+    ]
+
+    if missing:
+        raise ValueError(
+            "Adjusted rows are missing analytics "
+            "columns: " + ", ".join(missing)
+        )
+
+    work = adjusted_df.copy()
+
+    if "ProductRaw" in work.columns:
+        work["ProductDisplay"] = (
+            work["ProductRaw"]
+            .fillna(work["Product"])
+            .astype(str)
+        )
+    else:
+        work["ProductDisplay"] = (
+            work["Product"].astype(str)
+        )
+
+    for column in [
+        "Year",
+        "ImportOriginal",
+        "ExportOriginal",
+        "ImportsAdj",
+        "ExportsAdj",
+    ]:
+        work[column] = pd.to_numeric(
+            work[column],
+            errors="coerce",
+        )
+
+    work = work.dropna(
+        subset=[
+            "Pathway",
+            "Product",
+            "Year",
+        ]
+    )
+
+    analytics = (
+        work
+        .groupby(
+            [
+                "Pathway",
+                "Product",
+                "Year",
+            ],
+            as_index=False,
+            dropna=False,
+        )
+        .agg(
+            ProductDisplay=(
+                "ProductDisplay",
+                "first",
+            ),
+            ImportsOriginal=(
+                "ImportOriginal",
+                "sum",
+            ),
+            ExportsOriginal=(
+                "ExportOriginal",
+                "sum",
+            ),
+            ImportsAdj=(
+                "ImportsAdj",
+                lambda series: series.sum(min_count=1),
+            ),
+            ExportsAdj=(
+                "ExportsAdj",
+                lambda series: series.sum(min_count=1),
+            ),
+        )
+    )
+
+    analytics.insert(
+        0,
+        "Iteration",
+        iteration,
+    )
+
+    analytics["Year"] = (
+        analytics["Year"].astype(int)
+    )
+
+    analytics["TradeGapBefore"] = (
+        analytics["ImportsOriginal"]
+        - analytics["ExportsOriginal"]
+    ).abs()
+
+    analytics["TradeGapAfter"] = (
+        analytics["ImportsAdj"]
+        - analytics["ExportsAdj"]
+    ).abs()
+
+    analytics["ExportAdjustment"] = (
+        analytics["ExportsAdj"]
+        - analytics["ExportsOriginal"]
+    )
+
+    analytics["AbsoluteExportAdjustment"] = (
+        analytics["ExportAdjustment"].abs()
+    )
+
+    return (
+        analytics
+        .sort_values(
+            [
+                "Pathway",
+                "ProductDisplay",
+                "Year",
+            ],
+            kind="stable",
+        )
+        .reset_index(drop=True)
+    )
+
+
+def load_iteration_analytics(
+    iteration: str,
+):
+
+    file_data = github_get_file(
+        analytics_path(iteration)
+    )
+
+    if not file_data:
+        return pd.DataFrame()
+
+    return pd.read_csv(
+        io.BytesIO(
+            file_data["content"]
+        )
+    )
+
+
+def load_run_summary(
+    iteration: str,
+):
+
+    return (
+        github_get_json(
+            run_summary_path(iteration)
+        )
+        or {}
+    )
+
+
+def load_all_published_analytics():
+
+    frames = []
+
+    for config in list_iteration_configs():
+
+        iteration = config.get(
+            "iteration",
+            "",
+        )
+
+        if not iteration:
+            continue
+
+        if load_stale_marker(iteration):
+            continue
+
+        try:
+            frame = load_iteration_analytics(
+                iteration
+            )
+        except Exception:
+            continue
+
+        if not frame.empty:
+            frames.append(frame)
+
+    if not frames:
+        return pd.DataFrame()
+
+    return pd.concat(
+        frames,
+        ignore_index=True,
+    )
+
+
+def aggregate_trade_view(
+    analytics_df: pd.DataFrame,
+    *,
+    pathway: str,
+    product_display: str,
+):
+
+    filtered = analytics_df[
+        analytics_df["Pathway"].astype(str)
+        == str(pathway)
+    ].copy()
+
+    if product_display != "All products":
+        filtered = filtered[
+            filtered["ProductDisplay"].astype(str)
+            == str(product_display)
+        ].copy()
+
+    if filtered.empty:
+        return filtered
+
+    return (
+        filtered
+        .groupby(
+            "Year",
+            as_index=False,
+        )
+        .agg(
+            ImportsOriginal=(
+                "ImportsOriginal",
+                "sum",
+            ),
+            ExportsOriginal=(
+                "ExportsOriginal",
+                "sum",
+            ),
+            ImportsAdj=(
+                "ImportsAdj",
+                lambda series: series.sum(min_count=1),
+            ),
+            ExportsAdj=(
+                "ExportsAdj",
+                lambda series: series.sum(min_count=1),
+            ),
+        )
+        .sort_values("Year")
+        .assign(
+            TradeGapBefore=lambda d: (
+                d["ImportsOriginal"]
+                - d["ExportsOriginal"]
+            ).abs(),
+            TradeGapAfter=lambda d: (
+                d["ImportsAdj"]
+                - d["ExportsAdj"]
+            ).abs(),
+            ExportAdjustment=lambda d: (
+                d["ExportsAdj"]
+                - d["ExportsOriginal"]
+            ),
+        )
+    )
+
+
+# ============================================================
+# TRADE ENGINE - RUN + PUBLISH RESULTS
 # ============================================================
 
 def run_iteration_trade_adjustment(
@@ -1222,61 +1689,38 @@ def run_iteration_trade_adjustment(
         )
     )
 
-
     if not engine_rows:
-
         raise ValueError(
             "No submitted trade rows "
             "are available for this iteration."
         )
 
-
-    # --------------------------------------------------------
-    # strict=False:
-    #
-    # Admin is allowed to run even if:
-    # - some participants are missing
-    # - some pathways are missing
-    # - engine QA blockers exist
-    #
-    # Blockers remain visible in result.
-    # --------------------------------------------------------
-
-    result = (
-        calculate_trade_adjustment(
-            engine_rows,
-            strict=False,
-        )
+    result = calculate_trade_adjustment(
+        engine_rows,
+        strict=False,
     )
-
 
     adjusted_rows = result.get(
         "adjusted_rows",
         [],
     )
-
     blockers = result.get(
         "blockers",
         [],
     )
-
     global_qa = result.get(
         "global_qa",
         [],
     )
 
-
     if not adjusted_rows:
-
         raise ValueError(
             "Trade engine returned no adjusted rows."
         )
 
-
     adjusted_df = pd.DataFrame(
         adjusted_rows
     )
-
 
     participants = sorted(
         {
@@ -1286,8 +1730,7 @@ def run_iteration_trade_adjustment(
                     "",
                 )
             ).strip()
-            for submission
-            in submissions
+            for submission in submissions
             if str(
                 submission.get(
                     "participant",
@@ -1297,39 +1740,18 @@ def run_iteration_trade_adjustment(
         }
     )
 
-
     published_files = []
-
-
-    # --------------------------------------------------------
-    # Generate ONE copy-ready FullDataTradeAdj file
-    # per participant.
-    #
-    # If participant submitted:
-    # CT only      -> CT rows
-    # CT + GS      -> both pathways
-    # CT + GS + NC -> all three pathways
-    # --------------------------------------------------------
 
     for participant in participants:
 
-        participant_df = (
-            adjusted_df[
-                adjusted_df[
-                    "CountryID"
-                ].astype(str)
-                == participant
-            ]
-            .copy()
-        )
-
+        participant_df = adjusted_df[
+            adjusted_df["CountryID"].astype(str)
+            == participant
+        ].copy()
 
         if participant_df.empty:
             continue
 
-
-        # Use ProductRaw so original FABLE
-        # product naming is preserved.
         output_df = (
             participant_df[
                 [
@@ -1345,12 +1767,6 @@ def run_iteration_trade_adjustment(
                     "ProductRaw": "Product"
                 }
             )
-        )
-
-
-        # Clean order for manual copy/paste.
-        output_df = (
-            output_df
             .sort_values(
                 [
                     "Pathway",
@@ -1359,13 +1775,9 @@ def run_iteration_trade_adjustment(
                 ],
                 kind="stable",
             )
-            .reset_index(
-                drop=True
-            )
+            .reset_index(drop=True)
         )
 
-
-        # Exact desired column order
         output_df = output_df[
             [
                 "Pathway",
@@ -1376,23 +1788,14 @@ def run_iteration_trade_adjustment(
             ]
         ]
 
-
-        csv_bytes = (
-            output_df
-            .to_csv(
-                index=False
-            )
-            .encode(
-                "utf-8-sig"
-            )
-        )
-
+        csv_bytes = output_df.to_csv(
+            index=False
+        ).encode("utf-8-sig")
 
         path = result_path(
             iteration,
             participant,
         )
-
 
         github_put_bytes(
             path,
@@ -1403,71 +1806,98 @@ def run_iteration_trade_adjustment(
             ),
         )
 
-
         published_files.append(
             {
                 "participant": participant,
-                "rows": len(
-                    output_df
-                ),
+                "rows": len(output_df),
                 "path": path,
             }
         )
 
+    analytics_df = build_iteration_analytics(
+        adjusted_df,
+        iteration,
+    )
 
-    # --------------------------------------------------------
-    # Save small run summary
-    # --------------------------------------------------------
+    github_put_bytes(
+        analytics_path(iteration),
+        analytics_df.to_csv(
+            index=False
+        ).encode("utf-8-sig"),
+        (
+            "Publish trade analytics: "
+            f"{iteration}"
+        ),
+    )
+
+    config = (
+        load_iteration_config(iteration)
+        or {}
+    )
+
+    expected_reports = (
+        len(config.get("participants", []))
+        * len(config.get("pathways", []))
+    )
+
+    submitted_pairs = {
+        (
+            str(item.get("participant", "")).strip(),
+            str(item.get("pathway", "")).strip(),
+        )
+        for item in submissions
+        if str(
+            item.get("participant", "")
+        ).strip()
+        and str(
+            item.get("pathway", "")
+        ).strip()
+    }
+
+    submitted_reports = len(
+        submitted_pairs
+    )
+
+    complete = bool(
+        expected_reports
+        and submitted_reports >= expected_reports
+    )
+
+    publication_status = (
+        "FINAL"
+        if complete and not blockers
+        else "PROVISIONAL"
+    )
 
     run_summary = {
         "iteration": iteration,
-
-        "engine_version": (
-            result.get(
-                "engine_version",
-                ENGINE_VERSION,
-            )
+        "engine_version": result.get(
+            "engine_version",
+            ENGINE_VERSION,
         ),
-
-        "run_at_utc": (
-            datetime.now(
-                timezone.utc
-            ).isoformat()
-        ),
-
-        "reports_used": len(
-            submissions
-        ),
-
-        "input_rows": len(
-            engine_rows
-        ),
-
-        "adjusted_rows": len(
-            adjusted_rows
-        ),
-
-        "blocker_count": len(
-            blockers
-        ),
-
-        "published_participants": (
-            len(
-                published_files
-            )
-        ),
-
-        "published_files": (
+        "run_at_utc": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "status": publication_status,
+        "complete": complete,
+        "expected_reports": expected_reports,
+        "reports_used": len(submissions),
+        "submitted_reports": submitted_reports,
+        "input_rows": len(engine_rows),
+        "adjusted_rows": len(adjusted_rows),
+        "analytics_rows": len(analytics_df),
+        "blocker_count": len(blockers),
+        "published_participants": len(
             published_files
+        ),
+        "published_files": published_files,
+        "analytics_path": analytics_path(
+            iteration
         ),
     }
 
-
     github_put_json(
-        (
-            f"{result_folder(iteration)}"
-            "/_run_summary.json"
-        ),
+        run_summary_path(iteration),
         run_summary,
         (
             "Publish trade adjustment "
@@ -1475,33 +1905,30 @@ def run_iteration_trade_adjustment(
         ),
     )
 
+    clear_iteration_stale_marker(
+        iteration
+    )
 
     return {
-        "engine_version": (
-            result.get(
-                "engine_version",
-                ENGINE_VERSION,
-            )
+        "engine_version": result.get(
+            "engine_version",
+            ENGINE_VERSION,
         ),
-        "input_rows": len(
-            engine_rows
-        ),
-        "adjusted_rows": len(
-            adjusted_rows
-        ),
-        "reports_used": len(
-            submissions
-        ),
+        "input_rows": len(engine_rows),
+        "adjusted_rows": len(adjusted_rows),
+        "analytics_rows": len(analytics_df),
+        "reports_used": len(submissions),
         "participants": len(
             published_files
         ),
-        "published_files": (
-            published_files
-        ),
+        "status": publication_status,
+        "complete": complete,
+        "expected_reports": expected_reports,
+        "submitted_reports": submitted_reports,
+        "published_files": published_files,
         "blockers": blockers,
         "global_qa": global_qa,
     }
-
 
 
 # ============================================================
@@ -1510,7 +1937,6 @@ def run_iteration_trade_adjustment(
 
 st.set_page_config(
     page_title=APP_TITLE,
-    page_icon="📊",
     layout="wide",
 )
 
@@ -1527,7 +1953,7 @@ st.title(APP_TITLE)
 
 st.caption(
     "Submit SCENATHON reports, monitor participation, "
-    "run the global trade adjustment and retrieve "
+    "run the trade adjustment and retrieve "
     "adjusted trade results."
 )
 
@@ -1561,11 +1987,12 @@ if not connection_ok:
 # 12. MAIN TABS
 # ============================================================
 
-submit_tab, result_tab, admin_tab = (
+submit_tab, result_tab, analytics_tab, admin_tab = (
     st.tabs(
         [
             "Submit Report",
             "Download Result",
+            "Analytics",
             "Admin",
         ]
     )
@@ -1573,7 +2000,7 @@ submit_tab, result_tab, admin_tab = (
 
 
 # ============================================================
-# 13. USER — SUBMIT REPORT
+# 13. USER - SUBMIT REPORT
 # ============================================================
 
 with submit_tab:
@@ -1688,6 +2115,11 @@ with submit_tab:
                 )
             )
 
+            replace_existing = st.checkbox(
+                "Replace the previous submission if "
+                "this participant/pathway already has "
+                "a different report."
+            )
 
             submitted = (
                 st.form_submit_button(
@@ -1745,7 +2177,7 @@ with submit_tab:
                             .copy()
                         )
 
-                        stored_path = (
+                        save_result = (
                             save_submission(
                                 iteration=(
                                     selected_iteration
@@ -1756,12 +2188,43 @@ with submit_tab:
                                 ),
                                 pathway=pathway,
                                 df=clean_df,
+                                replace_existing=(
+                                    replace_existing
+                                ),
                             )
                         )
 
-                        st.success(
-                            "Report submitted successfully."
+                        stored_path = (
+                            save_result["path"]
                         )
+
+                        if (
+                            save_result["status"]
+                            == "DUPLICATE"
+                        ):
+                            st.info(
+                                "This exact report is already "
+                                "submitted. Nothing was changed."
+                            )
+                        elif (
+                            save_result["status"]
+                            == "REPLACED"
+                        ):
+                            st.success(
+                                "Previous submission replaced "
+                                "successfully."
+                            )
+                            st.warning(
+                                "Any previously published result "
+                                "for this iteration is now stale. "
+                                "The admin must rerun the trade "
+                                "adjustment before users download "
+                                "or analyse results."
+                            )
+                        else:
+                            st.success(
+                                "Report submitted successfully."
+                            )
 
                         c1, c2 = (
                             st.columns(2)
@@ -1792,6 +2255,16 @@ with submit_tab:
                             hide_index=True,
                         )
 
+                except FileExistsError:
+
+                    st.warning(
+                        "A different report already exists for "
+                        "this participant and pathway. Tick "
+                        "'Replace the previous submission' and "
+                        "submit again only if you intend to "
+                        "replace it."
+                    )
+
                 except Exception as exc:
 
                     st.error(
@@ -1801,7 +2274,7 @@ with submit_tab:
 
 
 # ============================================================
-# 14. USER — DOWNLOAD RESULT
+# 14. USER - DOWNLOAD RESULT
 # ============================================================
 
 with result_tab:
@@ -1811,27 +2284,20 @@ with result_tab:
     )
 
     try:
-        configs = (
-            list_iteration_configs()
-        )
+        configs = list_iteration_configs()
     except Exception:
         configs = []
-
 
     iteration_names = [
         cfg["iteration"]
         for cfg in configs
     ]
 
-
     if not iteration_names:
-
         st.info(
             "No iterations are available."
         )
-
     else:
-
         selected_result_iteration = (
             st.selectbox(
                 "Iteration",
@@ -1840,68 +2306,1726 @@ with result_tab:
             )
         )
 
-        result_config = (
-            load_iteration_config(
-                selected_result_iteration
-            )
+        stale_info = load_stale_marker(
+            selected_result_iteration
         )
 
-        result_participant = (
-            st.selectbox(
-                "Country / participant",
+        if stale_info:
+            st.warning(
+                "This iteration changed after the last "
+                "trade-adjustment run. The published "
+                "result is stale and download is disabled "
+                "until the admin reruns the adjustment."
+            )
+        else:
+            result_config = (
+                load_iteration_config(
+                    selected_result_iteration
+                )
+                or {}
+            )
+
+            participant_options = (
                 result_config.get(
                     "participants",
                     [],
-                ),
-                key="result_participant",
-            )
-        )
-
-        path = result_path(
-            selected_result_iteration,
-            result_participant,
-        )
-
-        result_file = (
-            github_get_file(
-                path
-            )
-        )
-
-        if result_file:
-
-            st.success(
-                "Adjusted trade result is ready."
+                )
             )
 
-            st.caption(
-                "The downloaded CSV is formatted for "
-                "the FABLE-C FullDataTradeAdj table: "
-                "Pathway, Product, Year, ImportsAdj, ExportsAdj."
-            )
+            if not participant_options:
+                st.info(
+                    "No participants are configured for "
+                    "this iteration."
+                )
+            else:
+                result_participant = (
+                    st.selectbox(
+                        "Country / participant",
+                        participant_options,
+                        key="result_participant",
+                    )
+                )
 
-            st.download_button(
-                "Download adjusted trade",
-                data=result_file[
-                    "content"
-                ],
-                file_name=(
-                    f"{safe_name(result_participant)}"
-                    "_adjusted_trade.csv"
-                ),
-                mime="text/csv",
-            )
+                path = result_path(
+                    selected_result_iteration,
+                    result_participant,
+                )
 
-        else:
+                result_file = github_get_file(
+                    path
+                )
 
-            st.warning(
-                "No published adjusted trade "
-                "result is available yet."
-            )
+                if result_file:
+                    st.success(
+                        "Adjusted trade result is ready."
+                    )
+                    st.caption(
+                        "The downloaded CSV is formatted for "
+                        "the FABLE-C FullDataTradeAdj table: "
+                        "Pathway, Product, Year, ImportsAdj, "
+                        "ExportsAdj."
+                    )
+                    st.download_button(
+                        "Download adjusted trade",
+                        data=result_file["content"],
+                        file_name=(
+                            f"{safe_name(result_participant)}"
+                            "_adjusted_trade.csv"
+                        ),
+                        mime="text/csv",
+                    )
+                else:
+                    st.warning(
+                        "No published adjusted trade "
+                        "result is available yet."
+                    )
 
 
 # ============================================================
-# 15. ADMIN
+# 15. PUBLIC ANALYTICS
+# ============================================================
+
+with analytics_tab:
+
+    st.subheader("Trade Analytics")
+
+    st.caption(
+        "Interactive analysis of published trade-adjustment runs. "
+        "This section is visible to all app users; admin access is "
+        "not required. Clicking Run Analysis only builds charts from "
+        "published results — it does not rerun the trade engine."
+    )
+
+    # --------------------------------------------------------
+    # Find iterations with a current analytics artifact
+    # --------------------------------------------------------
+
+    try:
+        analytics_configs = (
+            list_iteration_configs()
+        )
+
+    except Exception as exc:
+
+        analytics_configs = []
+
+        st.error(
+            f"Could not load iterations: {exc}"
+        )
+
+
+    available_analytics_iterations = []
+
+
+    for cfg in analytics_configs:
+
+        name = cfg.get(
+            "iteration",
+            "",
+        )
+
+        if not name:
+            continue
+
+        # Do not expose analytics from a stale run.
+        if load_stale_marker(name):
+            continue
+
+        try:
+
+            if github_get_file(
+                analytics_path(name)
+            ):
+
+                available_analytics_iterations.append(
+                    name
+                )
+
+        except Exception:
+            pass
+
+
+    # --------------------------------------------------------
+    # No analytics yet
+    # --------------------------------------------------------
+
+    if not available_analytics_iterations:
+
+        st.info(
+            "No current analytics dataset is available. "
+            "Run Trade Adjustment from the Admin tab. "
+            "An iteration created by an older app version "
+            "must be rerun once to generate its analytics file."
+        )
+
+
+    else:
+
+        # ====================================================
+        # FILTERS
+        # ====================================================
+
+        filter_c1, filter_c2, filter_c3 = (
+            st.columns(3)
+        )
+
+
+        with filter_c1:
+
+            selected_analytics_iteration = (
+                st.selectbox(
+                    "Iteration",
+                    available_analytics_iterations,
+                    key="analytics_iteration",
+                )
+            )
+
+
+        # ----------------------------------------------------
+        # Load current published iteration data.
+        # This is needed to populate pathway/product filters.
+        # ----------------------------------------------------
+
+        with st.spinner(
+            "Loading published analytics data..."
+        ):
+
+            analytics_df = (
+                load_iteration_analytics(
+                    selected_analytics_iteration
+                )
+            )
+
+            run_summary = (
+                load_run_summary(
+                    selected_analytics_iteration
+                )
+            )
+
+            analytics_config = (
+                load_iteration_config(
+                    selected_analytics_iteration
+                )
+                or {}
+            )
+
+
+        if analytics_df.empty:
+
+            st.warning(
+                "The selected iteration has an analytics file, "
+                "but no usable analytics rows were found. "
+                "Rerun Trade Adjustment from the Admin tab."
+            )
+
+
+        else:
+
+            pathway_options = sorted(
+                analytics_df[
+                    "Pathway"
+                ]
+                .dropna()
+                .astype(str)
+                .unique()
+            )
+
+
+            with filter_c2:
+
+                selected_analytics_pathway = (
+                    st.selectbox(
+                        "Pathway",
+                        pathway_options,
+                        key="analytics_pathway",
+                    )
+                )
+
+
+            product_options = sorted(
+                analytics_df.loc[
+                    (
+                        analytics_df[
+                            "Pathway"
+                        ].astype(str)
+                        == selected_analytics_pathway
+                    ),
+                    "ProductDisplay",
+                ]
+                .dropna()
+                .astype(str)
+                .unique(),
+                key=str.casefold,
+            )
+
+
+            with filter_c3:
+
+                selected_analytics_product = (
+                    st.selectbox(
+                        "Product",
+                        [
+                            "All products"
+                        ]
+                        + product_options,
+                        key="analytics_product",
+                    )
+                )
+
+
+            # =================================================
+            # RUN ANALYSIS BUTTON
+            # =================================================
+
+            analysis_token = (
+                f"{selected_analytics_iteration}|"
+                f"{selected_analytics_pathway}|"
+                f"{selected_analytics_product}"
+            )
+
+
+            run_analysis = st.button(
+                "Run Analysis",
+                type="primary",
+                key="run_trade_analytics",
+                help=(
+                    "Build the interactive charts for the "
+                    "selected iteration, pathway and product."
+                ),
+            )
+
+
+            if run_analysis:
+
+                st.session_state[
+                    "analytics_run_token"
+                ] = analysis_token
+
+
+            analysis_is_current = (
+                st.session_state.get(
+                    "analytics_run_token"
+                )
+                == analysis_token
+            )
+
+
+            if not analysis_is_current:
+
+                st.info(
+                    "Choose the filters above, then click "
+                    "Run Analysis to build the interactive charts."
+                )
+
+
+            else:
+
+                # =============================================
+                # LIVE ANALYSIS STATUS
+                # =============================================
+
+                with st.status(
+                    "Running trade analytics...",
+                    expanded=True,
+                ) as analysis_status:
+
+                    analysis_progress = (
+                        st.progress(0)
+                    )
+
+
+                    # -----------------------------------------
+                    # STEP 1
+                    # -----------------------------------------
+
+                    analysis_status.write(
+                        "Reading submission coverage "
+                        "and run metadata..."
+                    )
+
+                    submission_meta = (
+                        submission_metadata_df(
+                            selected_analytics_iteration
+                        )
+                    )
+
+
+                    submitted_participants = (
+                        submission_meta[
+                            "participant"
+                        ]
+                        .astype(str)
+                        .nunique()
+                        if not submission_meta.empty
+                        else 0
+                    )
+
+
+                    configured_participants = len(
+                        analytics_config.get(
+                            "participants",
+                            [],
+                        )
+                    )
+
+
+                    analysis_progress.progress(
+                        20
+                    )
+
+
+                    # -----------------------------------------
+                    # STEP 2
+                    # -----------------------------------------
+
+                    analysis_status.write(
+                        "Aggregating the selected pathway "
+                        "and product scope..."
+                    )
+
+
+                    selected_pathway_products = (
+                        analytics_df.loc[
+                            (
+                                analytics_df[
+                                    "Pathway"
+                                ].astype(str)
+                                == selected_analytics_pathway
+                            ),
+                            "Product",
+                        ]
+                        .astype(str)
+                        .nunique()
+                    )
+
+
+                    trade_view = (
+                        aggregate_trade_view(
+                            analytics_df,
+                            pathway=(
+                                selected_analytics_pathway
+                            ),
+                            product_display=(
+                                selected_analytics_product
+                            ),
+                        )
+                    )
+
+
+                    analysis_progress.progress(
+                        40
+                    )
+
+
+                    # -----------------------------------------
+                    # STEP 3
+                    # -----------------------------------------
+
+                    analysis_status.write(
+                        "Preparing product-impact "
+                        "and heatmap data..."
+                    )
+
+
+                    pathway_df = analytics_df[
+                        (
+                            analytics_df[
+                                "Pathway"
+                            ].astype(str)
+                            == selected_analytics_pathway
+                        )
+                    ].copy()
+
+
+                    product_impact = (
+                        pathway_df
+                        .groupby(
+                            [
+                                "Product",
+                                "ProductDisplay",
+                            ],
+                            as_index=False,
+                        )[
+                            "AbsoluteExportAdjustment"
+                        ]
+                        .sum(
+                            min_count=1
+                        )
+                        .sort_values(
+                            "AbsoluteExportAdjustment",
+                            ascending=False,
+                            na_position="last",
+                        )
+                    )
+
+
+                    analysis_progress.progress(
+                        60
+                    )
+
+
+                    # -----------------------------------------
+                    # STEP 4 — PATHWAY COMPARISON DATA
+                    # -----------------------------------------
+
+                    analysis_status.write(
+                        "Preparing pathway and "
+                        "iteration comparisons..."
+                    )
+
+
+                    pathway_comparison_source = (
+                        analytics_df.copy()
+                    )
+
+
+                    if (
+                        selected_analytics_product
+                        != "All products"
+                    ):
+
+                        pathway_comparison_source = (
+                            pathway_comparison_source[
+                                (
+                                    pathway_comparison_source[
+                                        "ProductDisplay"
+                                    ].astype(str)
+                                    == selected_analytics_product
+                                )
+                            ].copy()
+                        )
+
+
+                    pathway_compare = (
+                        pathway_comparison_source
+                        .groupby(
+                            [
+                                "Pathway",
+                                "Year",
+                            ],
+                            as_index=False,
+                        )[
+                            [
+                                "ImportsOriginal",
+                                "ExportsOriginal",
+                                "ImportsAdj",
+                                "ExportsAdj",
+                            ]
+                        ]
+                        .sum(
+                            min_count=1
+                        )
+                    )
+
+
+                    if not pathway_compare.empty:
+
+                        pathway_compare[
+                            "TradeGapBefore"
+                        ] = (
+                            pathway_compare[
+                                "ImportsOriginal"
+                            ]
+                            - pathway_compare[
+                                "ExportsOriginal"
+                            ]
+                        ).abs()
+
+
+                        pathway_compare[
+                            "TradeGapAfter"
+                        ] = (
+                            pathway_compare[
+                                "ImportsAdj"
+                            ]
+                            - pathway_compare[
+                                "ExportsAdj"
+                            ]
+                        ).abs()
+
+
+                        pathway_compare[
+                            "ExportAdjustment"
+                        ] = (
+                            pathway_compare[
+                                "ExportsAdj"
+                            ]
+                            - pathway_compare[
+                                "ExportsOriginal"
+                            ]
+                        )
+
+
+                        pathway_compare[
+                            "GapReduction"
+                        ] = (
+                            pathway_compare[
+                                "TradeGapBefore"
+                            ]
+                            - pathway_compare[
+                                "TradeGapAfter"
+                            ]
+                        )
+
+
+                    all_analytics = (
+                        load_all_published_analytics()
+                    )
+
+
+                    analysis_progress.progress(
+                        85
+                    )
+
+
+                    # -----------------------------------------
+                    # STEP 5
+                    # -----------------------------------------
+
+                    analysis_status.write(
+                        "Building interactive Plotly figures..."
+                    )
+
+
+                    analysis_progress.progress(
+                        100
+                    )
+
+
+                    analysis_status.update(
+                        label="Analysis ready",
+                        state="complete",
+                        expanded=False,
+                    )
+
+
+                # =================================================
+                # RUN STATUS
+                # =================================================
+
+                complete = bool(
+                    run_summary.get(
+                        "complete",
+                        False,
+                    )
+                )
+
+
+                blocker_count = int(
+                    run_summary.get(
+                        "blocker_count",
+                        0,
+                    )
+                    or 0
+                )
+
+
+                expected_reports = int(
+                    run_summary.get(
+                        "expected_reports",
+                        0,
+                    )
+                    or 0
+                )
+
+
+                reports_used = int(
+                    run_summary.get(
+                        "submitted_reports",
+                        run_summary.get(
+                            "reports_used",
+                            0,
+                        ),
+                    )
+                    or 0
+                )
+
+
+                if (
+                    complete
+                    and blocker_count == 0
+                ):
+
+                    st.success(
+                        "FINAL run — all configured reports "
+                        "are present and the engine reported "
+                        "0 QA blockers."
+                    )
+
+
+                elif complete:
+
+                    st.warning(
+                        f"PROVISIONAL run — all configured "
+                        f"reports are present, but "
+                        f"{blocker_count} QA blocker(s) "
+                        "require review."
+                    )
+
+
+                else:
+
+                    st.warning(
+                        f"PROVISIONAL run — "
+                        f"{reports_used}/{expected_reports} "
+                        "configured reports were included "
+                        "and/or QA blockers are present."
+                    )
+
+
+                if blocker_count:
+
+                    st.warning(
+                        "Some blocker-affected ExportsAdj values "
+                        "may be blank. After-adjustment aggregates "
+                        "are therefore provisional and can be "
+                        "incomplete for affected "
+                        "product/pathway/year combinations."
+                    )
+
+
+                # =================================================
+                # KPI CARDS
+                # =================================================
+
+                latest_row = (
+                    trade_view
+                    .sort_values(
+                        "Year"
+                    )
+                    .tail(1)
+                    if not trade_view.empty
+                    else pd.DataFrame()
+                )
+
+
+                before_latest = (
+                    float(
+                        latest_row[
+                            "ExportsOriginal"
+                        ].iloc[0]
+                    )
+                    if not latest_row.empty
+                    else 0.0
+                )
+
+
+                after_latest = (
+                    float(
+                        latest_row[
+                            "ExportsAdj"
+                        ].iloc[0]
+                    )
+                    if (
+                        not latest_row.empty
+                        and pd.notna(
+                            latest_row[
+                                "ExportsAdj"
+                            ].iloc[0]
+                        )
+                    )
+                    else float(
+                        "nan"
+                    )
+                )
+
+
+                latest_adjustment = (
+                    after_latest
+                    - before_latest
+                    if pd.notna(
+                        after_latest
+                    )
+                    else float(
+                        "nan"
+                    )
+                )
+
+
+                k1, k2, k3, k4, k5 = (
+                    st.columns(5)
+                )
+
+
+                k1.metric(
+                    "Participants",
+                    (
+                        f"{submitted_participants}/"
+                        f"{configured_participants}"
+                        if configured_participants
+                        else str(
+                            submitted_participants
+                        )
+                    ),
+                )
+
+
+                k2.metric(
+                    "Products",
+                    int(
+                        selected_pathway_products
+                    ),
+                )
+
+
+                k3.metric(
+                    "Latest exports before",
+                    f"{before_latest:,.0f}",
+                )
+
+
+                k4.metric(
+                    "Latest exports after",
+                    (
+                        f"{after_latest:,.0f}"
+                        if pd.notna(
+                            after_latest
+                        )
+                        else "Unavailable"
+                    ),
+                )
+
+
+                k5.metric(
+                    "Latest export change",
+                    (
+                        f"{latest_adjustment:,.0f}"
+                        if pd.notna(
+                            latest_adjustment
+                        )
+                        else "Unavailable"
+                    ),
+                )
+
+
+                scope_label = (
+                    "All products"
+                    if (
+                        selected_analytics_product
+                        == "All products"
+                    )
+                    else selected_analytics_product
+                )
+
+
+                # =================================================
+                # 1. AGGREGATE TRADE TRAJECTORY
+                # =================================================
+
+                st.markdown(
+                    "### Aggregate trade trajectory"
+                )
+
+
+                trajectory_fig = (
+                    go.Figure()
+                )
+
+
+                trajectory_fig.add_trace(
+                    go.Scatter(
+                        x=trade_view[
+                            "Year"
+                        ],
+                        y=trade_view[
+                            "ImportsOriginal"
+                        ],
+                        mode="lines+markers",
+                        name="Imports",
+                    )
+                )
+
+
+                trajectory_fig.add_trace(
+                    go.Scatter(
+                        x=trade_view[
+                            "Year"
+                        ],
+                        y=trade_view[
+                            "ExportsOriginal"
+                        ],
+                        mode="lines+markers",
+                        name=(
+                            "Exports before adjustment"
+                        ),
+                    )
+                )
+
+
+                trajectory_fig.add_trace(
+                    go.Scatter(
+                        x=trade_view[
+                            "Year"
+                        ],
+                        y=trade_view[
+                            "ExportsAdj"
+                        ],
+                        mode="lines+markers",
+                        name=(
+                            "Exports after adjustment"
+                        ),
+                    )
+                )
+
+
+                if not trade_view.empty:
+
+                    trajectory_fig.add_vrect(
+                        x0=float(
+                            trade_view[
+                                "Year"
+                            ].min()
+                        ),
+                        x1=2020,
+                        opacity=0.08,
+                        line_width=0,
+                        annotation_text=(
+                            "Historical — unchanged"
+                        ),
+                        annotation_position=(
+                            "top left"
+                        ),
+                    )
+
+
+                trajectory_fig.update_layout(
+                    title=(
+                        "Submitted-participant aggregate | "
+                        f"{selected_analytics_iteration} | "
+                        f"{selected_analytics_pathway} | "
+                        f"{scope_label}"
+                    ),
+                    xaxis_title="Year",
+                    yaxis_title=(
+                        "Submitted-participant "
+                        "trade quantity"
+                    ),
+                    hovermode="x unified",
+                    legend_title_text="Series",
+                )
+
+
+                st.plotly_chart(
+                    trajectory_fig,
+                    use_container_width=True,
+                    key="analytics_trajectory",
+                )
+
+
+                # =================================================
+                # 2 + 3. ADJUSTMENT + GAP
+                # =================================================
+
+                chart_left, chart_right = (
+                    st.columns(2)
+                )
+
+
+                with chart_left:
+
+                    st.markdown(
+                        "### Adjustment by year"
+                    )
+
+
+                    adjustment_plot_df = (
+                        trade_view[
+                            [
+                                "Year",
+                                "ExportAdjustment",
+                            ]
+                        ].copy()
+                    )
+
+
+                    def _adjustment_direction(
+                        value
+                    ):
+
+                        if pd.isna(
+                            value
+                        ):
+                            return "Unavailable"
+
+                        if value > 0:
+                            return "Increase"
+
+                        if value < 0:
+                            return "Decrease"
+
+                        return "No change"
+
+
+                    adjustment_plot_df[
+                        "Direction"
+                    ] = (
+                        adjustment_plot_df[
+                            "ExportAdjustment"
+                        ]
+                        .apply(
+                            _adjustment_direction
+                        )
+                    )
+
+
+                    adjustment_fig = (
+                        px.bar(
+                            adjustment_plot_df,
+                            x="Year",
+                            y="ExportAdjustment",
+                            color="Direction",
+                            color_discrete_map={
+                                "Increase": "#2ca02c",
+                                "Decrease": "#d62728",
+                                "No change": "#7f7f7f",
+                                "Unavailable": "#f0ad4e",
+                            },
+                            labels={
+                                "ExportAdjustment": (
+                                    "Adjusted exports - "
+                                    "original exports"
+                                ),
+                            },
+                        )
+                    )
+
+
+                    adjustment_fig.update_layout(
+                        legend_title_text=(
+                            "Direction"
+                        )
+                    )
+
+
+                    st.plotly_chart(
+                        adjustment_fig,
+                        use_container_width=True,
+                        key=(
+                            "analytics_adjustment_year"
+                        ),
+                    )
+
+
+                with chart_right:
+
+                    st.markdown(
+                        "### Import-export gap"
+                    )
+
+
+                    gap_long = (
+                        trade_view[
+                            [
+                                "Year",
+                                "TradeGapBefore",
+                                "TradeGapAfter",
+                            ]
+                        ]
+                        .melt(
+                            id_vars="Year",
+                            var_name="Stage",
+                            value_name=(
+                                "Absolute gap"
+                            ),
+                        )
+                    )
+
+
+                    gap_long[
+                        "Stage"
+                    ] = (
+                        gap_long[
+                            "Stage"
+                        ]
+                        .map(
+                            {
+                                "TradeGapBefore": (
+                                    "Before adjustment"
+                                ),
+                                "TradeGapAfter": (
+                                    "After adjustment"
+                                ),
+                            }
+                        )
+                    )
+
+
+                    gap_fig = px.bar(
+                        gap_long,
+                        x="Year",
+                        y="Absolute gap",
+                        color="Stage",
+                        barmode="group",
+                        labels={
+                            "Absolute gap": (
+                                "Absolute "
+                                "import-export gap"
+                            ),
+                        },
+                    )
+
+
+                    gap_fig.update_layout(
+                        title=(
+                            "Submitted-participant "
+                            "aggregate"
+                        )
+                    )
+
+
+                    st.plotly_chart(
+                        gap_fig,
+                        use_container_width=True,
+                        key="analytics_gap",
+                    )
+
+
+                # =================================================
+                # 4. TOP PRODUCTS
+                # =================================================
+
+                st.markdown(
+                    "### Top products affected"
+                )
+
+
+                impact_count = max(
+                    5,
+                    len(
+                        product_impact
+                    ),
+                )
+
+
+                top_n = st.slider(
+                    "Number of products to show",
+                    min_value=5,
+                    max_value=min(
+                        30,
+                        impact_count,
+                    ),
+                    value=min(
+                        15,
+                        impact_count,
+                    ),
+                    key="analytics_top_n",
+                )
+
+
+                top_products = (
+                    product_impact
+                    .head(
+                        top_n
+                    )
+                    .sort_values(
+                        "AbsoluteExportAdjustment",
+                        ascending=True,
+                        na_position="first",
+                    )
+                )
+
+
+                top_fig = px.bar(
+                    top_products,
+                    x="AbsoluteExportAdjustment",
+                    y="ProductDisplay",
+                    orientation="h",
+                    labels={
+                        "AbsoluteExportAdjustment": (
+                            "Absolute export adjustment"
+                        ),
+                        "ProductDisplay": (
+                            "Product"
+                        ),
+                    },
+                )
+
+
+                st.plotly_chart(
+                    top_fig,
+                    use_container_width=True,
+                    key=(
+                        "analytics_top_products"
+                    ),
+                )
+
+
+                # =================================================
+                # 5. HEATMAP
+                # =================================================
+
+                st.markdown(
+                    "### Product × Year adjustment heatmap"
+                )
+
+
+                heatmap_product_keys = set(
+                    product_impact
+                    .head(
+                        top_n
+                    )[
+                        "Product"
+                    ]
+                    .astype(str)
+                )
+
+
+                heatmap_df = (
+                    pathway_df[
+                        pathway_df[
+                            "Product"
+                        ]
+                        .astype(str)
+                        .isin(
+                            heatmap_product_keys
+                        )
+                    ]
+                    .copy()
+                )
+
+
+                heatmap_pivot = (
+                    heatmap_df
+                    .pivot_table(
+                        index="ProductDisplay",
+                        columns="Year",
+                        values=(
+                            "ExportAdjustment"
+                        ),
+                        aggfunc=(
+                            lambda values:
+                            values.sum(
+                                min_count=1
+                            )
+                        ),
+                    )
+                )
+
+
+                if not heatmap_pivot.empty:
+
+                    heatmap_fig = (
+                        go.Figure(
+                            data=go.Heatmap(
+                                z=(
+                                    heatmap_pivot
+                                    .values
+                                ),
+                                x=[
+                                    int(
+                                        value
+                                    )
+                                    for value
+                                    in heatmap_pivot.columns
+                                ],
+                                y=list(
+                                    heatmap_pivot.index
+                                ),
+                                colorscale="RdBu",
+                                zmid=0,
+                                colorbar={
+                                    "title": (
+                                        "Export adjustment"
+                                    )
+                                },
+                                hovertemplate=(
+                                    "Product: %{y}<br>"
+                                    "Year: %{x}<br>"
+                                    "Adjustment: "
+                                    "%{z:,.2f}"
+                                    "<extra></extra>"
+                                ),
+                            )
+                        )
+                    )
+
+
+                    heatmap_fig.update_layout(
+                        xaxis_title="Year",
+                        yaxis_title="Product",
+                        height=max(
+                            450,
+                            (
+                                24
+                                * len(
+                                    heatmap_pivot.index
+                                )
+                                + 180
+                            ),
+                        ),
+                    )
+
+
+                    st.plotly_chart(
+                        heatmap_fig,
+                        use_container_width=True,
+                        key="analytics_heatmap",
+                    )
+
+
+                else:
+
+                    st.info(
+                        "No product-year adjustment "
+                        "values are available for "
+                        "the selected scope."
+                    )
+
+
+                # =================================================
+                # 6. PATHWAY COMPARISON
+                # =================================================
+
+                st.divider()
+
+                st.markdown(
+                    "## Pathway comparison"
+                )
+
+
+                st.caption(
+                    "Compare CurrentTrends, "
+                    "GlobalSustainability and "
+                    "NationalCommitments within the "
+                    "selected iteration. The Product "
+                    "filter above also applies here."
+                )
+
+
+                pathway_metric_label = (
+                    st.selectbox(
+                        "Compare pathways by",
+                        [
+                            "Adjusted exports",
+                            "Exports before adjustment",
+                            "Export adjustment",
+                            (
+                                "Import-export gap "
+                                "after adjustment"
+                            ),
+                            "Gap reduction",
+                        ],
+                        key=(
+                            "analytics_pathway_metric"
+                        ),
+                    )
+                )
+
+
+                pathway_metric_column = {
+                    "Adjusted exports": (
+                        "ExportsAdj"
+                    ),
+                    "Exports before adjustment": (
+                        "ExportsOriginal"
+                    ),
+                    "Export adjustment": (
+                        "ExportAdjustment"
+                    ),
+                    (
+                        "Import-export gap "
+                        "after adjustment"
+                    ): (
+                        "TradeGapAfter"
+                    ),
+                    "Gap reduction": (
+                        "GapReduction"
+                    ),
+                }[
+                    pathway_metric_label
+                ]
+
+
+                if pathway_compare.empty:
+
+                    st.info(
+                        "No pathway-comparison data "
+                        "is available for the selected "
+                        "product scope."
+                    )
+
+
+                else:
+
+                    pathway_line_fig = (
+                        px.line(
+                            pathway_compare,
+                            x="Year",
+                            y=(
+                                pathway_metric_column
+                            ),
+                            color="Pathway",
+                            markers=True,
+                            color_discrete_map={
+                                "CurrentTrends": (
+                                    "#1f77b4"
+                                ),
+                                "GlobalSustainability": (
+                                    "#2ca02c"
+                                ),
+                                "NationalCommitments": (
+                                    "#9467bd"
+                                ),
+                            },
+                            labels={
+                                pathway_metric_column: (
+                                    pathway_metric_label
+                                )
+                            },
+                        )
+                    )
+
+
+                    pathway_line_fig.update_layout(
+                        title=(
+                            f"{pathway_metric_label} "
+                            "across pathways | "
+                            f"{selected_analytics_iteration} "
+                            f"| {scope_label}"
+                        ),
+                        xaxis_title="Year",
+                        yaxis_title=(
+                            pathway_metric_label
+                        ),
+                        hovermode="x unified",
+                        legend_title_text=(
+                            "Pathway"
+                        ),
+                    )
+
+
+                    if (
+                        pathway_compare[
+                            "Year"
+                        ].min()
+                        <= 2020
+                    ):
+
+                        pathway_line_fig.add_vrect(
+                            x0=float(
+                                pathway_compare[
+                                    "Year"
+                                ].min()
+                            ),
+                            x1=2020,
+                            opacity=0.08,
+                            line_width=0,
+                            annotation_text=(
+                                "Historical — unchanged"
+                            ),
+                            annotation_position=(
+                                "top left"
+                            ),
+                        )
+
+
+                    st.plotly_chart(
+                        pathway_line_fig,
+                        use_container_width=True,
+                        key=(
+                            "analytics_pathway_line"
+                        ),
+                    )
+
+
+                    # -----------------------------------------
+                    # Selected year pathway comparison
+                    # -----------------------------------------
+
+                    available_years = sorted(
+                        pathway_compare[
+                            "Year"
+                        ]
+                        .dropna()
+                        .astype(int)
+                        .unique()
+                    )
+
+
+                    selected_compare_year = (
+                        st.selectbox(
+                            (
+                                "Year for pathway "
+                                "before-vs-after comparison"
+                            ),
+                            available_years,
+                            index=(
+                                len(
+                                    available_years
+                                )
+                                - 1
+                            ),
+                            key=(
+                                "analytics_pathway_year"
+                            ),
+                        )
+                    )
+
+
+                    pathway_year = (
+                        pathway_compare[
+                            (
+                                pathway_compare[
+                                    "Year"
+                                ].astype(int)
+                                == int(
+                                    selected_compare_year
+                                )
+                            )
+                        ][
+                            [
+                                "Pathway",
+                                "ExportsOriginal",
+                                "ExportsAdj",
+                            ]
+                        ]
+                        .copy()
+                    )
+
+
+                    pathway_year = (
+                        pathway_year
+                        .melt(
+                            id_vars="Pathway",
+                            var_name="Stage",
+                            value_name="Exports",
+                        )
+                    )
+
+
+                    pathway_year[
+                        "Stage"
+                    ] = (
+                        pathway_year[
+                            "Stage"
+                        ]
+                        .map(
+                            {
+                                "ExportsOriginal": (
+                                    "Before adjustment"
+                                ),
+                                "ExportsAdj": (
+                                    "After adjustment"
+                                ),
+                            }
+                        )
+                    )
+
+
+                    pathway_bar_fig = (
+                        px.bar(
+                            pathway_year,
+                            x="Pathway",
+                            y="Exports",
+                            color="Stage",
+                            barmode="group",
+                            labels={
+                                "Exports": (
+                                    "Export quantity"
+                                )
+                            },
+                        )
+                    )
+
+
+                    pathway_bar_fig.update_layout(
+                        title=(
+                            "Exports before vs after "
+                            "by pathway | "
+                            f"{selected_compare_year} "
+                            f"| {scope_label}"
+                        ),
+                        xaxis_title="Pathway",
+                        yaxis_title=(
+                            "Submitted-participant "
+                            "export quantity"
+                        ),
+                        legend_title_text="Stage",
+                    )
+
+
+                    st.plotly_chart(
+                        pathway_bar_fig,
+                        use_container_width=True,
+                        key=(
+                            "analytics_pathway_bar"
+                        ),
+                    )
+
+
+                # =================================================
+                # 7. ITERATION COMPARISON
+                # =================================================
+
+                st.divider()
+
+                st.markdown(
+                    "## Comparison across iterations"
+                )
+
+
+                metric_label = (
+                    st.selectbox(
+                        "Iteration comparison metric",
+                        [
+                            "Adjusted exports",
+                            "Original exports",
+                            (
+                                "Absolute import-export "
+                                "gap after"
+                            ),
+                            "Export adjustment",
+                        ],
+                        key=(
+                            "analytics_compare_metric"
+                        ),
+                    )
+                )
+
+
+                metric_column = {
+                    "Adjusted exports": (
+                        "ExportsAdj"
+                    ),
+                    "Original exports": (
+                        "ExportsOriginal"
+                    ),
+                    (
+                        "Absolute import-export "
+                        "gap after"
+                    ): (
+                        "TradeGapAfter"
+                    ),
+                    "Export adjustment": (
+                        "ExportAdjustment"
+                    ),
+                }[
+                    metric_label
+                ]
+
+
+                if all_analytics.empty:
+
+                    st.info(
+                        "No published iterations "
+                        "are available for comparison yet."
+                    )
+
+
+                else:
+
+                    comparison = (
+                        all_analytics[
+                            (
+                                all_analytics[
+                                    "Pathway"
+                                ].astype(str)
+                                == selected_analytics_pathway
+                            )
+                        ]
+                        .copy()
+                    )
+
+
+                    if (
+                        selected_analytics_product
+                        != "All products"
+                    ):
+
+                        comparison = (
+                            comparison[
+                                (
+                                    comparison[
+                                        "ProductDisplay"
+                                    ].astype(str)
+                                    == selected_analytics_product
+                                )
+                            ]
+                            .copy()
+                        )
+
+
+                    comparison = (
+                        comparison
+                        .groupby(
+                            [
+                                "Iteration",
+                                "Year",
+                            ],
+                            as_index=False,
+                        )[
+                            metric_column
+                        ]
+                        .sum(
+                            min_count=1
+                        )
+                    )
+
+
+                    if comparison.empty:
+
+                        st.info(
+                            "No comparable published data "
+                            "exists for the selected filters."
+                        )
+
+
+                    else:
+
+                        comparison_fig = (
+                            px.line(
+                                comparison,
+                                x="Year",
+                                y=metric_column,
+                                color="Iteration",
+                                markers=True,
+                                labels={
+                                    metric_column: (
+                                        metric_label
+                                    )
+                                },
+                            )
+                        )
+
+
+                        comparison_fig.update_layout(
+                            hovermode="x unified",
+                            legend_title_text=(
+                                "Iteration"
+                            ),
+                            title=(
+                                f"{selected_analytics_pathway} "
+                                f"| {scope_label}"
+                            ),
+                        )
+
+
+                        st.plotly_chart(
+                            comparison_fig,
+                            use_container_width=True,
+                            key=(
+                                "analytics_iteration_compare"
+                            ),
+                        )
+
+
+                # =================================================
+                # FOOTNOTE
+                # =================================================
+
+                st.caption(
+                    "Historical years through 2020 are expected "
+                    "to remain unchanged under the validated "
+                    "trade-adjustment method. Charts aggregate "
+                    "the participants included in the selected "
+                    "published run; they are not labelled global "
+                    "unless the configured coverage itself "
+                    "represents the full intended global set."
+                )
+
+
+# ============================================================
+# 16. ADMIN
 # ============================================================
 
 with admin_tab:
@@ -2558,8 +4682,7 @@ with admin_tab:
                             try:
 
                                 with st.spinner(
-                                    "Running global trade "
-                                    "adjustment..."
+                                    "Running trade adjustment..."
                                 ):
 
                                     run_result = (
@@ -2569,11 +4692,22 @@ with admin_tab:
                                     )
 
 
-                                st.success(
-                                    "Trade adjustment completed "
-                                    "and participant result files "
-                                    "were published."
-                                )
+                                if run_result.get("status") == "FINAL":
+
+                                    st.success(
+                                        "FINAL trade adjustment completed. "
+                                        "Participant result files and the "
+                                        "analytics dataset were published."
+                                    )
+
+                                else:
+
+                                    st.warning(
+                                        "PROVISIONAL trade adjustment completed. "
+                                        "Participant result files and the analytics "
+                                        "dataset were published, but QA blockers "
+                                        "and/or incomplete coverage require review."
+                                    )
 
 
                                 r1, r2, r3, r4 = (
@@ -2629,9 +4763,11 @@ with admin_tab:
                                     st.warning(
                                         f"Engine completed with "
                                         f"{len(blockers)} QA "
-                                        "blocker(s). Rows affected "
-                                        "by a blocker can have a "
-                                        "blank ExportsAdj value."
+                                        "blocker(s). Blocker-affected "
+                                        "product/pathway/year cases can "
+                                        "have blank ExportsAdj values; "
+                                        "treat the published run and its "
+                                        "analytics as provisional."
                                     )
 
 
@@ -2838,3 +4974,543 @@ with admin_tab:
                     st.info(
                         "No iterations exist yet."
                     )
+
+
+                # FABLE_FULL_APP_DATA_RESET_DANGER_ZONE_V1
+                # =================================================
+                # DANGER ZONE — RESET ALL RUNTIME APP DATA
+                # =================================================
+
+                st.divider()
+
+                # -------------------------------------------------
+                # CSS:
+                # Only forms containing our special marker get
+                # red destructive-action styling.
+                # Other buttons in the application are untouched.
+                # -------------------------------------------------
+
+                st.markdown(
+                    """
+                    <style>
+
+                    div[data-testid="stForm"]:has(
+                        .fable-danger-zone-marker
+                    ) {
+                        border: 1px solid rgba(220, 38, 38, 0.70);
+                        border-radius: 12px;
+                        padding: 1rem;
+                        background:
+                            rgba(220, 38, 38, 0.045);
+                    }
+
+                    div[data-testid="stForm"]:has(
+                        .fable-danger-zone-marker
+                    )
+                    button[kind="primary"] {
+                        background-color:
+                            #b91c1c !important;
+                        border-color:
+                            #b91c1c !important;
+                        color:
+                            white !important;
+                    }
+
+                    div[data-testid="stForm"]:has(
+                        .fable-danger-zone-marker
+                    )
+                    button[kind="primary"]:hover {
+                        background-color:
+                            #991b1b !important;
+                        border-color:
+                            #991b1b !important;
+                    }
+
+                    .fable-danger-title {
+                        color: #b91c1c;
+                        font-weight: 800;
+                        font-size: 1.12rem;
+                        letter-spacing: 0.03em;
+                        margin-bottom: 0.35rem;
+                    }
+
+                    .fable-danger-warning {
+                        color: #b91c1c;
+                        font-weight: 750;
+                        line-height: 1.45;
+                    }
+
+                    </style>
+                    """,
+                    unsafe_allow_html=True,
+                )
+
+
+                # -------------------------------------------------
+                # Put destructive controls at the lower-right side
+                # of the Storage page.
+                # -------------------------------------------------
+
+                danger_spacer, danger_column = (
+                    st.columns(
+                        [1.55, 1.0]
+                    )
+                )
+
+
+                with danger_column:
+
+                    st.markdown(
+                        """
+                        <div class="fable-danger-title">
+                            DANGER ZONE
+                        </div>
+
+                        <div class="fable-danger-warning">
+                            DO NOT TOUCH THIS UNLESS THE SYSTEM
+                            IS NOT WORKING OR YOU INTENTIONALLY
+                            WANT TO RESET ALL RUNTIME DATA.
+                        </div>
+                        """,
+                        unsafe_allow_html=True,
+                    )
+
+                    st.caption(
+                        "This is a destructive administrator "
+                        "maintenance action."
+                    )
+
+
+                    st.warning(
+                        "A complete reset permanently removes "
+                        "the CURRENT runtime data used by the app."
+                    )
+
+
+                    st.markdown(
+                        """
+                        **The reset removes:**
+
+                        - all iteration configurations
+                        - all submitted SCENATHON reports
+                        - all participant result CSV files
+                        - all analytics files
+                        - all run summaries
+                        - all stale markers
+                        - any other files stored under the
+                          configured runtime storage folder
+
+                        **The reset does NOT remove:**
+
+                        - Streamlit application code
+                        - notebooks
+                        - backend code
+                        - Excel add-in code
+                        - Streamlit secrets
+                        """
+                    )
+
+
+                    # ---------------------------------------------
+                    # Extra protection:
+                    # Never allow this bulk reset when runtime
+                    # storage accidentally points to main/master.
+                    # ---------------------------------------------
+
+                    runtime_branch_is_safe = (
+                        GITHUB_BRANCH
+                        .strip()
+                        .casefold()
+                        not in {
+                            "main",
+                            "master",
+                        }
+                    )
+
+
+                    if not runtime_branch_is_safe:
+
+                        st.error(
+                            "FULL RESET IS DISABLED because the "
+                            f"configured storage branch is "
+                            f"`{GITHUB_BRANCH}`. "
+                            "Use a dedicated runtime branch such "
+                            "as `app-data` before enabling this "
+                            "maintenance action."
+                        )
+
+
+                    else:
+
+                        st.caption(
+                            "Runtime branch: "
+                            f"`{GITHUB_BRANCH}`"
+                        )
+
+                        st.caption(
+                            "Runtime storage root: "
+                            f"`{STORAGE_ROOT}/`"
+                        )
+
+
+                    # =============================================
+                    # FIRST STEP — OPEN CONFIRMATION
+                    # =============================================
+
+                    with st.form(
+                        "fable_open_full_reset_form",
+                        border=True,
+                    ):
+
+                        st.markdown(
+                            '<div class="fable-danger-zone-marker">'
+                            '</div>',
+                            unsafe_allow_html=True,
+                        )
+
+                        open_full_reset = (
+                            st.form_submit_button(
+                                "RESET APP DATA",
+                                type="primary",
+                                use_container_width=True,
+                                disabled=(
+                                    not runtime_branch_is_safe
+                                ),
+                            )
+                        )
+
+
+                    if open_full_reset:
+
+                        st.session_state[
+                            "fable_show_full_reset_confirmation"
+                        ] = True
+
+
+                    # =============================================
+                    # SECOND STEP — STRONG CONFIRMATION
+                    # =============================================
+
+                    if st.session_state.get(
+                        "fable_show_full_reset_confirmation",
+                        False,
+                    ):
+
+                        st.error(
+                            "FINAL CONFIRMATION REQUIRED"
+                        )
+
+                        st.write(
+                            "After a successful reset, the app "
+                            "will behave like a fresh installation "
+                            "with no iterations, submissions, "
+                            "results or analytics."
+                        )
+
+
+                        with st.form(
+                            "fable_full_reset_confirmation_form",
+                            clear_on_submit=False,
+                            border=True,
+                        ):
+
+                            st.markdown(
+                                '<div '
+                                'class="fable-danger-zone-marker">'
+                                '</div>',
+                                unsafe_allow_html=True,
+                            )
+
+
+                            reset_admin_password = (
+                                st.text_input(
+                                    "Re-enter admin password",
+                                    type="password",
+                                    key=(
+                                        "fable_reset_admin_password"
+                                    ),
+                                )
+                            )
+
+
+                            reset_confirmation_phrase = (
+                                st.text_input(
+                                    "Type exactly: RESET APP DATA",
+                                    key=(
+                                        "fable_reset_confirmation_phrase"
+                                    ),
+                                )
+                            )
+
+
+                            reset_acknowledged = (
+                                st.checkbox(
+                                    "I understand that all current "
+                                    "runtime app data will be "
+                                    "permanently removed from the "
+                                    "current GitHub branch state.",
+                                    key=(
+                                        "fable_reset_acknowledged"
+                                    ),
+                                )
+                            )
+
+
+                            reset_cancel_col, reset_confirm_col = (
+                                st.columns(
+                                    [1, 1.65]
+                                )
+                            )
+
+
+                            with reset_cancel_col:
+
+                                cancel_full_reset = (
+                                    st.form_submit_button(
+                                        "Cancel",
+                                        use_container_width=True,
+                                    )
+                                )
+
+
+                            with reset_confirm_col:
+
+                                permanently_reset = (
+                                    st.form_submit_button(
+                                        "PERMANENTLY RESET APP DATA",
+                                        type="primary",
+                                        use_container_width=True,
+                                        disabled=(
+                                            not reset_acknowledged
+                                            or (
+                                                reset_confirmation_phrase
+                                                .strip()
+                                                != "RESET APP DATA"
+                                            )
+                                            or (
+                                                not runtime_branch_is_safe
+                                            )
+                                        ),
+                                    )
+                                )
+
+
+                        # -----------------------------------------
+                        # CANCEL
+                        # -----------------------------------------
+
+                        if cancel_full_reset:
+
+                            st.session_state[
+                                "fable_show_full_reset_confirmation"
+                            ] = False
+
+                            st.session_state.pop(
+                                "fable_reset_admin_password",
+                                None,
+                            )
+
+                            st.session_state.pop(
+                                "fable_reset_confirmation_phrase",
+                                None,
+                            )
+
+                            st.session_state.pop(
+                                "fable_reset_acknowledged",
+                                None,
+                            )
+
+                            st.rerun()
+
+
+                        # -----------------------------------------
+                        # PERMANENT RESET
+                        # -----------------------------------------
+
+                        if permanently_reset:
+
+                            if (
+                                reset_admin_password
+                                != ADMIN_PASSWORD
+                            ):
+
+                                st.error(
+                                    "Incorrect admin password. "
+                                    "Nothing was deleted."
+                                )
+
+
+                            elif (
+                                reset_confirmation_phrase.strip()
+                                != "RESET APP DATA"
+                            ):
+
+                                st.error(
+                                    "Confirmation phrase is "
+                                    "incorrect. Nothing was deleted."
+                                )
+
+
+                            elif not reset_acknowledged:
+
+                                st.error(
+                                    "You must acknowledge the "
+                                    "destructive reset first."
+                                )
+
+
+                            elif not runtime_branch_is_safe:
+
+                                st.error(
+                                    "Reset blocked because the "
+                                    "runtime storage branch is "
+                                    "main/master."
+                                )
+
+
+                            else:
+
+                                try:
+
+                                    with st.status(
+                                        "Resetting runtime app data...",
+                                        expanded=True,
+                                    ) as reset_status:
+
+                                        reset_status.write(
+                                            "Connected to "
+                                            f"`{GITHUB_OWNER}/"
+                                            f"{GITHUB_REPO}`."
+                                        )
+
+                                        reset_status.write(
+                                            "Runtime branch: "
+                                            f"`{GITHUB_BRANCH}`"
+                                        )
+
+                                        reset_status.write(
+                                            "Deleting all current "
+                                            "runtime files under "
+                                            f"`{STORAGE_ROOT}/`..."
+                                        )
+
+
+                                        # ---------------------------------
+                                        # Existing helper recursively
+                                        # deletes every file beneath
+                                        # STORAGE_ROOT.
+                                        # ---------------------------------
+
+                                        deleted_file_count = (
+                                            github_delete_tree(
+                                                STORAGE_ROOT
+                                            )
+                                        )
+
+
+                                        reset_status.write(
+                                            "Deleted current runtime "
+                                            "files: "
+                                            f"{deleted_file_count}"
+                                        )
+
+                                        reset_status.update(
+                                            label=(
+                                                "Runtime app data "
+                                                "reset completed"
+                                            ),
+                                            state="complete",
+                                            expanded=True,
+                                        )
+
+
+                                    st.success(
+                                        "All current runtime app data "
+                                        "was cleared successfully. "
+                                        "The application is now in a "
+                                        "fresh state."
+                                    )
+
+
+                                    st.info(
+                                        "Application code, notebooks, "
+                                        "backend, add-in and secrets "
+                                        "were not deleted."
+                                    )
+
+
+                                    st.warning(
+                                        "This reset removes files from "
+                                        "the CURRENT GitHub branch state. "
+                                        "Older file versions can still "
+                                        "exist in Git commit history. "
+                                        "A separate Git history cleanup "
+                                        "is required if you later want "
+                                        "to reclaim repository storage "
+                                        "used by old commits."
+                                    )
+
+
+                                    # Clean confirmation state
+
+                                    st.session_state[
+                                        "fable_show_full_reset_confirmation"
+                                    ] = False
+
+                                    st.session_state.pop(
+                                        "fable_reset_admin_password",
+                                        None,
+                                    )
+
+                                    st.session_state.pop(
+                                        "fable_reset_confirmation_phrase",
+                                        None,
+                                    )
+
+                                    st.session_state.pop(
+                                        "fable_reset_acknowledged",
+                                        None,
+                                    )
+
+
+                                    # Clear Analytics UI state so old
+                                    # filters/results do not survive
+                                    # after the storage reset.
+
+                                    analytics_state_keys = [
+                                        key
+                                        for key
+                                        in list(
+                                            st.session_state.keys()
+                                        )
+                                        if str(key).startswith(
+                                            "analytics_"
+                                        )
+                                    ]
+
+                                    for key in analytics_state_keys:
+
+                                        st.session_state.pop(
+                                            key,
+                                            None,
+                                        )
+
+
+                                    st.rerun()
+
+
+                                except Exception as exc:
+
+                                    st.error(
+                                        "Full runtime-data reset "
+                                        "failed before completion: "
+                                        f"{exc}"
+                                    )
+
+                                    st.warning(
+                                        "Some files may already have "
+                                        "been deleted before the error. "
+                                        "Check Admin -> Storage and "
+                                        "GitHub before retrying."
+                                    )
+
