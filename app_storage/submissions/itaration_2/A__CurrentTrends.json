@@ -1,0 +1,7095 @@
+{
+  "iteration": "itaration 2",
+  "username": "Davide",
+  "participant": "A",
+  "pathway": "CurrentTrends",
+  "submitted_at_utc": "2026-10-05T12:18:20.625430+00:00",
+  "row_count": 1012,
+  "report_hash": "0ae35f4d21c37855605a5f1af5723efab17b64c5ebd9c87fdbd67c42a67ba958",
+  "rows": [
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 175.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 297.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 355.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 381.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 706.6595650507
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 704.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 704.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 704.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 704.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 704.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 704.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 84.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 118.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 201.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 219.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 171.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 176.2051700266,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 180.6424323176,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 185.1985210677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 189.1335538223,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 192.4296695204,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 194.7669787572,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 147.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 234.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 429.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 501.6464927752,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 2157.1871798528,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 2221.7124164939,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 2276.5661241645,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 2333.6138549898,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 2383.9696008944,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 2427.4402102402,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 2460.1236182053,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 28.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 19.5783522252,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 20.0713813686,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 20.577613452,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 21.0148393136,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 21.3810743912,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 21.6407754175,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.9994809344
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 49.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 18.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 3.0913187724,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 3.1691654793,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 3.2490968608,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 3.3181325232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 3.3759591144,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 3.4169645396,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 491.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 1.0304395908,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 1.0563884931,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 1.0830322869,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 1.1060441744,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 1.1253197048,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 1.1389881799,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 12.5214292486,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 2.129773208,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 46.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 343.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 514.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 22.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 34.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 120.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 86.5569256271,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 88.7366334192,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 90.9747121034,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 92.9077106495,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 94.526855203,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 95.6750071088,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 41.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 53.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 74.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 73.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 75.2220901283,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 77.1163599952,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 79.061356947,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 80.7412247312,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 82.1483384502,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 83.1461371302,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 23.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 21.6392314068,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 22.1841583548,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 22.7436780259,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 23.2269276624,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 23.6317138008,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 23.9187517772,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 17.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 87.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 89.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 196.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 178.2660492082,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 182.7552093037,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 187.3645856416,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 191.3456421711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 194.68030893,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 197.0449551169,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 1266.2337651667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 72.6129265553,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 1142.0306939348,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 2250.447737216,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 3498.3133922951,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 4238.0918005312,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 4958.2213553111,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 5708.9469082238,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 6466.706475475,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 7224.7429343224,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 7964.3800984473,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 43.9163155417,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 539.269,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 737.238,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 24.6905498049,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 14.9964632435,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 155.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 171.4129103225,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 119.0719804537,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 0.8265186087,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 1.2346796268,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 1.6257394494,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 1.9047764662,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 2.1969201946,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 2.4928884209,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 2.7899664223,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 3.0805682206,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 37.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 38.1262648596,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 39.0863742442,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 40.072194617,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 40.9236344528,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 41.6368290775,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 42.1425626551,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.9931066245
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 214.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 214.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 212.9245565855
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 210.8400923712
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 207.9044138152
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 204.2511504063
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 200.0034997385
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 195.3073614804
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 0.006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 0.31,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 0.28,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 0.28,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 0.28,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 0.2885230854,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 0.2957887781,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 0.3032490403,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 0.3096923688,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 0.3150895173,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 0.3189166904,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 2.873,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 1.402,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 1.442,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 1.442,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 1.442,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 1.4858938899,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 1.523312207,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 1.5617325578,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 1.5949156995,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 1.6227110143,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 1.6424209554,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 490.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 694.9478126953
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 939.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1029.4151789588
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.7031785943
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1545.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 901.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1135.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1080.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1062.0322326411
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 86.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 150.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 150.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 184.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 28.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 17.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 17.5174730436,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 17.9586043824,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 18.4115488781,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 18.8027509648,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 19.1304349816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 19.3627990577,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 0.07,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 0.013,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 0.013,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 0.013,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 0.0133957147,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 0.0137330504,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 0.0140794197,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 0.0143785743,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 0.0146291562,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 0.0148068463,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 165.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 353.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 424.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 468.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0226468475
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 466.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 79.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 54.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 157.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 80.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 11.3348354988,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 11.6202734239,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 11.9133551564,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 12.1664859184,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 12.3785167528,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 12.5288699785,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.9995827553
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 284.3502686021
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 350.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 397.6472826087
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 324.6049196119
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 314.8462835896
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 339.0833333333
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 365.1666666667
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 391.25
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 417.3333333333
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 443.4166666667
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 469.5
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 7.2130771356,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 7.3947194516,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 7.5812260086,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 7.7423092208,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 7.8772379336,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 7.9729172591,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 5.9791983765,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 188.0626224172,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 23.3553571429,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 23.5069031651,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 24.0988624985,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 24.706674046,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 25.2316327285,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 25.6713557657,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 25.9831678532,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 56.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 67.6465241346
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 62.0166932933
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 71.7111051465
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.4045020838
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.3994287724
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.394441583
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.390304344
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.3869536602
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.3846383283
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 94.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.0602095239
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0519646066
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.2796337537
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.1493673602
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.8549130443
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.5525254282
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.29132048
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0725015895
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.9173217534
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 181.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 130.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 96.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 220.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 247.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 390.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 633.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 849.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1095.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 1080.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 1129.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 1143.7879457866,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 1172.5912273246,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 1202.1658385098,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 1227.7090335833,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 1249.1048723256,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 1264.2768796517,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 32.148,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 46.445,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 208.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 440.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 410.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 616.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 626.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 639.902985886,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 656.0172542059,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 672.5630501933,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 686.853432302,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 698.8235366795,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 707.311659697,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 0.863,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 130.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 100.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 85.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 72.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 74.1916505375,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 76.0599715021,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 77.9783246601,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 79.6351805568,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 81.0230187454,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 82.0071489504,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 17.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 16.4870334528,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 16.9022158894,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 17.3285165911,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 17.6967067904,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 18.0051152768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 18.2238108779,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 5.152197954,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 5.2819424654,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 5.4151614347,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 5.530220872,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 5.626598524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 5.6949408993,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 17.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 24.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 34.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 32.9740669056,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 33.8044317787,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 34.6570331823,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 35.3934135808,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 36.0102305535,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 36.4476217557,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 100.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.0283043941
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 107.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.4682208434
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 169.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 81.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 177.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 155.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 159.7181365738,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 163.7402164282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 167.8700044766,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 171.4368470319,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 174.4245542437,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 176.5431678793,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 2.2461480624,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 26.3126571715,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 61.640992152,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 41.4644317892,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 13.26611476,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 16.0774747019,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 16.7456459466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 17.4317103718,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 18.0242550694,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 18.5205904609,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 18.872546965,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 42.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.1698862228
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.6391136035
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.608982414
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.5780442883
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.5513234089
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.5289410784
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.5130695271
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 21.6067966102,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 69.103440678,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 270.5966811607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 250.0700656651,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 21.5668154705,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 22.0500098523,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 22.5461438066,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 22.9746480497,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 23.3335776064,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 23.5880982134,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 535.268490024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 418.319072087,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 533.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 348.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 462.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 476.063090949,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 488.0514838054,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 500.3609165689,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 510.9924085725,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 519.8977036166,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 526.2125390983,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 70.916,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 130.373,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 66.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 19.1225198413,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 81.5444444444,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 98.2038902439,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 121.9460685484,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 186.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 191.6617638886,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 196.4882597139,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 201.4440053719,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 205.7242164383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 209.3094650924,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 211.8518014551,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.558,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.288,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 16.6751890856,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 388.7587461119,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 786.6310944228,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 1784.8235357622,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 2640.9440248501,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 3211.6524831971,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 3239.1457669682,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 3228.0248423111,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 3213.2925868234,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 3183.118541799,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 3138.3784964375,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 3075.3965286803,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 534.1859990039,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 324.1546824269,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 259.8660306429,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 380.2221445564,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 461.7636883389,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 596.17489564,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 688.1252669601,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 783.4890483199,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 879.1761171196,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 974.3772407866,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 1066.7958747103,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 130.8334952184,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 166.6922040231,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 79.9216232732
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 251.9095805544
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 251.7665425432
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 239.5840855953
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 226.5949418305
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 212.0822314136
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 196.259078291
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 179.0950964977
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.503875969
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.5291613453
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 53.3227754355,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 19.7586212907,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 3.0913187724,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 3.1691654793,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 3.2490968608,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 3.3181325232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 3.3759591144,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 3.4169645396,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 651.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 84.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 188.9826849397
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9534958133
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 277.6296228515,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 277.2734714747,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 408.8515004369,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 549.8608171265,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 769.0969111624,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 964.8563302714,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 989.1536911824,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 1014.1017166643,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 1035.6489917102,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 1053.6977135279,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 1066.4962461278,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 39.092179992,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 164.2971945708,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 147.7755606844,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 180.6067337862,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 149.6859019074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 184.371242668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 189.0141459523,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 193.7813826029,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 197.8987809675,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 201.3476522302,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 203.7932819947,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 524.9234925891,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 490.2624958446,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 622.3538629583,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 307.342380659,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 1095.0595457336,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 1186.020317451,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 1389.585268388,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 1602.7119152678,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 1818.6286354311,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 2035.3549660878,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 2247.3567337732,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 18.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 18.5479126344,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 19.0149928755,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 19.494581165,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 19.9087951392,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 20.2557546864,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 20.5017872376,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.619
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.246
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.066
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 31.23768
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.33652
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 706.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 795.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 965.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 949.0398352066
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1375.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 233.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 539.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 662.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 680.1781930079
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.4287592291
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 988.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1418.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3143.2487358015
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 1784.1726154834,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 7777.6615141305,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 12398.4111379563,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 14455.7976603102,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 16500.3114521264,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 18632.3118331964,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 20776.4513959543,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 22913.9815315185,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 24988.6082721207,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Türkiye",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ]
+}
