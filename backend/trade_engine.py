@@ -66,15 +66,9 @@ _EXCLUDED_PRODUCTS_RAW = (
 )
 EXCLUDED_PRODUCTS = frozenset(x.strip().casefold() for x in _EXCLUDED_PRODUCTS_RAW)
 
-PATHWAYS = (
-    "CurrentTrends",
-    "GlobalSustainability",
-    "NationalCommitments",
-)
-_PATHWAY_BY_KEY = {
-    "".join(ch for ch in p.casefold() if ch.isalnum()): p
-    for p in PATHWAYS
-}
+# Pathway names are configured by the Streamlit iteration.
+# The trade engine treats pathway as a grouping label and does
+# not enforce a fixed global list.
 
 
 class TradeEngineError(ValueError):
@@ -109,17 +103,26 @@ def canonical_product(value: Any) -> str:
 
 
 def canonical_pathway(value: Any) -> str:
-    """Return one of the three canonical pathway names."""
+    """
+    Normalize an admin-configured pathway name.
+
+    Pathway names are intentionally not hardcoded in the engine.
+    The Streamlit iteration configuration defines which pathways
+    are valid for a given iteration.
+
+    The engine only needs a stable grouping label.
+    """
     if value is None:
         raise SubmissionValidationError("Pathway is blank.")
+
     raw = str(value).strip()
-    key = "".join(ch for ch in raw.casefold() if ch.isalnum())
-    try:
-        return _PATHWAY_BY_KEY[key]
-    except KeyError as exc:
-        raise SubmissionValidationError(
-            f"Unknown pathway {raw!r}. Expected one of: {', '.join(PATHWAYS)}."
-        ) from exc
+
+    if not raw:
+        raise SubmissionValidationError("Pathway is blank.")
+
+    # Collapse repeated internal whitespace while preserving
+    # the admin-selected display name/casing.
+    return " ".join(raw.split())
 
 
 def _required_text(value: Any, field: str) -> str:
