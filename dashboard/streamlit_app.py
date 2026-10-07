@@ -51,6 +51,37 @@ LOGO_PATH = (
     / "fable-logo-full.png"
 )
 
+
+# ============================================================
+# Production fixture mode
+#
+# Local development fixtures are disabled in production.
+# These helpers remain only so historical fixture-aware UI
+# branches can safely evaluate without affecting runtime data.
+# ============================================================
+
+LOCAL_GLOBAL_FIXTURE_ITERATION = "__LOCAL_FIXTURE_DISABLED__"
+
+
+def local_global_fixture_enabled():
+
+    return False
+
+
+def local_global_fixture_config():
+
+    return {
+        "iteration": LOCAL_GLOBAL_FIXTURE_ITERATION,
+        "participants": [],
+        "pathways": [],
+    }
+
+
+def load_local_global_fixture_payloads():
+
+    return []
+
+
 DEFAULT_PATHWAYS = [
     "CurrentTrends",
     "GlobalSustainability",
