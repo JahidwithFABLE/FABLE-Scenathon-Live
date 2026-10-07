@@ -5369,7 +5369,7 @@ with analytics_tab:
                                 title
                             )
                         ),
-                        height=560,
+                        height=620,
                         template="plotly_white",
                         barmode="relative",
                         font=dict(
@@ -5383,8 +5383,8 @@ with analytics_tab:
                         margin=dict(
                             l=10,
                             r=10,
-                            t=75,
-                            b=60,
+                            t=70,
+                            b=145,
                         ),
                         bargap=0.42,
                         legend_title_text="",
@@ -5393,10 +5393,10 @@ with analytics_tab:
                         ),
                         legend=dict(
                             orientation="h",
-                            yanchor="bottom",
-                            y=1.02,
-                            xanchor="left",
-                            x=0,
+                            yanchor="top",
+                            y=-0.18,
+                            xanchor="center",
+                            x=0.5,
                             font=dict(
                                 size=9,
                                 color="#374151",
@@ -5490,6 +5490,818 @@ with analytics_tab:
                         ),
                     )
                 )
+
+
+                # =================================================
+                # OPTIONAL BEFORE / AFTER COMPARISON
+                # =================================================
+
+                def gt_compare_stage_payloads(
+                    stage_name,
+                ):
+
+                    payloads = (
+                        list_submission_payloads(
+                            gt_iteration,
+                            stage=stage_name,
+                        )
+                    )
+
+
+                    return [
+                        payload
+                        for payload
+                        in payloads
+                        if (
+                            str(
+                                payload.get(
+                                    "pathway",
+                                    "",
+                                )
+                            )
+                            .strip()
+                            .casefold()
+                            ==
+                            str(
+                                gt_pathway
+                            )
+                            .strip()
+                            .casefold()
+                        )
+                    ]
+
+
+                gt_compare_before_payloads = (
+                    gt_compare_stage_payloads(
+                        "before"
+                    )
+                )
+
+
+                gt_compare_after_payloads = (
+                    gt_compare_stage_payloads(
+                        "after"
+                    )
+                )
+
+
+                gt_compare_available = (
+                    bool(
+                        gt_compare_before_payloads
+                    )
+                    and bool(
+                        gt_compare_after_payloads
+                    )
+                )
+
+
+                gt_compare_enabled = False
+
+
+                if gt_compare_available:
+
+                    gt_compare_enabled = (
+                        st.checkbox(
+                            "Compare Before and After trade adjustment",
+                            value=False,
+                            key=(
+                                "gt_compare_before_after"
+                            ),
+                            help=(
+                                "Show paired Before and After bars "
+                                "for this iteration and pathway."
+                            ),
+                        )
+                    )
+
+
+                if gt_compare_enabled:
+
+
+                    def gt_compare_result(
+                        payloads,
+                    ):
+
+                        aggregate_df = (
+                            aggregate_rows_from_submissions(
+                                payloads,
+                                pathway=gt_pathway,
+                            )
+                        )
+
+
+                        submitted_regions = [
+                            payload.get(
+                                "participant",
+                                "",
+                            )
+                            for payload
+                            in payloads
+                        ]
+
+
+                        return (
+                            calculate_global_targets_with_coverage(
+                                aggregate_df,
+                                expected_regions=(
+                                    gt_expected_participants
+                                ),
+                                submitted_regions=(
+                                    submitted_regions
+                                ),
+                            )
+                        )
+
+
+                    gt_before_compare_result = (
+                        gt_compare_result(
+                            gt_compare_before_payloads
+                        )
+                    )
+
+
+                    gt_after_compare_result = (
+                        gt_compare_result(
+                            gt_compare_after_payloads
+                        )
+                    )
+
+
+                    gt_compare_results = {
+                        "Before trade adjustment": (
+                            gt_before_compare_result
+                        ),
+                        "After trade adjustment": (
+                            gt_after_compare_result
+                        ),
+                    }
+
+
+                    # -----------------------------------------
+                    # FOOD SECURITY PAIRED VERTICAL BARS
+                    # -----------------------------------------
+
+                    gt_compare_food_rows = []
+
+                    margin_column = (
+                        f"Margin_{gt_year}_pct"
+                    )
+
+
+                    for stage_label, result in (
+                        gt_compare_results.items()
+                    ):
+
+                        detail_df = (
+                            result[
+                                "food_security"
+                            ][
+                                "detail"
+                            ]
+                            .copy()
+                        )
+
+
+                        if (
+                            detail_df.empty
+                            or margin_column
+                            not in detail_df.columns
+                        ):
+
+                            continue
+
+
+                        for _, row in (
+                            detail_df.iterrows()
+                        ):
+
+                            gt_compare_food_rows.append(
+                                {
+                                    "Location": (
+                                        plain_text_label(
+                                            row.get(
+                                                "Location",
+                                                "",
+                                            )
+                                        )
+                                    ),
+                                    "Margin": (
+                                        pd.to_numeric(
+                                            pd.Series(
+                                                [
+                                                    row.get(
+                                                        margin_column
+                                                    )
+                                                ]
+                                            ),
+                                            errors="coerce",
+                                        ).iloc[
+                                            0
+                                        ]
+                                    ),
+                                    "Stage": (
+                                        stage_label
+                                    ),
+                                }
+                            )
+
+
+                    gt_compare_food_df = (
+                        pd.DataFrame(
+                            gt_compare_food_rows
+                        )
+                    )
+
+
+                    if not gt_compare_food_df.empty:
+
+                        gt_compare_food_df = (
+                            gt_compare_food_df.dropna(
+                                subset=[
+                                    "Margin"
+                                ]
+                            )
+                        )
+
+
+                        gt_compare_location_order = (
+                            gt_compare_food_df.groupby(
+                                "Location"
+                            )[
+                                "Margin"
+                            ]
+                            .mean()
+                            .sort_values(
+                                ascending=False
+                            )
+                            .index
+                            .tolist()
+                        )
+
+
+                        gt_food_fig = (
+                            px.bar(
+                                gt_compare_food_df,
+                                x="Location",
+                                y="Margin",
+                                color="Stage",
+                                barmode="group",
+                                category_orders={
+                                    "Location": (
+                                        gt_compare_location_order
+                                    ),
+                                    "Stage": [
+                                        "Before trade adjustment",
+                                        "After trade adjustment",
+                                    ],
+                                },
+                                title=(
+                                    "Food security margin - "
+                                    f"{gt_year}"
+                                ),
+                                labels={
+                                    "Margin": (
+                                        "Food security margin (%)"
+                                    ),
+                                    "Stage": (
+                                        ""
+                                    ),
+                                },
+                            )
+                        )
+
+
+                        gt_food_fig.add_hrect(
+                            y0=10,
+                            y1=50,
+                            opacity=0.06,
+                            line_width=0,
+                        )
+
+
+                        gt_food_fig.add_hline(
+                            y=10,
+                            line_dash="dash",
+                            line_width=2,
+                            annotation_text="10%",
+                            annotation_position=(
+                                "bottom right"
+                            ),
+                        )
+
+
+                        gt_food_fig.add_hline(
+                            y=50,
+                            line_dash="dash",
+                            line_width=2,
+                            annotation_text="50%",
+                            annotation_position=(
+                                "top right"
+                            ),
+                        )
+
+
+                        gt_food_fig.update_layout(
+                            height=610,
+                            template="plotly_white",
+                            font=dict(
+                                color="#1F2937",
+                                size=12,
+                            ),
+                            title_font=dict(
+                                color="#111827",
+                                size=16,
+                            ),
+                            margin=dict(
+                                l=10,
+                                r=10,
+                                t=65,
+                                b=165,
+                            ),
+                            legend_title_text="",
+                            legend=dict(
+                                orientation="h",
+                                yanchor="top",
+                                y=-0.28,
+                                xanchor="center",
+                                x=0.5,
+                            ),
+                            xaxis=dict(
+                                title="Location",
+                                tickangle=-55,
+                                automargin=True,
+                            ),
+                            yaxis=dict(
+                                title=(
+                                    "Food security margin (%)"
+                                ),
+                                zeroline=True,
+                            ),
+                        )
+
+
+                        food_chart_ready = True
+
+
+                    # -----------------------------------------
+                    # GHG BEFORE / AFTER STACKED BARS
+                    # -----------------------------------------
+
+                    def build_gt_compare_ghg_chart(
+                        indicator_key,
+                        *,
+                        title,
+                        target,
+                        target_label,
+                    ):
+
+                        stage_labels = [
+                            "Before trade adjustment",
+                            "After trade adjustment",
+                        ]
+
+                        stage_maps = {}
+
+                        all_locations = set()
+
+                        range_values = [
+                            0.0,
+                            float(
+                                target
+                            ),
+                        ]
+
+                        global_totals = []
+
+
+                        for stage_label in (
+                            stage_labels
+                        ):
+
+                            result = (
+                                gt_compare_results[
+                                    stage_label
+                                ][
+                                    indicator_key
+                                ]
+                            )
+
+
+                            contributions = (
+                                result[
+                                    "contributions"
+                                ]
+                                .copy()
+                            )
+
+
+                            if contributions.empty:
+
+                                stage_maps[
+                                    stage_label
+                                ] = {}
+
+
+                            else:
+
+                                contributions[
+                                    "Location"
+                                ] = (
+                                    contributions[
+                                        "Location"
+                                    ]
+                                    .astype(str)
+                                )
+
+
+                                contributions[
+                                    "Value_Gt_CO2e"
+                                ] = pd.to_numeric(
+                                    contributions[
+                                        "Value_Gt_CO2e"
+                                    ],
+                                    errors="coerce",
+                                )
+
+
+                                contributions = (
+                                    contributions.dropna(
+                                        subset=[
+                                            "Value_Gt_CO2e"
+                                        ]
+                                    )
+                                )
+
+
+                                stage_map = {
+                                    str(
+                                        row[
+                                            "Location"
+                                        ]
+                                    ): float(
+                                        row[
+                                            "Value_Gt_CO2e"
+                                        ]
+                                    )
+                                    for _, row
+                                    in contributions.iterrows()
+                                }
+
+
+                                stage_maps[
+                                    stage_label
+                                ] = stage_map
+
+
+                                all_locations.update(
+                                    stage_map.keys()
+                                )
+
+
+                                range_values.extend(
+                                    [
+                                        float(
+                                            contributions.loc[
+                                                contributions[
+                                                    "Value_Gt_CO2e"
+                                                ]
+                                                > 0,
+                                                "Value_Gt_CO2e",
+                                            ].sum()
+                                        ),
+                                        float(
+                                            contributions.loc[
+                                                contributions[
+                                                    "Value_Gt_CO2e"
+                                                ]
+                                                < 0,
+                                                "Value_Gt_CO2e",
+                                            ].sum()
+                                        ),
+                                    ]
+                                )
+
+
+                            global_total = (
+                                result.get(
+                                    "global_total_gt"
+                                )
+                            )
+
+
+                            if pd.notna(
+                                global_total
+                            ):
+
+                                global_totals.append(
+                                    float(
+                                        global_total
+                                    )
+                                )
+
+                                range_values.append(
+                                    float(
+                                        global_total
+                                    )
+                                )
+
+
+                            else:
+
+                                global_totals.append(
+                                    None
+                                )
+
+
+                        all_locations = sorted(
+                            all_locations,
+                            key=str.casefold,
+                        )
+
+
+                        palette = (
+                            px.colors.qualitative.Safe
+                            + px.colors.qualitative.Set3
+                            + px.colors.qualitative.Plotly
+                            + px.colors.qualitative.Light24
+                        )
+
+
+                        location_colors = {
+                            location: (
+                                palette[
+                                    index
+                                    % len(
+                                        palette
+                                    )
+                                ]
+                            )
+                            for index, location
+                            in enumerate(
+                                all_locations
+                            )
+                        }
+
+
+                        fig = (
+                            go.Figure()
+                        )
+
+
+                        show_location_legend = (
+                            len(
+                                all_locations
+                            )
+                            <= 10
+                        )
+
+
+                        for location in (
+                            all_locations
+                        ):
+
+                            fig.add_trace(
+                                go.Bar(
+                                    x=(
+                                        stage_labels
+                                    ),
+                                    y=[
+                                        stage_maps.get(
+                                            stage_label,
+                                            {},
+                                        ).get(
+                                            location,
+                                            0.0,
+                                        )
+                                        for stage_label
+                                        in stage_labels
+                                    ],
+                                    name=(
+                                        plain_text_label(
+                                            location
+                                        )
+                                    ),
+                                    marker=dict(
+                                        color=(
+                                            location_colors[
+                                                location
+                                            ]
+                                        )
+                                    ),
+                                    hovertemplate=(
+                                        "<b>"
+                                        + plain_text_label(
+                                            location
+                                        )
+                                        + "</b>"
+                                        "<br>%{x}"
+                                        "<br>Contribution: "
+                                        "%{y:.3f} Gt CO2e"
+                                        "<extra></extra>"
+                                    ),
+                                    showlegend=(
+                                        show_location_legend
+                                    ),
+                                )
+                            )
+
+
+                        valid_total_x = []
+                        valid_total_y = []
+                        valid_total_text = []
+
+
+                        for stage_label, global_total in zip(
+                            stage_labels,
+                            global_totals,
+                        ):
+
+                            if global_total is None:
+
+                                continue
+
+
+                            valid_total_x.append(
+                                stage_label
+                            )
+
+                            valid_total_y.append(
+                                global_total
+                            )
+
+                            valid_total_text.append(
+                                (
+                                    "Net global total<br>"
+                                    f"{global_total:.3f} "
+                                    "Gt CO2e"
+                                )
+                            )
+
+
+                        if valid_total_x:
+
+                            fig.add_trace(
+                                go.Scatter(
+                                    x=valid_total_x,
+                                    y=valid_total_y,
+                                    mode=(
+                                        "markers+text"
+                                    ),
+                                    marker=dict(
+                                        symbol="diamond",
+                                        size=12,
+                                        color="#111111",
+                                        line=dict(
+                                            width=1,
+                                            color="#FFFFFF",
+                                        ),
+                                    ),
+                                    text=(
+                                        valid_total_text
+                                    ),
+                                    textposition=(
+                                        "top center"
+                                    ),
+                                    textfont=dict(
+                                        color="#111827",
+                                        size=10,
+                                    ),
+                                    showlegend=False,
+                                    hovertemplate=(
+                                        "<b>%{x}</b>"
+                                        "<br>Net global total: "
+                                        "%{y:.3f} Gt CO2e"
+                                        "<extra></extra>"
+                                    ),
+                                )
+                            )
+
+
+                        fig.add_hline(
+                            y=target,
+                            line_dash="dash",
+                            line_width=2,
+                            annotation_text=(
+                                target_label
+                            ),
+                            annotation_position=(
+                                "bottom right"
+                                if target < 0
+                                else "top right"
+                            ),
+                        )
+
+
+                        lower_value = min(
+                            range_values
+                        )
+
+                        upper_value = max(
+                            range_values
+                        )
+
+                        span = (
+                            upper_value
+                            - lower_value
+                        )
+
+                        padding = max(
+                            span * 0.18,
+                            0.35,
+                        )
+
+
+                        fig.update_layout(
+                            title=(
+                                plain_text_label(
+                                    title
+                                )
+                            ),
+                            height=620,
+                            template="plotly_white",
+                            barmode="relative",
+                            font=dict(
+                                color="#1F2937",
+                                size=12,
+                            ),
+                            title_font=dict(
+                                color="#111827",
+                                size=16,
+                            ),
+                            margin=dict(
+                                l=10,
+                                r=10,
+                                t=70,
+                                b=145,
+                            ),
+                            bargap=0.35,
+                            legend_title_text="",
+                            showlegend=(
+                                show_location_legend
+                            ),
+                            legend=dict(
+                                orientation="h",
+                                yanchor="top",
+                                y=-0.18,
+                                xanchor="center",
+                                x=0.5,
+                                font=dict(
+                                    size=9,
+                                    color="#374151",
+                                ),
+                            ),
+                            xaxis=dict(
+                                title="",
+                                automargin=True,
+                            ),
+                            yaxis=dict(
+                                title=(
+                                    "Gt CO2e"
+                                ),
+                                range=[
+                                    lower_value
+                                    - padding,
+                                    upper_value
+                                    + padding,
+                                ],
+                                zeroline=True,
+                                zerolinewidth=1.5,
+                                zerolinecolor=(
+                                    "#6B7280"
+                                ),
+                            ),
+                        )
+
+
+                        return fig
+
+
+                    gt_land_fig = (
+                        build_gt_compare_ghg_chart(
+                            "land_use_ghg",
+                            title=(
+                                "Land use change GHG - 2050"
+                            ),
+                            target=-1.0,
+                            target_label=(
+                                "Target: -1 Gt CO2e"
+                            ),
+                        )
+                    )
+
+
+                    gt_agri_fig = (
+                        build_gt_compare_ghg_chart(
+                            "agriculture_ghg",
+                            title=(
+                                "Agriculture GHG - 2050"
+                            ),
+                            target=4.0,
+                            target_label=(
+                                "Target: 4 Gt CO2e"
+                            ),
+                        )
+                    )
 
 
                 # =================================================
@@ -6328,9 +7140,7 @@ with analytics_tab:
                         st.multiselect(
                             "Trade stages",
                             progress_stages,
-                            default=(
-                                default_progress_stage
-                            ),
+                            default=progress_stages,
                             key=(
                                 "flex_progress_stages"
                             ),
@@ -6465,14 +7275,14 @@ with analytics_tab:
                     # ----------------------------------------
 
                     progress_food_fig = (
-                        px.line(
+                        px.bar(
                             progress_df,
                             x="Iteration display",
                             y=(
                                 "Food security passing percent"
                             ),
                             color="Series",
-                            markers=True,
+                            barmode="group",
                             title=(
                                 "Food security progress"
                             ),
@@ -6510,12 +7320,12 @@ with analytics_tab:
                     # ----------------------------------------
 
                     progress_agri_fig = (
-                        px.line(
+                        px.bar(
                             progress_df,
                             x="Iteration display",
                             y="Agriculture GHG",
                             color="Series",
-                            markers=True,
+                            barmode="group",
                             title=(
                                 "Agriculture GHG progress"
                             ),
@@ -6553,12 +7363,12 @@ with analytics_tab:
                     # ----------------------------------------
 
                     progress_land_fig = (
-                        px.line(
+                        px.bar(
                             progress_df,
                             x="Iteration display",
                             y="Land use change GHG",
                             color="Series",
-                            markers=True,
+                            barmode="group",
                             title=(
                                 "Land use change GHG progress"
                             ),
@@ -9595,7 +10405,15 @@ with admin_tab:
 
                 submissions = (
                     submission_metadata_df(
-                        progress_iteration
+                        progress_iteration,
+                        stage="before",
+                    )
+                )
+
+                after_submissions = (
+                    submission_metadata_df(
+                        progress_iteration,
+                        stage="after",
                     )
                 )
 
@@ -9691,6 +10509,435 @@ with admin_tab:
                         1.0,
                     )
                 )
+
+
+                # -----------------------------------------
+                # BEFORE / AFTER WORKFLOW STATUS
+                # -----------------------------------------
+
+                st.markdown(
+                    "#### Before and After workflow"
+                )
+
+
+                def admin_submission_lookup(
+                    frame,
+                ):
+
+                    if frame.empty:
+
+                        return {}
+
+                    return {
+                        (
+                            str(
+                                row.get(
+                                    "participant",
+                                    "",
+                                )
+                            ).strip(),
+                            str(
+                                row.get(
+                                    "pathway",
+                                    "",
+                                )
+                            ).strip(),
+                        ): row
+                        for row
+                        in frame.to_dict(
+                            orient="records"
+                        )
+                    }
+
+
+                before_lookup = (
+                    admin_submission_lookup(
+                        submissions
+                    )
+                )
+
+                after_lookup = (
+                    admin_submission_lookup(
+                        after_submissions
+                    )
+                )
+
+
+                workflow_rows = []
+
+
+                for _, expected_row in (
+                    expected.iterrows()
+                ):
+
+                    participant_name = str(
+                        expected_row[
+                            "participant"
+                        ]
+                    ).strip()
+
+                    pathway_name = str(
+                        expected_row[
+                            "pathway"
+                        ]
+                    ).strip()
+
+                    key = (
+                        participant_name,
+                        pathway_name,
+                    )
+
+                    before_row = (
+                        before_lookup.get(
+                            key
+                        )
+                    )
+
+                    after_row = (
+                        after_lookup.get(
+                            key
+                        )
+                    )
+
+                    before_ok = (
+                        before_row
+                        is not None
+                    )
+
+                    after_ok = (
+                        after_row
+                        is not None
+                    )
+
+
+                    if (
+                        before_ok
+                        and after_ok
+                    ):
+
+                        workflow_status = (
+                            "Before and After complete"
+                        )
+
+                    elif before_ok:
+
+                        workflow_status = (
+                            "Before only"
+                        )
+
+                    elif after_ok:
+
+                        workflow_status = (
+                            "After without Before"
+                        )
+
+                    else:
+
+                        workflow_status = (
+                            "Not submitted"
+                        )
+
+
+                    workflow_rows.append(
+                        {
+                            "Participant": (
+                                participant_name
+                            ),
+                            "Pathway": (
+                                pathway_name
+                            ),
+                            "Before": (
+                                "Submitted"
+                                if before_ok
+                                else "Missing"
+                            ),
+                            "After": (
+                                "Submitted"
+                                if after_ok
+                                else "Missing"
+                            ),
+                            "Workflow status": (
+                                workflow_status
+                            ),
+                            "Before submitted": (
+                                before_row.get(
+                                    "submitted_at_utc",
+                                    "",
+                                )
+                                if before_ok
+                                else ""
+                            ),
+                            "After submitted": (
+                                after_row.get(
+                                    "submitted_at_utc",
+                                    "",
+                                )
+                                if after_ok
+                                else ""
+                            ),
+                        }
+                    )
+
+
+                workflow_df = (
+                    pd.DataFrame(
+                        workflow_rows
+                    )
+                )
+
+
+                after_reports = (
+                    len(
+                        after_submissions
+                    )
+                )
+
+
+                complete_pairs = (
+                    int(
+                        (
+                            (
+                                workflow_df[
+                                    "Before"
+                                ]
+                                == "Submitted"
+                            )
+                            &
+                            (
+                                workflow_df[
+                                    "After"
+                                ]
+                                == "Submitted"
+                            )
+                        ).sum()
+                    )
+                    if not workflow_df.empty
+                    else 0
+                )
+
+
+                workflow_metric_1, workflow_metric_2, workflow_metric_3 = (
+                    st.columns(
+                        3
+                    )
+                )
+
+
+                workflow_metric_1.metric(
+                    "Before reports",
+                    (
+                        f"{submitted_reports}"
+                        f" / {expected_reports}"
+                    ),
+                )
+
+
+                workflow_metric_2.metric(
+                    "After reports",
+                    (
+                        f"{after_reports}"
+                        f" / {expected_reports}"
+                    ),
+                )
+
+
+                workflow_metric_3.metric(
+                    "Before and After complete",
+                    (
+                        f"{complete_pairs}"
+                        f" / {expected_reports}"
+                    ),
+                )
+
+
+                progress_before_col, progress_after_col = (
+                    st.columns(
+                        2
+                    )
+                )
+
+
+                with progress_before_col:
+
+                    st.caption(
+                        "Before trade adjustment"
+                    )
+
+                    st.progress(
+                        min(
+                            (
+                                submitted_reports
+                                / expected_reports
+                            )
+                            if expected_reports
+                            else 0,
+                            1.0,
+                        )
+                    )
+
+
+                with progress_after_col:
+
+                    st.caption(
+                        "After trade adjustment"
+                    )
+
+                    st.progress(
+                        min(
+                            (
+                                after_reports
+                                / expected_reports
+                            )
+                            if expected_reports
+                            else 0,
+                            1.0,
+                        )
+                    )
+
+
+                if not workflow_df.empty:
+
+                    st.dataframe(
+                        workflow_df,
+                        use_container_width=True,
+                        hide_index=True,
+                    )
+
+
+                    after_without_before = (
+                        workflow_df[
+                            workflow_df[
+                                "Workflow status"
+                            ]
+                            == "After without Before"
+                        ]
+                    )
+
+
+                    if not after_without_before.empty:
+
+                        st.warning(
+                            "An After submission exists without "
+                            "a matching Before submission for the "
+                            "same iteration, participant and pathway."
+                        )
+
+
+                pathway_stage_rows = []
+
+
+                for pathway_name in pathways:
+
+                    before_count = (
+                        int(
+                            (
+                                submissions[
+                                    "pathway"
+                                ]
+                                == pathway_name
+                            ).sum()
+                        )
+                        if not submissions.empty
+                        else 0
+                    )
+
+                    after_count = (
+                        int(
+                            (
+                                after_submissions[
+                                    "pathway"
+                                ]
+                                == pathway_name
+                            ).sum()
+                        )
+                        if not after_submissions.empty
+                        else 0
+                    )
+
+
+                    pathway_stage_rows.extend(
+                        [
+                            {
+                                "Pathway": (
+                                    plain_text_label(
+                                        pathway_name
+                                    )
+                                ),
+                                "Trade stage": (
+                                    "Before trade adjustment"
+                                ),
+                                "Submitted": (
+                                    before_count
+                                ),
+                            },
+                            {
+                                "Pathway": (
+                                    plain_text_label(
+                                        pathway_name
+                                    )
+                                ),
+                                "Trade stage": (
+                                    "After trade adjustment"
+                                ),
+                                "Submitted": (
+                                    after_count
+                                ),
+                            },
+                        ]
+                    )
+
+
+                pathway_stage_df = (
+                    pd.DataFrame(
+                        pathway_stage_rows
+                    )
+                )
+
+
+                if not pathway_stage_df.empty:
+
+                    pathway_stage_fig = (
+                        px.bar(
+                            pathway_stage_df,
+                            x="Pathway",
+                            y="Submitted",
+                            color="Trade stage",
+                            barmode="group",
+                            title=(
+                                "Before and After submissions by pathway"
+                            ),
+                            labels={
+                                "Submitted": (
+                                    "Reports submitted"
+                                ),
+                                "Trade stage": (
+                                    ""
+                                ),
+                            },
+                        )
+                    )
+
+
+                    pathway_stage_fig.update_layout(
+                        template="plotly_white",
+                        height=360,
+                        margin=dict(
+                            l=10,
+                            r=10,
+                            t=55,
+                            b=70,
+                        ),
+                        legend_title_text="",
+                    )
+
+
+                    st.plotly_chart(
+                        pathway_stage_fig,
+                        use_container_width=True,
+                        key=(
+                            "admin_before_after_pathway_chart"
+                        ),
+                    )
 
 
                 # -----------------------------------------
