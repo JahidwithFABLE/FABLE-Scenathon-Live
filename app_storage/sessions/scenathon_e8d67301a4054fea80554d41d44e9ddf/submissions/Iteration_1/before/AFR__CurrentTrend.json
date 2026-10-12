@@ -1,0 +1,7191 @@
+{
+  "schema_version": "2.0",
+  "iteration": "Iteration 1",
+  "username": "Jahid",
+  "participant": "AFR",
+  "pathway": "CurrentTrend",
+  "submission_stage": "before",
+  "submission_stage_label": "Before trade adjustment",
+  "source_workbook": "FableTool_AFR.xlsx",
+  "submitted_at_utc": "2026-10-12T20:28:55.201571+00:00",
+  "row_count": 1012,
+  "trade_row_count": 1012,
+  "aggregate_row_count": 11,
+  "report_hash": "cff22246dc0f16b6eb52314342b095ffb3bd46142f560e3181a4c84d88f338a9",
+  "rows": [
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 0.135,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 0.05,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 221.2491133363
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 272.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 274.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0364435532
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 446.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 498.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 472.3254423792
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 733.0971119827
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 647.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 674.9961221295,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 733.2539332338,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 754.991175596,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 1085.0080723186,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 1004.840524475,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 1135.3514221668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 1275.0797120316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 1420.7112467583,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 1569.8560245304,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 1720.3621712321,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 1870.0588211397,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 51.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 125.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 62.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 262.9232206375
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.2661180753
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 224.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 224.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 224.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 224.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 224.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 224.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 124.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 34.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 40.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 39.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 44.0626344203,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 49.4855179032,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 55.1375075256,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 60.9258468285,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 66.7670211377,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 72.5767787109,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 44.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 104.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 34.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 159.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 265.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 299.3999518301,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 336.2477498552,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 374.6522947251,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 413.9833181934,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 453.6733487561,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 493.1499066255,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 131.9995329395,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 26.9137065841,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 283.103448904,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 0.9636713422,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 565.5292818722,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 638.7065104857,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 717.0446672356,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 798.6924567148,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 882.3099331102,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 966.6906560373,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 1050.6175375353,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 292.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 519.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 868.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 1190.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 1506.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 1701.4955753062,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 1910.9023067245,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 2129.1560598341,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 2352.675008299,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 2578.2342008554,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 2802.5802240677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14.0012093505
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 3.3894334169,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 3.8065783002,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 4.2413467327,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 4.6866036022,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 5.1359247029,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 5.5828291316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 18.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20.2043422733
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1948.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2352.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1942.0924886458
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2938.5158541122
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3253.9312499279
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3787.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4328.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4869.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5410.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5951.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6492.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 101.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.3701540586
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 48.6756377191,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 32.150198374
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 21.3424224092,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 23.5112306483,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 26.3937446925,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 29.3980392741,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 32.4748100337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 35.5796650492,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 38.6678206128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0571212942
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0157264923
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 11.9504615538,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0132124188
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 960.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 568.479412944
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 554.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 567.8283034282
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.3970665861
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 614.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 945.8356588859,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 788.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 1005.3933166232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 3617.2153313966,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 924.2472972342,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 1045.2168393116,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 1173.7571934071,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 1307.7281241282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 1444.9309952494,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 1583.3862315463,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 1721.0967868294,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 111.2367908166
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 358.7748450648,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 282.4420608974,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 379.1260850754,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 484.3335018957,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 596.4054198335,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 713.2150665952,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 832.8452718075,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 953.5697387207,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 1073.6468580496,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 879.2825677015
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1096.9576260672
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.5815487049
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1168.5725746052
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 807.4396522322
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 806.3896818594
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 806.4408021364
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 806.4885780297
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 806.532552585
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 806.5725857699
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 806.6086817265
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.6507829765
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 14.903678898,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 93.9528573973,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 407.1108388952
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 247.9313429582
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53.0193550685
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 46.2819963501,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.9601371632
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.8328081261
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.8417360828
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.8500799559
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.8577599403
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.8647515796
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 140.8710555974
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 18.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 89.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 100.5531913694,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 112.928489574,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 125.8266197379,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 139.0359068649,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 152.365766186,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 165.6239309044,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 14.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 25.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 29.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 32.7645230305,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 36.7969235691,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 40.9996850831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 45.3038348212,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 49.647272128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 53.9673482722,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 2.051,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 4.797,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 3.843,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 0.424,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 0.548,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 0.328,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 0.328,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 0.3852655984,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 0.4326810668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 0.4820997453,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 0.5327106094,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 0.5837834412,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 0.634581578,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 243.2063224356
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 303.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 363.0281932993
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 587.720241431
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 687.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 273.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 310.0059182771
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 422.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 485.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 535.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 202.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 288.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 240.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 206.7218186337
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.1256671917
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 287.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.1804637208
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.9134667552
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 38.4594137262
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 134.0927505008
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 400.3094684818
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 387.4478787393
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 387.4143095909
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 387.3861685577
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 387.3626337119
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 387.3429322967
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 387.3264205516
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1657.2242757699
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1628.8806874973
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 170.414531919
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 55.9258658439
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 114.8261413288
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 22.5702431017
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 46.4004406621
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.6165538121
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.8315914407
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 22.06,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 22.959,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.508
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 83.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 135.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 146.1066027637
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 263.0292310009
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 540.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 1831.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 2390.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 3310.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 5085.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 4889.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 5523.6466584807,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 6203.4537699709,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 6911.9813921174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 7637.6016703678,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 8369.8452908246,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 9098.1505414788,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 20.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 9.0384891119,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 10.1508754673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 11.310257954,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 12.4976096058,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 13.6957992077,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 14.887544351,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 23.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.9899462241
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9810528742
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9820932712
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9836133141
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9848812965
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9859373712
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9868183916
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 17.9875546523
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 335.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 456.5109463381
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 661.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1521.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1902.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2219.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2536.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2853.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3170.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3487.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3804.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 49.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 70.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 55.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 63.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 87.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 98.2935690914,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 110.3907707072,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 122.9990552494,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 135.9115044635,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 148.9418163841,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 161.9020448167,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 307.5223759873
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0804471058
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 5.9632700119,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 8.7521691718,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 3.287629221,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 3.6922448423,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 4.1139546761,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 4.5458379187,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 4.9816633204,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 5.4151446366,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 74.2498283099
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.1473057851
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 79.3731203008
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 175.3173121078
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 178.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 178.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 178.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 178.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 178.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 178.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 4.5192445559,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 5.0754377337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 5.655128977,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 6.2488048029,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 6.8478996039,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 7.4437721755,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 20.3366005017,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 22.8394698015,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 25.4480803964,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 28.1196216131,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 30.8155482174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 33.4969747897,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 61.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 102.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 146.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 233.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 479.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 541.1795355722,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 607.7836686063,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 677.2016949937,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 748.2943751496,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 820.0359775629,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 891.3917180136,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 698.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 975.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1145.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1331.6005728811
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1735.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2024.1666666667
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2313.3333333333
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2602.5
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2891.6666666667
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3180.8333333333
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3470.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 489.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 780.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 1365.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 1072.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 1587.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 1752.3370765604,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 1968.0009812283,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 2192.7762608252,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 2422.9740623318,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 2655.2730713988,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 2886.3226610419,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 442.466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 855.6416978522,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 1893.0503381921,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 2803.8863199851,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 4418.9281071785,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 5451.074596558,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 6239.1120513109,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 7006.9730323085,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 7807.2746264073,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 8626.8828494924,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 9453.9723212408,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 10276.6132951006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5916.9866111398
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6547.9259731996
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 391.9175041207
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 435.3740661449
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1154.3436034279
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 347.7567809143
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 390.5559582243
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 435.1633164246
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 480.8467910804
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 526.9472569572
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 572.7997716364
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 113.896932343,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 490.3435123033,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 31.8253654158,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 70.0960174825,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 78.7228855857,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 87.714221864,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 96.9224668613,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 106.2147632,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 115.4570809547,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 53.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 107.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 48.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 206.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 232.7410946302,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 261.3850432837,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 291.2391423146,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 321.8134473503,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 352.6668295991,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 383.3542670372,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 1.129811139,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 1.2688594334,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 1.4137822442,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 1.5622012007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 1.711974901,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 1.8609430439,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0061746874
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 10.1683002508,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 11.4197349007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 12.7240401982,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 14.0598108066,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 15.4077741087,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 16.7484873948,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 429.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 347.1322219271
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 165.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 249.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 323.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 63.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 52.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 93.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 128.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 280.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 243.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 274.5441067725,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 308.3328423201,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 343.5490853517,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 379.6148917773,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 416.0099009348,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 452.2091596603,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 207.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 275.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 359.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 214.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 393.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 444.0157776197,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 498.6617573325,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 555.6164219886,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 613.9450718868,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 672.8061360798,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 731.3506162408,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 49.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 250.0291457127
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 236.1731633894
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 301.4327463305
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.620339041
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 109.0538552024
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 89.3765498119
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 43.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 10.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 16.248036927,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 14.9684587654,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 13.0032430895,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 14.8491390397,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 16.6766546182,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 18.5813791282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 20.5320535771,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 22.5005334607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 24.4584258819,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 6.3634417673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 8.2944268255,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.9145267402
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 14.2809180807,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 25.3802525253,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 35.4646575303,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 39.8293694473,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 44.3784818406,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 49.0373378928,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 53.7387192146,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 58.414814173,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 7588.4359356341,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 14556.3038545251,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 11178.3490220087,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 16432.515103232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 19517.3574391664,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 22053.7304622755,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 24767.8663981744,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 27596.6692281849,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 30493.7146396383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 33417.2038037306,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 36324.9689913753,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 166.012
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 267.429
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 326.468
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 524.46754
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1279.33557
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 25.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 20.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 3.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 44.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 81.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 346.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 542.309616673
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 935.0875062012
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 974.1420432887
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 964.8634397224
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 964.5436834053
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 964.2557537934
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 963.9995646438
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 963.7733511498
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 963.5748732255
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13.278247565
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.6640556923
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0510162154
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.5882472925
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.357539815
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.1127667679
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.8584035352
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.5986403127
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.3377480682
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33.183
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 60.909
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 1.881,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 1.881,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 1.881,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 2.1251747524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 2.3867245943,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 2.6593244014,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 2.9385004586,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 3.2202247887,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 3.5004338655,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 74.9958480667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 257.5831244664,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 465.4265299181,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 451.3529700843,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 192.1116034505,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 217.2576351258,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 243.9960010127,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 271.8640101607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 300.4043125006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 329.2051260125,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 357.8510344476,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 62.5532341683,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 104.0618678712,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 98.9593174563
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 102.1313027401,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 133.2305801587
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 127.9553898171
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 127.9422244053
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 127.9311245806
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 127.9217969501
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 127.9139571529
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 127.9073644014
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 476.5003331059,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 648.0964507246,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 860.7813325016,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 1104.8699220145,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 1234.2730064535,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 1407.313058587,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 1580.2418524162,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 1760.4771219148,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 1945.0608689418,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 2131.3298109098,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 2316.5971702364,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 313.3111817174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 551.634723179,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 620.0768611909,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 746.5011353051,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 1141.7351172105,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 1187.0860916184,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 1333.2256857982,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 1485.5395455436,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 1641.5279751953,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 1798.9403349352,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 1955.5061244063,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 4.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15.4447903697
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 37.4972139372
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1684444573
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1683256148
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1682266188
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1681442637
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1680756269
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44.1680183144
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 934.794428477
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 1008.4990286747,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 2387.9373346013,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 3494.0524516456,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 4663.1042120249,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 5594.0961880453,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 6282.5973334742,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 7000.18629797,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 7735.0865181267,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 8476.6947877884,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 9214.3143210642,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 128.7114882777
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.5556952147
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 161.0067069383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 74.2100323385,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 149.9177234833,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 104.3865380985,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 467.5587615831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 566.6435605065,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 636.3816060277,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 709.0659465284,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 783.5037379849,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 858.6209853231,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 933.3342148039,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 4.6440227805,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.6602605921
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 16.2401550398,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 57.1514798084,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 4.1016851772,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 4.6064884213,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 5.1326186076,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 5.6714412593,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 6.2151821953,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 6.7559986225,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.014276276
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0092410389
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 292.0276351907
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 402.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 481.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 267.3213481766
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 659.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 278.8556867459
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 222.5485047229
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 193.345
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 347.26691
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 376.7913
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 386.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 618.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 1616.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 2489.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 1940.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 2191.8336096242,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 2461.5873008271,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 2742.7375538367,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 3030.6703294157,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 3321.2313078748,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 3610.2295051072,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 54.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 27.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 73.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 69.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 100.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 129.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 38.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 80.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 90.3848911185,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 101.5087546733,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 113.1025795397,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 124.9760960584,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 136.9579920773,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 148.8754435096,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 8421.8470098102,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 11871.9337390812,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 15525.8735947869,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 17560.9980217116,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 22321.0424667681,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 25218.7432980289,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 28322.3775777105,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 31557.1342888822,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 34869.9268907029,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 38212.9581169373,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 41538.0088611809,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0045679452
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25.7603343654
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.6296882522
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "AFRICA",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ],
+  "aggregate_rows": [
+    {
+      "Location": "AFRICA",
+      "Year": 2000.0,
+      "kcal_feas": 2093.0072391608,
+      "kcal_mder": 1700.293810292,
+      "CalcAllLandCO2e": 0.0,
+      "CalcAllAgriCO2e": 337.3370856768
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2005.0,
+      "kcal_feas": 2191.0998516205,
+      "kcal_mder": 1704.9224848829,
+      "CalcAllLandCO2e": 530.9835542414,
+      "CalcAllAgriCO2e": 381.341428905
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2010.0,
+      "kcal_feas": 2310.9368712509,
+      "kcal_mder": 1707.53807251,
+      "CalcAllLandCO2e": 421.5376116315,
+      "CalcAllAgriCO2e": 455.9475966763
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2015.0,
+      "kcal_feas": 2302.4727278794,
+      "kcal_mder": 1715.710171869,
+      "CalcAllLandCO2e": 391.316723877,
+      "CalcAllAgriCO2e": 526.8216311751
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2020.0,
+      "kcal_feas": 2334.1392720948,
+      "kcal_mder": 1727.7153379512,
+      "CalcAllLandCO2e": 274.3533166584,
+      "CalcAllAgriCO2e": 610.1660872375
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2025.0,
+      "kcal_feas": 2325.369327973,
+      "kcal_mder": 1740.634352149,
+      "CalcAllLandCO2e": 416.7109892206,
+      "CalcAllAgriCO2e": 680.7105914723
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2030.0,
+      "kcal_feas": 2325.3622085676,
+      "kcal_mder": 1754.1380684231,
+      "CalcAllLandCO2e": 697.9395051375,
+      "CalcAllAgriCO2e": 764.0986699115
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2035.0,
+      "kcal_feas": 2325.3560807586,
+      "kcal_mder": 1766.9758145453,
+      "CalcAllLandCO2e": 689.0223863362,
+      "CalcAllAgriCO2e": 850.9647168474
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2040.0,
+      "kcal_feas": 2325.3508328617,
+      "kcal_mder": 1779.4314123772,
+      "CalcAllLandCO2e": 667.1736468154,
+      "CalcAllAgriCO2e": 939.8845141757
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2045.0,
+      "kcal_feas": 2325.3463460146,
+      "kcal_mder": 1791.108627369,
+      "CalcAllLandCO2e": 630.3889825502,
+      "CalcAllAgriCO2e": 1029.5767485901
+    },
+    {
+      "Location": "AFRICA",
+      "Year": 2050.0,
+      "kcal_feas": 2325.3425148614,
+      "kcal_mder": 1801.7722114218,
+      "CalcAllLandCO2e": 578.352953689,
+      "CalcAllAgriCO2e": 1118.7498646959
+    }
+  ]
+}
