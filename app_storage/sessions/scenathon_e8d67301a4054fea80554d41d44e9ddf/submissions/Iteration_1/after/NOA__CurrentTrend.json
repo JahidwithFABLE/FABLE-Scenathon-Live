@@ -1,0 +1,7191 @@
+{
+  "schema_version": "2.0",
+  "iteration": "Iteration 1",
+  "username": "Jahid",
+  "participant": "NOA",
+  "pathway": "CurrentTrend",
+  "submission_stage": "after",
+  "submission_stage_label": "After trade adjustment",
+  "source_workbook": "FableTool_NOA.xlsx",
+  "submitted_at_utc": "2026-10-12T21:02:30.346153+00:00",
+  "row_count": 1012,
+  "trade_row_count": 1012,
+  "aggregate_row_count": 11,
+  "report_hash": "307651ea66be46d9d719aa676867a6e9a0c8ea27509cf7ba447cb2bcece8febb",
+  "rows": [
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 6.137,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 0.115,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 1422.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 3069.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 3478.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 7652.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 12753.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 12510.8881074929,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 12281.9278945359,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 12011.3577213874,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 11684.6499810573,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 11300.3468431962,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 10869.1222935839,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 3800.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 3556.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 3899.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 4389.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 4428.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 4345.1506180965,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 4266.823188313,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 4173.9916680256,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 4061.5941278938,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 3929.1073304782,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 3780.2268578357,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2936.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3479.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1967.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1567.4093015673
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3335.1727602469
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3291.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3291.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3291.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3291.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3291.0
+    },
+    {
+      "Location": "North America",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3291.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 453.0507616202
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 365.2533415812
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 464.3212949155
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 481.1599914237
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.1679698754
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 550.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 63.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 981.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 221.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 488.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.9999727713
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "North America",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 255.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 339.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 114.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 195.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 240.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 245.7003772997,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 251.9917535632,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 257.7718398093,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 262.6313516007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 266.3921158488,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 269.1454812931,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2829.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2774.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3591.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3229.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3704.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 21.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 21.095890411
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 16.2374412216,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 16.5095233253,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 16.7437577329,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 16.9147477724,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 17.0127101848,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 17.0452566456,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 2.0492423057,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 2.1034703067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 2.153486139,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 2.1958560397,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 2.2290695873,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 2.253869321,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 813.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 1011.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 918.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 923.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 994.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 1013.3503201642,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 1040.1660666491,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 1064.8988957215,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 1085.8508116487,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 1102.2749109177,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 1114.5383792227,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 266.7908232119,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 252.8598114055,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 203.640776699,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 350.9745743034,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 291.0784701114,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 263.777752513,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 268.2778630644,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 272.1654102688,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 275.0269035183,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 276.7023026656,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 277.3143810316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 480.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 405.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 568.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 515.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 456.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 465.1058769105,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 477.3398179322,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 488.6143615352,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 498.1509777407,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 505.6078762341,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 511.154423128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 1343.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 1401.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 1596.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 1712.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 1898.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 1944.7309481007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 1996.1933210313,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 2043.6583458842,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 2083.867381708,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 2115.3870383436,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 2138.9219856064,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 46759.7606031862
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43517.2867494297
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49369.9999999999
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 42114.2275070008
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49732.9999999999
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49733.0
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49732.9999999999
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49733.0
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49733.0
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49733.0
+    },
+    {
+      "Location": "North America",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49733.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 102.735505636
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 94.2483560233
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 84.9018977074
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 76.2814270413
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68.9787696657
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 63.2542540614
+    },
+    {
+      "Location": "North America",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 58.9798999842
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1442.42
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3345.878
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2959.594
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2393.296
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3821.581
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 62.9008203345
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 63.0697593684
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 58.8466163631
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 54.9620951142
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 51.6880956476
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.1434484865
+    },
+    {
+      "Location": "North America",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 47.2681821189
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 156.9118544359,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 757.72
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 280.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 120.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 299.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 6.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 17.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 52.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 19.2819614507,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 19.6050589488,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 19.8832123078,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 20.0862629798,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 20.2025933445,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 20.2412422667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.9998558815
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 110.999493355
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 144.0
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 106.0
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.9860232618
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.9656717812
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.9467307481
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.929699249
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.914670893
+    },
+    {
+      "Location": "North America",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 217.9013586647
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 57.358,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 57.358,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 57.358,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 58.7702200849,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 60.325424925,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 61.7598289796,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 62.9749553635,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 63.9274866941,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 64.6387182563,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 56.621,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 39.401,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 897.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 2070.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 1974.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 3365.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 4568.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 4636.2916635033,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 4714.4901288439,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 4781.896395285,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 4831.2530594135,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 4859.7596197484,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 4869.5838463213,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 222.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 263.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 36.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 233.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 465.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 474.2278880784,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 484.5405198402,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 493.8149222716,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 501.2821708369,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 506.6237348287,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 510.0359739473,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1161.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 476.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 442.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 273.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0203729604
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "North America",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 63.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 57.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 298.2533970606
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 510.666021519
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 507.6582134335
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 507.644290236
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 507.6318665285
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 507.62156886
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 507.6135470363
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 507.6074885161
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 48.71809375
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.8557105469
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0485542545
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.3165265687
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 14.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 27.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 20.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 21.5653202113,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0177774822
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.2034415707
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.1798309254
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.1580532663
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.1396236383
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.1252129827
+    },
+    {
+      "Location": "North America",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.1144998977
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 1.768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 1.004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 1.004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 1.004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 1.0287196375,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 1.0559420939,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 1.0810500418,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 1.1023197319,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 1.1189929328,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 1.1314423991,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 1752.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 1430.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 2017.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 4596.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 5356.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 5435.5323543239,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 5526.6623828719,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 5605.124192138,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 5662.4155982446,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 5695.2609364069,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 5706.2076927238,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 3036.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 858.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 2942.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 4864.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 2791.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 2758.3334374731,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 2727.7239646766,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 2686.9900276943,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 2632.6629694714,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 2564.1483175555,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 2483.6164339012,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 38.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.019778481
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 37.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 71.0544339382
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 73.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 90.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 94.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 122.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 152.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 155.3013284383,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 158.9607825572,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 162.2822049281,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 165.0104089308,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 167.0371936559,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 168.4239228917,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 40.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 104.2601914715
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 1000.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 768.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 1157.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 1184.456422745,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 1214.7443807258,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 1242.5493887142,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 1265.8983588154,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 1283.9328731043,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 1297.0940561007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 187.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 334.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 55.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 37.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 226.1793486559
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 225.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 927.9496769166
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2290.5460972018
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1574.0202216069
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2587.5016621813
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3192.9166082979
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3193.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3193.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3193.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3193.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3193.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3193.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 111.0847457627,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 139.965958881,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 561.3798689696,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 519.4991687525,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 474.1198003328,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 414.8250362711,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 425.4326433198,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 435.1706634936,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 443.348073689,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 449.6642348425,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 454.2736389068,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 222.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 264.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 309.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 338.9741121009,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 453.9952245968,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 464.7762262091,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 476.6620097917,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 487.5735345276,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 496.7365582394,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 503.8142284819,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 508.9796306353,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 71.4188984336,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 139.6353631695,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 291.4014869888,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 370.9107593485,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 376.415103337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 382.7224895668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 388.1524934406,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 392.116371279,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 394.3873283269,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 395.1418178574,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 2335.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 2307.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 1788.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 5651.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 7697.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 7812.3979673174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 7944.4997047639,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 8058.4254670317,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 8141.9423146378,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 8190.3266351172,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 8207.2275831245,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 4979.5605094044,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 183.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 434.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 940.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 1193.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 1443.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 1513.3654427528,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 1553.4128214769,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 1590.3495136306,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 1621.6396853439,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 1646.1678902178,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 1664.4824935409,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 1.646,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 197.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 229.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 379.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 390.3664120279,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 400.6818703726,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 410.1942715459,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 418.249668255,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 424.5605375982,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 429.2684932541,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1866.1488095238
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2579.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3230.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3133.5714107333
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4104.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 54.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 67.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 70.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 69.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 86.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 84.0189345333,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 86.2422825735,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 88.2929316978,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 90.0300976291,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 91.3918530791,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 92.40864216,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 57.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 88.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 107.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 120.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 152.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 155.7424152325,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 159.863743307,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 163.6649465619,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 166.8850590198,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 169.4092886345,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 171.2940683942,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 1630.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 1691.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 6851.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 6185.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 5747.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 5832.285918795,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 5930.0144094064,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 6014.1484806793,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 6075.5659655132,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 6110.7528395131,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 6122.4431214006,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 214.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 263.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 264.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 326.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 406.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 412.0250709989,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 418.9291543795,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 424.8728524719,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 429.2117247257,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 431.69752094,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 432.5233873827,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 736.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1614.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2445.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2696.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4096.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 966.8840747744
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 893.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1901.3740867855
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 721.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 671.4990021075
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 763.9307329642
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1565.2080548475
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2985.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3578.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1199.6049223801
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1795.3649092485
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2679.2242135306
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2460.982140527
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2463.9791459653
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2466.5655590728
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2468.4846120491
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2469.638319355
+    },
+    {
+      "Location": "North America",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2470.1045879128
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 177.6133535542
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 512.1509977193
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1225.1899007244
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1040.6857694979
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1739.5415909087
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1671.8173928294
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1670.0948669357
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1668.5011343288
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1667.149465361
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1666.0915710749
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1665.305530128
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7542.29827879
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7513.3580715837
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7084.008817089
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8852.6010528362
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11309.6704269944
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11167.2767966158
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11166.1356875135
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11165.1037686135
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11164.2459097371
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11163.5852719405
+    },
+    {
+      "Location": "North America",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11163.1004078079
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3481.1286538025
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4890.4897333964
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4110.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3133.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1694.6525933384
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1682.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1682.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1682.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1682.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1682.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1682.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 1327.638,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 1303.35,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 33.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 49.0617906683
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 123.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 106.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 108.3075831864,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 110.8674715588,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 113.1942507526,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 115.109936855,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 116.5389720673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 117.5240233343,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 50.8490566038,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 45.8723404255,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 36.6744186047,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 31.5789473684,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 31.3636363636,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 32.109779337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 32.9327740048,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 33.6885450607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 34.3235824684,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 34.8145887117,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 35.1735007712,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 14.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 16.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 23.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 23.5662865154,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 24.1899085267,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 24.7650905982,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 25.2523444569,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 25.6343002539,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 25.9194971912,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 0.418,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6573.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4638.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3874.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9765.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 6577.0
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 27417.570854328
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 26277.2589150708
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44427.5851158876
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 51271.8596076969
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68242.0134720236
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68097.4766117597
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68096.1967531004
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68095.0513242407
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68094.1179259394
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68093.4235981454
+    },
+    {
+      "Location": "North America",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68092.9417000749
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 5128.6261462483
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3952.4762357271
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7297.2557932165
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8043.4730318427
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9501.1469928949
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9393.5958166965
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9390.6444464797
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9387.9386317243
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9385.6855767307
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9383.978334099
+    },
+    {
+      "Location": "North America",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9382.7743213072
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1001.2210521109
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3146.1472538781
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2189.4815963805
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2973.3993980193
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2926.2986143911
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2918.6318249595
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2909.7543788854
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2899.3588954599
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2887.4484702976
+    },
+    {
+      "Location": "North America",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2874.300702016
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 72.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 98.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 120.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 158.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 193.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 197.7518824992,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 202.9848845938,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 207.8114124108,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 211.9001078344,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 215.105215174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 217.4983894742,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 11.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 27.5631859057,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 5.6726759943,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 5.8227889792,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 5.961241914,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 6.0785295174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 6.1704706673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 6.2391208477,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 49.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 24.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 24.5909076683,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 25.2416436801,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 25.8418336677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 26.3502724768,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 26.7488350475,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 27.0464318517,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 2605.8795753354,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 3375.5177090067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 4012.842883842,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 4628.543884339,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 5345.8297108823,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 5775.1557662207,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 5927.9806184522,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 6068.9347757564,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 6188.3412393182,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 6281.9433527345,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 6351.8337334709,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 3.0061236538
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4.1667322937
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 209.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 10.2471590909,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39.0019436675
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 71.7677111979,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 176.4794377083,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 188.9232754964,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 193.8912711489,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 198.4695031364,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 202.3417521219,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 205.3692036936,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 207.6206687456,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 114.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 72.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 134.9907132172
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 72.6163586747
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 74.1354511037,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 72.7760749689,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 74.6814711523,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 76.4363422102,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 77.9189676074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 79.0759894472,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 79.9340091492,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 8.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 120.1346293748
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 218.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 163.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 173.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 138.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 130.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 118.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 169.0624902195,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 173.5363003004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 177.6626064652,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 181.1581232781,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 183.8982409519,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 185.9442189805,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 194.672
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 10.848,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12.35
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 493.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 549.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 764.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 174.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 993.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 1007.7379074413,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 1024.6257719855,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 1039.1647592839,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 1049.7786657074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 1055.8602925785,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 1057.882021233,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 62.3714285714,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 64.4857142857,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 123.4074074074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 198.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 301.4862385321,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 310.6028946485,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 316.485620876,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 321.6604240472,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 325.6336886127,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 328.2089400114,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 329.5244779007,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 1903.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 3135.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 7455.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 9217.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 12593.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 12780.9476781986,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 12996.1956403935,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 13181.6833867056,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 13317.4080176954,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 13395.6538206818,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 13422.4002690209,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45274.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 42277.1046427168
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 41615.1392319766
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39417.8613047666
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 44465.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 26.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 32.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 35.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 40.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 55.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 54.8939957147,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 55.9074028282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 56.7949148988,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 57.4695951582,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 57.8970848534,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 58.1021157205,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "North America",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ],
+  "aggregate_rows": [
+    {
+      "Location": "North America",
+      "Year": 2000.0,
+      "kcal_feas": 2910.1473292881,
+      "kcal_mder": 1942.2049418504,
+      "CalcAllLandCO2e": 0.0,
+      "CalcAllAgriCO2e": 461.6966292898
+    },
+    {
+      "Location": "North America",
+      "Year": 2005.0,
+      "kcal_feas": 3002.2783539006,
+      "kcal_mder": 1947.0617058827,
+      "CalcAllLandCO2e": -12.8612570481,
+      "CalcAllAgriCO2e": 461.4097228631
+    },
+    {
+      "Location": "North America",
+      "Year": 2010.0,
+      "kcal_feas": 2935.1477030073,
+      "kcal_mder": 1946.6045790807,
+      "CalcAllLandCO2e": 14.347715372,
+      "CalcAllAgriCO2e": 425.9433492696
+    },
+    {
+      "Location": "North America",
+      "Year": 2015.0,
+      "kcal_feas": 2971.5285763883,
+      "kcal_mder": 1945.8995760988,
+      "CalcAllLandCO2e": -16.8184309914,
+      "CalcAllAgriCO2e": 419.2385698487
+    },
+    {
+      "Location": "North America",
+      "Year": 2020.0,
+      "kcal_feas": 3096.3019860793,
+      "kcal_mder": 1946.6950686335,
+      "CalcAllLandCO2e": 28.6789847014,
+      "CalcAllAgriCO2e": 436.6247565723
+    },
+    {
+      "Location": "North America",
+      "Year": 2025.0,
+      "kcal_feas": 3089.0112553666,
+      "kcal_mder": 1948.3178971985,
+      "CalcAllLandCO2e": 490.9430779857,
+      "CalcAllAgriCO2e": 454.6591486285
+    },
+    {
+      "Location": "North America",
+      "Year": 2030.0,
+      "kcal_feas": 3089.0042052091,
+      "kcal_mder": 1947.4246591817,
+      "CalcAllLandCO2e": 271.2067045734,
+      "CalcAllAgriCO2e": 462.3735345984
+    },
+    {
+      "Location": "North America",
+      "Year": 2035.0,
+      "kcal_feas": 3088.99770899,
+      "kcal_mder": 1945.7674314796,
+      "CalcAllLandCO2e": 262.7068069246,
+      "CalcAllAgriCO2e": 469.3215013015
+    },
+    {
+      "Location": "North America",
+      "Year": 2040.0,
+      "kcal_feas": 3088.9919803098,
+      "kcal_mder": 1944.4580997364,
+      "CalcAllLandCO2e": 239.509845092,
+      "CalcAllAgriCO2e": 474.856032997
+    },
+    {
+      "Location": "North America",
+      "Year": 2045.0,
+      "kcal_feas": 3088.987065731,
+      "kcal_mder": 1943.9561580704,
+      "CalcAllLandCO2e": 214.3366516147,
+      "CalcAllAgriCO2e": 478.7061043064
+    },
+    {
+      "Location": "North America",
+      "Year": 2050.0,
+      "kcal_feas": 3088.9828519228,
+      "kcal_mder": 1944.3506247287,
+      "CalcAllLandCO2e": 189.3955850794,
+      "CalcAllAgriCO2e": 481.0233664143
+    }
+  ]
+}
