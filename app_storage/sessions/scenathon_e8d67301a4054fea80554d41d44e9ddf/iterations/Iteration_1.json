@@ -6,12 +6,11 @@
     "ASP",
     "EUR",
     "LAC",
-    "NOA",
-    "SU"
+    "NOA"
   ],
   "pathways": [
     "CurrentTrend"
   ],
   "status": "OPEN",
-  "updated_at_utc": "2026-10-12T20:27:55.394414+00:00"
+  "updated_at_utc": "2026-10-12T20:38:43.635220+00:00"
 }
