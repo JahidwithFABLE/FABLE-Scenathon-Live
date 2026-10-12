@@ -1,0 +1,7191 @@
+{
+  "schema_version": "2.0",
+  "iteration": "Iteration 1",
+  "username": "Jahid",
+  "participant": "EUR",
+  "pathway": "CurrentTrend",
+  "submission_stage": "after",
+  "submission_stage_label": "After trade adjustment",
+  "source_workbook": "FableTool_EUR.xlsx",
+  "submitted_at_utc": "2026-10-12T21:01:57.001399+00:00",
+  "row_count": 1012,
+  "trade_row_count": 1012,
+  "aggregate_row_count": 11,
+  "report_hash": "40c9b497bc6f7a67786888e9d9366c8708ced296c55d7e15b64f274d3981e1b9",
+  "rows": [
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2015,
+      "Import_quantity": 23997.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53695.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2025,
+      "Import_quantity": 23500.8590771855,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2020,
+      "Import_quantity": 23323.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2030,
+      "Import_quantity": 23176.1457115349,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2025,
+      "Import_quantity": 23127.3253622656,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2030,
+      "Import_quantity": 22802.7249810738,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2035,
+      "Import_quantity": 22788.2718897942,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2035,
+      "Import_quantity": 22409.0972156168,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2015,
+      "Import_quantity": 22354.8568105288,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2040,
+      "Import_quantity": 22346.6660038138,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2040,
+      "Import_quantity": 21956.1728202904,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2045,
+      "Import_quantity": 21851.1822290683,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2045,
+      "Import_quantity": 21443.8388620528,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2050,
+      "Import_quantity": 21290.7646178082,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2050,
+      "Import_quantity": 20860.7649977722,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2010,
+      "Import_quantity": 20161.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2010,
+      "Import_quantity": 19038.7880339229,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2005,
+      "Import_quantity": 18424.7598504982,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2000,
+      "Import_quantity": 16528.1887926452,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2000,
+      "Import_quantity": 16494.4475082374,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 171.4407626413
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2010,
+      "Import_quantity": 15564.2762377004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2005,
+      "Import_quantity": 14396.6313159321,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2025,
+      "Import_quantity": 14234.1916893778,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2030,
+      "Import_quantity": 13918.9663517771,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2035,
+      "Import_quantity": 13534.4691079253,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2040,
+      "Import_quantity": 13090.2684820956,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2045,
+      "Import_quantity": 12586.133601445,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2050,
+      "Import_quantity": 12010.6289369806,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2000,
+      "Import_quantity": 11912.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2015,
+      "Import_quantity": 11563.8727355977,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2025,
+      "Import_quantity": 11514.5809128516,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2030,
+      "Import_quantity": 11357.8546060444,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2035,
+      "Import_quantity": 11169.3001325555,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2040,
+      "Import_quantity": 10953.566535865,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2045,
+      "Import_quantity": 10710.5639916444,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2025,
+      "Import_quantity": 10674.3737372909,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2030,
+      "Import_quantity": 10529.1288807753,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2050,
+      "Import_quantity": 10434.7954615204,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2035,
+      "Import_quantity": 10351.8582221154,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2015,
+      "Import_quantity": 10201.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2040,
+      "Import_quantity": 10147.0178248527,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2045,
+      "Import_quantity": 9914.5204583516,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2050,
+      "Import_quantity": 9649.0903504832,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2020,
+      "Import_quantity": 7019.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2025,
+      "Import_quantity": 8846.1137801987,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2015,
+      "Import_quantity": 8700.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2030,
+      "Import_quantity": 8678.4549122174,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2015,
+      "Import_quantity": 8635.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2025,
+      "Import_quantity": 8553.8246907748,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2020,
+      "Import_quantity": 104.4501828508,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2035,
+      "Import_quantity": 8486.4125039233,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2030,
+      "Import_quantity": 8439.8196909518,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2025,
+      "Import_quantity": 8400.4783944312,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2035,
+      "Import_quantity": 8300.0683406475,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2040,
+      "Import_quantity": 8274.0073323165,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2030,
+      "Import_quantity": 8242.5473685756,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2040,
+      "Import_quantity": 8138.1228753756,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2010,
+      "Import_quantity": 8124.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2035,
+      "Import_quantity": 8061.4035623737,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2045,
+      "Import_quantity": 8041.4887075316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2045,
+      "Import_quantity": 7953.894756858,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2040,
+      "Import_quantity": 7860.856243855,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2010,
+      "Import_quantity": 7837.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2050,
+      "Import_quantity": 7784.9136704468,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2050,
+      "Import_quantity": 7743.1317428798,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2045,
+      "Import_quantity": 7641.1333666278,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2015,
+      "Import_quantity": 7443.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2050,
+      "Import_quantity": 7398.4788740476,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2015,
+      "Import_quantity": 7029.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2020,
+      "Import_quantity": 2972.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2025,
+      "Import_quantity": 6926.9783933722,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2030,
+      "Import_quantity": 6797.4875027764,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2010,
+      "Import_quantity": 6787.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2035,
+      "Import_quantity": 6648.8223487103,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2015,
+      "Import_quantity": 6595.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2010,
+      "Import_quantity": 6522.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2040,
+      "Import_quantity": 6484.1188714302,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2045,
+      "Import_quantity": 6303.5599750706,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2005,
+      "Import_quantity": 6302.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2050,
+      "Import_quantity": 6104.0416871907,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2010,
+      "Import_quantity": 5981.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2005,
+      "Import_quantity": 5866.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2020,
+      "Import_quantity": 1209.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2010,
+      "Import_quantity": 5672.0957966764,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2025,
+      "Import_quantity": 5654.7324882078,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2030,
+      "Import_quantity": 5574.947400404,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2010,
+      "Import_quantity": 5498.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2035,
+      "Import_quantity": 5478.2952362685,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2040,
+      "Import_quantity": 5367.1587385278,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2005,
+      "Import_quantity": 5315.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2045,
+      "Import_quantity": 5241.5138959566,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2015,
+      "Import_quantity": 5109.3502538071,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2050,
+      "Import_quantity": 5098.5951123025,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2025,
+      "Import_quantity": 5036.2252690634,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2030,
+      "Import_quantity": 4946.0206446434,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2035,
+      "Import_quantity": 4841.7651218651,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2040,
+      "Import_quantity": 4725.7057118522,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2000,
+      "Import_quantity": 4616.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2045,
+      "Import_quantity": 4597.9529723759,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2050,
+      "Import_quantity": 4456.2309218932,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2015,
+      "Import_quantity": 4434.2830669485,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 341.0743705614
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2015,
+      "Import_quantity": 4159.2610064395,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2010,
+      "Import_quantity": 4112.3525062842,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2025,
+      "Import_quantity": 4101.8583799128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2015,
+      "Import_quantity": 4068.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2025,
+      "Import_quantity": 4038.3206565731,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2000,
+      "Import_quantity": 4036.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2030,
+      "Import_quantity": 4021.4576178703,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2030,
+      "Import_quantity": 3984.2827507325,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2015,
+      "Import_quantity": 3958.0886975536,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2035,
+      "Import_quantity": 3929.8708836524,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2035,
+      "Import_quantity": 3918.0965290047,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2005,
+      "Import_quantity": 3899.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2040,
+      "Import_quantity": 3841.4407511083,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2040,
+      "Import_quantity": 3828.9810781677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2045,
+      "Import_quantity": 3754.2753575085,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2045,
+      "Import_quantity": 3718.9219647917,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2020,
+      "Import_quantity": 2665.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2010,
+      "Import_quantity": 3712.7394095712,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2025,
+      "Import_quantity": 3667.0707091233,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2010,
+      "Import_quantity": 3655.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2050,
+      "Import_quantity": 3654.5951237049,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2030,
+      "Import_quantity": 3620.8735346718,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2050,
+      "Import_quantity": 3597.889456831,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2035,
+      "Import_quantity": 3564.2997731232,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2040,
+      "Import_quantity": 3498.7838083322,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2045,
+      "Import_quantity": 3424.2916208987,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2010,
+      "Import_quantity": 3391.5215115867,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2050,
+      "Import_quantity": 3339.1104105309,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2000,
+      "Import_quantity": 3163.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2020,
+      "Import_quantity": 3716.8255997967,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2025,
+      "Import_quantity": 2931.3573388028,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2005,
+      "Import_quantity": 2923.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2005,
+      "Import_quantity": 2903.3711407926,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2030,
+      "Import_quantity": 2874.9141233261,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2005,
+      "Import_quantity": 2829.751,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2035,
+      "Import_quantity": 2810.4306749105,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2040,
+      "Import_quantity": 2739.2455567885,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2010,
+      "Import_quantity": 2719.8533305394,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2000,
+      "Import_quantity": 2676.0500942634,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2020,
+      "Import_quantity": 391.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2045,
+      "Import_quantity": 2661.4474622064,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2025,
+      "Import_quantity": 2629.3721897572,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2030,
+      "Import_quantity": 2579.5444755793,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2050,
+      "Import_quantity": 2575.7379086644,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2035,
+      "Import_quantity": 2522.468842399,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2015,
+      "Import_quantity": 2501.8495707171,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2010,
+      "Import_quantity": 2484.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2000,
+      "Import_quantity": 2473.8520184042,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2040,
+      "Import_quantity": 2459.3403605749,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2045,
+      "Import_quantity": 2390.2330903385,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2015,
+      "Import_quantity": 2337.6442373312,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2050,
+      "Import_quantity": 2313.9749894596,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2010,
+      "Import_quantity": 2312.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2000,
+      "Import_quantity": 2296.3352661133,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2005,
+      "Import_quantity": 2295.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2000,
+      "Import_quantity": 2125.669,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "vegetable_other",
+      "Year": 2000,
+      "Import_quantity": 2063.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2000,
+      "Import_quantity": 1973.6616134231,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2005,
+      "Import_quantity": 1973.5645624314,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2015,
+      "Import_quantity": 1917.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2020,
+      "Import_quantity": 87.3655310086,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2020,
+      "Import_quantity": 16168.8691936765,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2025,
+      "Import_quantity": 1801.8263850983,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2030,
+      "Import_quantity": 1776.43407941,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2035,
+      "Import_quantity": 1745.6661854702,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2040,
+      "Import_quantity": 1710.2817041165,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2045,
+      "Import_quantity": 1670.2727465512,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2000,
+      "Import_quantity": 1667.2356657604,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2005,
+      "Import_quantity": 1664.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2005,
+      "Import_quantity": 1626.654,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2050,
+      "Import_quantity": 1624.7577687549,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2005,
+      "Import_quantity": 1622.5014577259,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2010,
+      "Import_quantity": 1592.9722686917,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2025,
+      "Import_quantity": 1572.9512880171,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2030,
+      "Import_quantity": 1552.1045401902,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2000,
+      "Import_quantity": 1550.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2035,
+      "Import_quantity": 1526.5192571468,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2040,
+      "Import_quantity": 1496.8477390326,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2015,
+      "Import_quantity": 1488.9251381162,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2000,
+      "Import_quantity": 1473.42,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2045,
+      "Import_quantity": 1463.0727869889,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2010,
+      "Import_quantity": 1439.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2050,
+      "Import_quantity": 1424.4112533736,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2015,
+      "Import_quantity": 1411.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2005,
+      "Import_quantity": 1403.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2005,
+      "Import_quantity": 1380.6374068855,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2005,
+      "Import_quantity": 1378.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2010,
+      "Import_quantity": 1342.2627646821,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2005,
+      "Import_quantity": 1335.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2005,
+      "Import_quantity": 1282.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2005,
+      "Import_quantity": 1235.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fruit_other",
+      "Year": 2000,
+      "Import_quantity": 1231.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2015,
+      "Import_quantity": 1229.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2000,
+      "Import_quantity": 1225.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8647.6343522885
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2025,
+      "Import_quantity": 1197.7821033227,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2010,
+      "Import_quantity": 1185.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2030,
+      "Import_quantity": 1179.9315022384,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2035,
+      "Import_quantity": 1158.5613590823,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2040,
+      "Import_quantity": 1134.1822000631,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2005,
+      "Import_quantity": 1113.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2045,
+      "Import_quantity": 1106.7944906267,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2005,
+      "Import_quantity": 1090.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2000,
+      "Import_quantity": 1080.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2050,
+      "Import_quantity": 1075.8199568963,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2010,
+      "Import_quantity": 1027.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2000,
+      "Import_quantity": 975.543,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2005,
+      "Import_quantity": 957.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2005,
+      "Import_quantity": 949.7477343147,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2000,
+      "Import_quantity": 916.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2020,
+      "Import_quantity": 660.8816819215,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2005,
+      "Import_quantity": 910.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2000,
+      "Import_quantity": 900.081803005,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2010,
+      "Import_quantity": 892.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2025,
+      "Import_quantity": 885.7405095991,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2005,
+      "Import_quantity": 879.6393704128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2030,
+      "Import_quantity": 874.0015516388,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2035,
+      "Import_quantity": 859.5942894344,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2005,
+      "Import_quantity": 856.7875859376,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2005,
+      "Import_quantity": 845.691,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2040,
+      "Import_quantity": 842.886038025,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2015,
+      "Import_quantity": 834.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2045,
+      "Import_quantity": 823.8671126057,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2000,
+      "Import_quantity": 810.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2050,
+      "Import_quantity": 802.0965169445,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2010,
+      "Import_quantity": 799.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.3118038415
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2000,
+      "Import_quantity": 781.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2025,
+      "Import_quantity": 779.0076458782,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2030,
+      "Import_quantity": 768.6586107314,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2035,
+      "Import_quantity": 755.9636596879,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2040,
+      "Import_quantity": 741.2460378792,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2000,
+      "Import_quantity": 727.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grape",
+      "Year": 2000,
+      "Import_quantity": 726.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2045,
+      "Import_quantity": 724.4974199802,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2050,
+      "Import_quantity": 705.3302038179,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2000,
+      "Import_quantity": 701.8837250147,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2025,
+      "Import_quantity": 669.658064607,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2030,
+      "Import_quantity": 661.6660565355,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2064.8703048854
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2015,
+      "Import_quantity": 656.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2035,
+      "Import_quantity": 651.9754157072,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2015,
+      "Import_quantity": 647.6521620319,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2040,
+      "Import_quantity": 640.8256331192,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2045,
+      "Import_quantity": 628.214004539,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2015,
+      "Import_quantity": 625.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2025,
+      "Import_quantity": 624.1648538295,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2030,
+      "Import_quantity": 615.8397619498,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2050,
+      "Import_quantity": 613.8618454028,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2035,
+      "Import_quantity": 605.6361988766,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2040,
+      "Import_quantity": 593.8134167387,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2025,
+      "Import_quantity": 581.9402054897,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2045,
+      "Import_quantity": 580.3650038005,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2030,
+      "Import_quantity": 570.7433620539,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2015,
+      "Import_quantity": 570.2322591962,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2000,
+      "Import_quantity": 569.0054940224,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2000,
+      "Import_quantity": 567.714,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2010,
+      "Import_quantity": 566.5655927152,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2050,
+      "Import_quantity": 564.9807420906,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2035,
+      "Import_quantity": 557.949974475,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2040,
+      "Import_quantity": 543.8257188841,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2015,
+      "Import_quantity": 535.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2045,
+      "Import_quantity": 528.3881452208,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2005,
+      "Import_quantity": 528.271,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2000,
+      "Import_quantity": 523.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2025,
+      "Import_quantity": 519.7383901569,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2010,
+      "Import_quantity": 516.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "orange",
+      "Year": 2020,
+      "Import_quantity": 8966.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2030,
+      "Import_quantity": 512.5760092487,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2050,
+      "Import_quantity": 511.3793986937,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2025,
+      "Import_quantity": 508.983726707,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2035,
+      "Import_quantity": 503.8574160826,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2030,
+      "Import_quantity": 499.2226057973,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2040,
+      "Import_quantity": 493.8002820379,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2035,
+      "Import_quantity": 488.0636578519,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2045,
+      "Import_quantity": 482.401065722,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2040,
+      "Import_quantity": 475.7390282001,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2010,
+      "Import_quantity": 471.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2050,
+      "Import_quantity": 469.4038178851,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2015,
+      "Import_quantity": 466.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2010,
+      "Import_quantity": 464.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.9924465677
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2045,
+      "Import_quantity": 462.2638469614,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2005,
+      "Import_quantity": 460.1243821629,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2025,
+      "Import_quantity": 456.8179858337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2030,
+      "Import_quantity": 448.1686731018,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2015,
+      "Import_quantity": 448.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2050,
+      "Import_quantity": 447.4122931594,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2015,
+      "Import_quantity": 445.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2005,
+      "Import_quantity": 441.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2005,
+      "Import_quantity": 439.8503926018,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2035,
+      "Import_quantity": 438.2597914669,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2010,
+      "Import_quantity": 435.6508403074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2010,
+      "Import_quantity": 432.1616148086,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2040,
+      "Import_quantity": 427.298915325,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2005,
+      "Import_quantity": 422.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2005,
+      "Import_quantity": 416.7082924575,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2045,
+      "Import_quantity": 415.2988596128,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2050,
+      "Import_quantity": 402.0559284116,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2010,
+      "Import_quantity": 399.2747218723,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2000,
+      "Import_quantity": 394.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soycake",
+      "Year": 2020,
+      "Import_quantity": 23813.1653936688,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2000,
+      "Import_quantity": 390.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2025,
+      "Import_quantity": 386.0703727787,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2005,
+      "Import_quantity": 382.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2000,
+      "Import_quantity": 379.3327235429,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2030,
+      "Import_quantity": 379.0459011808,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2015,
+      "Import_quantity": 371.2635394337,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2035,
+      "Import_quantity": 370.9441104297,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2005,
+      "Import_quantity": 366.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2025,
+      "Import_quantity": 364.6273528981,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2040,
+      "Import_quantity": 361.9384340804,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2030,
+      "Import_quantity": 359.3694360508,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2000,
+      "Import_quantity": 357.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2035,
+      "Import_quantity": 353.0297600355,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2045,
+      "Import_quantity": 352.0377442221,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2025,
+      "Import_quantity": 350.4362023861,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 674.9174305718
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2040,
+      "Import_quantity": 345.7627044338,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2030,
+      "Import_quantity": 343.6168173725,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "apple",
+      "Year": 2050,
+      "Import_quantity": 341.0672804847,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2015,
+      "Import_quantity": 338.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2045,
+      "Import_quantity": 337.5674314474,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2035,
+      "Import_quantity": 335.8394926558,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2050,
+      "Import_quantity": 328.2665648783,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2040,
+      "Import_quantity": 327.2647493666,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyabean",
+      "Year": 2020,
+      "Import_quantity": 11682.2845067672,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2045,
+      "Import_quantity": 317.9036806168,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 601.5772507706
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2010,
+      "Import_quantity": 312.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2010,
+      "Import_quantity": 310.9877423763,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2010,
+      "Import_quantity": 310.7599775964,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2025,
+      "Import_quantity": 309.6282661586,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2025,
+      "Import_quantity": 308.6647917563,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2050,
+      "Import_quantity": 307.6017098949,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2030,
+      "Import_quantity": 305.5246792046,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2030,
+      "Import_quantity": 304.358078673,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2000,
+      "Import_quantity": 300.5441996636,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2035,
+      "Import_quantity": 300.488333268,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2035,
+      "Import_quantity": 299.1289952543,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2015,
+      "Import_quantity": 298.4511627907,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2040,
+      "Import_quantity": 294.6476306487,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2040,
+      "Import_quantity": 293.1072269929,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2000,
+      "Import_quantity": 289.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2045,
+      "Import_quantity": 287.99918583,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2045,
+      "Import_quantity": 286.2910853659,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2050,
+      "Import_quantity": 280.3888397808,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2050,
+      "Import_quantity": 278.5291120663,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2005,
+      "Import_quantity": 275.5774220504,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rice",
+      "Year": 2020,
+      "Import_quantity": 5102.4565509623,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2015,
+      "Import_quantity": 264.529767816,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2015,
+      "Import_quantity": 256.7848101266,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2025,
+      "Import_quantity": 256.0162767168,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2030,
+      "Import_quantity": 252.6123822835,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2000,
+      "Import_quantity": 249.8943493329,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2035,
+      "Import_quantity": 248.4376115829,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2005,
+      "Import_quantity": 244.33181948,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2040,
+      "Import_quantity": 243.5982186193,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2000,
+      "Import_quantity": 242.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2045,
+      "Import_quantity": 238.0914887657,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2050,
+      "Import_quantity": 231.7900670887,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2000,
+      "Import_quantity": 229.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "nuts",
+      "Year": 2020,
+      "Import_quantity": 5703.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2025,
+      "Import_quantity": 216.3428269954,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2010,
+      "Import_quantity": 216.2765957447,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2030,
+      "Import_quantity": 213.4755771366,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2010,
+      "Import_quantity": 210.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2035,
+      "Import_quantity": 209.9565918347,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2005,
+      "Import_quantity": 209.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2040,
+      "Import_quantity": 205.8755880815,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2010,
+      "Import_quantity": 205.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2045,
+      "Import_quantity": 201.2302003556,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2005,
+      "Import_quantity": 198.4575545171,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2000,
+      "Import_quantity": 196.9747172307,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2050,
+      "Import_quantity": 195.912714975,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2020,
+      "Import_quantity": 463.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2025,
+      "Import_quantity": 191.358526637,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2030,
+      "Import_quantity": 187.6852135103,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2035,
+      "Import_quantity": 183.4865279659,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2010,
+      "Import_quantity": 179.4412955466,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2040,
+      "Import_quantity": 178.8497722968,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2045,
+      "Import_quantity": 173.780658893,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2000,
+      "Import_quantity": 171.9295080883,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2010,
+      "Import_quantity": 171.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2010,
+      "Import_quantity": 170.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2050,
+      "Import_quantity": 168.194319709,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2000,
+      "Import_quantity": 167.8193561687,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2005,
+      "Import_quantity": 167.3980381415,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2015,
+      "Import_quantity": 162.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2000,
+      "Import_quantity": 153.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2000,
+      "Import_quantity": 146.9970605348,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2005,
+      "Import_quantity": 143.7935578677,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2010,
+      "Import_quantity": 143.3220338983,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2015,
+      "Import_quantity": 133.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2015,
+      "Import_quantity": 132.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2000,
+      "Import_quantity": 131.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2005,
+      "Import_quantity": 121.4693487046,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2005,
+      "Import_quantity": 111.9982013465,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2000,
+      "Import_quantity": 110.7201017812,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2025,
+      "Import_quantity": 109.1638117867,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2030,
+      "Import_quantity": 107.717034335,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2005,
+      "Import_quantity": 107.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 454.7596796629
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2015,
+      "Import_quantity": 106.125,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2010,
+      "Import_quantity": 106.104,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2015,
+      "Import_quantity": 106.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2035,
+      "Import_quantity": 105.9413995496,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2025,
+      "Import_quantity": 105.2984204511,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2020,
+      "Import_quantity": 52.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2030,
+      "Import_quantity": 103.9028720737,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2040,
+      "Import_quantity": 103.8821774723,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "lemon",
+      "Year": 2000,
+      "Import_quantity": 103.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2000,
+      "Import_quantity": 102.3312017067,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2035,
+      "Import_quantity": 102.1901109019,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2045,
+      "Import_quantity": 101.5381744913,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2040,
+      "Import_quantity": 100.2038040063,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2050,
+      "Import_quantity": 98.8550396663,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2005,
+      "Import_quantity": 98.4545454545,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2045,
+      "Import_quantity": 97.94280004,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2010,
+      "Import_quantity": 97.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2050,
+      "Import_quantity": 95.3546725799,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2005,
+      "Import_quantity": 94.559,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2025,
+      "Import_quantity": 92.3110988122,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2030,
+      "Import_quantity": 91.6231351033,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2035,
+      "Import_quantity": 90.7843896969,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2040,
+      "Import_quantity": 89.8158873809,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2005,
+      "Import_quantity": 89.3044290692,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2010,
+      "Import_quantity": 89.0034525311,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2045,
+      "Import_quantity": 88.7172450143,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2050,
+      "Import_quantity": 87.4636399018,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2010,
+      "Import_quantity": 87.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tea",
+      "Year": 2020,
+      "Import_quantity": 312.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2025,
+      "Import_quantity": 86.3386511404,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2025,
+      "Import_quantity": 85.5116223413,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2030,
+      "Import_quantity": 85.1943817013,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2030,
+      "Import_quantity": 84.3999995928,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "banana",
+      "Year": 2020,
+      "Import_quantity": 8513.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2035,
+      "Import_quantity": 83.7900160074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2025,
+      "Import_quantity": 83.3614562735,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2035,
+      "Import_quantity": 83.0668921317,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2010,
+      "Import_quantity": 82.7217391304,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2005,
+      "Import_quantity": 82.3846153846,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2030,
+      "Import_quantity": 82.2566444012,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2040,
+      "Import_quantity": 82.1613585463,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2040,
+      "Import_quantity": 81.5447613575,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2035,
+      "Import_quantity": 80.9007051106,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2045,
+      "Import_quantity": 80.3074652795,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2045,
+      "Import_quantity": 79.8335166819,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2040,
+      "Import_quantity": 79.3282082516,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2050,
+      "Import_quantity": 78.1853495543,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2050,
+      "Import_quantity": 77.8960161599,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2045,
+      "Import_quantity": 77.5382423388,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2050,
+      "Import_quantity": 75.4893030179,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2015,
+      "Import_quantity": 74.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2010,
+      "Import_quantity": 73.7119262065,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2005,
+      "Import_quantity": 73.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2005,
+      "Import_quantity": 72.58,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2015,
+      "Import_quantity": 71.6396396396,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2025,
+      "Import_quantity": 69.1664474188,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2000,
+      "Import_quantity": 69.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2000,
+      "Import_quantity": 68.7887323944,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2030,
+      "Import_quantity": 68.3558038552,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2035,
+      "Import_quantity": 67.3331173693,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2010,
+      "Import_quantity": 67.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2040,
+      "Import_quantity": 66.1262447556,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0801973752
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2025,
+      "Import_quantity": 65.5112112657,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2020,
+      "Import_quantity": 274.7911251835,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2045,
+      "Import_quantity": 64.7336015244,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2030,
+      "Import_quantity": 64.5912223894,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilseed_other",
+      "Year": 2000,
+      "Import_quantity": 64.2067637615,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2025,
+      "Import_quantity": 64.1144137684,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2035,
+      "Import_quantity": 63.4756738708,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2050,
+      "Import_quantity": 63.1196600491,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2015,
+      "Import_quantity": 62.9993986309,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2030,
+      "Import_quantity": 62.8831295001,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2040,
+      "Import_quantity": 62.1921365032,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2000,
+      "Import_quantity": 61.4996803757,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2035,
+      "Import_quantity": 61.4758444392,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2005,
+      "Import_quantity": 61.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2045,
+      "Import_quantity": 60.7402982901,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2010,
+      "Import_quantity": 60.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2010,
+      "Import_quantity": 60.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2040,
+      "Import_quantity": 59.9218129131,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2050,
+      "Import_quantity": 59.0880746986,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2005,
+      "Import_quantity": 59.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2045,
+      "Import_quantity": 58.2229525957,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2015,
+      "Import_quantity": 58.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2000,
+      "Import_quantity": 58.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2050,
+      "Import_quantity": 56.3508335576,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2025,
+      "Import_quantity": 51.4585584416,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2030,
+      "Import_quantity": 50.6331632721,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2000,
+      "Import_quantity": 50.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2035,
+      "Import_quantity": 49.6582706543,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2040,
+      "Import_quantity": 48.556300076,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2045,
+      "Import_quantity": 47.3277628045,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2010,
+      "Import_quantity": 47.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2005,
+      "Import_quantity": 47.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2015,
+      "Import_quantity": 46.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2000,
+      "Import_quantity": 45.973,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mutton_goat",
+      "Year": 2050,
+      "Import_quantity": 45.9484565282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2000,
+      "Import_quantity": 44.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beans",
+      "Year": 2020,
+      "Import_quantity": 524.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2025,
+      "Import_quantity": 40.6363095794,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2030,
+      "Import_quantity": 40.0469154593,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2035,
+      "Import_quantity": 39.3372650091,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2000,
+      "Import_quantity": 39.269,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2040,
+      "Import_quantity": 38.5245763065,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2045,
+      "Import_quantity": 37.6087664782,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2000,
+      "Import_quantity": 37.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2050,
+      "Import_quantity": 36.5700831107,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2000,
+      "Import_quantity": 32.272,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "spices_other",
+      "Year": 2020,
+      "Import_quantity": 218.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2000,
+      "Import_quantity": 24.177,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2025,
+      "Import_quantity": 23.7008305282,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2030,
+      "Import_quantity": 23.2726591401,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2000,
+      "Import_quantity": 23.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2035,
+      "Import_quantity": 22.7779379041,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "grapefruit",
+      "Year": 2020,
+      "Import_quantity": 516.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2040,
+      "Import_quantity": 22.2273173901,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2005,
+      "Import_quantity": 22.1353154234,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2010,
+      "Import_quantity": 21.7861895254,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2045,
+      "Import_quantity": 21.6213495073,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2000,
+      "Import_quantity": 21.511,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2050,
+      "Import_quantity": 20.94931053,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2015,
+      "Import_quantity": 19.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2005,
+      "Import_quantity": 17.585,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2005,
+      "Import_quantity": 15.065,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2015,
+      "Import_quantity": 13.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2010,
+      "Import_quantity": 12.541,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2010,
+      "Import_quantity": 11.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2005,
+      "Import_quantity": 10.523,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2025,
+      "Import_quantity": 10.3224485194,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2010,
+      "Import_quantity": 10.1800308642,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2030,
+      "Import_quantity": 10.1646791074,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2035,
+      "Import_quantity": 9.9765355448,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2020,
+      "Import_quantity": 65.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2040,
+      "Import_quantity": 9.7624622024,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2045,
+      "Import_quantity": 9.5225103155,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2050,
+      "Import_quantity": 9.2517566032,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "citrus_other",
+      "Year": 2015,
+      "Import_quantity": 9.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2025,
+      "Import_quantity": 8.9206682195,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2030,
+      "Import_quantity": 8.8024401967,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2015,
+      "Import_quantity": 8.791,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnut",
+      "Year": 2020,
+      "Import_quantity": 1834.0886151108,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2035,
+      "Import_quantity": 8.6573385505,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2040,
+      "Import_quantity": 8.4890626663,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2045,
+      "Import_quantity": 8.2975150046,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2050,
+      "Import_quantity": 8.0782541051,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2025,
+      "Import_quantity": 7.9391863118,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2030,
+      "Import_quantity": 7.8339661335,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2035,
+      "Import_quantity": 7.7048290582,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2040,
+      "Import_quantity": 7.5550674525,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2045,
+      "Import_quantity": 7.3845945085,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2050,
+      "Import_quantity": 7.1894574303,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2020,
+      "Import_quantity": 22.7637878694,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2025,
+      "Import_quantity": 6.9467880228,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2030,
+      "Import_quantity": 6.8547203668,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2035,
+      "Import_quantity": 6.7417254259,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2040,
+      "Import_quantity": 6.610684021,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2045,
+      "Import_quantity": 6.4615201949,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2050,
+      "Import_quantity": 6.2907752515,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2010,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2005,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutoil",
+      "Year": 2020,
+      "Import_quantity": 65.9920528197,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2015,
+      "Import_quantity": 3.9331490257,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2010,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2005,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2000,
+      "Import_quantity": 2.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2010,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2015,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2020,
+      "Import_quantity": 9.9301661818,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2025,
+      "Import_quantity": 0.992398289,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2030,
+      "Import_quantity": 0.9792457667,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2035,
+      "Import_quantity": 0.9631036323,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2040,
+      "Import_quantity": 0.9443834316,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2045,
+      "Import_quantity": 0.9230743136,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2050,
+      "Import_quantity": 0.8986821788,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 39302.8335967652
+    },
+    {
+      "Location": "Europe",
+      "Product": "date",
+      "Year": 2020,
+      "Import_quantity": 194.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 25924.2584113867
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13220.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "milk",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 15682.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 20064.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12474.2971599537
+    },
+    {
+      "Location": "Europe",
+      "Product": "piment",
+      "Year": 2020,
+      "Import_quantity": 84.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 138.5796978464
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 380.1101770128
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 669.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesame",
+      "Year": 2020,
+      "Import_quantity": 325.808105661,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2285.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tuber_other",
+      "Year": 2020,
+      "Import_quantity": 41.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2397.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 10359.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_oil",
+      "Year": 2020,
+      "Import_quantity": 11380.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 23946.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 14241.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 12938.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1285.6349988918
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 13123.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1196.5961594376
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 766.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 115.5699077427
+    },
+    {
+      "Location": "Europe",
+      "Product": "tomato",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1245.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palm_oil",
+      "Year": 2020,
+      "Import_quantity": 9352.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2218.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pinapple",
+      "Year": 2020,
+      "Import_quantity": 4204.7141883604,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1240.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 707.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coffee",
+      "Year": 2020,
+      "Import_quantity": 4185.2296836983,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeseed",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1768.6215403657
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1203.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cereal_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 125.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 893.1873148225
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 86.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocoa",
+      "Year": 2020,
+      "Import_quantity": 1900.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 521.3815140742
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2020,
+      "Import_quantity": 911.9347385844,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1680.0584223604
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 436.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflower",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 43.2996579986
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 383.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 699.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkerneloil",
+      "Year": 2020,
+      "Import_quantity": 795.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "coconut",
+      "Year": 2020,
+      "Import_quantity": 635.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cocooil",
+      "Year": 2020,
+      "Import_quantity": 629.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "plantain",
+      "Year": 2020,
+      "Import_quantity": 350.3691275168,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 98.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 78.7827564006
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 180.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 324.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "olive",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 96.9761321596
+    },
+    {
+      "Location": "Europe",
+      "Product": "sweet_potato",
+      "Year": 2020,
+      "Import_quantity": 313.857605178,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4580.5268069949
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 388.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 438.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 895.2466656043
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 24.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cassava",
+      "Year": 2020,
+      "Import_quantity": 110.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 257.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 82.0602947961
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 90.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 93.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 289.7841272408
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunflcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1046.4649484828
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1405.4940096519
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 289.3117968685
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 486.035400165
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_hard_other",
+      "Year": 2020,
+      "Import_quantity": 106.125,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pepper",
+      "Year": 2020,
+      "Import_quantity": 87.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2020,
+      "Import_quantity": 26.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 191.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 586.4367067519
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1001.7420823384
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 108.0134611196
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 68.0850414467
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 175.0761633323
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 65.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 593.9590513394
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 342.1486712008
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 247.2891736513
+    },
+    {
+      "Location": "Europe",
+      "Product": "jute",
+      "Year": 2020,
+      "Import_quantity": 8.791,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 149.0393743802
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2020,
+      "Import_quantity": 7.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 182.0258693693
+    },
+    {
+      "Location": "Europe",
+      "Product": "cotton",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 51.0394936012
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2020,
+      "Import_quantity": 5.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 66.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2020,
+      "Import_quantity": 1.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 51.021367177
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottlint",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "other_olscake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "tobacco",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cottoil",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "groundnutcake",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarcane",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sesamoil",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 7.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "yams",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "barley",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 19305.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.948497982
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 29.9848872132
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "beef",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 30.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chicken",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 2282.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chips_and__particles",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "clove",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "corn",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 9450.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.7655332043
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.7897608327
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.8314735945
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.890377986
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 69.9664833108
+    },
+    {
+      "Location": "Europe",
+      "Product": "eggs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "fiber_soft_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "honey",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "meat_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "mech_pulp",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "millet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 45.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 294.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oilpalmfruit",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 332.6455293049
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 338.0137280315
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 343.5542661146
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 349.2019042473
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 354.9318024483
+    },
+    {
+      "Location": "Europe",
+      "Product": "oliveoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 360.757213586
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "onion",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 839.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "palmkernelcake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 600.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 600.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 600.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 600.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 600.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "peas",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 600.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pork",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 4244.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "potato",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 993.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pulses_other",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 87.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1928.5061138115
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1926.4082836794
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1920.6167219284
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1911.4964702393
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1898.9440094704
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapecake",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 1882.2913887967
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 342.8623874845
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 358.0966323249
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 373.9041933436
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 390.076053711
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 406.532859876
+    },
+    {
+      "Location": "Europe",
+      "Product": "rapeoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 423.3179120551
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rye",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 366.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sisal",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sorghum",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 70.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "soyoil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.2877117882
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.4157352006
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.5437610829
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.671788943
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.7998187593
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarbeet",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 117.9278510496
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sugarraw",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8234.8293471893
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8251.6187036916
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8268.7774721801
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8286.1676897786
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8303.7368544756
+    },
+    {
+      "Location": "Europe",
+      "Product": "sunfloil",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 8321.5131272432
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53695.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53695.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53695.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53694.9999999999
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53695.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "wheat",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 53695.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "cattle",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "pigs",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "chickens",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2000,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2005,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2020,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2025,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2030,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2035,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2040,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2045,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "sheep_goats",
+      "Year": 2050,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2015,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "abaca",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    },
+    {
+      "Location": "Europe",
+      "Product": "rubber",
+      "Year": 2010,
+      "Import_quantity": 0.0,
+      "Export_quantity": 0.0
+    }
+  ],
+  "aggregate_rows": [
+    {
+      "Location": "Europe",
+      "Year": 2000.0,
+      "kcal_feas": 2801.5186188457,
+      "kcal_mder": 1868.1874300931,
+      "CalcAllLandCO2e": 0.0,
+      "CalcAllAgriCO2e": 754.7242011763
+    },
+    {
+      "Location": "Europe",
+      "Year": 2005.0,
+      "kcal_feas": 2872.653836678,
+      "kcal_mder": 1873.3287896492,
+      "CalcAllLandCO2e": -12.4362890951,
+      "CalcAllAgriCO2e": 748.671459756
+    },
+    {
+      "Location": "Europe",
+      "Year": 2010.0,
+      "kcal_feas": 2907.2204817408,
+      "kcal_mder": 1868.1634456351,
+      "CalcAllLandCO2e": -11.7955125391,
+      "CalcAllAgriCO2e": 717.5959719772
+    },
+    {
+      "Location": "Europe",
+      "Year": 2015.0,
+      "kcal_feas": 2915.3692942395,
+      "kcal_mder": 1860.5456698759,
+      "CalcAllLandCO2e": -14.6525894351,
+      "CalcAllAgriCO2e": 719.1600941304
+    },
+    {
+      "Location": "Europe",
+      "Year": 2020.0,
+      "kcal_feas": 3013.5687881524,
+      "kcal_mder": 1858.0387200694,
+      "CalcAllLandCO2e": -4.6513337057,
+      "CalcAllAgriCO2e": 726.0322543405
+    },
+    {
+      "Location": "Europe",
+      "Year": 2025.0,
+      "kcal_feas": 3012.8890582512,
+      "kcal_mder": 1861.0655004413,
+      "CalcAllLandCO2e": 155.2880668139,
+      "CalcAllAgriCO2e": 728.4044322232
+    },
+    {
+      "Location": "Europe",
+      "Year": 2030.0,
+      "kcal_feas": 3012.9817779299,
+      "kcal_mder": 1863.296696153,
+      "CalcAllLandCO2e": -135.4792639121,
+      "CalcAllAgriCO2e": 716.8458697088
+    },
+    {
+      "Location": "Europe",
+      "Year": 2035.0,
+      "kcal_feas": 3013.0465009123,
+      "kcal_mder": 1862.7979003786,
+      "CalcAllLandCO2e": -211.2707559365,
+      "CalcAllAgriCO2e": 702.7373506931
+    },
+    {
+      "Location": "Europe",
+      "Year": 2040.0,
+      "kcal_feas": 3013.0945805231,
+      "kcal_mder": 1858.8352423172,
+      "CalcAllLandCO2e": -285.4517416168,
+      "CalcAllAgriCO2e": 686.4419699431
+    },
+    {
+      "Location": "Europe",
+      "Year": 2045.0,
+      "kcal_feas": 3013.1538071645,
+      "kcal_mder": 1854.128426302,
+      "CalcAllLandCO2e": -358.7411846976,
+      "CalcAllAgriCO2e": 668.0569036783
+    },
+    {
+      "Location": "Europe",
+      "Year": 2050.0,
+      "kcal_feas": 3013.170377081,
+      "kcal_mder": 1851.2310212733,
+      "CalcAllLandCO2e": -434.4280991852,
+      "CalcAllAgriCO2e": 647.380026546
+    }
+  ]
+}
