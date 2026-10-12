@@ -1,16 +1,11 @@
 {
   "iteration": "Iteration 1",
   "participants": [
-    "LAC",
-    "MENA",
-    "NOA",
-    "ASP",
-    "EUR",
-    "AFR"
+    "Africa"
   ],
   "pathways": [
-    "GlobalSustainability"
+    "CurrentTrends"
   ],
   "status": "OPEN",
-  "updated_at_utc": "2026-10-07T10:21:32.702023+00:00"
+  "updated_at_utc": "2026-10-12T12:54:05.612168+00:00"
 }
