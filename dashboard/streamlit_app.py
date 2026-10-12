@@ -2001,12 +2001,15 @@ def _read_submission_json_files(
     folder,
 ):
 
-    payloads = []
+    from concurrent.futures import (
+        ThreadPoolExecutor,
+    )
 
-    for item in github_list_dir(
-        folder
-    ):
-
+    items = [
+        item
+        for item in github_list_dir(
+            folder
+        )
         if (
             item.get(
                 "type"
@@ -2020,25 +2023,57 @@ def _read_submission_json_files(
             .endswith(
                 ".json"
             )
-        ):
+        )
+    ]
 
-            try:
 
-                payload = github_get_json(
-                    item[
-                        "path"
-                    ]
-                )
+    if not items:
 
-                if payload:
+        return []
 
-                    payloads.append(
-                        payload
-                    )
 
-            except Exception:
+    def _load_submission_item(
+        item,
+    ):
 
-                pass
+        try:
+
+            return github_get_json(
+                item[
+                    "path"
+                ]
+            )
+
+        except Exception:
+
+            return None
+
+
+    max_workers = min(
+        6,
+        len(
+            items
+        ),
+    )
+
+
+    with ThreadPoolExecutor(
+        max_workers=max_workers
+    ) as executor:
+
+        loaded = list(
+            executor.map(
+                _load_submission_item,
+                items,
+            )
+        )
+
+
+    payloads = [
+        payload
+        for payload in loaded
+        if payload
+    ]
 
 
     return payloads
@@ -7270,6 +7305,13 @@ with analytics_tab:
                     )
 
 
+                    progress_df["Legend"] = (
+                        progress_df["Stage"]
+                        .astype(str)
+                        .map(plain_text_label)
+                    )
+
+
                     # ----------------------------------------
                     # FOOD SECURITY PROGRESS
                     # ----------------------------------------
@@ -7281,7 +7323,7 @@ with analytics_tab:
                             y=(
                                 "Food security passing percent"
                             ),
-                            color="Series",
+                            color="Legend",
                             barmode="group",
                             title=(
                                 "Food security progress"
@@ -7293,7 +7335,7 @@ with analytics_tab:
                                 "Iteration display": (
                                     "Iteration"
                                 ),
-                                "Series": "",
+                                "Legend": "",
                             },
                         )
                     )
@@ -7315,6 +7357,21 @@ with analytics_tab:
                     )
 
 
+                    progress_food_fig.update_layout(
+                        legend=dict(
+                            orientation="h",
+                            yanchor="top",
+                            y=-0.18,
+                            xanchor="center",
+                            x=0.5,
+                            title_text="",
+                        ),
+                        margin=dict(
+                            b=120,
+                        ),
+                    )
+
+
                     # ----------------------------------------
                     # AGRICULTURE GHG PROGRESS
                     # ----------------------------------------
@@ -7324,7 +7381,7 @@ with analytics_tab:
                             progress_df,
                             x="Iteration display",
                             y="Agriculture GHG",
-                            color="Series",
+                            color="Legend",
                             barmode="group",
                             title=(
                                 "Agriculture GHG progress"
@@ -7336,7 +7393,7 @@ with analytics_tab:
                                 "Iteration display": (
                                     "Iteration"
                                 ),
-                                "Series": "",
+                                "Legend": "",
                             },
                         )
                     )
@@ -7358,6 +7415,21 @@ with analytics_tab:
                     )
 
 
+                    progress_agri_fig.update_layout(
+                        legend=dict(
+                            orientation="h",
+                            yanchor="top",
+                            y=-0.18,
+                            xanchor="center",
+                            x=0.5,
+                            title_text="",
+                        ),
+                        margin=dict(
+                            b=120,
+                        ),
+                    )
+
+
                     # ----------------------------------------
                     # LAND GHG PROGRESS
                     # ----------------------------------------
@@ -7367,7 +7439,7 @@ with analytics_tab:
                             progress_df,
                             x="Iteration display",
                             y="Land use change GHG",
-                            color="Series",
+                            color="Legend",
                             barmode="group",
                             title=(
                                 "Land use change GHG progress"
@@ -7379,7 +7451,7 @@ with analytics_tab:
                                 "Iteration display": (
                                     "Iteration"
                                 ),
-                                "Series": "",
+                                "Legend": "",
                             },
                         )
                     )
@@ -7398,6 +7470,21 @@ with analytics_tab:
                     flex_prepare_figure(
                         progress_land_fig,
                         height=500,
+                    )
+
+
+                    progress_land_fig.update_layout(
+                        legend=dict(
+                            orientation="h",
+                            yanchor="top",
+                            y=-0.18,
+                            xanchor="center",
+                            x=0.5,
+                            title_text="",
+                        ),
+                        margin=dict(
+                            b=120,
+                        ),
                     )
 
 
@@ -9031,6 +9118,176 @@ with analytics_tab:
                         == "All products"
                     )
                     else selected_analytics_product
+                )
+
+
+                # =================================================
+                # PRODUCT-LEVEL TRADE BALANCE
+                # =================================================
+                #
+                # IMPORTANT:
+                # Calculate the import-export distance at
+                # Product x Year level first, then sum those
+                # product-level distances by Year.
+                #
+                # This avoids cancellation between products
+                # that can occur in aggregate net trade totals.
+                # =================================================
+
+                st.markdown(
+                    "### Product-level trade balance"
+                )
+
+
+                product_balance_df = (
+                    pathway_df
+                    .groupby(
+                        [
+                            "Product",
+                            "Year",
+                        ],
+                        as_index=False,
+                    )[
+                        [
+                            "ImportsOriginal",
+                            "ExportsOriginal",
+                            "ExportsAdj",
+                        ]
+                    ]
+                    .sum(
+                        min_count=1
+                    )
+                )
+
+
+                product_balance_df[
+                    "GapBefore"
+                ] = (
+                    product_balance_df[
+                        "ImportsOriginal"
+                    ]
+                    - product_balance_df[
+                        "ExportsOriginal"
+                    ]
+                ).abs()
+
+
+                product_balance_df[
+                    "GapAfter"
+                ] = (
+                    product_balance_df[
+                        "ImportsOriginal"
+                    ]
+                    - product_balance_df[
+                        "ExportsAdj"
+                    ]
+                ).abs()
+
+
+                product_balance_yearly = (
+                    product_balance_df
+                    .groupby(
+                        "Year",
+                        as_index=False,
+                    )[
+                        [
+                            "GapBefore",
+                            "GapAfter",
+                        ]
+                    ]
+                    .sum(
+                        min_count=1
+                    )
+                    .sort_values(
+                        "Year"
+                    )
+                )
+
+
+                product_balance_fig = (
+                    go.Figure()
+                )
+
+
+                product_balance_fig.add_trace(
+                    go.Scatter(
+                        x=product_balance_yearly[
+                            "Year"
+                        ],
+                        y=product_balance_yearly[
+                            "GapBefore"
+                        ],
+                        mode="lines+markers",
+                        name=(
+                            "Exports before adjustment"
+                        ),
+                    )
+                )
+
+
+                product_balance_fig.add_trace(
+                    go.Scatter(
+                        x=product_balance_yearly[
+                            "Year"
+                        ],
+                        y=product_balance_yearly[
+                            "GapAfter"
+                        ],
+                        mode="lines+markers",
+                        name=(
+                            "Exports after adjustment"
+                        ),
+                    )
+                )
+
+
+                product_balance_fig.add_hline(
+                    y=0,
+                    line_dash="dash",
+                    annotation_text=(
+                        "Perfect balance"
+                    ),
+                    annotation_position=(
+                        "bottom left"
+                    ),
+                )
+
+
+                product_balance_fig.update_layout(
+                    title=(
+                        "Product-level trade balance"
+                    ),
+                    xaxis_title="Year",
+                    yaxis_title=(
+                        "Product-level import-export gap"
+                    ),
+                    hovermode="x unified",
+                    legend=dict(
+                        orientation="h",
+                        yanchor="top",
+                        y=-0.18,
+                        xanchor="center",
+                        x=0.5,
+                        title_text="",
+                    ),
+                    margin=dict(
+                        b=110,
+                    ),
+                )
+
+
+                st.plotly_chart(
+                    product_balance_fig,
+                    use_container_width=True,
+                    key=(
+                        "analytics_product_balance"
+                    ),
+                )
+
+
+                st.caption(
+                    "Lower is better. Zero represents perfect "
+                    "product-level import-export balance."
                 )
 
 
