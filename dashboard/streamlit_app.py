@@ -10,6 +10,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone
+from uuid import uuid4
 from pathlib import Path
 from urllib.parse import quote
 
@@ -24,7 +25,7 @@ import streamlit as st
 # 1. APPLICATION CONFIGURATION
 # ============================================================
 
-APP_TITLE = "FABLE Scenathon Trade Adjustment"
+APP_TITLE = "FABLE Scenathon"
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BACKEND_DIR = REPO_ROOT / "backend"
@@ -33,6 +34,7 @@ if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
 
 from trade_engine import calculate_trade_adjustment, ENGINE_VERSION
+from scenathon_exports import build_scenathon_reports, csv_bytes
 
 from global_results import (
     aggregate_rows_from_submissions,
@@ -174,6 +176,192 @@ def safe_name(value: str) -> str:
     return cleaned.strip("_")
 
 
+# ============================================================
+# 3B. COMMON LABEL FORMATTING
+#
+# FIX: Shared across Analytics, Admin, and Storage tabs.
+# Must be defined at module level.
+# ============================================================
+
+def plain_text_label(text):
+    text = str(text)
+    text = text.replace("_", " ")
+    text = text.replace("—", "-").replace("–", "-")
+
+    while "--" in text:
+        text = text.replace("--", "-")
+
+    while "  " in text:
+        text = text.replace("  ", " ")
+
+    return text.strip()
+
+
+# ============================================================
+# 3A. SCENATHON SESSION ID AND STORAGE ISOLATION
+#
+# Each session gets a permanent internal ID.
+# Iteration names can repeat across sessions.
+# "legacy" reads data using the original storage paths.
+# ============================================================
+
+def active_session_id():
+    return st.session_state.get("active_scenathon_id", "legacy")
+
+
+def session_config_path(session_id):
+    return storage_path("sessions", safe_name(session_id), "session.json")
+
+
+def list_scenathon_sessions():
+    sessions = []
+
+    for entry in github_list_dir(storage_path("sessions")):
+        if entry.get("type") == "dir":
+            cfg = github_get_json(session_config_path(entry["name"]))
+
+            if cfg:
+                sessions.append(cfg)
+
+    return sorted(
+        sessions,
+        key=lambda c: c.get("created_at_utc", ""),
+        reverse=True,
+    )
+
+
+def load_scenathon_session(session_id):
+    if session_id == "legacy":
+        return {
+            "id": "legacy",
+            "name": "Legacy Scenathon (old data)",
+            "status": "LEGACY",
+            "date": "",
+        }
+
+    return github_get_json(session_config_path(session_id))
+
+
+def ensure_session_open():
+
+    # FULL_RESET_WRITE_GUARD_09
+    # Do not allow an old browser tab to submit into
+    # a session that the Admin has paused or reset.
+
+    published = get_published_active_scenathon()
+
+    if (
+        published == "__no_active__"
+        or active_session_id() != published
+    ):
+        raise PermissionError(
+            "This Scenathon is no longer active. "
+            "New submissions are disabled."
+        )
+    session = load_scenathon_session(active_session_id())
+
+    if session is None or session.get("status") == "CLOSED":
+        raise PermissionError(
+            "This Scenathon is closed. "
+            "Submissions and edits are locked."
+        )
+
+
+def create_scenathon_session(name, date, time_text):
+    if not str(name).strip():
+        raise ValueError("Give this Scenathon a name.")
+
+    # Internal ID guarantees uniqueness.
+    session_id = "scenathon_" + uuid4().hex
+
+    cfg = {
+        "id": session_id,
+        "name": str(name).strip(),
+        "date": str(date),
+        "time": str(time_text).strip(),
+        "status": "OPEN",
+        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "closed_at_utc": None,
+    }
+
+    github_put_json(
+        session_config_path(session_id),
+        cfg,
+        "Create FABLE Scenathon session",
+    )
+
+    return cfg
+
+
+def close_scenathon_session(session_id):
+    if session_id == "legacy":
+        raise ValueError(
+            "Legacy data cannot be closed as a new session."
+        )
+
+    cfg = load_scenathon_session(session_id)
+
+    if not cfg or cfg.get("status") != "OPEN":
+        raise ValueError(
+            "Scenathon not found or already closed."
+        )
+
+    cfg = {
+        **cfg,
+        "status": "CLOSED",
+        "closed_at_utc": datetime.now(timezone.utc).isoformat(),
+    }
+
+    github_put_json(
+        session_config_path(session_id),
+        cfg,
+        "Close FABLE Scenathon session",
+    )
+
+    return cfg
+
+
+
+# SECTION20_REOPEN_FUNCTION
+def reopen_scenathon_session(session_id):
+
+    if session_id in (
+        "legacy", "__no_active__", "", None
+    ):
+        raise ValueError(
+            "Select a closed Scenathon to reopen."
+        )
+
+    cfg = load_scenathon_session(session_id)
+
+    if not cfg or cfg.get("status") != "CLOSED":
+        raise ValueError(
+            "Only a closed Scenathon can be reopened."
+        )
+
+    now = datetime.now(timezone.utc).isoformat()
+
+    updated = dict(cfg)
+
+    updated.update({
+        "status": "OPEN",
+        "closed_at_utc": None,
+        "last_closed_at_utc": cfg.get(
+            "closed_at_utc"
+        ),
+        "reopened_at_utc": now,
+        "updated_at_utc": now,
+    })
+
+    github_put_json(
+        session_config_path(session_id),
+        updated,
+        "Admin: reopen FABLE Scenathon",
+    )
+
+    return updated
+
+
 def storage_path(*parts) -> str:
     clean_parts = [
         str(part).strip("/")
@@ -181,9 +369,23 @@ def storage_path(*parts) -> str:
         if str(part).strip("/")
     ]
 
-    return "/".join(
-        [STORAGE_ROOT] + clean_parts
-    )
+    # Session isolation applies only to data roots.
+    # Session configuration and archives stay separate.
+
+    if clean_parts and clean_parts[0] in {
+        "iterations",
+        "submissions",
+        "results",
+    }:
+        current_id = active_session_id()
+
+        if current_id != "legacy":
+            clean_parts = [
+                "sessions",
+                safe_name(current_id),
+            ] + clean_parts
+
+    return "/".join([STORAGE_ROOT] + clean_parts)
 
 
 def iteration_config_path(
@@ -356,6 +558,13 @@ def github_get_file(path: str):
     }
 
 
+@st.cache_data(ttl=90, show_spinner=False)
+def github_get_file_readonly(path: str):
+    """Cached dashboard reads only; upload/delete still fetch a fresh SHA."""
+    return github_get_file(path)
+
+
+@st.cache_data(ttl=90, show_spinner=False)
 def github_list_dir(path: str):
 
     response = requests.get(
@@ -407,7 +616,7 @@ def github_put_bytes(
     )
 
     response.raise_for_status()
-
+    st.cache_data.clear()  # Invalidate all read caches when stored data changes.
     return response.json()
 
 
@@ -443,6 +652,7 @@ def github_put_json(
     )
 
 
+@st.cache_data(ttl=90, show_spinner=False)
 def github_get_json(path: str):
 
     file_data = github_get_file(path)
@@ -479,7 +689,7 @@ def github_delete_file(
     )
 
     response.raise_for_status()
-
+    st.cache_data.clear()
     return True
 
 
@@ -548,6 +758,7 @@ def save_iteration_config(
     pathways: list[str],
     is_open: bool,
 ):
+    ensure_session_open()
 
     config = {
         "iteration": (
@@ -877,16 +1088,21 @@ def _find_scenathon_table_header(
     )
 
 
+
 def _extract_scenathon_table(
     rows,
     required_columns,
     identity_columns,
 ):
     """
-    Extract one table from SCENATHON_report.
+    SECTION16_STOP_AT_NEXT_TABLE
 
-    The table is detected from its headers, so the extractor
-    is resilient to changes in the physical Excel row number.
+    Extract one SCENATHON_report table only.
+
+    Stop when:
+    - The next reporting section starts
+    - Another reporting table header is encountered
+    - Two blank identity rows follow existing data
     """
 
     header_index, column_indexes = (
@@ -904,15 +1120,45 @@ def _extract_scenathon_table(
     started = False
     blank_after_data = 0
 
-    for row in rows[
-        header_index + 1:
-    ]:
+    for row in rows[header_index + 1:]:
 
         row = list(row)
 
+        cells = {
+            str(value).strip()
+            for value in row
+            if value is not None
+        }
+
+        # -----------------------------------------------
+        # DETECT NEXT REPORTING SECTION
+        # -----------------------------------------------
+
+        next_section = (
+            "REPORTING_AGGREGATE" in cells
+            or "REPORTING_BYPRODUCT" in cells
+            or all(
+                column in cells
+                for column in REQUIRED_COLUMNS
+            )
+            or all(
+                column in cells
+                for column in AGGREGATE_COLUMNS
+            )
+        )
+
+        if next_section and started:
+            break
+
+        # -----------------------------------------------
+        # READ CURRENT TABLE ROW
+        # -----------------------------------------------
+
         if len(row) <= max_index:
-            row += [""] * (
-                max_index + 1 - len(row)
+            row.extend(
+                [None] * (
+                    max_index + 1 - len(row)
+                )
             )
 
         record = {
@@ -921,21 +1167,22 @@ def _extract_scenathon_table(
             in column_indexes.items()
         }
 
-        identity_values = [
-            record.get(column)
-            for column in identity_columns
+        present = [
+            value is not None
+            and str(value).strip() != ""
+            for value in (
+                record[column]
+                for column in identity_columns
+            )
         ]
 
-        fully_blank = all(
-            value is None
-            or str(value).strip() == ""
-            for value in identity_values
-        )
+        # -----------------------------------------------
+        # HANDLE BLANK ROWS
+        # -----------------------------------------------
 
-        if fully_blank:
+        if not any(present):
 
             if started:
-
                 blank_after_data += 1
 
                 if blank_after_data >= 2:
@@ -945,21 +1192,21 @@ def _extract_scenathon_table(
 
         blank_after_data = 0
 
-        if not all(
-            value is not None
-            and str(value).strip() != ""
-            for value in identity_values
-        ):
-            continue
+        # Reject incomplete identity records.
+        if not all(present):
+            raise ValueError(
+                "Incomplete SCENATHON report record in "
+                + ", ".join(identity_columns)
+                + f": {record!r}"
+            )
 
         started = True
-        records.append(
-            record
-        )
+
+        records.append(record)
 
     if not records:
         raise ValueError(
-            "SCENATHON table header was found, "
+            "SCENATHON table header was found "
             "but no data rows were detected."
         )
 
@@ -967,6 +1214,258 @@ def _extract_scenathon_table(
         records,
         columns=required_columns,
     )
+
+
+
+# ============================================================
+# SECTION17_VALIDATION_HELPERS
+# ============================================================
+
+def cc17_validate_table(df, kind):
+    import math
+
+    if df.empty:
+        raise ValueError(f"{kind} report table is empty")
+
+    if kind == "trade":
+        needed = [
+            "Location", "Product", "Year",
+            "Import_quantity", "Export_quantity",
+        ]
+        numeric = [
+            "Year", "Import_quantity", "Export_quantity",
+        ]
+        identity = ["Location", "Product", "Year"]
+
+    else:
+        needed = [
+            "Location", "Year",
+            "kcal_feas", "kcal_mder",
+            "CalcAllLandCO2e", "CalcAllAgriCO2e",
+        ]
+        numeric = needed[1:]
+        identity = ["Location", "Year"]
+
+    missing = [x for x in needed if x not in df.columns]
+
+    if missing:
+        raise ValueError(
+            f"{kind}: missing columns: {missing}"
+        )
+
+    # Check identity fields.
+    for field in ("Location", "Product"):
+
+        if field not in identity:
+            continue
+
+        bad = (
+            df[field].isna()
+            | df[field].astype(str).str.strip().eq("")
+        )
+
+        if bad.any():
+            raise ValueError(
+                f"{kind}: blank {field} in "
+                f"{int(bad.sum())} row(s)"
+            )
+
+    # Check every numeric field.
+    for field in numeric:
+
+        bad = ~df[field].map(
+            lambda x: (
+                pd.notna(x)
+                and math.isfinite(float(x))
+            )
+        )
+
+        if bad.any():
+            raise ValueError(
+                f"{kind}: invalid/missing {field} "
+                f"in {int(bad.sum())} row(s). "
+                "Nothing saved."
+            )
+
+    # Year must be an integer.
+    bad_year = ~df["Year"].map(
+        lambda x: (
+            float(x).is_integer()
+            and x >= 0
+        )
+    )
+
+    if bad_year.any():
+        raise ValueError(
+            f"{kind}: invalid Year values in "
+            f"{int(bad_year.sum())} row(s)"
+        )
+
+    # Trade quantities cannot be negative.
+    if kind == "trade":
+
+        for field in (
+            "Import_quantity",
+            "Export_quantity",
+        ):
+
+            if (df[field] < 0).any():
+                raise ValueError(
+                    f"{kind}: negative {field} "
+                    "is not allowed"
+                )
+
+    else:
+        for field in ("kcal_feas", "kcal_mder"):
+
+            if (df[field] < 0).any():
+                raise ValueError(
+                    f"{kind}: negative {field} "
+                    "is not allowed"
+                )
+
+    # Duplicate checking.
+    keys = df[identity].copy()
+
+    for field in ("Location", "Product"):
+
+        if field in keys:
+            keys[field] = (
+                keys[field]
+                .astype(str)
+                .str.strip()
+                .str.casefold()
+            )
+
+    keys["Year"] = keys["Year"].astype(int)
+
+    if keys.duplicated().any():
+        raise ValueError(
+            f"{kind}: duplicate identity keys detected"
+        )
+
+
+def cc17_read_report_metadata(rows):
+    """
+    Read saved pathway and trade-adjustment setting.
+    No second workbook load is needed.
+    """
+
+    wanted = (
+        "pathway",
+        "scenario on trade adjustment",
+    )
+
+    for n in range(min(30, len(rows) - 1)):
+
+        cells = [
+            str(v).strip().casefold()
+            if v is not None
+            else ""
+            for v in rows[n]
+        ]
+
+        if all(label in cells for label in wanted):
+
+            values = rows[n + 1]
+            outcome = {}
+
+            for label in wanted:
+
+                pos = cells.index(label)
+
+                outcome[label] = (
+                    str(values[pos]).strip()
+                    if (
+                        pos < len(values)
+                        and values[pos] is not None
+                    )
+                    else ""
+                )
+
+            return outcome
+
+    raise ValueError(
+        "SCENATHON_report pathway/trade-adjustment "
+        "metadata not found. Check workbook version "
+        "and save recalculated results."
+    )
+
+
+def cc17_verify_submission_context(
+    bundle,
+    participant,
+    pathway,
+    stage,
+):
+    """
+    Stop invalid submissions before GitHub save.
+    """
+
+    location = str(
+        bundle.get("location", "")
+    ).strip()
+
+    metadata = bundle.get(
+        "report_metadata", {}
+    )
+
+    workbook_pathway = str(
+        metadata.get("pathway", "")
+    ).strip()
+
+    trade_option = str(
+        metadata.get(
+            "scenario on trade adjustment", ""
+        )
+    ).strip().casefold()
+
+    # SECTION17B_PARTICIPANT_POLICY
+    #
+    # The selected participant is the official
+    # submission identity configured by the admin.
+    #
+    # Workbook Location is preserved independently.
+    # Name differences are not upload blockers.
+    #
+    # The upload UI warns about mismatches after save.
+
+    if not str(participant).strip():
+        raise ValueError(
+            "Please select a participant."
+        )
+
+    # SECTION17C_ADMIN_PATHWAY_AUTHORITY
+    # The Admin-selected Pathway is the submission identity.
+    # The Excel Pathway may use a different label.
+
+    if not str(pathway).strip():
+        raise ValueError(
+            "Please select an Admin Pathway."
+        )
+
+    # Check trade-adjustment option.
+    if trade_option not in ("yes", "no"):
+
+        raise ValueError(
+            f"Trade Adjustment field is "
+            f"'{trade_option}', expected Yes/No. "
+            "No data saved."
+        )
+
+    # Verify Before/After classification.
+    if (
+        (stage == "after")
+        != (trade_option == "yes")
+    ):
+
+        raise ValueError(
+            f"Wrong submission stage - workbook "
+            f"Trade Adjustment is '{trade_option}', "
+            f"but you selected '{stage}'. "
+            "No data saved."
+        )
+
 
 
 def _clean_trade_dataframe(
@@ -1000,13 +1499,8 @@ def _clean_trade_dataframe(
             errors="coerce",
         )
 
-    df = (
-        df
-        .dropna(
-            subset=["Year"]
-        )
-        .reset_index(drop=True)
-    )
+    cc17_validate_table(df, "trade")
+    df = df.reset_index(drop=True)
 
     if df.empty:
         raise ValueError(
@@ -1044,13 +1538,8 @@ def _clean_aggregate_dataframe(
             errors="coerce",
         )
 
-    df = (
-        df
-        .dropna(
-            subset=["Year"]
-        )
-        .reset_index(drop=True)
-    )
+    cc17_validate_table(df, "aggregate")
+    df = df.reset_index(drop=True)
 
     if df.empty:
         raise ValueError(
@@ -1142,6 +1631,8 @@ def read_uploaded_fable_workbook(
             values_only=True
         )
     )
+
+    report_metadata = cc17_read_report_metadata(rows)
 
     wb.close()
 
@@ -1247,6 +1738,7 @@ def read_uploaded_fable_workbook(
 
     return {
         "location": location,
+        "report_metadata": report_metadata,
         "trade_df": trade_df,
         "aggregate_df": aggregate_df,
         "trade_row_count": len(
@@ -1686,8 +2178,11 @@ def save_submission(
     aggregate_df: pd.DataFrame | None = None,
     stage: str = "before",
     source_workbook: str = "",
+    workbook_pathway: str = "",
     replace_existing: bool = False,
 ):
+
+    ensure_session_open()
 
     stage = (
         normalize_submission_stage(
@@ -1853,6 +2348,9 @@ def save_submission(
                 stage
             ]
         ),
+
+        # SECTION17C_WORKBOOK_PATHWAY_METADATA
+        "workbook_pathway": str(workbook_pathway).strip(),
 
         "source_workbook": (
             source_workbook
@@ -2667,7 +3165,7 @@ def load_iteration_analytics(
     iteration: str,
 ):
 
-    file_data = github_get_file(
+    file_data = github_get_file_readonly(
         analytics_path(iteration)
     )
 
@@ -2799,6 +3297,8 @@ def aggregate_trade_view(
 def run_iteration_trade_adjustment(
     iteration: str,
 ):
+
+    ensure_session_open()
 
     engine_rows, submissions = (
         build_engine_rows(
@@ -3048,6 +3548,1666 @@ def run_iteration_trade_adjustment(
     }
 
 
+
+# ============================================================
+# 9A. CONSOLIDATED SCENATHON CSV EXPORTS
+# REPORTING_AGGREGATE is country/year data, not a numerical global sum.
+# Downloads never rerun the trade adjustment calculation.
+# ============================================================
+
+def scenathon_report_dataframes(session_id):
+    """Build the two reporting CSV tables for one selected session."""
+    original = active_session_id()
+    st.session_state["active_scenathon_id"] = session_id
+    try:
+        cfg = load_scenathon_session(session_id) or {}
+        all_submissions = []
+        for iteration_cfg in list_iteration_configs():
+            iteration = iteration_cfg["iteration"]
+            for payload in list_submission_payloads(iteration, stage=None):
+                all_submissions.append((iteration, payload))
+        aggregate_df, byproduct_df = build_scenathon_reports(
+            all_submissions,
+            session_id=session_id,
+            session_date=str(cfg.get("date", "")),
+        )
+        return aggregate_df, byproduct_df
+    finally:
+        st.session_state["active_scenathon_id"] = original
+
+
+def render_scenathon_exports(session_id, key_prefix="report"):
+    """Both downloads from the same session. Only closed sessions are exposed."""
+    cfg = load_scenathon_session(session_id)
+    if not cfg or cfg.get("status") != "CLOSED":
+        st.info("The global Scenathon CSV exports are available after closing the session.")
+        return
+    try:
+        with st.spinner("Preparing the saved Scenathon reports..."):
+            aggregate_df, byproduct_df = scenathon_report_dataframes(session_id)
+        if aggregate_df.empty and byproduct_df.empty:
+            st.warning("There are no saved submissions for this Scenathon.")
+            return
+        st.caption(f"Saved rows: {len(aggregate_df):,} aggregate; {len(byproduct_df):,} by product / country")
+        c1, c2 = st.columns(2)
+        c1.download_button(
+            "Export REPORTING_AGGREGATE.csv",
+            data=csv_bytes(aggregate_df),
+            file_name=f"{safe_name(session_id)}_REPORTING_AGGREGATE.csv",
+            mime="text/csv", key=f"{key_prefix}_aggregate_export",
+            on_click="ignore",
+        )
+        c2.download_button(
+            "Export REPORTING_BYPRODUCT.csv",
+            data=csv_bytes(byproduct_df),
+            file_name=f"{safe_name(session_id)}_REPORTING_BYPRODUCT.csv",
+            mime="text/csv", key=f"{key_prefix}_byproduct_export",
+            on_click="ignore",
+        )
+    except Exception as exc:
+        st.error(f"Could not prepare Scenathon export: {exc}")
+
+
+
+# ============================================================
+# 9B. STORAGE CLEANUP: SCOPE, ARCHIVE AND VERIFY
+# Clear only selected session/iteration results and submissions.
+# An archive is stored in a separate root before any deletion begins.
+# ============================================================
+
+def _tree_file_paths(folder):
+    result = []
+    for item in github_list_dir(folder):
+        if item.get("type") == "dir":
+            result.extend(_tree_file_paths(item["path"]))
+        elif item.get("type") == "file":
+            result.append(item["path"])
+    return sorted(result)
+
+
+def _with_session_storage(session_id, iteration):
+    """Path-only scope helper; does not change the dashboard's selected session."""
+    if session_id == "legacy":
+        return (f"{STORAGE_ROOT}/submissions/{safe_name(iteration)}",
+                f"{STORAGE_ROOT}/results/{safe_name(iteration)}")
+    root = storage_path("sessions", safe_name(session_id))
+    return (f"{root}/submissions/{safe_name(iteration)}",
+            f"{root}/results/{safe_name(iteration)}")
+
+
+def clear_selected_iteration_data(selection, *, archive_first=True):
+    """Archive then remove selected iteration data; raise on partial failure.
+
+    selection: list[(session_id, iteration_name)]. No iteration config is deleted.
+    Only valid configured iteration names can be used.
+    """
+    if not selection:
+        raise ValueError("Select at least one iteration.")
+
+    # Remove stale GitHub listing/cache before validation.
+
+    st.cache_data.clear()
+
+    now_stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    files = []
+    for session_id, iteration in selection:
+        if session_id != "legacy" and not load_scenathon_session(session_id):
+            raise ValueError(f"Unknown session {session_id}")
+        # Validate against ACTUAL stored configuration filenames.
+        # Never assume that filename == safe_name(iteration).
+
+        root = (
+            f"{STORAGE_ROOT}/iterations"
+            if session_id == "legacy"
+            else (
+                f"{STORAGE_ROOT}/sessions/"
+                f"{safe_name(session_id)}/iterations"
+            )
+        )
+
+        configs = []
+
+        for entry in github_list_dir(root):
+
+            if (
+                entry.get("type") != "file"
+                or not entry.get("name", "").lower().endswith(".json")
+            ):
+                continue
+
+            # Read fresh GitHub content, not a cached config.
+
+            item = github_get_file(entry["path"])
+
+            if item is None:
+                continue
+
+            config = json.loads(
+                item["content"].decode("utf-8")
+            )
+
+            name = str(
+                config.get("iteration", "")
+            ).strip()
+
+            if name:
+                configs.append(
+                    (name, entry["path"])
+                )
+
+        # Exact matching of the selected iteration label.
+
+        matches = [
+            path
+            for name, path in configs
+            if name == iteration
+        ]
+
+        # Also prevent different labels from resolving
+        # to the same submission/result folder.
+
+        conflicts = [
+            (name, path)
+            for name, path in configs
+            if safe_name(name) == safe_name(iteration)
+        ]
+
+        if len(matches) != 1 or len(conflicts) != 1:
+
+            available = ", ".join(
+                f"{name} [{path}]"
+                for name, path in configs
+            )
+
+            raise ValueError(
+                f"Cannot safely resolve iteration "
+                f"{iteration!r} in {session_id!r}. "
+                f"Matching configs: {len(matches)}; "
+                f"storage-name conflicts: {len(conflicts)}. "
+                f"Available: {available or 'none'}"
+            )
+        for folder in _with_session_storage(session_id, iteration):
+            for path in _tree_file_paths(folder):
+                files.append((session_id, iteration, path))
+    if not files:
+        return {"deleted": 0, "archived": 0, "archive_root": ""}
+    # Copy and verify every file before the first delete request.
+    archive_root = storage_path("archives", now_stamp + "_" + uuid4().hex[:8])
+    if archive_first:
+        for session_id, iteration, path in files:
+            original = github_get_file(path)
+            if original is None:
+                raise RuntimeError(f"File disappeared while archiving: {path}")
+            # Preserve nested subdirectories and Before/After stages in the archive.
+            # Distinguish submission files from published results.
+            src_sub, src_res = _with_session_storage(session_id, iteration)
+            subpath = ("submissions/" + path[len(src_sub):].lstrip("/")) if path.startswith(src_sub + "/") else ("results/" + path[len(src_res):].lstrip("/"))
+            destination = f"{archive_root}/{safe_name(session_id)}/{safe_name(iteration)}/{subpath}"
+            github_put_bytes(destination, original["content"], "Archive Scenathon before clear")
+            confirmation = github_get_file(destination)
+            if confirmation is None or confirmation["content"] != original["content"]:
+                raise RuntimeError(f"Archive verification failed: {destination}")
+    deleted = 0
+    for _session, _iteration, path in files:
+        if github_delete_file(path, "Admin clear selected Scenathon data"):
+            if github_get_file(path) is not None:
+                raise RuntimeError(f"Delete verification failed for {path}; {deleted} earlier files were deleted")
+            deleted += 1
+    return {"deleted": deleted, "archived": len(files) if archive_first else 0,
+            "archive_root": archive_root if archive_first else ""}
+
+
+
+# ============================================================
+# ADMIN_ACTIVE_SCENATHON_PATCH_07
+# ============================================================
+
+NO_ACTIVE_SCENATHON = "__no_active__"
+
+ACTIVE_SCENATHON_PATH = (
+    f"{STORAGE_ROOT}/_control/active_scenathon.json"
+)
+
+DATA_REVISION_PATH = (
+    f"{STORAGE_ROOT}/_control/data_revision.json"
+)
+
+
+def get_published_active_scenathon():
+    """
+    Read the Admin-selected active session from GitHub.
+    This setting is shared across all users and browsers.
+    """
+
+    item = github_get_file(ACTIVE_SCENATHON_PATH)
+
+    if item is None:
+        return NO_ACTIVE_SCENATHON
+
+    data = json.loads(
+        item["content"].decode("utf-8")
+    )
+
+    session_id = data.get("session_id")
+
+    if not isinstance(session_id, str) or not session_id:
+        return NO_ACTIVE_SCENATHON
+
+    return session_id
+
+
+def set_published_active_scenathon(session_id):
+    """
+    Called only from the authenticated Admin interface.
+    """
+
+    if session_id != NO_ACTIVE_SCENATHON:
+
+        session = load_scenathon_session(session_id)
+
+        if (
+            session is None
+            or session.get("status") not in ("OPEN", "LEGACY")
+        ):
+            raise ValueError(
+                "Only an open Scenathon can be activated."
+            )
+
+    github_put_json(
+        ACTIVE_SCENATHON_PATH,
+        {
+            "session_id": session_id,
+            "updated_at_utc": datetime.now(
+                timezone.utc
+            ).isoformat(),
+        },
+        "Admin: update active Scenathon",
+    )
+
+
+def get_data_revision():
+    """
+    Fresh GitHub read for detecting data-clearing changes.
+    """
+
+    item = github_get_file(DATA_REVISION_PATH)
+
+    if not item:
+        return None
+
+    data = json.loads(
+        item["content"].decode("utf-8")
+    )
+
+    return data.get("revision")
+
+
+def bump_data_revision():
+    """
+    Publish a new revision after successfully deleting data.
+    """
+
+    github_put_json(
+        DATA_REVISION_PATH,
+        {
+            "revision": uuid4().hex,
+            "updated_at_utc": datetime.now(
+                timezone.utc
+            ).isoformat(),
+        },
+        "Admin: invalidate Scenathon analytics",
+    )
+
+
+def reset_loaded_dashboard_data():
+    """
+    Clear previously loaded Analytics data from
+    the current user's Streamlit session.
+
+    Does not delete any GitHub files.
+    """
+
+    keys = [
+        "flex_global_normalized_df",
+        "flex_global_summary_df",
+        "flex_global_expected",
+        "flex_global_payload_count",
+        "gt_run_token",
+        "analytics_run_token",
+    ]
+
+    for key in keys:
+        st.session_state.pop(key, None)
+
+
+# ============================================================
+# COMPLETE_RESET_PATCH_09
+# ============================================================
+
+def complete_reset_inventory():
+    """Find every file under the current app storage root."""
+
+    def visit(folder):
+        found = []
+
+        for entry in github_list_dir(folder):
+            path = str(entry.get("path", ""))
+
+            if not path.startswith(
+                STORAGE_ROOT.rstrip("/") + "/"
+            ):
+                raise RuntimeError(
+                    f"Unsafe storage path: {path}"
+                )
+
+            if entry.get("type") == "dir":
+                found.extend(visit(path))
+
+            elif entry.get("type") == "file":
+                found.append(
+                    (path, entry.get("sha", ""))
+                )
+
+        return found
+
+    return sorted(visit(STORAGE_ROOT))
+
+
+def reset_entire_scenathon_storage(expected_snapshot):
+    """
+    Completely reset current Scenathon app storage.
+
+    Includes:
+    - Legacy configurations
+    - Session configurations
+    - All iteration configurations
+    - Submissions and results
+    - Archives
+    - Active session control files
+
+    Does not rewrite Git commit history.
+    """
+
+    # Restrict this destructive feature to the intended
+    # Scenathon data branch and storage directory.
+
+    if (
+        GITHUB_BRANCH != "app-data"
+        or STORAGE_ROOT.strip("/") != "app_storage"
+    ):
+        raise RuntimeError(
+            "Full reset requires branch 'app-data' "
+            "and storage root 'app_storage'."
+        )
+
+    if not isinstance(expected_snapshot, list):
+        raise ValueError(
+            "Preview all files before resetting."
+        )
+
+    st.cache_data.clear()
+
+    current_files = complete_reset_inventory()
+
+    # Do not delete if files changed after preview.
+
+    if current_files != expected_snapshot:
+        raise RuntimeError(
+            "Storage changed since the preview. "
+            "Preview again before resetting."
+        )
+
+    if not current_files:
+        return {
+            "deleted": 0,
+            "remaining": 0,
+        }
+
+    # Stop new submissions first.
+
+    set_published_active_scenathon(
+        "__no_active__"
+    )
+
+    st.cache_data.clear()
+
+    # Include the updated active-session control file.
+
+    files_to_delete = complete_reset_inventory()
+
+    deleted = 0
+    failures = []
+
+    for path, _sha in files_to_delete:
+
+        try:
+            success = github_delete_file(
+                path,
+                "Admin complete Scenathon storage reset",
+            )
+
+            if success:
+                if github_get_file(path) is not None:
+                    raise RuntimeError(
+                        "Delete verification failed."
+                    )
+
+                deleted += 1
+
+        except Exception as exc:
+            failures.append(
+                f"{path}: {exc}"
+            )
+
+    # Final independent verification.
+
+    st.cache_data.clear()
+
+    remaining = complete_reset_inventory()
+
+    if failures or remaining:
+        raise RuntimeError(
+            f"Partial reset: {deleted} deleted, "
+            f"{len(remaining)} files remain. "
+            + "; ".join(failures[:5])
+        )
+
+    return {
+        "deleted": deleted,
+        "remaining": 0,
+    }
+
+
+
+
+# ============================================================
+# CONTROL CENTER 12B — ADMIN EDITING HELPERS
+# ============================================================
+
+def cc12b_iteration_configs(session_id):
+
+    root = (
+        f"{STORAGE_ROOT}/iterations"
+        if session_id == "legacy"
+        else (
+            f"{STORAGE_ROOT}/sessions/"
+            f"{safe_name(session_id)}/iterations"
+        )
+    )
+
+    output = {}
+
+    for item in github_list_dir(root):
+
+        if (
+            item.get("type") != "file"
+            or not item.get("name", "").endswith(".json")
+        ):
+            continue
+
+        cfg = github_get_json(item["path"])
+
+        if cfg and cfg.get("iteration"):
+
+            name = str(cfg["iteration"])
+
+            if name in output:
+                raise ValueError(
+                    f"Duplicate iteration label: {name}"
+                )
+
+            output[name] = (item["path"], cfg)
+
+    return output
+
+
+def cc12b_edit_session(
+    session_id,
+    name,
+    session_day,
+    start_time,
+):
+
+    if session_id == "legacy":
+        raise ValueError(
+            "Legacy has no editable Scenathon metadata."
+        )
+
+    cfg = load_scenathon_session(session_id)
+
+    if not cfg:
+        raise ValueError(
+            "Scenathon not found. Refresh and try again."
+        )
+
+    if not name.strip():
+        raise ValueError(
+            "Enter a Scenathon name."
+        )
+
+    cfg.update({
+        "name": name.strip(),
+        "date": str(session_day),
+        "time": str(start_time),
+        "updated_at_utc": datetime.now(
+            timezone.utc
+        ).isoformat(),
+    })
+
+    github_put_json(
+        session_config_path(session_id),
+        cfg,
+        "Admin: edit FABLE Scenathon information",
+    )
+
+
+def cc12b_save_iteration(
+    session_id,
+    previous_name,
+    name,
+    participant_lines,
+    pathway_lines,
+    is_open,
+):
+
+    if session_id == "legacy":
+        raise ValueError(
+            "Create/select a named Scenathon first."
+        )
+
+    session = load_scenathon_session(session_id)
+
+    if not session:
+        raise ValueError("Scenathon not found.")
+
+    name = name.strip()
+
+    people = normalize_participants(
+        participant_lines
+    )
+
+    pathways = normalize_participants(
+        pathway_lines
+    )
+
+    if not name or not people or not pathways:
+        raise ValueError(
+            "Name, participants and pathways are required."
+        )
+
+    existing = cc12b_iteration_configs(
+        session_id
+    )
+
+    if previous_name and previous_name not in existing:
+        raise ValueError(
+            "Original iteration no longer exists."
+        )
+
+    if (
+        not previous_name
+        and session.get("status") != "OPEN"
+    ):
+        raise ValueError(
+            "Cannot create iterations in a closed Scenathon."
+        )
+
+    if (
+        is_open
+        and session.get("status") != "OPEN"
+    ):
+        raise ValueError(
+            "A closed Scenathon cannot accept submissions."
+        )
+
+    # Prevent duplicate iteration names and paths.
+
+    for other_name in existing:
+
+        if other_name == previous_name:
+            continue
+
+        if (
+            other_name.casefold() == name.casefold()
+            or safe_name(other_name) == safe_name(name)
+        ):
+            raise ValueError(
+                "An iteration with this name/path already exists."
+            )
+
+    root = (
+        f"{STORAGE_ROOT}/sessions/"
+        f"{safe_name(session_id)}"
+    )
+
+    if previous_name:
+
+        old_path, old = existing[previous_name]
+
+        old_root = safe_name(previous_name)
+
+        saved_files = []
+
+        for kind in ("submissions", "results"):
+
+            saved_files.extend(
+                _tree_file_paths(
+                    f"{root}/{kind}/{old_root}"
+                )
+            )
+
+        # Protect stored data from an unsafe rename.
+
+        if name != previous_name and saved_files:
+            raise ValueError(
+                "Cannot rename an iteration containing "
+                "submissions/results."
+            )
+
+        # ====================================================
+        # SECTION 12E - SAFE PARTICIPANT/PATHWAY REMOVAL
+        #
+        # A report from someone else must not block editing.
+        # Only protect data belonging to removed entries.
+        # ====================================================
+
+        removed_people = {
+            str(p).strip().casefold()
+            for p in old.get("participants", [])
+        } - {
+            str(p).strip().casefold()
+            for p in people
+        }
+
+        removed_pathways = {
+            str(p).strip().casefold()
+            for p in old.get("pathways", [])
+        } - {
+            str(p).strip().casefold()
+            for p in pathways
+        }
+
+        if removed_people or removed_pathways:
+
+            submission_root = (
+                f"{root}/submissions/{old_root}"
+            )
+
+            submission_files = _tree_file_paths(
+                submission_root
+            )
+
+            conflicting_reports = []
+
+            for file_path in submission_files:
+
+                if not file_path.lower().endswith(".json"):
+                    continue
+
+                payload = github_get_json(file_path)
+
+                if not isinstance(payload, dict):
+                    raise RuntimeError(
+                        "Could not verify existing submission: "
+                        + file_path
+                    )
+
+                participant = str(
+                    payload.get("participant", "")
+                ).strip().casefold()
+
+                pathway = str(
+                    payload.get("pathway", "")
+                ).strip().casefold()
+
+                if (
+                    participant in removed_people
+                    or pathway in removed_pathways
+                ):
+                    conflicting_reports.append(
+                        file_path
+                    )
+
+            if conflicting_reports:
+                raise ValueError(
+                    "The selected participant or pathway "
+                    "already has submitted data. "
+                    "Its reports must be handled before "
+                    "removal. No data was deleted."
+                )
+
+    else:
+        old_path = None
+
+    new_path = (
+        f"{root}/iterations/{safe_name(name)}.json"
+    )
+
+    github_put_json(
+        new_path,
+        {
+            "iteration": name,
+            "participants": people,
+            "pathways": pathways,
+            "status": (
+                "OPEN" if is_open else "CLOSED"
+            ),
+            "updated_at_utc": datetime.now(
+                timezone.utc
+            ).isoformat(),
+        },
+        "Admin: save FABLE Scenathon iteration",
+    )
+
+    # Refresh results after changes to participants/pathways.
+
+    if previous_name and (
+        set(old.get("participants", [])) != set(people)
+        or set(old.get("pathways", [])) != set(pathways)
+    ):
+
+        existing_results = _tree_file_paths(
+            f"{root}/results/{old_root}"
+        )
+
+        if existing_results:
+
+            github_put_json(
+                f"{root}/results/{old_root}/_stale.json",
+                {
+                    "iteration": name,
+                    "stale": True,
+                    "reason": "Iteration configuration changed",
+                    "marked_at_utc": datetime.now(
+                        timezone.utc
+                    ).isoformat(),
+                },
+                "Mark results stale after configuration edit",
+            )
+
+        st.cache_data.clear()
+
+        reset_loaded_dashboard_data()
+
+    if old_path and old_path != new_path:
+
+        github_delete_file(
+            old_path,
+            "Admin: rename iteration config",
+        )
+
+
+
+# ============================================================
+# CC12C_SCOPED_CLEAR_HELPERS
+# Exact GitHub paths + SHA verification.
+# ============================================================
+
+def cc12c_inventory():
+    """Read all files in app storage, including archives."""
+
+    st.cache_data.clear()
+
+    prefix = STORAGE_ROOT.rstrip("/") + "/"
+    found = {}
+
+    def walk(folder):
+        for entry in github_list_dir(folder):
+
+            path = str(entry.get("path", ""))
+
+            if (
+                not path.startswith(prefix)
+                or ".." in path.split("/")
+            ):
+                raise RuntimeError(
+                    f"Unsafe GitHub path: {path}"
+                )
+
+            if entry.get("type") == "dir":
+                walk(path)
+
+            elif entry.get("type") == "file":
+                found[path] = str(
+                    entry.get("sha", "")
+                )
+
+            else:
+                raise RuntimeError(
+                    f"Unexpected GitHub item: {path}"
+                )
+
+            if len(found) > 20000:
+                raise RuntimeError(
+                    "Too many files - use a smaller storage root"
+                )
+
+    walk(STORAGE_ROOT)
+
+    return found
+
+
+def cc12c_target_files(
+    scope,
+    sessions,
+    iterations,
+    pathways,
+    inventory,
+):
+    """Find exact files belonging to selected clear scope."""
+
+    if scope == "Entire storage":
+        return dict(inventory)
+
+    chosen_iterations = {
+        tuple(json.loads(x))
+        for x in iterations
+    }
+
+    chosen_pathways = {
+        tuple(json.loads(x))
+        for x in pathways
+    }
+
+    result = {}
+
+    expanded_iters = (
+        set(chosen_iterations)
+        if scope == "Iteration"
+        else set()
+    )
+
+    # Selecting every pathway means clearing the iteration.
+
+    if scope == "Pathway":
+
+        by_iteration = {}
+
+        for sid, it, pw in chosen_pathways:
+            by_iteration.setdefault(
+                (sid, it), set()
+            ).add(pw)
+
+        for (sid, it), chosen_pws in by_iteration.items():
+
+            configs = cc12b_iteration_configs(sid)
+
+            if it not in configs:
+                raise RuntimeError(
+                    f"Missing iteration: {sid}/{it}"
+                )
+
+            configured = set(
+                configs[it][1].get("pathways", [])
+            )
+
+            if (
+                configured
+                and configured.issubset(chosen_pws)
+            ):
+                expanded_iters.add((sid, it))
+
+    actual_configs = {}
+
+    for sid, it in expanded_iters:
+
+        configs = cc12b_iteration_configs(sid)
+
+        if it not in configs:
+            raise RuntimeError(
+                f"Iteration no longer exists: {sid}/{it}"
+            )
+
+        actual_configs[(sid, it)] = configs[it][0]
+
+    prefix = STORAGE_ROOT.rstrip("/") + "/"
+
+    for file_path, sha in inventory.items():
+
+        rel = file_path[len(prefix):]
+        parts = rel.split("/")
+
+        # ---------------------------------------------
+        # Entire selected Scenathon(s)
+        # ---------------------------------------------
+
+        if scope == "Scenathon":
+
+            for sid in sessions:
+
+                sid_slug = safe_name(sid)
+
+                if sid == "legacy":
+
+                    direct = rel.startswith(
+                        (
+                            "iterations/",
+                            "submissions/",
+                            "results/",
+                        )
+                    )
+
+                else:
+
+                    direct = rel.startswith(
+                        f"sessions/{sid_slug}/"
+                    )
+
+                archived = (
+                    len(parts) >= 4
+                    and parts[0] == "archives"
+                    and parts[2] == sid_slug
+                )
+
+                if direct or archived:
+
+                    result[file_path] = sha
+                    break
+
+            continue
+
+        # ---------------------------------------------
+        # Selected iterations
+        # ---------------------------------------------
+
+        active_sets = (
+            expanded_iters
+            if scope == "Pathway"
+            else chosen_iterations
+        )
+
+        for sid, it in active_sets:
+
+            sid_slug = safe_name(sid)
+            it_slug = safe_name(it)
+
+            base = (
+                ""
+                if sid == "legacy"
+                else f"sessions/{sid_slug}/"
+            )
+
+            cfg_file = (
+                actual_configs.get((sid, it))
+                or (
+                    f"{prefix}{base}iterations/"
+                    f"{it_slug}.json"
+                )
+            )
+
+            direct = (
+                file_path == cfg_file
+                or rel.startswith(
+                    f"{base}submissions/{it_slug}/"
+                )
+                or rel.startswith(
+                    f"{base}results/{it_slug}/"
+                )
+            )
+
+            archived = (
+                len(parts) >= 5
+                and parts[0] == "archives"
+                and parts[2] == sid_slug
+                and parts[3] == it_slug
+            )
+
+            if direct or archived:
+                result[file_path] = sha
+
+        if (
+            scope != "Pathway"
+            or file_path in result
+        ):
+            continue
+
+        # ---------------------------------------------
+        # Selected pathway submissions
+        # Also invalidate iteration-wide results
+        # ---------------------------------------------
+
+        for sid, it, pw in chosen_pathways:
+
+            if (sid, it) in expanded_iters:
+                continue
+
+            sid_slug = safe_name(sid)
+            it_slug = safe_name(it)
+            pw_slug = safe_name(pw)
+
+            base = (
+                ""
+                if sid == "legacy"
+                else f"sessions/{sid_slug}/"
+            )
+
+            is_submission = (
+                rel.startswith(
+                    f"{base}submissions/{it_slug}/"
+                )
+                and rel.endswith(
+                    f"__{pw_slug}.json"
+                )
+            )
+
+            is_result = rel.startswith(
+                f"{base}results/{it_slug}/"
+            )
+
+            archived_submission = (
+                len(parts) >= 6
+                and parts[0] == "archives"
+                and parts[2] == sid_slug
+                and parts[3] == it_slug
+                and parts[4] == "submissions"
+                and rel.endswith(
+                    f"__{pw_slug}.json"
+                )
+            )
+
+            archived_result = (
+                len(parts) >= 6
+                and parts[0] == "archives"
+                and parts[2] == sid_slug
+                and parts[3] == it_slug
+                and parts[4] == "results"
+            )
+
+            if (
+                is_submission
+                or is_result
+                or archived_submission
+                or archived_result
+            ):
+                result[file_path] = sha
+
+    return result
+
+
+# ============================================================
+# EXECUTE VERIFIED CLEAR
+# ============================================================
+
+def cc12c_clear(
+    scope,
+    sessions,
+    iterations,
+    pathways,
+    preview,
+):
+
+    if not st.session_state.get(
+        "fable_admin_authenticated"
+    ):
+        raise PermissionError(
+            "Admin login required"
+        )
+
+    if (
+        GITHUB_BRANCH != "app-data"
+        or STORAGE_ROOT.strip("/") != "app_storage"
+    ):
+        raise RuntimeError(
+            "Clear is restricted to "
+            "branch app-data / app_storage"
+        )
+
+    if not ADMIN_PASSWORD:
+        raise RuntimeError(
+            "Admin password is not configured"
+        )
+
+    current = cc12c_inventory()
+
+    targets = cc12c_target_files(
+        scope,
+        sessions,
+        iterations,
+        pathways,
+        current,
+    )
+
+    if targets != preview:
+        raise RuntimeError(
+            "Files changed since preview. "
+            "Preview again; nothing deleted"
+        )
+
+    if not targets and scope != "Pathway":
+        raise RuntimeError(
+            "No matching files; nothing to clear"
+        )
+
+    active_sid = (
+        get_published_active_scenathon()
+    )
+
+    affected = set(sessions)
+
+    affected.update(
+        json.loads(x)[0]
+        for x in iterations
+    )
+
+    affected.update(
+        json.loads(x)[0]
+        for x in pathways
+    )
+
+    # Pause submissions before destructive changes.
+
+    if (
+        scope == "Entire storage"
+        or active_sid in affected
+    ):
+        set_published_active_scenathon(
+            "__no_active__"
+        )
+
+    # Full reset may have created or modified
+    # the active-session control file.
+
+    if scope == "Entire storage":
+
+        refreshed = cc12c_inventory()
+
+        active_path = (
+            f"{STORAGE_ROOT}/_control/"
+            "active_scenathon.json"
+        )
+
+        unexpected = (
+            set(refreshed)
+            - set(targets)
+            - {active_path}
+        )
+
+        changed = [
+            p for p in targets
+            if (
+                p in refreshed
+                and p != active_path
+                and refreshed[p] != targets[p]
+            )
+        ]
+
+        if unexpected or changed:
+            raise RuntimeError(
+                "Storage changed while pausing; "
+                "preview again"
+            )
+
+        targets = refreshed
+
+    deleted = 0
+
+    try:
+
+        # -----------------------------------------
+        # Delete each selected file
+        # -----------------------------------------
+
+        for path, sha in sorted(
+            targets.items()
+        ):
+
+            original = github_get_file(path)
+
+            if original is None:
+                raise RuntimeError(
+                    f"File disappeared: {path}"
+                )
+
+            control_file_changed = (
+                scope == "Entire storage"
+                and path.endswith(
+                    "/_control/active_scenathon.json"
+                )
+            )
+
+            if (
+                original["sha"] != sha
+                and not control_file_changed
+            ):
+                raise RuntimeError(
+                    f"File changed during reset: {path}"
+                )
+
+            if not github_delete_file(
+                path,
+                "Admin clear FABLE Scenathon data",
+            ):
+                raise RuntimeError(
+                    f"Delete failed: {path}"
+                )
+
+            if github_get_file(path) is not None:
+                raise RuntimeError(
+                    f"Deletion could not be verified: {path}"
+                )
+
+            deleted += 1
+
+        # -----------------------------------------
+        # Update pathway configuration
+        # -----------------------------------------
+
+        if scope == "Pathway":
+
+            changed = {}
+
+            for key in pathways:
+
+                sid, it, pw = json.loads(key)
+
+                changed.setdefault(
+                    (sid, it), set()
+                ).add(pw)
+
+            for (sid, it), removed in changed.items():
+
+                configs = (
+                    cc12b_iteration_configs(sid)
+                )
+
+                if it not in configs:
+                    # Entire iteration may have been deleted.
+                    continue
+
+                path, cfg = configs[it]
+
+                remaining = [
+                    x for x in cfg.get(
+                        "pathways", []
+                    )
+                    if x not in removed
+                ]
+
+                if remaining == cfg.get(
+                    "pathways", []
+                ):
+                    continue
+
+                if not remaining:
+
+                    github_delete_file(
+                        path,
+                        "Admin clear empty iteration configuration",
+                    )
+
+                else:
+
+                    cfg["pathways"] = remaining
+
+                    cfg["updated_at_utc"] = (
+                        datetime.now(
+                            timezone.utc
+                        ).isoformat()
+                    )
+
+                    github_put_json(
+                        path,
+                        cfg,
+                        "Admin remove cleared pathways",
+                    )
+
+        # -----------------------------------------
+        # Final verification
+        # -----------------------------------------
+
+        st.cache_data.clear()
+
+        remaining_files = (
+            cc12c_inventory()
+        )
+
+        leftover = sorted(
+            set(targets).intersection(
+                remaining_files
+            )
+        )
+
+        if leftover:
+            raise RuntimeError(
+                f"{len(leftover)} targeted files "
+                "remain after clear"
+            )
+
+        reset_loaded_dashboard_data()
+
+        if scope != "Entire storage":
+            bump_data_revision()
+
+        return deleted
+
+    except Exception as exc:
+
+        st.cache_data.clear()
+
+        raise RuntimeError(
+            f"Clear may be partial "
+            f"({deleted} files deleted). "
+            f"Inspect GitHub before retrying. "
+            f"Details: {exc}"
+        ) from exc
+
+
+# ============================================================
+# COMPACT CLEAR DATA DIALOG
+# ============================================================
+
+@st.dialog("Clear Scenathon Data", width="large")
+def cc12c_clear_dialog():
+
+    st.warning(
+        "Deletion removes files from the current GitHub "
+        "branch. Git commit history is not erased."
+    )
+
+    scope = st.radio(
+        "Clear scope",
+        [
+            "Scenathon",
+            "Iteration",
+            "Pathway",
+            "Entire storage",
+        ],
+        horizontal=True,
+        key="cc12c_scope",
+    )
+
+    sessions = {
+        s["id"]: s.get("name", s["id"])
+        for s in list_scenathon_sessions()
+    }
+
+    root = STORAGE_ROOT.rstrip("/")
+
+    if github_list_dir(
+        f"{root}/iterations"
+    ):
+        sessions["legacy"] = (
+            "Legacy Scenathon"
+        )
+
+    picked_sessions = []
+    picked_iterations = []
+    picked_pathways = []
+
+    # -----------------------------------------
+    # Select Scenathons
+    # -----------------------------------------
+
+    if scope != "Entire storage":
+
+        picked_sessions = st.multiselect(
+            "Scenathon(s)",
+            list(sessions),
+            format_func=lambda sid: sessions[sid],
+            key="cc12c_sessions",
+        )
+
+    # -----------------------------------------
+    # Select Iterations
+    # -----------------------------------------
+
+    iter_map = {}
+
+    if scope in ("Iteration", "Pathway"):
+
+        for sid in picked_sessions:
+
+            configs = (
+                cc12b_iteration_configs(sid)
+            )
+
+            for name, (_path, cfg) in configs.items():
+
+                key = json.dumps(
+                    [sid, name]
+                )
+
+                iter_map[key] = (
+                    sid, name, cfg
+                )
+
+        picked_iterations = st.multiselect(
+            "Iteration(s)",
+            list(iter_map),
+            format_func=lambda key: (
+                f"{iter_map[key][0]} - "
+                f"{iter_map[key][1]}"
+            ),
+            key="cc12c_iterations",
+        )
+
+    # -----------------------------------------
+    # Select Pathways
+    # -----------------------------------------
+
+    pathway_map = {}
+
+    if scope == "Pathway":
+
+        for key in picked_iterations:
+
+            sid, name, cfg = iter_map[key]
+
+            for pw in cfg.get(
+                "pathways", []
+            ):
+
+                pw_key = json.dumps(
+                    [sid, name, pw]
+                )
+
+                pathway_map[pw_key] = (
+                    sid, name, pw
+                )
+
+        picked_pathways = st.multiselect(
+            "Pathway(s)",
+            list(pathway_map),
+            format_func=lambda key: (
+                " - ".join(
+                    pathway_map[key]
+                )
+            ),
+            key="cc12c_pathways",
+        )
+
+    # -----------------------------------------
+    # Validate selection
+    # -----------------------------------------
+
+    valid = (
+        scope == "Entire storage"
+        or (
+            scope == "Scenathon"
+            and bool(picked_sessions)
+        )
+        or (
+            scope == "Iteration"
+            and bool(picked_iterations)
+        )
+        or (
+            scope == "Pathway"
+            and bool(picked_pathways)
+        )
+    )
+
+    signature = json.dumps([
+        scope,
+        picked_sessions,
+        picked_iterations,
+        picked_pathways,
+    ])
+
+    # -----------------------------------------
+    # Preview exact files
+    # -----------------------------------------
+
+    if st.button(
+        "Preview exact files",
+        disabled=not valid,
+        key="cc12c_preview",
+    ):
+
+        try:
+
+            inventory = (
+                cc12c_inventory()
+            )
+
+            target = (
+                cc12c_target_files(
+                    scope,
+                    picked_sessions,
+                    picked_iterations,
+                    picked_pathways,
+                    inventory,
+                )
+            )
+
+            st.session_state[
+                "cc12c_preview_info"
+            ] = (
+                signature,
+                target,
+            )
+
+        except Exception as exc:
+
+            st.session_state.pop(
+                "cc12c_preview_info",
+                None,
+            )
+
+            st.error(
+                f"Cannot preview: {exc}"
+            )
+
+    preview = st.session_state.get(
+        "cc12c_preview_info"
+    )
+
+    preview_valid = bool(
+        preview
+        and preview[0] == signature
+        and (
+            preview[1]
+            or (
+                scope == "Pathway"
+                and picked_pathways
+            )
+        )
+    )
+
+    if (
+        preview
+        and preview[0] == signature
+    ):
+
+        st.info(
+            f"Selected GitHub files: "
+            f"{len(preview[1])}"
+        )
+
+        with st.expander(
+            "Review exact file paths"
+        ):
+
+            st.code(
+                "\n".join(
+                    sorted(preview[1])
+                ) or "(empty)",
+                language="text",
+            )
+
+        if scope == "Pathway":
+
+            st.caption(
+                "Pathway clear also invalidates "
+                "iteration-wide results and their "
+                "archived copies."
+            )
+
+    # -----------------------------------------
+    # Admin password confirmation
+    # -----------------------------------------
+
+    pwd = st.text_input(
+        "Confirm admin password",
+        type="password",
+        key="cc12c_password",
+    )
+
+    confirm = st.checkbox(
+        "I understand this will delete "
+        "the selected data",
+        key="cc12c_confirm",
+    )
+
+    if st.button(
+        "Delete selected data",
+        type="primary",
+        key="cc12c_execute",
+        disabled=not (
+            preview_valid
+            and confirm
+            and bool(pwd)
+        ),
+    ):
+
+        if (
+            not ADMIN_PASSWORD
+            or pwd != ADMIN_PASSWORD
+        ):
+
+            st.error(
+                "Incorrect admin password"
+            )
+
+            return
+
+        try:
+
+            with st.spinner(
+                "Clearing and verifying GitHub files..."
+            ):
+
+                n = cc12c_clear(
+                    scope,
+                    picked_sessions,
+                    picked_iterations,
+                    picked_pathways,
+                    preview[1],
+                )
+
+            st.session_state.pop(
+                "cc12c_preview_info",
+                None,
+            )
+
+            st.session_state.pop(
+                "cc12c_storage_inventory",
+                None,
+            )
+
+            st.session_state[
+                "cc12c_last_message"
+            ] = (
+                f"Verified: {n} file(s) removed; "
+                "selected configuration updated."
+            )
+
+            st.rerun()
+
+        except Exception as exc:
+
+            st.error(str(exc))
+
+
 # ============================================================
 # 10. PAGE SETUP
 # ============================================================
@@ -3104,6 +5264,124 @@ if not connection_ok:
     st.stop()
 
 
+
+# ============================================================
+# 11A. ACTIVE SCENATHON — PUBLIC READ ONLY
+#
+# Admin selects the active Scenathon.
+# Public users cannot change it.
+# ============================================================
+
+try:
+
+    _selected_session = (
+        get_published_active_scenathon()
+    )
+
+    if _selected_session != NO_ACTIVE_SCENATHON:
+
+        _published_config = load_scenathon_session(
+            _selected_session
+        )
+
+        if (
+            not _published_config
+            or _published_config.get("status")
+            not in ("OPEN", "LEGACY")
+        ):
+            _selected_session = NO_ACTIVE_SCENATHON
+
+    _current_revision = get_data_revision()
+
+except Exception as exc:
+
+    st.error(
+        "Could not read active Scenathon configuration: "
+        f"{exc}"
+    )
+
+    st.stop()
+
+
+# Refresh old loaded data if active session or data changed.
+
+session_changed = (
+    st.session_state.get("_last_viewed_scenathon_id")
+    != _selected_session
+)
+
+data_changed = (
+    st.session_state.get("_last_data_revision")
+    != _current_revision
+)
+
+if session_changed or data_changed:
+
+    reset_loaded_dashboard_data()
+
+    # These controls have not yet been rendered in this run.
+    st.session_state.pop(
+        "admin_clear_iterations", None
+    )
+
+    st.session_state.pop(
+        "clear_confirmation", None
+    )
+
+    st.session_state["_last_viewed_scenathon_id"] = (
+        _selected_session
+    )
+
+    st.session_state["_last_data_revision"] = (
+        _current_revision
+    )
+
+
+st.session_state["active_scenathon_id"] = (
+    _selected_session
+)
+
+if _selected_session == NO_ACTIVE_SCENATHON:
+
+    _active_session_config = {
+        "status": "INACTIVE"
+    }
+
+else:
+
+    _active_session_config = (
+        load_scenathon_session(_selected_session)
+        or {"status": "INACTIVE"}
+    )
+
+
+# No public Active Scenathon selector is displayed.
+# Uploads are disabled if no active session is published.
+
+
+# After a complete reset, discard any previously loaded
+# dashboards when the page is rerun or refreshed.
+
+if not github_list_dir(STORAGE_ROOT):
+
+    for key in (
+        "flex_global_normalized_df",
+        "flex_global_summary_df",
+        "flex_global_expected",
+        "flex_global_payload_count",
+        "gt_run_token",
+        "analytics_run_token",
+    ):
+        st.session_state.pop(key, None)
+
+    st.session_state["active_scenathon_id"] = (
+        "__no_active__"
+    )
+
+    _active_session_config = {
+        "status": "INACTIVE"
+    }
+
 # ============================================================
 # 12. MAIN TABS
 # ============================================================
@@ -3139,6 +5417,9 @@ with submit_tab:
 
         open_iterations = (
             list_open_iterations()
+            if _active_session_config.get("status")
+            in ("OPEN", "LEGACY")
+            else []
         )
 
     except Exception as exc:
@@ -3495,6 +5776,15 @@ with submit_tab:
                             )
 
 
+                        # SECTION17_SUBMISSION_GATE
+                        # Validate BEFORE GitHub save.
+                        cc17_verify_submission_context(
+                            workbook_bundle,
+                            participant,
+                            pathway,
+                            submission_stage,
+                        )
+
                         submission_progress.progress(
                             65
                         )
@@ -3535,6 +5825,14 @@ with submit_tab:
                                 is None
                             )
 
+
+                        if before_missing:
+                            raise ValueError(
+                                "After submission requires "
+                                "a matching Before report "
+                                "for this participant, pathway "
+                                "and iteration. Nothing saved."
+                            )
 
                         submission_progress.progress(
                             75
@@ -3583,6 +5881,13 @@ with submit_tab:
 
                                 source_workbook=(
                                     uploaded_file.name
+                                ),
+
+                                # SECTION17C_PASS_WORKBOOK_PATHWAY
+                                workbook_pathway=(
+                                    workbook_bundle.get(
+                                        "report_metadata", {}
+                                    ).get("pathway", "")
                                 ),
 
                                 replace_existing=(
@@ -3695,6 +6000,28 @@ with submit_tab:
                         )
 
 
+                    # SECTION17C_PATHWAY_MISMATCH_WARNING
+
+                    excel_pathway = str(
+                        workbook_bundle.get(
+                            "report_metadata", {}
+                        ).get("pathway", "")
+                    ).strip()
+
+                    if (
+                        excel_pathway
+                        and excel_pathway.casefold()
+                        != str(pathway).strip().casefold()
+                    ):
+                        st.warning(
+                            f"Excel Pathway is '{excel_pathway}', "
+                            f"but the Admin Pathway is '{pathway}'. "
+                            "The submission is classified under "
+                            "the selected Admin Pathway. "
+                            "Please confirm that the correct "
+                            "scenario workbook was submitted."
+                        )
+
                     # =========================================
                     # PARTICIPANT / WORKBOOK LOCATION CHECK
                     # =========================================
@@ -3780,6 +6107,21 @@ with submit_tab:
 
                     st.code(
                         stored_path
+                    )
+
+                    st.markdown("#### Download your submitted SCENATHON report")
+                    left_csv, right_csv = st.columns(2)
+                    left_csv.download_button(
+                        "Download my REPORTING_AGGREGATE.csv",
+                        data=csv_bytes(aggregate_df),
+                        file_name=f"{safe_name(participant)}_{safe_name(pathway)}_{submission_stage}_AGGREGATE.csv",
+                        mime="text/csv", key="my_submitted_aggregate_csv", on_click="ignore",
+                    )
+                    right_csv.download_button(
+                        "Download my REPORTING_BYPRODUCT.csv",
+                        data=csv_bytes(trade_df),
+                        file_name=f"{safe_name(participant)}_{safe_name(pathway)}_{submission_stage}_BYPRODUCT.csv",
+                        mime="text/csv", key="my_submitted_byproduct_csv", on_click="ignore",
                     )
 
 
@@ -3966,7 +6308,7 @@ with result_tab:
                     result_participant,
                 )
 
-                result_file = github_get_file(
+                result_file = github_get_file_readonly(
                     path
                 )
 
@@ -3996,1162 +6338,826 @@ with result_tab:
                     )
 
 
+    st.divider()
+
+    st.markdown(
+        "### Closed Scenathon reporting datasets"
+    )
+
+    closed_public_sessions = [
+        session
+        for session in list_scenathon_sessions()
+        if session.get("status") == "CLOSED"
+    ]
+
+    if closed_public_sessions:
+
+        closed_options = {
+            session["id"]: (
+                f"{session.get('name', 'Scenathon')} | "
+                f"{session.get('date', '')}"
+            )
+            for session in closed_public_sessions
+        }
+
+        selected_closed_session = st.selectbox(
+            "Completed Scenathon",
+            list(closed_options),
+            format_func=lambda sid: closed_options[sid],
+            key="public_closed_csv_session",
+        )
+
+        render_scenathon_exports(
+            selected_closed_session,
+            key_prefix="public",
+        )
+
+    else:
+
+        st.info(
+            "No completed Scenathon reports "
+            "are available yet."
+        )
+
+
 # ============================================================
 # 15. PUBLIC ANALYTICS
 # ============================================================
 
 with analytics_tab:
 
-    # ========================================================
-    # GLOBAL TARGETS DASHBOARD - BEGIN
-    # ========================================================
-
-    def plain_text_label(text):
-
-        text = str(text)
-
-        text = text.replace("_", " ")
-
-        text = text.replace("—", "-")
-        text = text.replace("–", "-")
-
-        while "--" in text:
-            text = text.replace("--", "-")
-
-        while "  " in text:
-            text = text.replace("  ", " ")
-
-        return text.strip()
 
 
-    def pretty_columns(columns):
-
-        special_map = {
-            "Value_Gt_CO2e": "Gt CO2e",
-            "CalcAllLandCO2e": "Land use change GHG (Mt CO2e)",
-            "CalcAllAgriCO2e": "Agriculture GHG (Mt CO2e)",
-            "Margin_2030_pct": "Margin 2030 (%)",
-            "Margin_2050_pct": "Margin 2050 (%)",
-            "Pass_2030": "Pass 2030",
-            "Pass_2050": "Pass 2050",
-            "Pass_Both_Years": "Pass both years",
-            "Target threshold": "Target threshold",
-            "Target": "Target",
-            "Status": "Status",
-            "Actual": "Actual",
-            "Location": "Region",
-            "Participant": "Participant",
-            "Pathway": "Pathway",
-            "Year": "Year",
-            "kcal_feas": "Kcal feas",
-            "kcal_mder": "Kcal mder",
-            "Complete": "Complete",
-        }
-
-        output = []
-
-        for column in columns:
-
-            column = str(column)
-
-            if column in special_map:
-                output.append(special_map[column])
-            else:
-                output.append(
-                    plain_text_label(column)
-                )
-
-        return output
 
 
-    def pretty_dataframe(df):
 
-        pretty_df = df.copy()
+    @st.fragment
+    def _render_analytics_fragment():
 
-        pretty_df.columns = pretty_columns(
-            pretty_df.columns
+        # ========================================================
+        # GLOBAL TARGETS DASHBOARD - BEGIN
+        # ========================================================
+        # ========================================================
+        # COMMON LABEL HELPER
+        #
+        # plain_text_label() is defined in Section 04A.
+        # Shared by Analytics, Admin, and Storage.
+        # ========================================================
+
+
+        def pretty_columns(columns):
+
+            special_map = {
+                "Value_Gt_CO2e": "Gt CO2e",
+                "CalcAllLandCO2e": "Land use change GHG (Mt CO2e)",
+                "CalcAllAgriCO2e": "Agriculture GHG (Mt CO2e)",
+                "Margin_2030_pct": "Margin 2030 (%)",
+                "Margin_2050_pct": "Margin 2050 (%)",
+                "Pass_2030": "Pass 2030",
+                "Pass_2050": "Pass 2050",
+                "Pass_Both_Years": "Pass both years",
+                "Target threshold": "Target threshold",
+                "Target": "Target",
+                "Status": "Status",
+                "Actual": "Actual",
+                "Location": "Region",
+                "Participant": "Participant",
+                "Pathway": "Pathway",
+                "Year": "Year",
+                "kcal_feas": "Kcal feas",
+                "kcal_mder": "Kcal mder",
+                "Complete": "Complete",
+            }
+
+            output = []
+
+            for column in columns:
+
+                column = str(column)
+
+                if column in special_map:
+                    output.append(special_map[column])
+                else:
+                    output.append(
+                        plain_text_label(column)
+                    )
+
+            return output
+
+
+        def pretty_dataframe(df):
+
+            pretty_df = df.copy()
+
+            pretty_df.columns = pretty_columns(
+                pretty_df.columns
+            )
+
+            return pretty_df
+
+
+        st.subheader(
+            "Global Targets"
         )
 
-        return pretty_df
-
-
-    st.subheader(
-        "Global Targets"
-    )
-
-    st.caption(
-        "Assess food security and global GHG targets "
-        "using aggregate outputs automatically extracted "
-        "from submitted FABLE-C calculators."
-    )
-
-
-    # --------------------------------------------------------
-    # ITERATIONS
-    # --------------------------------------------------------
-
-    try:
-
-        gt_configs = (
-            list_iteration_configs()
-        )
-
-    except Exception as exc:
-
-        gt_configs = []
-
-        st.error(
-            "Could not load iteration configuration: "
-            f"{exc}"
+        st.caption(
+            "Assess food security and global GHG targets "
+            "using aggregate outputs automatically extracted "
+            "from submitted FABLE-C calculators."
         )
 
 
-    # --------------------------------------------------------
-    # Add development-only fixture iteration when explicitly
-    # enabled through FABLE_ENABLE_LOCAL_FIXTURES=1.
-    # --------------------------------------------------------
+        # --------------------------------------------------------
+        # ITERATIONS
+        # --------------------------------------------------------
 
-    if local_global_fixture_enabled():
-
-        local_fixture_cfg = (
-            local_global_fixture_config()
-        )
-
-
-        if local_fixture_cfg[
-            "participants"
-        ]:
+        try:
 
             gt_configs = (
-                [
-                    local_fixture_cfg
-                ]
-                + gt_configs
+                list_iteration_configs()
+            )
+
+        except Exception as exc:
+
+            gt_configs = []
+
+            st.error(
+                "Could not load iteration configuration: "
+                f"{exc}"
             )
 
 
-    gt_iterations = [
-        config.get(
-            "iteration",
-            "",
-        )
-        for config in gt_configs
-        if config.get(
-            "iteration",
-            "",
-        )
-    ]
+        # --------------------------------------------------------
+        # Add development-only fixture iteration when explicitly
+        # enabled through FABLE_ENABLE_LOCAL_FIXTURES=1.
+        # --------------------------------------------------------
 
+        if local_global_fixture_enabled():
 
-    if not gt_iterations:
-
-        st.info(
-            "No configured iteration is available "
-            "for global target assessment."
-        )
-
-
-    else:
-
-        # ====================================================
-        # FILTERS
-        # ====================================================
-
-        gt_filter_1, gt_filter_2, gt_filter_3 = (
-            st.columns(
-                3
-            )
-        )
-
-
-        with gt_filter_1:
-
-            gt_iteration = (
-                st.selectbox(
-                    "Iteration",
-                    gt_iterations,
-                    key="gt_iteration",
-                    format_func=plain_text_label,
-                )
-            )
-
-
-        if (
-            gt_iteration
-            == LOCAL_GLOBAL_FIXTURE_ITERATION
-            and local_global_fixture_enabled()
-        ):
-
-            gt_config = (
+            local_fixture_cfg = (
                 local_global_fixture_config()
             )
 
+
+            if local_fixture_cfg[
+                "participants"
+            ]:
+
+                gt_configs = (
+                    [
+                        local_fixture_cfg
+                    ]
+                    + gt_configs
+                )
+
+
+        gt_iterations = [
+            config.get(
+                "iteration",
+                "",
+            )
+            for config in gt_configs
+            if config.get(
+                "iteration",
+                "",
+            )
+        ]
+
+
+        if not gt_iterations:
+
+            st.info(
+                "No configured iteration is available "
+                "for global target assessment."
+            )
+
+
         else:
 
-            gt_config = (
-                load_iteration_config(
-                    gt_iteration
-                )
-                or {}
-            )
+            # ====================================================
+            # FILTERS
+            # ====================================================
 
-
-        gt_pathways = (
-            gt_config.get(
-                "pathways",
-                [],
-            )
-        )
-
-
-        with gt_filter_2:
-
-            gt_pathway = (
-                st.selectbox(
-                    "Pathway",
-                    gt_pathways,
-                    key="gt_pathway",
-                    format_func=plain_text_label,
+            gt_filter_1, gt_filter_2, gt_filter_3 = (
+                st.columns(
+                    3
                 )
             )
 
 
-        with gt_filter_3:
+            with gt_filter_1:
+
+                gt_iteration = (
+                    st.selectbox(
+                        "Iteration",
+                        gt_iterations,
+                        key="gt_iteration",
+                        format_func=plain_text_label,
+                    )
+                )
+
+
+            if (
+                gt_iteration
+                == LOCAL_GLOBAL_FIXTURE_ITERATION
+                and local_global_fixture_enabled()
+            ):
+
+                gt_config = (
+                    local_global_fixture_config()
+                )
+
+            else:
+
+                gt_config = (
+                    load_iteration_config(
+                        gt_iteration
+                    )
+                    or {}
+                )
+
+
+            gt_pathways = (
+                gt_config.get(
+                    "pathways",
+                    [],
+                )
+            )
+
+
+            with gt_filter_2:
+
+                gt_pathway = (
+                    st.selectbox(
+                        "Pathway",
+                        gt_pathways,
+                        key="gt_pathway",
+                        format_func=plain_text_label,
+                    )
+                )
+
+
+            # SECTION23_ANALYSIS_MODE
+
+            with gt_filter_3:
+
+                gt_analysis_mode = st.selectbox(
+                    "Analysis mode",
+                    [
+                        "Compare Before and After",
+                        "Before trade adjustment",
+                        "After trade adjustment",
+                    ],
+                    key="gt_analysis_mode23",
+                    help=(
+                        "Comparison uses separately uploaded "
+                        "Before and After calculators."
+                    ),
+                )
 
             gt_stage_label = (
-                st.selectbox(
-                    "Submission stage",
-                    [
-                        "After trade adjustment",
-                        "Before trade adjustment",
-                    ],
-                    index=0,
-                    key="gt_stage",
-                    help=(
-                        "After trade adjustment: "
-                        "calculator HAS applied adjusted "
-                        "trade for this pathway."
-                        "\n\n"
-                        "Before trade adjustment: "
-                        "calculator has NOT yet applied "
-                        "adjusted trade for this pathway."
-                    ),
+                "Before trade adjustment"
+                if gt_analysis_mode
+                == "Before trade adjustment"
+                else "After trade adjustment"
+            )
+
+            gt_stage = (
+                "before"
+                if gt_stage_label
+                == "Before trade adjustment"
+                else "after"
+            )
+
+            if (
+                gt_iteration
+                == LOCAL_GLOBAL_FIXTURE_ITERATION
+            ):
+
+                st.info(
+                    "Local development fixture mode - "
+                    "using the validated 28-region "
+                    "CurrentTrends dataset. "
+                    "GitHub and app-data storage are not being used."
+                )
+
+
+            # ====================================================
+            # RUN TOKEN
+            # ====================================================
+
+            gt_token = (
+                f"{gt_iteration}|"
+                f"{gt_pathway}|"
+                f"{gt_stage}"
+            )
+
+
+            gt_run_clicked = (
+                st.button(
+                    "Run Global Assessment",
+                    type="primary",
+                    key="gt_run_button",
                 )
             )
 
 
-        gt_stage = (
-            "after"
-            if (
-                gt_stage_label
-                == "After trade adjustment"
-            )
-            else "before"
-        )
+            if gt_run_clicked:
+
+                st.session_state[
+                    "gt_run_token"
+                ] = gt_token
 
 
-        if (
-            gt_iteration
-            == LOCAL_GLOBAL_FIXTURE_ITERATION
-        ):
-
-            st.info(
-                "Local development fixture mode - "
-                "using the validated 28-region "
-                "CurrentTrends dataset. "
-                "GitHub and app-data storage are not being used."
+            gt_ready = (
+                st.session_state.get(
+                    "gt_run_token"
+                )
+                == gt_token
             )
 
 
-        # ====================================================
-        # RUN TOKEN
-        # ====================================================
+            if not gt_ready:
 
-        gt_token = (
-            f"{gt_iteration}|"
-            f"{gt_pathway}|"
-            f"{gt_stage}"
-        )
+                st.info(
+                    "Choose the iteration, pathway and stage, "
+                    "then click Run Global Assessment."
+                )
 
 
-        gt_run_clicked = (
-            st.button(
-                "Run Global Assessment",
-                type="primary",
-                key="gt_run_button",
-            )
-        )
+            else:
 
+                try:
 
-        if gt_run_clicked:
+                    # =============================================
+                    # SMART PROCESSING STATUS
+                    # =============================================
 
-            st.session_state[
-                "gt_run_token"
-            ] = gt_token
+                    with st.status(
+                        "Running global target assessment...",
+                        expanded=True,
+                    ) as gt_status:
 
-
-        gt_ready = (
-            st.session_state.get(
-                "gt_run_token"
-            )
-            == gt_token
-        )
-
-
-        if not gt_ready:
-
-            st.info(
-                "Choose the iteration, pathway and stage, "
-                "then click Run Global Assessment."
-            )
-
-
-        else:
-
-            try:
-
-                # =============================================
-                # SMART PROCESSING STATUS
-                # =============================================
-
-                with st.status(
-                    "Running global target assessment...",
-                    expanded=True,
-                ) as gt_status:
-
-                    gt_progress = (
-                        st.progress(
-                            0
+                        gt_progress = (
+                            st.progress(
+                                0
+                            )
                         )
-                    )
 
 
-                    # -----------------------------------------
-                    # STEP 1
-                    # -----------------------------------------
+                        # -----------------------------------------
+                        # STEP 1
+                        # -----------------------------------------
 
-                    gt_status.write(
-                        "Reading expected participant coverage..."
-                    )
-
-
-                    gt_expected_participants = (
-                        gt_config.get(
-                            "participants",
-                            [],
+                        gt_status.write(
+                            "Reading expected participant coverage..."
                         )
-                    )
 
 
-                    gt_progress.progress(
-                        15
-                    )
+                        gt_expected_participants = (
+                            gt_config.get(
+                                "participants",
+                                [],
+                            )
+                        )
 
 
-                    # -----------------------------------------
-                    # STEP 2
-                    # -----------------------------------------
-
-                    gt_status.write(
-                        "Loading submitted FABLE-C calculators..."
-                    )
+                        gt_progress.progress(
+                            15
+                        )
 
 
-                    if (
-                        gt_iteration
-                        == LOCAL_GLOBAL_FIXTURE_ITERATION
-                        and local_global_fixture_enabled()
-                    ):
+                        # -----------------------------------------
+                        # STEP 2
+                        # -----------------------------------------
 
-                        if gt_stage == "after":
+                        gt_status.write(
+                            "Loading submitted FABLE-C calculators..."
+                        )
+
+
+                        if (
+                            gt_iteration
+                            == LOCAL_GLOBAL_FIXTURE_ITERATION
+                            and local_global_fixture_enabled()
+                        ):
+
+                            if gt_stage == "after":
+
+                                gt_submissions_all = (
+                                    load_local_global_fixture_payloads()
+                                )
+
+                            else:
+
+                                gt_submissions_all = []
+
+
+                        else:
 
                             gt_submissions_all = (
-                                load_local_global_fixture_payloads()
-                            )
-
-                        else:
-
-                            gt_submissions_all = []
-
-
-                    else:
-
-                        gt_submissions_all = (
-                            list_submission_payloads(
-                                gt_iteration,
-                                stage=gt_stage,
-                            )
-                        )
-
-
-                    gt_submissions = [
-                        payload
-                        for payload
-                        in gt_submissions_all
-                        if (
-                            str(
-                                payload.get(
-                                    "pathway",
-                                    "",
+                                list_submission_payloads(
+                                    gt_iteration,
+                                    stage=gt_stage,
                                 )
                             )
-                            .strip()
-                            .casefold()
-                            ==
-                            str(
-                                gt_pathway
+
+
+                        gt_submissions = [
+                            payload
+                            for payload
+                            in gt_submissions_all
+                            if (
+                                str(
+                                    payload.get(
+                                        "pathway",
+                                        "",
+                                    )
+                                )
+                                .strip()
+                                .casefold()
+                                ==
+                                str(
+                                    gt_pathway
+                                )
+                                .strip()
+                                .casefold()
                             )
-                            .strip()
-                            .casefold()
+                        ]
+
+
+                        gt_submitted_participants = [
+                            payload.get(
+                                "participant",
+                                "",
+                            )
+                            for payload
+                            in gt_submissions
+                        ]
+
+
+                        gt_progress.progress(
+                            35
                         )
-                    ]
 
 
-                    gt_submitted_participants = [
-                        payload.get(
-                            "participant",
-                            "",
+                        # -----------------------------------------
+                        # STEP 3
+                        # -----------------------------------------
+
+                        gt_status.write(
+                            "Building global aggregate dataset..."
                         )
-                        for payload
-                        in gt_submissions
-                    ]
 
 
-                    gt_progress.progress(
-                        35
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 3
-                    # -----------------------------------------
-
-                    gt_status.write(
-                        "Building global aggregate dataset..."
-                    )
-
-
-                    gt_aggregate_df = (
-                        aggregate_rows_from_submissions(
-                            gt_submissions,
-                            pathway=gt_pathway,
+                        gt_aggregate_df = (
+                            aggregate_rows_from_submissions(
+                                gt_submissions,
+                                pathway=gt_pathway,
+                            )
                         )
-                    )
 
 
-                    gt_progress.progress(
-                        55
-                    )
+                        gt_progress.progress(
+                            55
+                        )
 
 
-                    # -----------------------------------------
-                    # STEP 4
-                    # -----------------------------------------
+                        # -----------------------------------------
+                        # STEP 4
+                        # -----------------------------------------
 
-                    gt_status.write(
-                        "Calculating food security and GHG targets..."
-                    )
+                        gt_status.write(
+                            "Calculating food security and GHG targets..."
+                        )
 
 
-                    gt_result = (
-                        calculate_global_targets_with_coverage(
-                            gt_aggregate_df,
-                            expected_regions=(
-                                gt_expected_participants
+                        gt_result = (
+                            calculate_global_targets_with_coverage(
+                                gt_aggregate_df,
+                                expected_regions=(
+                                    gt_expected_participants
+                                ),
+                                submitted_regions=(
+                                    gt_submitted_participants
+                                ),
+                            )
+                        )
+
+
+                        gt_food = (
+                            gt_result[
+                                "food_security"
+                            ]
+                        )
+
+                        gt_agri = (
+                            gt_result[
+                                "agriculture_ghg"
+                            ]
+                        )
+
+                        gt_land = (
+                            gt_result[
+                                "land_use_ghg"
+                            ]
+                        )
+
+                        gt_coverage = (
+                            gt_result[
+                                "coverage"
+                            ]
+                        )
+
+
+                        gt_progress.progress(
+                            80
+                        )
+
+
+                        # -----------------------------------------
+                        # STEP 5
+                        # -----------------------------------------
+
+                        gt_status.write(
+                            "Preparing charts and summary..."
+                        )
+
+
+                        gt_progress.progress(
+                            100
+                        )
+
+
+                        gt_status.update(
+                            label=(
+                                "Global assessment ready"
                             ),
-                            submitted_regions=(
-                                gt_submitted_participants
-                            ),
+                            state="complete",
+                            expanded=False,
+                        )
+
+
+                    # =================================================
+                    # COVERAGE
+                    # =================================================
+
+                    coverage_col_1, coverage_col_2 = (
+                        st.columns(
+                            2
                         )
                     )
 
 
-                    gt_food = (
-                        gt_result[
-                            "food_security"
-                        ]
-                    )
-
-                    gt_agri = (
-                        gt_result[
-                            "agriculture_ghg"
-                        ]
-                    )
-
-                    gt_land = (
-                        gt_result[
-                            "land_use_ghg"
-                        ]
-                    )
-
-                    gt_coverage = (
-                        gt_result[
-                            "coverage"
-                        ]
-                    )
-
-
-                    gt_progress.progress(
-                        80
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 5
-                    # -----------------------------------------
-
-                    gt_status.write(
-                        "Preparing charts and summary..."
-                    )
-
-
-                    gt_progress.progress(
-                        100
-                    )
-
-
-                    gt_status.update(
-                        label=(
-                            "Global assessment ready"
+                    coverage_col_1.metric(
+                        "Submitted participants",
+                        (
+                            f"{gt_coverage['submitted_expected_regions']}/"
+                            f"{gt_coverage['expected_regions']}"
                         ),
-                        state="complete",
-                        expanded=False,
                     )
 
 
-                # =================================================
-                # COVERAGE
-                # =================================================
-
-                coverage_col_1, coverage_col_2 = (
-                    st.columns(
-                        2
-                    )
-                )
-
-
-                coverage_col_1.metric(
-                    "Submitted participants",
-                    (
-                        f"{gt_coverage['submitted_expected_regions']}/"
-                        f"{gt_coverage['expected_regions']}"
-                    ),
-                )
-
-
-                gt_region_count = (
-                    int(
-                        gt_aggregate_df[
-                            "Location"
-                        ].nunique()
-                    )
-                    if not gt_aggregate_df.empty
-                    else 0
-                )
-
-
-                coverage_col_2.metric(
-                    "Regions in aggregate data",
-                    gt_region_count,
-                )
-
-
-                if not gt_coverage[
-                    "coverage_complete"
-                ]:
-
-                    st.warning(
-                        "Assessment is INCOMPLETE because "
-                        "not all configured participants "
-                        "have submitted the selected "
-                        "pathway and stage."
+                    gt_region_count = (
+                        int(
+                            gt_aggregate_df[
+                                "Location"
+                            ].nunique()
+                        )
+                        if not gt_aggregate_df.empty
+                        else 0
                     )
 
 
-                    if gt_coverage[
-                        "missing_regions"
+                    coverage_col_2.metric(
+                        "Regions in aggregate data",
+                        gt_region_count,
+                    )
+
+
+                    if not gt_coverage[
+                        "coverage_complete"
                     ]:
 
-                        with st.expander(
-                            "Missing participants"
-                        ):
+                        st.warning(
+                            "Assessment is INCOMPLETE because "
+                            "not all configured participants "
+                            "have submitted the selected "
+                            "pathway and stage."
+                        )
 
-                            st.write(
-                                ", ".join(
-                                    gt_coverage[
-                                        "missing_regions"
-                                    ]
+
+                        if gt_coverage[
+                            "missing_regions"
+                        ]:
+
+                            with st.expander(
+                                "Missing participants"
+                            ):
+
+                                st.write(
+                                    ", ".join(
+                                        gt_coverage[
+                                            "missing_regions"
+                                        ]
+                                    )
                                 )
-                            )
 
 
-                # =================================================
-                # SUMMARY CARDS
-                # =================================================
+                    # =================================================
+                    # SUMMARY CARDS
+                    # =================================================
 
-                st.markdown(
-                    "### Target summary"
-                )
-
-
-                card_1, card_2, card_3 = (
-                    st.columns(
-                        3
-                    )
-                )
-
-
-                def show_gt_card(
-                    container,
-                    title,
-                    status,
-                    actual,
-                    target,
-                ):
-
-                    with container:
-
-                        st.markdown(
-                            f"#### {plain_text_label(title)}"
-                        )
-
-
-                        if status == "YES":
-
-                            st.success(
-                                f"YES - {actual}"
-                            )
-
-                        elif status == "NO":
-
-                            st.error(
-                                f"NO - {actual}"
-                            )
-
-                        else:
-
-                            st.warning(
-                                f"INCOMPLETE - {actual}"
-                            )
-
-
-                        st.caption(
-                            f"Target: {plain_text_label(target)}"
-                        )
-
-
-                show_gt_card(
-                    card_1,
-                    "Food security",
-                    gt_food[
-                        "status"
-                    ],
-                    (
-                        f"{gt_food['regions_passing']}/"
-                        f"{gt_food['regions_total']} "
-                        "regions pass"
-                    ),
-                    (
-                        "All regions 10-50% above "
-                        "MDER in 2030 and 2050"
-                    ),
-                )
-
-
-                show_gt_card(
-                    card_2,
-                    "Agriculture GHG",
-                    gt_agri[
-                        "status"
-                    ],
-                    (
-                        (
-                            f"{gt_agri['global_total_gt']:.3f} "
-                            "Gt CO2e"
-                        )
-                        if pd.notna(
-                            gt_agri[
-                                "global_total_gt"
-                            ]
-                        )
-                        else "Missing data"
-                    ),
-                    "<= 4 Gt CO2e in 2050",
-                )
-
-
-                show_gt_card(
-                    card_3,
-                    "Land use change GHG",
-                    gt_land[
-                        "status"
-                    ],
-                    (
-                        (
-                            f"{gt_land['global_total_gt']:.3f} "
-                            "Gt CO2e"
-                        )
-                        if pd.notna(
-                            gt_land[
-                                "global_total_gt"
-                            ]
-                        )
-                        else "Missing data"
-                    ),
-                    "<= -1 Gt CO2e in 2050",
-                )
-
-
-                # =================================================
-                # SUMMARY TABLE
-                # =================================================
-
-                st.dataframe(
-                    pretty_dataframe(
-                        gt_result[
-                            "summary"
-                        ]
-                    ),
-                    use_container_width=True,
-                    hide_index=True,
-                )
-
-
-                # =================================================
-                # SHARED FILTER FOR VISUAL DASHBOARD
-                # =================================================
-
-                st.markdown(
-                    "### Visual dashboard"
-                )
-
-                gt_year = (
-                    st.radio(
-                        "Food security year",
-                        [
-                            2030,
-                            2050,
-                        ],
-                        horizontal=True,
-                        key="gt_year",
-                    )
-                )
-
-
-                # =================================================
-                # FOOD SECURITY - VERTICAL LOCATION BARS
-                # =================================================
-
-                gt_food_detail = (
-                    gt_food[
-                        "detail"
-                    ].copy()
-                )
-
-
-                if gt_food_detail.empty:
-
-                    food_chart_ready = False
-
-                    gt_food_fig = (
-                        go.Figure()
+                    st.markdown(
+                        "### Target summary"
                     )
 
 
-                    gt_food_fig.update_layout(
-                        title=(
-                            "Food security"
-                        ),
-                        height=560,
-                        template="plotly_white",
-                        font=dict(
-                            color="#1F2937",
-                            size=12,
-                        ),
-                    )
-
-
-                else:
-
-                    gt_margin_column = (
-                        f"Margin_{gt_year}_pct"
-                    )
-
-
-                    gt_pass_column = (
-                        f"Pass_{gt_year}"
-                    )
-
-
-                    gt_food_plot = (
-                        gt_food_detail[
-                            [
-                                "Location",
-                                gt_margin_column,
-                                gt_pass_column,
-                            ]
-                        ]
-                        .copy()
-                    )
-
-
-                    gt_food_plot.columns = [
-                        "Location",
-                        "Margin",
-                        "Pass",
-                    ]
-
-
-                    gt_food_plot[
-                        "Margin"
-                    ] = pd.to_numeric(
-                        gt_food_plot[
-                            "Margin"
-                        ],
-                        errors="coerce",
-                    )
-
-
-                    gt_food_plot = (
-                        gt_food_plot.sort_values(
-                            [
-                                "Margin",
-                                "Location",
-                            ],
-                            ascending=[
-                                False,
-                                True,
-                            ],
-                            na_position="last",
-                        )
-                        .reset_index(
-                            drop=True
+                    card_1, card_2, card_3 = (
+                        st.columns(
+                            3
                         )
                     )
 
 
-                    def gt_food_bar_color(
-                        value,
+                    def show_gt_card(
+                        container,
+                        title,
+                        status,
+                        actual,
+                        target,
                     ):
 
-                        if pd.isna(
-                            value
-                        ):
+                        with container:
 
-                            return "#9CA3AF"
-
-
-                        return (
-                            "#2E8B57"
-                            if bool(
-                                value
+                            st.markdown(
+                                f"#### {plain_text_label(title)}"
                             )
-                            else "#E6533C"
-                        )
 
 
-                    gt_food_colors = [
-                        gt_food_bar_color(
-                            value
-                        )
-                        for value
-                        in gt_food_plot[
-                            "Pass"
-                        ]
-                    ]
+                            if status == "YES":
 
-
-                    gt_food_status = [
-                        (
-                            "Incomplete"
-                            if pd.isna(
-                                value
-                            )
-                            else (
-                                "Within target"
-                                if bool(
-                                    value
+                                st.success(
+                                    f"YES - {actual}"
                                 )
-                                else "Outside target"
+
+                            elif status == "NO":
+
+                                st.error(
+                                    f"NO - {actual}"
+                                )
+
+                            else:
+
+                                st.warning(
+                                    f"INCOMPLETE - {actual}"
+                                )
+
+
+                            st.caption(
+                                f"Target: {plain_text_label(target)}"
                             )
-                        )
-                        for value
-                        in gt_food_plot[
-                            "Pass"
-                        ]
-                    ]
 
 
-                    gt_food_fig = (
-                        go.Figure()
-                    )
-
-
-                    gt_food_fig.add_trace(
-                        go.Bar(
-                            x=(
-                                gt_food_plot[
-                                    "Location"
-                                ]
-                            ),
-                            y=(
-                                gt_food_plot[
-                                    "Margin"
-                                ]
-                            ),
-                            marker=dict(
-                                color=(
-                                    gt_food_colors
-                                ),
-                                line=dict(
-                                    width=0
-                                ),
-                            ),
-                            customdata=(
-                                gt_food_status
-                            ),
-                            hovertemplate=(
-                                "<b>%{x}</b>"
-                                "<br>Margin: %{y:.1f}%"
-                                "<br>Status: %{customdata}"
-                                "<extra></extra>"
-                            ),
-                            showlegend=False,
-                        )
-                    )
-
-
-                    # -----------------------------------------
-                    # Target range
-                    # -----------------------------------------
-
-                    gt_food_fig.add_hrect(
-                        y0=10,
-                        y1=50,
-                        opacity=0.06,
-                        line_width=0,
-                    )
-
-
-                    gt_food_fig.add_hline(
-                        y=10,
-                        line_dash="dash",
-                        line_width=2,
-                        annotation_text="10%",
-                        annotation_position=(
-                            "bottom right"
-                        ),
-                    )
-
-
-                    gt_food_fig.add_hline(
-                        y=50,
-                        line_dash="dash",
-                        line_width=2,
-                        annotation_text="50%",
-                        annotation_position=(
-                            "top right"
-                        ),
-                    )
-
-
-                    gt_food_fig.update_layout(
-                        title=(
-                            "Food security margin - "
-                            f"{gt_year}"
-                        ),
-                        height=560,
-                        template="plotly_white",
-                        font=dict(
-                            color="#1F2937",
-                            size=12,
-                        ),
-                        title_font=dict(
-                            color="#111827",
-                            size=16,
-                        ),
-                        margin=dict(
-                            l=10,
-                            r=10,
-                            t=60,
-                            b=150,
-                        ),
-                        bargap=0.18,
-                        xaxis=dict(
-                            title="Location",
-                            tickangle=-55,
-                            automargin=True,
-                            tickfont=dict(
-                                size=9,
-                                color="#374151",
-                            ),
-                            title_font=dict(
-                                color="#374151",
-                            ),
-                        ),
-                        yaxis=dict(
-                            title=(
-                                "Food security margin (%)"
-                            ),
-                            automargin=True,
-                            zeroline=True,
-                            zerolinewidth=1,
-                            tickfont=dict(
-                                color="#374151",
-                            ),
-                            title_font=dict(
-                                color="#374151",
-                            ),
-                        ),
-                    )
-
-
-                    gt_food_fig.update_annotations(
-                        font=dict(
-                            color="#374151",
-                            size=11,
-                        )
-                    )
-
-
-                    food_chart_ready = True
-
-
-                # =================================================
-                # SHARED LOCATION COLORS FOR GHG STACKS
-                # =================================================
-
-                gt_all_ghg_locations = sorted(
-                    set(
-                        gt_land[
-                            "contributions"
-                        ][
-                            "Location"
-                        ]
-                        .dropna()
-                        .astype(str)
-                        .tolist()
-                    )
-                    |
-                    set(
-                        gt_agri[
-                            "contributions"
-                        ][
-                            "Location"
-                        ]
-                        .dropna()
-                        .astype(str)
-                        .tolist()
-                    ),
-                    key=str.casefold,
-                )
-
-
-                gt_location_palette = (
-                    px.colors.qualitative.Safe
-                    + px.colors.qualitative.Set3
-                    + px.colors.qualitative.Plotly
-                    + px.colors.qualitative.Light24
-                    + px.colors.qualitative.Dark24
-                )
-
-
-                gt_location_colors = {
-                    location: (
-                        gt_location_palette[
-                            index
-                            % len(
-                                gt_location_palette
-                            )
-                        ]
-                    )
-                    for index, location
-                    in enumerate(
-                        gt_all_ghg_locations
-                    )
-                }
-
-
-                # =================================================
-                # GHG STACKED VERTICAL CHART HELPER
-                # =================================================
-
-                def build_gt_vertical_ghg_chart(
-                    contributions,
-                    *,
-                    title,
-                    global_total,
-                    target,
-                    target_label,
-                ):
-
-                    plot_df = (
-                        contributions[
-                            [
-                                "Location",
-                                "Value_Gt_CO2e",
-                            ]
-                        ]
-                        .copy()
-                    )
-
-
-                    plot_df[
-                        "Location"
-                    ] = (
-                        plot_df[
-                            "Location"
-                        ]
-                        .astype(str)
-                    )
-
-
-                    plot_df[
-                        "Value_Gt_CO2e"
-                    ] = pd.to_numeric(
-                        plot_df[
-                            "Value_Gt_CO2e"
+                    show_gt_card(
+                        card_1,
+                        "Food security",
+                        gt_food[
+                            "status"
                         ],
-                        errors="coerce",
+                        (
+                            f"{gt_food['regions_passing']}/"
+                            f"{gt_food['regions_total']} "
+                            "regions pass"
+                        ),
+                        (
+                            "All regions 10-50% above "
+                            "MDER in 2030 and 2050"
+                        ),
                     )
 
 
-                    plot_df = (
-                        plot_df.dropna(
-                            subset=[
-                                "Value_Gt_CO2e"
-                            ]
-                        )
+                    show_gt_card(
+                        card_2,
+                        "Agriculture GHG",
+                        gt_agri[
+                            "status"
+                        ],
+                        (
+                            (
+                                f"{gt_agri['global_total_gt']:.3f} "
+                                "Gt CO2e"
+                            )
+                            if pd.notna(
+                                gt_agri[
+                                    "global_total_gt"
+                                ]
+                            )
+                            else "Missing data"
+                        ),
+                        "<= 4 Gt CO2e in 2050",
                     )
 
 
-                    plot_df = (
-                        plot_df.sort_values(
-                            "Location",
-                            key=lambda values: (
-                                values.astype(
-                                    str
-                                ).str.casefold()
+                    show_gt_card(
+                        card_3,
+                        "Land use change GHG",
+                        gt_land[
+                            "status"
+                        ],
+                        (
+                            (
+                                f"{gt_land['global_total_gt']:.3f} "
+                                "Gt CO2e"
+                            )
+                            if pd.notna(
+                                gt_land[
+                                    "global_total_gt"
+                                ]
+                            )
+                            else "Missing data"
+                        ),
+                        "<= -1 Gt CO2e in 2050",
+                    )
+
+
+                    # =================================================
+                    # SUMMARY TABLE
+                    # =================================================
+
+                    # SECTION29_FINAL_ANALYTICS
+
+                    st.caption(
+                        "Target summary reflects "
+                        + gt_stage_label
+                        + ". Charts below follow the "
+                        "selected analysis mode."
+                    )
+
+                    with st.expander(
+                        "View detailed target assessment"
+                    ):
+                        st.dataframe(
+                            pretty_dataframe(
+                                gt_result["summary"]
                             ),
+                            use_container_width=True,
+                            hide_index=True,
                         )
-                        .reset_index(
-                            drop=True
+
+
+                    # =================================================
+                    # SHARED FILTER FOR VISUAL DASHBOARD
+                    # =================================================
+
+                    st.markdown(
+                        "### Visual dashboard"
+                    )
+
+                    # SECTION23_TARGET_CAPTION
+
+                    st.caption(
+                        "Target cards assess 2030/2050 food security and "
+                        "2050 GHG targets. Charts below follow the "
+                        "selected year and analysis mode."
+                    )
+
+                    gt_year = (
+                        st.radio(
+                            "Analysis year (visual dashboard)",
+                            [
+                                2030,
+                                2050,
+                            ],
+                            horizontal=True,
+                            key="gt_year",
                         )
                     )
 
 
-                    fig = (
-                        go.Figure()
+                    # =================================================
+                    # FOOD SECURITY - VERTICAL LOCATION BARS
+                    # =================================================
+
+                    gt_food_detail = (
+                        gt_food[
+                            "detail"
+                        ].copy()
                     )
 
 
-                    if plot_df.empty:
+                    if gt_food_detail.empty:
 
-                        fig.update_layout(
+                        food_chart_ready = False
+
+                        gt_food_fig = (
+                            go.Figure()
+                        )
+
+
+                        gt_food_fig.update_layout(
                             title=(
-                                plain_text_label(
-                                    title
-                                )
+                                "Food security"
                             ),
                             height=560,
                             template="plotly_white",
@@ -5161,133 +7167,150 @@ with analytics_tab:
                             ),
                         )
 
-                        return fig
 
+                    else:
 
-                    show_location_legend = (
-                        len(
-                            plot_df
+                        gt_margin_column = (
+                            f"Margin_{gt_year}_pct"
                         )
-                        <= 10
-                    )
 
 
-                    # -----------------------------------------
-                    # One trace per Location
-                    #
-                    # Positive values stack above zero.
-                    # Negative values stack below zero.
-                    # -----------------------------------------
+                        gt_pass_column = (
+                            f"Pass_{gt_year}"
+                        )
 
-                    for _, row in (
-                        plot_df.iterrows()
-                    ):
 
-                        location = str(
-                            row[
-                                "Location"
+                        gt_food_plot = (
+                            gt_food_detail[
+                                [
+                                    "Location",
+                                    gt_margin_column,
+                                    gt_pass_column,
+                                ]
                             ]
+                            .copy()
                         )
 
 
-                        value = float(
-                            row[
-                                "Value_Gt_CO2e"
-                            ]
+                        gt_food_plot.columns = [
+                            "Location",
+                            "Margin",
+                            "Pass",
+                        ]
+
+
+                        gt_food_plot[
+                            "Margin"
+                        ] = pd.to_numeric(
+                            gt_food_plot[
+                                "Margin"
+                            ],
+                            errors="coerce",
                         )
 
 
-                        fig.add_trace(
-                            go.Bar(
-                                x=[
-                                    "Global 2050"
+                        gt_food_plot = (
+                            gt_food_plot.sort_values(
+                                [
+                                    "Margin",
+                                    "Location",
                                 ],
-                                y=[
-                                    value
+                                ascending=[
+                                    False,
+                                    True,
                                 ],
-                                name=(
-                                    plain_text_label(
-                                        location
-                                    )
-                                ),
-                                marker=dict(
-                                    color=(
-                                        gt_location_colors.get(
-                                            location
-                                        )
-                                    ),
-                                    line=dict(
-                                        width=0.5,
-                                        color=(
-                                            "rgba(255,255,255,0.7)"
-                                        ),
-                                    ),
-                                ),
-                                hovertemplate=(
-                                    "<b>"
-                                    + plain_text_label(
-                                        location
-                                    )
-                                    + "</b>"
-                                    "<br>Contribution: "
-                                    "%{y:.3f} Gt CO2e"
-                                    "<extra></extra>"
-                                ),
-                                showlegend=(
-                                    show_location_legend
-                                ),
+                                na_position="last",
+                            )
+                            .reset_index(
+                                drop=True
                             )
                         )
 
 
-                    # -----------------------------------------
-                    # Global total marker
-                    # -----------------------------------------
+                        def gt_food_bar_color(
+                            value,
+                        ):
 
-                    if pd.notna(
-                        global_total
-                    ):
+                            if pd.isna(
+                                value
+                            ):
 
-                        fig.add_trace(
-                            go.Scatter(
-                                x=[
-                                    "Global 2050"
-                                ],
-                                y=[
-                                    global_total
-                                ],
-                                mode=(
-                                    "markers+text"
+                                return "#9CA3AF"
+
+
+                            return (
+                                "#2E8B57"
+                                if bool(
+                                    value
+                                )
+                                else "#E6533C"
+                            )
+
+
+                        gt_food_colors = [
+                            gt_food_bar_color(
+                                value
+                            )
+                            for value
+                            in gt_food_plot[
+                                "Pass"
+                            ]
+                        ]
+
+
+                        gt_food_status = [
+                            (
+                                "Incomplete"
+                                if pd.isna(
+                                    value
+                                )
+                                else (
+                                    "Within target"
+                                    if bool(
+                                        value
+                                    )
+                                    else "Outside target"
+                                )
+                            )
+                            for value
+                            in gt_food_plot[
+                                "Pass"
+                            ]
+                        ]
+
+
+                        gt_food_fig = (
+                            go.Figure()
+                        )
+
+
+                        gt_food_fig.add_trace(
+                            go.Bar(
+                                x=(
+                                    gt_food_plot[
+                                        "Location"
+                                    ]
                                 ),
-                                name=(
-                                    "Global total"
+                                y=(
+                                    gt_food_plot[
+                                        "Margin"
+                                    ]
                                 ),
                                 marker=dict(
-                                    symbol="diamond",
-                                    size=12,
-                                    color="#111111",
+                                    color=(
+                                        gt_food_colors
+                                    ),
                                     line=dict(
-                                        width=1,
-                                        color="#FFFFFF",
+                                        width=0
                                     ),
                                 ),
-                                text=[
-                                    (
-                                        "Global total<br>"
-                                        f"{global_total:.3f} "
-                                        "Gt CO2e"
-                                    )
-                                ],
-                                textposition=(
-                                    "top center"
-                                ),
-                                textfont=dict(
-                                    color="#111827",
-                                    size=11,
+                                customdata=(
+                                    gt_food_status
                                 ),
                                 hovertemplate=(
-                                    "<b>Global total</b>"
-                                    "<br>%{y:.3f} Gt CO2e"
+                                    "<b>%{x}</b>"
+                                    "<br>Margin: %{y:.1f}%"
+                                    "<br>Status: %{customdata}"
                                     "<extra></extra>"
                                 ),
                                 showlegend=False,
@@ -5295,516 +7318,9 @@ with analytics_tab:
                         )
 
 
-                    # -----------------------------------------
-                    # Target
-                    # -----------------------------------------
-
-                    fig.add_hline(
-                        y=target,
-                        line_dash="dash",
-                        line_width=2,
-                        annotation_text=(
-                            target_label
-                        ),
-                        annotation_position=(
-                            "bottom right"
-                            if target < 0
-                            else "top right"
-                        ),
-                    )
-
-
-                    # -----------------------------------------
-                    # Sensible signed y range
-                    # -----------------------------------------
-
-                    positive_sum = float(
-                        plot_df.loc[
-                            (
-                                plot_df[
-                                    "Value_Gt_CO2e"
-                                ]
-                                > 0
-                            ),
-                            "Value_Gt_CO2e",
-                        ].sum()
-                    )
-
-
-                    negative_sum = float(
-                        plot_df.loc[
-                            (
-                                plot_df[
-                                    "Value_Gt_CO2e"
-                                ]
-                                < 0
-                            ),
-                            "Value_Gt_CO2e",
-                        ].sum()
-                    )
-
-
-                    range_values = [
-                        0.0,
-                        positive_sum,
-                        negative_sum,
-                        float(
-                            target
-                        ),
-                    ]
-
-
-                    if pd.notna(
-                        global_total
-                    ):
-
-                        range_values.append(
-                            float(
-                                global_total
-                            )
-                        )
-
-
-                    lower_value = min(
-                        range_values
-                    )
-
-                    upper_value = max(
-                        range_values
-                    )
-
-
-                    span = (
-                        upper_value
-                        - lower_value
-                    )
-
-
-                    padding = max(
-                        span * 0.18,
-                        0.35,
-                    )
-
-
-                    y_range = [
-                        lower_value
-                        - padding,
-                        upper_value
-                        + padding,
-                    ]
-
-
-                    # -----------------------------------------
-                    # Layout
-                    # -----------------------------------------
-
-                    fig.update_layout(
-                        title=(
-                            plain_text_label(
-                                title
-                            )
-                        ),
-                        height=620,
-                        template="plotly_white",
-                        barmode="relative",
-                        font=dict(
-                            color="#1F2937",
-                            size=12,
-                        ),
-                        title_font=dict(
-                            color="#111827",
-                            size=16,
-                        ),
-                        margin=dict(
-                            l=10,
-                            r=10,
-                            t=70,
-                            b=145,
-                        ),
-                        bargap=0.42,
-                        legend_title_text="",
-                        showlegend=(
-                            show_location_legend
-                        ),
-                        legend=dict(
-                            orientation="h",
-                            yanchor="top",
-                            y=-0.18,
-                            xanchor="center",
-                            x=0.5,
-                            font=dict(
-                                size=9,
-                                color="#374151",
-                            ),
-                        ),
-                        xaxis=dict(
-                            title="",
-                            tickfont=dict(
-                                color="#374151",
-                                size=11,
-                            ),
-                        ),
-                        yaxis=dict(
-                            title=(
-                                "Gt CO2e"
-                            ),
-                            range=(
-                                y_range
-                            ),
-                            zeroline=True,
-                            zerolinewidth=1.5,
-                            zerolinecolor=(
-                                "#6B7280"
-                            ),
-                            tickfont=dict(
-                                color="#374151",
-                            ),
-                            title_font=dict(
-                                color="#374151",
-                            ),
-                        ),
-                    )
-
-
-                    fig.update_annotations(
-                        font=dict(
-                            color="#374151",
-                            size=11,
-                        )
-                    )
-
-
-                    return fig
-
-
-                # =================================================
-                # BUILD LAND CHART
-                # =================================================
-
-                gt_land_fig = (
-                    build_gt_vertical_ghg_chart(
-                        gt_land[
-                            "contributions"
-                        ],
-                        title=(
-                            "Land use change GHG - 2050"
-                        ),
-                        global_total=(
-                            gt_land[
-                                "global_total_gt"
-                            ]
-                        ),
-                        target=-1.0,
-                        target_label=(
-                            "Target: -1 Gt CO2e"
-                        ),
-                    )
-                )
-
-
-                # =================================================
-                # BUILD AGRICULTURE CHART
-                # =================================================
-
-                gt_agri_fig = (
-                    build_gt_vertical_ghg_chart(
-                        gt_agri[
-                            "contributions"
-                        ],
-                        title=(
-                            "Agriculture GHG - 2050"
-                        ),
-                        global_total=(
-                            gt_agri[
-                                "global_total_gt"
-                            ]
-                        ),
-                        target=4.0,
-                        target_label=(
-                            "Target: 4 Gt CO2e"
-                        ),
-                    )
-                )
-
-
-                # =================================================
-                # OPTIONAL BEFORE / AFTER COMPARISON
-                # =================================================
-
-                def gt_compare_stage_payloads(
-                    stage_name,
-                ):
-
-                    payloads = (
-                        list_submission_payloads(
-                            gt_iteration,
-                            stage=stage_name,
-                        )
-                    )
-
-
-                    return [
-                        payload
-                        for payload
-                        in payloads
-                        if (
-                            str(
-                                payload.get(
-                                    "pathway",
-                                    "",
-                                )
-                            )
-                            .strip()
-                            .casefold()
-                            ==
-                            str(
-                                gt_pathway
-                            )
-                            .strip()
-                            .casefold()
-                        )
-                    ]
-
-
-                gt_compare_before_payloads = (
-                    gt_compare_stage_payloads(
-                        "before"
-                    )
-                )
-
-
-                gt_compare_after_payloads = (
-                    gt_compare_stage_payloads(
-                        "after"
-                    )
-                )
-
-
-                gt_compare_available = (
-                    bool(
-                        gt_compare_before_payloads
-                    )
-                    and bool(
-                        gt_compare_after_payloads
-                    )
-                )
-
-
-                gt_compare_enabled = False
-
-
-                if gt_compare_available:
-
-                    gt_compare_enabled = (
-                        st.checkbox(
-                            "Compare Before and After trade adjustment",
-                            value=False,
-                            key=(
-                                "gt_compare_before_after"
-                            ),
-                            help=(
-                                "Show paired Before and After bars "
-                                "for this iteration and pathway."
-                            ),
-                        )
-                    )
-
-
-                if gt_compare_enabled:
-
-
-                    def gt_compare_result(
-                        payloads,
-                    ):
-
-                        aggregate_df = (
-                            aggregate_rows_from_submissions(
-                                payloads,
-                                pathway=gt_pathway,
-                            )
-                        )
-
-
-                        submitted_regions = [
-                            payload.get(
-                                "participant",
-                                "",
-                            )
-                            for payload
-                            in payloads
-                        ]
-
-
-                        return (
-                            calculate_global_targets_with_coverage(
-                                aggregate_df,
-                                expected_regions=(
-                                    gt_expected_participants
-                                ),
-                                submitted_regions=(
-                                    submitted_regions
-                                ),
-                            )
-                        )
-
-
-                    gt_before_compare_result = (
-                        gt_compare_result(
-                            gt_compare_before_payloads
-                        )
-                    )
-
-
-                    gt_after_compare_result = (
-                        gt_compare_result(
-                            gt_compare_after_payloads
-                        )
-                    )
-
-
-                    gt_compare_results = {
-                        "Before trade adjustment": (
-                            gt_before_compare_result
-                        ),
-                        "After trade adjustment": (
-                            gt_after_compare_result
-                        ),
-                    }
-
-
-                    # -----------------------------------------
-                    # FOOD SECURITY PAIRED VERTICAL BARS
-                    # -----------------------------------------
-
-                    gt_compare_food_rows = []
-
-                    margin_column = (
-                        f"Margin_{gt_year}_pct"
-                    )
-
-
-                    for stage_label, result in (
-                        gt_compare_results.items()
-                    ):
-
-                        detail_df = (
-                            result[
-                                "food_security"
-                            ][
-                                "detail"
-                            ]
-                            .copy()
-                        )
-
-
-                        if (
-                            detail_df.empty
-                            or margin_column
-                            not in detail_df.columns
-                        ):
-
-                            continue
-
-
-                        for _, row in (
-                            detail_df.iterrows()
-                        ):
-
-                            gt_compare_food_rows.append(
-                                {
-                                    "Location": (
-                                        plain_text_label(
-                                            row.get(
-                                                "Location",
-                                                "",
-                                            )
-                                        )
-                                    ),
-                                    "Margin": (
-                                        pd.to_numeric(
-                                            pd.Series(
-                                                [
-                                                    row.get(
-                                                        margin_column
-                                                    )
-                                                ]
-                                            ),
-                                            errors="coerce",
-                                        ).iloc[
-                                            0
-                                        ]
-                                    ),
-                                    "Stage": (
-                                        stage_label
-                                    ),
-                                }
-                            )
-
-
-                    gt_compare_food_df = (
-                        pd.DataFrame(
-                            gt_compare_food_rows
-                        )
-                    )
-
-
-                    if not gt_compare_food_df.empty:
-
-                        gt_compare_food_df = (
-                            gt_compare_food_df.dropna(
-                                subset=[
-                                    "Margin"
-                                ]
-                            )
-                        )
-
-
-                        gt_compare_location_order = (
-                            gt_compare_food_df.groupby(
-                                "Location"
-                            )[
-                                "Margin"
-                            ]
-                            .mean()
-                            .sort_values(
-                                ascending=False
-                            )
-                            .index
-                            .tolist()
-                        )
-
-
-                        gt_food_fig = (
-                            px.bar(
-                                gt_compare_food_df,
-                                x="Location",
-                                y="Margin",
-                                color="Stage",
-                                barmode="group",
-                                category_orders={
-                                    "Location": (
-                                        gt_compare_location_order
-                                    ),
-                                    "Stage": [
-                                        "Before trade adjustment",
-                                        "After trade adjustment",
-                                    ],
-                                },
-                                title=(
-                                    "Food security margin - "
-                                    f"{gt_year}"
-                                ),
-                                labels={
-                                    "Margin": (
-                                        "Food security margin (%)"
-                                    ),
-                                    "Stage": (
-                                        ""
-                                    ),
-                                },
-                            )
-                        )
-
+                        # -----------------------------------------
+                        # Target range
+                        # -----------------------------------------
 
                         gt_food_fig.add_hrect(
                             y0=10,
@@ -5837,7 +7353,11 @@ with analytics_tab:
 
 
                         gt_food_fig.update_layout(
-                            height=610,
+                            title=(
+                                "Food security margin - "
+                                f"{gt_year}"
+                            ),
+                            height=560,
                             template="plotly_white",
                             font=dict(
                                 color="#1F2937",
@@ -5850,232 +7370,171 @@ with analytics_tab:
                             margin=dict(
                                 l=10,
                                 r=10,
-                                t=65,
-                                b=165,
+                                t=60,
+                                b=150,
                             ),
-                            legend_title_text="",
-                            legend=dict(
-                                orientation="h",
-                                yanchor="top",
-                                y=-0.28,
-                                xanchor="center",
-                                x=0.5,
-                            ),
+                            bargap=0.18,
                             xaxis=dict(
                                 title="Location",
                                 tickangle=-55,
                                 automargin=True,
+                                tickfont=dict(
+                                    size=9,
+                                    color="#374151",
+                                ),
+                                title_font=dict(
+                                    color="#374151",
+                                ),
                             ),
                             yaxis=dict(
                                 title=(
                                     "Food security margin (%)"
                                 ),
+                                automargin=True,
                                 zeroline=True,
+                                zerolinewidth=1,
+                                tickfont=dict(
+                                    color="#374151",
+                                ),
+                                title_font=dict(
+                                    color="#374151",
+                                ),
                             ),
+                        )
+
+
+                        gt_food_fig.update_annotations(
+                            font=dict(
+                                color="#374151",
+                                size=11,
+                            )
                         )
 
 
                         food_chart_ready = True
 
 
-                    # -----------------------------------------
-                    # GHG BEFORE / AFTER STACKED BARS
-                    # -----------------------------------------
+                    # =================================================
+                    # SHARED LOCATION COLORS FOR GHG STACKS
+                    # =================================================
 
-                    def build_gt_compare_ghg_chart(
-                        indicator_key,
+                    gt_all_ghg_locations = sorted(
+                        set(
+                            gt_land[
+                                "contributions"
+                            ][
+                                "Location"
+                            ]
+                            .dropna()
+                            .astype(str)
+                            .tolist()
+                        )
+                        |
+                        set(
+                            gt_agri[
+                                "contributions"
+                            ][
+                                "Location"
+                            ]
+                            .dropna()
+                            .astype(str)
+                            .tolist()
+                        ),
+                        key=str.casefold,
+                    )
+
+
+                    gt_location_palette = (
+                        px.colors.qualitative.Safe
+                        + px.colors.qualitative.Set3
+                        + px.colors.qualitative.Plotly
+                        + px.colors.qualitative.Light24
+                        + px.colors.qualitative.Dark24
+                    )
+
+
+                    gt_location_colors = {
+                        location: (
+                            gt_location_palette[
+                                index
+                                % len(
+                                    gt_location_palette
+                                )
+                            ]
+                        )
+                        for index, location
+                        in enumerate(
+                            gt_all_ghg_locations
+                        )
+                    }
+
+
+                    # =================================================
+                    # GHG STACKED VERTICAL CHART HELPER
+                    # =================================================
+
+                    def build_gt_vertical_ghg_chart(
+                        contributions,
                         *,
                         title,
+                        global_total,
                         target,
                         target_label,
                     ):
 
-                        stage_labels = [
-                            "Before trade adjustment",
-                            "After trade adjustment",
-                        ]
-
-                        stage_maps = {}
-
-                        all_locations = set()
-
-                        range_values = [
-                            0.0,
-                            float(
-                                target
-                            ),
-                        ]
-
-                        global_totals = []
-
-
-                        for stage_label in (
-                            stage_labels
-                        ):
-
-                            result = (
-                                gt_compare_results[
-                                    stage_label
-                                ][
-                                    indicator_key
+                        plot_df = (
+                            contributions[
+                                [
+                                    "Location",
+                                    "Value_Gt_CO2e",
                                 ]
-                            )
+                            ]
+                            .copy()
+                        )
 
 
-                            contributions = (
-                                result[
-                                    "contributions"
-                                ]
-                                .copy()
-                            )
+                        plot_df[
+                            "Location"
+                        ] = (
+                            plot_df[
+                                "Location"
+                            ]
+                            .astype(str)
+                        )
 
 
-                            if contributions.empty:
-
-                                stage_maps[
-                                    stage_label
-                                ] = {}
-
-
-                            else:
-
-                                contributions[
-                                    "Location"
-                                ] = (
-                                    contributions[
-                                        "Location"
-                                    ]
-                                    .astype(str)
-                                )
+                        plot_df[
+                            "Value_Gt_CO2e"
+                        ] = pd.to_numeric(
+                            plot_df[
+                                "Value_Gt_CO2e"
+                            ],
+                            errors="coerce",
+                        )
 
 
-                                contributions[
+                        plot_df = (
+                            plot_df.dropna(
+                                subset=[
                                     "Value_Gt_CO2e"
-                                ] = pd.to_numeric(
-                                    contributions[
-                                        "Value_Gt_CO2e"
-                                    ],
-                                    errors="coerce",
-                                )
-
-
-                                contributions = (
-                                    contributions.dropna(
-                                        subset=[
-                                            "Value_Gt_CO2e"
-                                        ]
-                                    )
-                                )
-
-
-                                stage_map = {
-                                    str(
-                                        row[
-                                            "Location"
-                                        ]
-                                    ): float(
-                                        row[
-                                            "Value_Gt_CO2e"
-                                        ]
-                                    )
-                                    for _, row
-                                    in contributions.iterrows()
-                                }
-
-
-                                stage_maps[
-                                    stage_label
-                                ] = stage_map
-
-
-                                all_locations.update(
-                                    stage_map.keys()
-                                )
-
-
-                                range_values.extend(
-                                    [
-                                        float(
-                                            contributions.loc[
-                                                contributions[
-                                                    "Value_Gt_CO2e"
-                                                ]
-                                                > 0,
-                                                "Value_Gt_CO2e",
-                                            ].sum()
-                                        ),
-                                        float(
-                                            contributions.loc[
-                                                contributions[
-                                                    "Value_Gt_CO2e"
-                                                ]
-                                                < 0,
-                                                "Value_Gt_CO2e",
-                                            ].sum()
-                                        ),
-                                    ]
-                                )
-
-
-                            global_total = (
-                                result.get(
-                                    "global_total_gt"
-                                )
-                            )
-
-
-                            if pd.notna(
-                                global_total
-                            ):
-
-                                global_totals.append(
-                                    float(
-                                        global_total
-                                    )
-                                )
-
-                                range_values.append(
-                                    float(
-                                        global_total
-                                    )
-                                )
-
-
-                            else:
-
-                                global_totals.append(
-                                    None
-                                )
-
-
-                        all_locations = sorted(
-                            all_locations,
-                            key=str.casefold,
-                        )
-
-
-                        palette = (
-                            px.colors.qualitative.Safe
-                            + px.colors.qualitative.Set3
-                            + px.colors.qualitative.Plotly
-                            + px.colors.qualitative.Light24
-                        )
-
-
-                        location_colors = {
-                            location: (
-                                palette[
-                                    index
-                                    % len(
-                                        palette
-                                    )
                                 ]
                             )
-                            for index, location
-                            in enumerate(
-                                all_locations
+                        )
+
+
+                        plot_df = (
+                            plot_df.sort_values(
+                                "Location",
+                                key=lambda values: (
+                                    values.astype(
+                                        str
+                                    ).str.casefold()
+                                ),
                             )
-                        }
+                            .reset_index(
+                                drop=True
+                            )
+                        )
 
 
                         fig = (
@@ -6083,33 +7542,65 @@ with analytics_tab:
                         )
 
 
+                        if plot_df.empty:
+
+                            fig.update_layout(
+                                title=(
+                                    plain_text_label(
+                                        title
+                                    )
+                                ),
+                                height=560,
+                                template="plotly_white",
+                                font=dict(
+                                    color="#1F2937",
+                                    size=12,
+                                ),
+                            )
+
+                            return fig
+
+
                         show_location_legend = (
                             len(
-                                all_locations
+                                plot_df
                             )
                             <= 10
                         )
 
 
-                        for location in (
-                            all_locations
+                        # -----------------------------------------
+                        # One trace per Location
+                        #
+                        # Positive values stack above zero.
+                        # Negative values stack below zero.
+                        # -----------------------------------------
+
+                        for _, row in (
+                            plot_df.iterrows()
                         ):
+
+                            location = str(
+                                row[
+                                    "Location"
+                                ]
+                            )
+
+
+                            value = float(
+                                row[
+                                    "Value_Gt_CO2e"
+                                ]
+                            )
+
 
                             fig.add_trace(
                                 go.Bar(
-                                    x=(
-                                        stage_labels
-                                    ),
+                                    x=[
+                                        "Global 2050"
+                                    ],
                                     y=[
-                                        stage_maps.get(
-                                            stage_label,
-                                            {},
-                                        ).get(
-                                            location,
-                                            0.0,
-                                        )
-                                        for stage_label
-                                        in stage_labels
+                                        value
                                     ],
                                     name=(
                                         plain_text_label(
@@ -6118,10 +7609,16 @@ with analytics_tab:
                                     ),
                                     marker=dict(
                                         color=(
-                                            location_colors[
+                                            gt_location_colors.get(
                                                 location
-                                            ]
-                                        )
+                                            )
+                                        ),
+                                        line=dict(
+                                            width=0.5,
+                                            color=(
+                                                "rgba(255,255,255,0.7)"
+                                            ),
+                                        ),
                                     ),
                                     hovertemplate=(
                                         "<b>"
@@ -6129,7 +7626,6 @@ with analytics_tab:
                                             location
                                         )
                                         + "</b>"
-                                        "<br>%{x}"
                                         "<br>Contribution: "
                                         "%{y:.3f} Gt CO2e"
                                         "<extra></extra>"
@@ -6141,46 +7637,27 @@ with analytics_tab:
                             )
 
 
-                        valid_total_x = []
-                        valid_total_y = []
-                        valid_total_text = []
+                        # -----------------------------------------
+                        # Global total marker
+                        # -----------------------------------------
 
-
-                        for stage_label, global_total in zip(
-                            stage_labels,
-                            global_totals,
+                        if pd.notna(
+                            global_total
                         ):
-
-                            if global_total is None:
-
-                                continue
-
-
-                            valid_total_x.append(
-                                stage_label
-                            )
-
-                            valid_total_y.append(
-                                global_total
-                            )
-
-                            valid_total_text.append(
-                                (
-                                    "Net global total<br>"
-                                    f"{global_total:.3f} "
-                                    "Gt CO2e"
-                                )
-                            )
-
-
-                        if valid_total_x:
 
                             fig.add_trace(
                                 go.Scatter(
-                                    x=valid_total_x,
-                                    y=valid_total_y,
+                                    x=[
+                                        "Global 2050"
+                                    ],
+                                    y=[
+                                        global_total
+                                    ],
                                     mode=(
                                         "markers+text"
+                                    ),
+                                    name=(
+                                        "Global total"
                                     ),
                                     marker=dict(
                                         symbol="diamond",
@@ -6191,26 +7668,33 @@ with analytics_tab:
                                             color="#FFFFFF",
                                         ),
                                     ),
-                                    text=(
-                                        valid_total_text
-                                    ),
+                                    text=[
+                                        (
+                                            "Global total<br>"
+                                            f"{global_total:.3f} "
+                                            "Gt CO2e"
+                                        )
+                                    ],
                                     textposition=(
                                         "top center"
                                     ),
                                     textfont=dict(
                                         color="#111827",
-                                        size=10,
+                                        size=11,
                                     ),
-                                    showlegend=False,
                                     hovertemplate=(
-                                        "<b>%{x}</b>"
-                                        "<br>Net global total: "
-                                        "%{y:.3f} Gt CO2e"
+                                        "<b>Global total</b>"
+                                        "<br>%{y:.3f} Gt CO2e"
                                         "<extra></extra>"
                                     ),
+                                    showlegend=False,
                                 )
                             )
 
+
+                        # -----------------------------------------
+                        # Target
+                        # -----------------------------------------
 
                         fig.add_hline(
                             y=target,
@@ -6227,6 +7711,57 @@ with analytics_tab:
                         )
 
 
+                        # -----------------------------------------
+                        # Sensible signed y range
+                        # -----------------------------------------
+
+                        positive_sum = float(
+                            plot_df.loc[
+                                (
+                                    plot_df[
+                                        "Value_Gt_CO2e"
+                                    ]
+                                    > 0
+                                ),
+                                "Value_Gt_CO2e",
+                            ].sum()
+                        )
+
+
+                        negative_sum = float(
+                            plot_df.loc[
+                                (
+                                    plot_df[
+                                        "Value_Gt_CO2e"
+                                    ]
+                                    < 0
+                                ),
+                                "Value_Gt_CO2e",
+                            ].sum()
+                        )
+
+
+                        range_values = [
+                            0.0,
+                            positive_sum,
+                            negative_sum,
+                            float(
+                                target
+                            ),
+                        ]
+
+
+                        if pd.notna(
+                            global_total
+                        ):
+
+                            range_values.append(
+                                float(
+                                    global_total
+                                )
+                            )
+
+
                         lower_value = min(
                             range_values
                         )
@@ -6235,16 +7770,30 @@ with analytics_tab:
                             range_values
                         )
 
+
                         span = (
                             upper_value
                             - lower_value
                         )
+
 
                         padding = max(
                             span * 0.18,
                             0.35,
                         )
 
+
+                        y_range = [
+                            lower_value
+                            - padding,
+                            upper_value
+                            + padding,
+                        ]
+
+
+                        # -----------------------------------------
+                        # Layout
+                        # -----------------------------------------
 
                         fig.update_layout(
                             title=(
@@ -6269,7 +7818,7 @@ with analytics_tab:
                                 t=70,
                                 b=145,
                             ),
-                            bargap=0.35,
+                            bargap=0.42,
                             legend_title_text="",
                             showlegend=(
                                 show_location_legend
@@ -6287,35 +7836,60 @@ with analytics_tab:
                             ),
                             xaxis=dict(
                                 title="",
-                                automargin=True,
+                                tickfont=dict(
+                                    color="#374151",
+                                    size=11,
+                                ),
                             ),
                             yaxis=dict(
                                 title=(
                                     "Gt CO2e"
                                 ),
-                                range=[
-                                    lower_value
-                                    - padding,
-                                    upper_value
-                                    + padding,
-                                ],
+                                range=(
+                                    y_range
+                                ),
                                 zeroline=True,
                                 zerolinewidth=1.5,
                                 zerolinecolor=(
                                     "#6B7280"
                                 ),
+                                tickfont=dict(
+                                    color="#374151",
+                                ),
+                                title_font=dict(
+                                    color="#374151",
+                                ),
                             ),
+                        )
+
+
+                        fig.update_annotations(
+                            font=dict(
+                                color="#374151",
+                                size=11,
+                            )
                         )
 
 
                         return fig
 
 
+                    # =================================================
+                    # BUILD LAND CHART
+                    # =================================================
+
                     gt_land_fig = (
-                        build_gt_compare_ghg_chart(
-                            "land_use_ghg",
+                        build_gt_vertical_ghg_chart(
+                            gt_land[
+                                "contributions"
+                            ],
                             title=(
                                 "Land use change GHG - 2050"
+                            ),
+                            global_total=(
+                                gt_land[
+                                    "global_total_gt"
+                                ]
                             ),
                             target=-1.0,
                             target_label=(
@@ -6325,11 +7899,22 @@ with analytics_tab:
                     )
 
 
+                    # =================================================
+                    # BUILD AGRICULTURE CHART
+                    # =================================================
+
                     gt_agri_fig = (
-                        build_gt_compare_ghg_chart(
-                            "agriculture_ghg",
+                        build_gt_vertical_ghg_chart(
+                            gt_agri[
+                                "contributions"
+                            ],
                             title=(
                                 "Agriculture GHG - 2050"
+                            ),
+                            global_total=(
+                                gt_agri[
+                                    "global_total_gt"
+                                ]
                             ),
                             target=4.0,
                             target_label=(
@@ -6339,185 +7924,1646 @@ with analytics_tab:
                     )
 
 
-                # =================================================
-                # THREE SIDE BY SIDE
-                # =================================================
+                    # =================================================
+                    # OPTIONAL BEFORE / AFTER COMPARISON
+                    # =================================================
 
-                (
-                    chart_col_1,
-                    chart_col_2,
-                    chart_col_3,
-                ) = st.columns(
-                    [
-                        1.55,
-                        1,
-                        1,
-                    ]
-                )
+                    def gt_compare_stage_payloads(
+                        stage_name,
+                    ):
+
+                        payloads = (
+                            list_submission_payloads(
+                                gt_iteration,
+                                stage=stage_name,
+                            )
+                        )
 
 
-                with chart_col_1:
+                        return [
+                            payload
+                            for payload
+                            in payloads
+                            if (
+                                str(
+                                    payload.get(
+                                        "pathway",
+                                        "",
+                                    )
+                                )
+                                .strip()
+                                .casefold()
+                                ==
+                                str(
+                                    gt_pathway
+                                )
+                                .strip()
+                                .casefold()
+                            )
+                        ]
+
+
+                    gt_compare_before_payloads = (
+                        gt_compare_stage_payloads(
+                            "before"
+                        )
+                    )
+
+
+                    gt_compare_after_payloads = (
+                        gt_compare_stage_payloads(
+                            "after"
+                        )
+                    )
+
+
+                    gt_compare_available = (
+                        bool(
+                            gt_compare_before_payloads
+                        )
+                        and bool(
+                            gt_compare_after_payloads
+                        )
+                    )
+
+
+                    gt_compare_enabled = (
+                        gt_analysis_mode
+                        == "Compare Before and After"
+                        and gt_compare_available
+                    )
+
+                    if (
+                        gt_analysis_mode
+                        == "Compare Before and After"
+                        and not gt_compare_available
+                    ):
+
+                        st.warning(
+                            "Both Before and After submissions "
+                            "are required for comparison."
+                        )
+
+                    if gt_compare_enabled:
+
+
+                        def gt_compare_result(
+                            payloads,
+                        ):
+
+                            aggregate_df = (
+                                aggregate_rows_from_submissions(
+                                    payloads,
+                                    pathway=gt_pathway,
+                                )
+                            )
+
+
+                            submitted_regions = [
+                                payload.get(
+                                    "participant",
+                                    "",
+                                )
+                                for payload
+                                in payloads
+                            ]
+
+
+                            return (
+                                calculate_global_targets_with_coverage(
+                                    aggregate_df,
+                                    expected_regions=(
+                                        gt_expected_participants
+                                    ),
+                                    submitted_regions=(
+                                        submitted_regions
+                                    ),
+                                )
+                            )
+
+
+                        gt_before_compare_result = (
+                            gt_compare_result(
+                                gt_compare_before_payloads
+                            )
+                        )
+
+
+                        gt_after_compare_result = (
+                            gt_compare_result(
+                                gt_compare_after_payloads
+                            )
+                        )
+
+
+                        gt_compare_results = {
+                            "Before trade adjustment": (
+                                gt_before_compare_result
+                            ),
+                            "After trade adjustment": (
+                                gt_after_compare_result
+                            ),
+                        }
+
+
+                        # -----------------------------------------
+                        # FOOD SECURITY PAIRED VERTICAL BARS
+                        # -----------------------------------------
+
+                        gt_compare_food_rows = []
+
+                        margin_column = (
+                            f"Margin_{gt_year}_pct"
+                        )
+
+
+                        for stage_label, result in (
+                            gt_compare_results.items()
+                        ):
+
+                            detail_df = (
+                                result[
+                                    "food_security"
+                                ][
+                                    "detail"
+                                ]
+                                .copy()
+                            )
+
+
+                            if (
+                                detail_df.empty
+                                or margin_column
+                                not in detail_df.columns
+                            ):
+
+                                continue
+
+
+                            for _, row in (
+                                detail_df.iterrows()
+                            ):
+
+                                gt_compare_food_rows.append(
+                                    {
+                                        "Location": (
+                                            plain_text_label(
+                                                row.get(
+                                                    "Location",
+                                                    "",
+                                                )
+                                            )
+                                        ),
+                                        "Margin": (
+                                            pd.to_numeric(
+                                                pd.Series(
+                                                    [
+                                                        row.get(
+                                                            margin_column
+                                                        )
+                                                    ]
+                                                ),
+                                                errors="coerce",
+                                            ).iloc[
+                                                0
+                                            ]
+                                        ),
+                                        "Stage": (
+                                            stage_label
+                                        ),
+                                    }
+                                )
+
+
+                        gt_compare_food_df = (
+                            pd.DataFrame(
+                                gt_compare_food_rows
+                            )
+                        )
+
+
+                        if not gt_compare_food_df.empty:
+
+                            gt_compare_food_df = (
+                                gt_compare_food_df.dropna(
+                                    subset=[
+                                        "Margin"
+                                    ]
+                                )
+                            )
+
+
+                            gt_compare_location_order = (
+                                gt_compare_food_df.groupby(
+                                    "Location"
+                                )[
+                                    "Margin"
+                                ]
+                                .mean()
+                                .sort_values(
+                                    ascending=False
+                                )
+                                .index
+                                .tolist()
+                            )
+
+
+                            gt_food_fig = (
+                                px.bar(
+                                    gt_compare_food_df,
+                                    x="Location",
+                                    y="Margin",
+                                    color="Stage",
+                                    barmode="group",
+                                    category_orders={
+                                        "Location": (
+                                            gt_compare_location_order
+                                        ),
+                                        "Stage": [
+                                            "Before trade adjustment",
+                                            "After trade adjustment",
+                                        ],
+                                    },
+                                    title=(
+                                        "Food security margin - "
+                                        f"{gt_year}"
+                                    ),
+                                    labels={
+                                        "Margin": (
+                                            "Food security margin (%)"
+                                        ),
+                                        "Stage": (
+                                            ""
+                                        ),
+                                    },
+                                )
+                            )
+
+
+                            gt_food_fig.add_hrect(
+                                y0=10,
+                                y1=50,
+                                opacity=0.06,
+                                line_width=0,
+                            )
+
+
+                            gt_food_fig.add_hline(
+                                y=10,
+                                line_dash="dash",
+                                line_width=2,
+                                annotation_text="10%",
+                                annotation_position=(
+                                    "bottom right"
+                                ),
+                            )
+
+
+                            gt_food_fig.add_hline(
+                                y=50,
+                                line_dash="dash",
+                                line_width=2,
+                                annotation_text="50%",
+                                annotation_position=(
+                                    "top right"
+                                ),
+                            )
+
+
+                            gt_food_fig.update_layout(
+                                height=610,
+                                template="plotly_white",
+                                font=dict(
+                                    color="#1F2937",
+                                    size=12,
+                                ),
+                                title_font=dict(
+                                    color="#111827",
+                                    size=16,
+                                ),
+                                margin=dict(
+                                    l=10,
+                                    r=10,
+                                    t=65,
+                                    b=165,
+                                ),
+                                legend_title_text="",
+                                legend=dict(
+                                    orientation="h",
+                                    yanchor="top",
+                                    y=-0.28,
+                                    xanchor="center",
+                                    x=0.5,
+                                ),
+                                xaxis=dict(
+                                    title="Location",
+                                    tickangle=-55,
+                                    automargin=True,
+                                ),
+                                yaxis=dict(
+                                    title=(
+                                        "Food security margin (%)"
+                                    ),
+                                    zeroline=True,
+                                ),
+                            )
+
+
+                            food_chart_ready = True
+
+
+                        # -----------------------------------------
+                        # GHG BEFORE / AFTER STACKED BARS
+                        # -----------------------------------------
+
+                        def build_gt_compare_ghg_chart(
+                            indicator_key,
+                            *,
+                            title,
+                            target,
+                            target_label,
+                        ):
+
+                            stage_labels = [
+                                "Before trade adjustment",
+                                "After trade adjustment",
+                            ]
+
+                            stage_maps = {}
+
+                            all_locations = set()
+
+                            range_values = [
+                                0.0,
+                                float(
+                                    target
+                                ),
+                            ]
+
+                            global_totals = []
+
+
+                            for stage_label in (
+                                stage_labels
+                            ):
+
+                                result = (
+                                    gt_compare_results[
+                                        stage_label
+                                    ][
+                                        indicator_key
+                                    ]
+                                )
+
+
+                                contributions = (
+                                    result[
+                                        "contributions"
+                                    ]
+                                    .copy()
+                                )
+
+
+                                if contributions.empty:
+
+                                    stage_maps[
+                                        stage_label
+                                    ] = {}
+
+
+                                else:
+
+                                    contributions[
+                                        "Location"
+                                    ] = (
+                                        contributions[
+                                            "Location"
+                                        ]
+                                        .astype(str)
+                                    )
+
+
+                                    contributions[
+                                        "Value_Gt_CO2e"
+                                    ] = pd.to_numeric(
+                                        contributions[
+                                            "Value_Gt_CO2e"
+                                        ],
+                                        errors="coerce",
+                                    )
+
+
+                                    contributions = (
+                                        contributions.dropna(
+                                            subset=[
+                                                "Value_Gt_CO2e"
+                                            ]
+                                        )
+                                    )
+
+
+                                    stage_map = {
+                                        str(
+                                            row[
+                                                "Location"
+                                            ]
+                                        ): float(
+                                            row[
+                                                "Value_Gt_CO2e"
+                                            ]
+                                        )
+                                        for _, row
+                                        in contributions.iterrows()
+                                    }
+
+
+                                    stage_maps[
+                                        stage_label
+                                    ] = stage_map
+
+
+                                    all_locations.update(
+                                        stage_map.keys()
+                                    )
+
+
+                                    range_values.extend(
+                                        [
+                                            float(
+                                                contributions.loc[
+                                                    contributions[
+                                                        "Value_Gt_CO2e"
+                                                    ]
+                                                    > 0,
+                                                    "Value_Gt_CO2e",
+                                                ].sum()
+                                            ),
+                                            float(
+                                                contributions.loc[
+                                                    contributions[
+                                                        "Value_Gt_CO2e"
+                                                    ]
+                                                    < 0,
+                                                    "Value_Gt_CO2e",
+                                                ].sum()
+                                            ),
+                                        ]
+                                    )
+
+
+                                global_total = (
+                                    result.get(
+                                        "global_total_gt"
+                                    )
+                                )
+
+
+                                if pd.notna(
+                                    global_total
+                                ):
+
+                                    global_totals.append(
+                                        float(
+                                            global_total
+                                        )
+                                    )
+
+                                    range_values.append(
+                                        float(
+                                            global_total
+                                        )
+                                    )
+
+
+                                else:
+
+                                    global_totals.append(
+                                        None
+                                    )
+
+
+                            all_locations = sorted(
+                                all_locations,
+                                key=str.casefold,
+                            )
+
+
+                            palette = (
+                                px.colors.qualitative.Safe
+                                + px.colors.qualitative.Set3
+                                + px.colors.qualitative.Plotly
+                                + px.colors.qualitative.Light24
+                            )
+
+
+                            location_colors = {
+                                location: (
+                                    palette[
+                                        index
+                                        % len(
+                                            palette
+                                        )
+                                    ]
+                                )
+                                for index, location
+                                in enumerate(
+                                    all_locations
+                                )
+                            }
+
+
+                            fig = (
+                                go.Figure()
+                            )
+
+
+                            show_location_legend = (
+                                len(
+                                    all_locations
+                                )
+                                <= 10
+                            )
+
+
+                            for location in (
+                                all_locations
+                            ):
+
+                                fig.add_trace(
+                                    go.Bar(
+                                        x=(
+                                            stage_labels
+                                        ),
+                                        y=[
+                                            stage_maps.get(
+                                                stage_label,
+                                                {},
+                                            ).get(
+                                                location,
+                                                0.0,
+                                            )
+                                            for stage_label
+                                            in stage_labels
+                                        ],
+                                        name=(
+                                            plain_text_label(
+                                                location
+                                            )
+                                        ),
+                                        marker=dict(
+                                            color=(
+                                                location_colors[
+                                                    location
+                                                ]
+                                            )
+                                        ),
+                                        hovertemplate=(
+                                            "<b>"
+                                            + plain_text_label(
+                                                location
+                                            )
+                                            + "</b>"
+                                            "<br>%{x}"
+                                            "<br>Contribution: "
+                                            "%{y:.3f} Gt CO2e"
+                                            "<extra></extra>"
+                                        ),
+                                        showlegend=(
+                                            show_location_legend
+                                        ),
+                                    )
+                                )
+
+
+                            valid_total_x = []
+                            valid_total_y = []
+                            valid_total_text = []
+
+
+                            for stage_label, global_total in zip(
+                                stage_labels,
+                                global_totals,
+                            ):
+
+                                if global_total is None:
+
+                                    continue
+
+
+                                valid_total_x.append(
+                                    stage_label
+                                )
+
+                                valid_total_y.append(
+                                    global_total
+                                )
+
+                                valid_total_text.append(
+                                    (
+                                        "Net global total<br>"
+                                        f"{global_total:.3f} "
+                                        "Gt CO2e"
+                                    )
+                                )
+
+
+                            if valid_total_x:
+
+                                fig.add_trace(
+                                    go.Scatter(
+                                        x=valid_total_x,
+                                        y=valid_total_y,
+                                        mode=(
+                                            "markers+text"
+                                        ),
+                                        marker=dict(
+                                            symbol="diamond",
+                                            size=12,
+                                            color="#111111",
+                                            line=dict(
+                                                width=1,
+                                                color="#FFFFFF",
+                                            ),
+                                        ),
+                                        text=(
+                                            valid_total_text
+                                        ),
+                                        textposition=(
+                                            "top center"
+                                        ),
+                                        textfont=dict(
+                                            color="#111827",
+                                            size=10,
+                                        ),
+                                        showlegend=False,
+                                        hovertemplate=(
+                                            "<b>%{x}</b>"
+                                            "<br>Net global total: "
+                                            "%{y:.3f} Gt CO2e"
+                                            "<extra></extra>"
+                                        ),
+                                    )
+                                )
+
+
+                            fig.add_hline(
+                                y=target,
+                                line_dash="dash",
+                                line_width=2,
+                                annotation_text=(
+                                    target_label
+                                ),
+                                annotation_position=(
+                                    "bottom right"
+                                    if target < 0
+                                    else "top right"
+                                ),
+                            )
+
+
+                            lower_value = min(
+                                range_values
+                            )
+
+                            upper_value = max(
+                                range_values
+                            )
+
+                            span = (
+                                upper_value
+                                - lower_value
+                            )
+
+                            padding = max(
+                                span * 0.18,
+                                0.35,
+                            )
+
+
+                            fig.update_layout(
+                                title=(
+                                    plain_text_label(
+                                        title
+                                    )
+                                ),
+                                height=620,
+                                template="plotly_white",
+                                barmode="relative",
+                                font=dict(
+                                    color="#1F2937",
+                                    size=12,
+                                ),
+                                title_font=dict(
+                                    color="#111827",
+                                    size=16,
+                                ),
+                                margin=dict(
+                                    l=10,
+                                    r=10,
+                                    t=70,
+                                    b=145,
+                                ),
+                                bargap=0.35,
+                                legend_title_text="",
+                                showlegend=(
+                                    show_location_legend
+                                ),
+                                legend=dict(
+                                    orientation="h",
+                                    yanchor="top",
+                                    y=-0.18,
+                                    xanchor="center",
+                                    x=0.5,
+                                    font=dict(
+                                        size=9,
+                                        color="#374151",
+                                    ),
+                                ),
+                                xaxis=dict(
+                                    title="",
+                                    automargin=True,
+                                ),
+                                yaxis=dict(
+                                    title=(
+                                        "Gt CO2e"
+                                    ),
+                                    range=[
+                                        lower_value
+                                        - padding,
+                                        upper_value
+                                        + padding,
+                                    ],
+                                    zeroline=True,
+                                    zerolinewidth=1.5,
+                                    zerolinecolor=(
+                                        "#6B7280"
+                                    ),
+                                ),
+                            )
+
+
+                            return fig
+
+
+                        gt_land_fig = (
+                            build_gt_compare_ghg_chart(
+                                "land_use_ghg",
+                                title=(
+                                    "Land use change GHG - 2050"
+                                ),
+                                target=-1.0,
+                                target_label=(
+                                    "Target: -1 Gt CO2e"
+                                ),
+                            )
+                        )
+
+
+                        gt_agri_fig = (
+                            build_gt_compare_ghg_chart(
+                                "agriculture_ghg",
+                                title=(
+                                    "Agriculture GHG - 2050"
+                                ),
+                                target=4.0,
+                                target_label=(
+                                    "Target: 4 Gt CO2e"
+                                ),
+                            )
+                        )
+
+
+
+                    # SECTION29_CONSISTENT_VISUALS
+                    # All three charts use the selected
+                    # calculator stage(s) and analysis year.
+
+                    _s29_stage_payloads = {
+                        "Before trade adjustment": (
+                            gt_compare_before_payloads
+                        ),
+                        "After trade adjustment": (
+                            gt_compare_after_payloads
+                        ),
+                    }
+
+                    _s29_requested = (
+                        list(_s29_stage_payloads)
+                        if gt_analysis_mode
+                        == "Compare Before and After"
+                        else [gt_stage_label]
+                    )
+
+                    _s29_expected = {
+                        str(x).strip().casefold()
+                        for x in gt_expected_participants
+                        if str(x).strip()
+                    }
+
+                    _s29_frames = {}
+
+                    # ----------------------------------------
+                    # CHECK EACH SELECTED STAGE
+                    # ----------------------------------------
+
+                    for _s29_stage in _s29_requested:
+
+                        _s29_payloads = [
+                            p
+                            for p in _s29_stage_payloads[
+                                _s29_stage
+                            ]
+                            if str(
+                                p.get("participant", "")
+                            ).strip().casefold()
+                            in _s29_expected
+                        ]
+
+                        _s29_received = [
+                            str(
+                                p.get("participant", "")
+                            ).strip().casefold()
+                            for p in _s29_payloads
+                        ]
+
+                        if (
+                            not _s29_expected
+                            or set(_s29_received)
+                            != _s29_expected
+                            or len(_s29_received)
+                            != len(_s29_expected)
+                        ):
+
+                            st.warning(
+                                f"{_s29_stage}: incomplete "
+                                "participant coverage "
+                                f"({len(_s29_received)}/"
+                                f"{len(_s29_expected)}). "
+                                "This stage is not plotted."
+                            )
+
+                            continue
+
+                        _s29_frame = (
+                            aggregate_rows_from_submissions(
+                                _s29_payloads,
+                                pathway=gt_pathway,
+                            )
+                        )
+
+                        if _s29_frame.empty:
+
+                            st.warning(
+                                f"{_s29_stage}: "
+                                "aggregate data unavailable."
+                            )
+
+                            continue
+
+                        _s29_frame = _s29_frame.copy()
+
+                        _s29_frame["Year"] = (
+                            pd.to_numeric(
+                                _s29_frame["Year"],
+                                errors="coerce",
+                            )
+                        )
+
+                        _s29_frame = _s29_frame.loc[
+                            _s29_frame["Year"]
+                            == int(gt_year)
+                        ].copy()
+
+                        _s29_cols = [
+                            "kcal_feas",
+                            "kcal_mder",
+                            "CalcAllLandCO2e",
+                            "CalcAllAgriCO2e",
+                        ]
+
+                        _s29_missing = [
+                            c
+                            for c in _s29_cols
+                            if c not in _s29_frame.columns
+                        ]
+
+                        if _s29_missing:
+
+                            st.warning(
+                                f"{_s29_stage}: missing "
+                                "aggregate columns: "
+                                + ", ".join(_s29_missing)
+                            )
+
+                            continue
+
+                        for _s29_col in _s29_cols:
+
+                            _s29_frame[_s29_col] = (
+                                pd.to_numeric(
+                                    _s29_frame[_s29_col],
+                                    errors="coerce",
+                                )
+                            )
+
+                        if (
+                            len(_s29_frame)
+                            != len(_s29_expected)
+                            or _s29_frame[
+                                "Location"
+                            ].isna().any()
+                            or _s29_frame[
+                                "Location"
+                            ].duplicated().any()
+                            or _s29_frame[
+                                _s29_cols
+                            ].isna().any().any()
+                            or (
+                                _s29_frame["kcal_mder"]
+                                <= 0
+                            ).any()
+                        ):
+
+                            st.warning(
+                                f"{_s29_stage}: "
+                                f"{gt_year} aggregate data "
+                                "is incomplete or invalid. "
+                                "Chart omitted for this stage."
+                            )
+
+                            continue
+
+                        _s29_frame[
+                            "Food security margin (%)"
+                        ] = (
+                            (
+                                _s29_frame["kcal_feas"]
+                                /
+                                _s29_frame["kcal_mder"]
+                                - 1.0
+                            )
+                            * 100.0
+                        )
+
+                        _s29_frames[
+                            _s29_stage
+                        ] = _s29_frame
+
+                    if (
+                        gt_analysis_mode
+                        == "Compare Before and After"
+                        and len(_s29_frames) != 2
+                    ):
+
+                        st.warning(
+                            "Before/After comparison is "
+                            "incomplete for the selected year. "
+                            "Charts are not presented as "
+                            "a full comparison."
+                        )
+
+                    # ========================================
+                    # FOOD SECURITY CHART
+                    # ========================================
+
+                    _s29_food_rows = []
+
+                    for (
+                        _s29_stage,
+                        _s29_frame,
+                    ) in _s29_frames.items():
+
+                        for _, _s29_item in (
+                            _s29_frame.iterrows()
+                        ):
+
+                            _s29_food_rows.append({
+                                "Location": (
+                                    plain_text_label(
+                                        _s29_item["Location"]
+                                    )
+                                ),
+                                "Stage": _s29_stage,
+                                "Margin": float(
+                                    _s29_item[
+                                        "Food security margin (%)"
+                                    ]
+                                ),
+                            })
+
+                    food_chart_ready = bool(
+                        _s29_food_rows
+                    )
+
+                    gt_food_fig = go.Figure()
 
                     if food_chart_ready:
 
+                        _s29_food_df = pd.DataFrame(
+                            _s29_food_rows
+                        )
+
+                        gt_food_fig = px.bar(
+                            _s29_food_df,
+                            x="Location",
+                            y="Margin",
+                            color="Stage",
+                            barmode="group",
+                            color_discrete_map={
+                                "Before trade adjustment": (
+                                    "#4474A5"
+                                ),
+                                "After trade adjustment": (
+                                    "#28886E"
+                                ),
+                            },
+                        )
+
+                        for _s29_limit in (10, 50):
+
+                            gt_food_fig.add_hline(
+                                y=_s29_limit,
+                                line_dash="dash",
+                                line_color="#334155",
+                                opacity=0.65,
+                            )
+
+                        gt_food_fig.update_layout(
+                            title=(
+                                f"Food security margin "
+                                f"- {gt_year}"
+                            ),
+                            template="plotly_white",
+                            height=495,
+                            yaxis_title=(
+                                "Food security margin (%)"
+                            ),
+                            legend_title_text="",
+                            xaxis_tickangle=-35,
+                            margin=dict(
+                                l=8,
+                                r=8,
+                                t=70,
+                                b=115,
+                            ),
+                        )
+
+                    # ========================================
+                    # CONSISTENT GHG CHART FUNCTION
+                    # ========================================
+
+                    def _s29_ghg_plot(
+                        col,
+                        title,
+                        target,
+                    ):
+
+                        fig = go.Figure()
+
+                        for (
+                            stage,
+                            df_stage,
+                        ) in _s29_frames.items():
+
+                            for _, item in (
+                                df_stage.iterrows()
+                            ):
+
+                                location = str(
+                                    item["Location"]
+                                )
+
+                                fig.add_trace(
+                                    go.Bar(
+                                        x=[stage],
+                                        y=[
+                                            float(
+                                                item[col]
+                                            ) / 1000.0
+                                        ],
+                                        name=(
+                                            plain_text_label(
+                                                location
+                                            )
+                                        ),
+                                        legendgroup=location,
+                                        marker_color=(
+                                            gt_location_colors.get(
+                                                location
+                                            )
+                                        ),
+                                        showlegend=not any(
+                                            t.name
+                                            == plain_text_label(
+                                                location
+                                            )
+                                            for t in fig.data
+                                        ),
+                                        hovertemplate=(
+                                            f"{plain_text_label(location)}"
+                                            "<br>%{x}<br>"
+                                            "%{y:.3f} Gt CO2e"
+                                            "<extra></extra>"
+                                        ),
+                                    )
+                                )
+
+                            total = (
+                                float(
+                                    df_stage[col].sum()
+                                ) / 1000.0
+                            )
+
+                            fig.add_trace(
+                                go.Scatter(
+                                    x=[stage],
+                                    y=[total],
+                                    mode="markers",
+                                    marker=dict(
+                                        symbol="diamond",
+                                        size=11,
+                                        color="#111827",
+                                    ),
+                                    showlegend=False,
+                                    hovertemplate=(
+                                        "Net total: "
+                                        "%{y:.3f} Gt CO2e"
+                                        "<extra></extra>"
+                                    ),
+                                )
+                            )
+
+                        # 2050 targets are not applied
+                        # as 2030 achievement tests.
+
+                        if int(gt_year) == 2050:
+
+                            fig.add_hline(
+                                y=target,
+                                line_dash="dash",
+                                line_color="#334155",
+                                opacity=0.7,
+                                annotation_text=(
+                                    "2050 target: "
+                                    f"{target:g} Gt"
+                                ),
+                            )
+
+                        fig.update_layout(
+                            title=(
+                                f"{title} - {gt_year}"
+                            ),
+                            barmode="relative",
+                            template="plotly_white",
+                            height=495,
+                            yaxis_title="Gt CO2e",
+                            legend_title_text="Region",
+                            showlegend=(
+                                len(gt_location_colors)
+                                <= 12
+                            ),
+                            margin=dict(
+                                l=8,
+                                r=8,
+                                t=70,
+                                b=95,
+                            ),
+                        )
+
+                        if not _s29_frames:
+
+                            fig.add_annotation(
+                                text=(
+                                    "Comparable data "
+                                    "unavailable"
+                                ),
+                                x=0.5,
+                                y=0.5,
+                                xref="paper",
+                                yref="paper",
+                                showarrow=False,
+                            )
+
+                        return fig
+
+                    gt_land_fig = _s29_ghg_plot(
+                        "CalcAllLandCO2e",
+                        "Land-use change GHG",
+                        -1.0,
+                    )
+
+                    gt_agri_fig = _s29_ghg_plot(
+                        "CalcAllAgriCO2e",
+                        "Agriculture GHG",
+                        4.0,
+                    )
+
+                    st.caption(
+                        "GHG targets apply to 2050. "
+                        "Figures show the selected year "
+                        f"({gt_year}) and selected "
+                        "calculator stage(s). "
+                        "Black diamonds represent "
+                        "global totals."
+                    )
+
+                    # =================================================
+                    # SECTION30_FIXED_VISUAL_POLISH
+                    # Keep 2050 target labels outside the bars.
+                    gt_food_fig.update_layout(
+                        height=550,
+                        legend=dict(
+                            orientation="h", x=0.5, xanchor="center",
+                            y=-0.23, yanchor="top",
+                            font=dict(size=10, color="#182438"),
+                            title=None,
+                        ),
+                        margin=dict(l=10, r=12, t=65, b=165),
+                    )
+
+                    _s30x_region_names = {
+                        "AFRICA": "Africa",
+                        "Asia and Pacific": "Asia-Pacific",
+                        "Latin America and the Caribbean": "Latin America",
+                        "Middle East, North Africa and Central Asia": "MENA & Central Asia",
+                        "North America": "North America",
+                    }
+                    for _s30x_ghg_fig in (gt_land_fig, gt_agri_fig):
+                        _s30x_ghg_fig.update_layout(
+                            height=550,
+                            legend=dict(
+                                orientation="h", x=0.5, xanchor="center",
+                                y=-0.20, yanchor="top",
+                                font=dict(size=9, color="#182438"),
+                                title=None,
+                            ),
+                            margin=dict(l=12, r=10, t=90, b=165),
+                        )
+                        for _s30x_ann in _s30x_ghg_fig.layout.annotations or ():
+                            if "target" in str(_s30x_ann.text or "").lower():
+                                _s30x_ann.update(
+                                    xref="paper", yref="paper",
+                                    x=0.02, y=1.03,
+                                    xanchor="left", yanchor="bottom",
+                                    text="<b>" + str(_s30x_ann.text) + "</b>",
+                                    font=dict(size=12, color="#111827"),
+                                    bgcolor="rgba(255,255,255,0.96)",
+                                    bordercolor="#94A3B8", borderwidth=1,
+                                    borderpad=4, showarrow=False,
+                                )
+                        for _s30x_trace in _s30x_ghg_fig.data:
+                            _s30x_name = str(_s30x_trace.name or "")
+                            if _s30x_name in _s30x_region_names:
+                                _s30x_trace.name = _s30x_region_names[_s30x_name]
+
+                    # SECTION31_EXACT_TARGET_VALUES
+                    # Presentation-only correction.
+
+                    def _s31_fmt(number):
+                        return (
+                            f"{float(number):,.3f}"
+                            .replace("-", "−")
+                        )
+
+                    def _s31_stage_totals(column):
+                        result = {}
+
+                        for stage, frame in _s29_frames.items():
+
+                            if (
+                                frame is None
+                                or frame.empty
+                                or column not in frame
+                            ):
+                                continue
+
+                            values = pd.to_numeric(
+                                frame[column],
+                                errors="coerce",
+                            )
+
+                            if not values.notna().all():
+                                continue
+
+                            result[stage] = (
+                                float(values.sum()) / 1000.0
+                            )
+
+                        return result
+
+                    _s31_land_totals = _s31_stage_totals(
+                        "CalcAllLandCO2e"
+                    )
+
+                    _s31_agri_totals = _s31_stage_totals(
+                        "CalcAllAgriCO2e"
+                    )
+
+                    _s31_before = "Before trade adjustment"
+                    _s31_after = "After trade adjustment"
+
+                    def _s31_totals_caption(totals):
+
+                        entries = []
+
+                        for stage, label in (
+                            (_s31_before, "Before"),
+                            (_s31_after, "After"),
+                        ):
+
+                            if stage in totals:
+                                entries.append(
+                                    f"{label}: "
+                                    f"{_s31_fmt(totals[stage])} "
+                                    "Gt CO₂e"
+                                )
+
+                        if (
+                            _s31_before in totals
+                            and _s31_after in totals
+                        ):
+
+                            difference = (
+                                totals[_s31_after]
+                                - totals[_s31_before]
+                            )
+
+                            entries.append(
+                                "Change (After − Before): "
+                                f"{_s31_fmt(difference)} Gt"
+                            )
+
+                        return (
+                            " · ".join(entries)
+                            if entries
+                            else "Actual totals unavailable"
+                        )
+
+                    # ----------------------------------------
+                    # 2. REMOVE OLD FLOATING TARGET BOXES
+                    # ----------------------------------------
+
+                    for fig, totals in (
+                        (gt_land_fig, _s31_land_totals),
+                        (gt_agri_fig, _s31_agri_totals),
+                    ):
+
+                        fig.layout.annotations = tuple(
+                            annotation
+                            for annotation in (
+                                fig.layout.annotations or ()
+                            )
+                            if "2050 target" not in str(
+                                annotation.text or ""
+                            ).casefold()
+                        )
+
+                        # ------------------------------------
+                        # 3. LABEL BLACK DIAMOND TOTALS
+                        # ------------------------------------
+
+                        for stage, total in totals.items():
+
+                            fig.add_annotation(
+                                x=stage,
+                                y=total,
+                                xref="x",
+                                yref="y",
+
+                                text=(
+                                    "<b>"
+                                    + _s31_fmt(total)
+                                    + " Gt</b>"
+                                ),
+
+                                showarrow=False,
+
+                                yshift=(
+                                    -22
+                                    if fig is gt_agri_fig
+                                    else 24
+                                ),
+
+                                xanchor="center",
+                                yanchor="middle",
+
+                                font=dict(
+                                    size=11,
+                                    color="#111827",
+                                ),
+
+                                bgcolor=(
+                                    "rgba(255,255,255,0.96)"
+                                ),
+
+                                bordercolor="#CBD5E1",
+                                borderwidth=1,
+                                borderpad=3,
+                            )
+
+                        fig.update_layout(
+                            hovermode="closest",
+                            margin=dict(
+                                l=12,
+                                r=12,
+                                t=65,
+                                b=165,
+                            ),
+                        )
+
+                    # ----------------------------------------
+                    # 4. FOOD SECURITY LIMIT LABELS
+                    # ----------------------------------------
+
+                    if food_chart_ready:
+
+                        for level, label, shift in (
+                            (10, "Minimum: 10%", 13),
+                            (50, "Maximum: 50%", -13),
+                        ):
+
+                            gt_food_fig.add_annotation(
+                                x=0.99,
+                                xref="paper",
+                                y=level,
+                                yref="y",
+
+                                text=f"<b>{label}</b>",
+                                showarrow=False,
+                                yshift=shift,
+                                xanchor="right",
+
+                                font=dict(
+                                    size=11,
+                                    color="#172554",
+                                ),
+
+                                bgcolor=(
+                                    "rgba(255,255,255,0.96)"
+                                ),
+
+                                bordercolor="#CBD5E1",
+                                borderwidth=1,
+                                borderpad=3,
+                            )
+
+                    # GHG targets only apply to 2050.
+                    _s31_year_is_target = (
+                        int(gt_year) == 2050
+                    )
+
+                    # THREE SIDE BY SIDE
+                    # =================================================
+
+                    (
+                        chart_col_1,
+                        chart_col_2,
+                        chart_col_3,
+                    ) = st.columns(
+                        [
+                            1.55,
+                            1,
+                            1,
+                        ]
+                    )
+
+
+                    with chart_col_1:
+
+                        if food_chart_ready:
+
+                            st.plotly_chart(
+                                gt_food_fig,
+                                use_container_width=True,
+                                key="gt_food_chart",
+                            )
+
+
+                            st.caption(
+                                "Each bar is one Location. "
+                                "The overall target is met only when "
+                                "every Location is 10% to 50% above "
+                                "MDER in both 2030 and 2050."
+                            )
+
+
+                        else:
+
+                            st.info(
+                                "No usable food security data is available."
+                            )
+
+
+                    with chart_col_2:
+
+                        if _s31_year_is_target:
+                            st.markdown(
+                                "**2050 target: ≤ −1.000 Gt CO₂e**"
+                            )
+                        else:
+                            st.caption(
+                                "2030 outcome — 2050 GHG "
+                                "target applies only in 2050"
+                            )
+
+                        st.caption(
+                            _s31_totals_caption(
+                                _s31_land_totals
+                            )
+                        )
+
                         st.plotly_chart(
-                            gt_food_fig,
+                            gt_land_fig,
                             use_container_width=True,
-                            key="gt_food_chart",
+                            key="gt_land_chart",
                         )
 
+
+                        if (
+                            len(
+                                gt_land[
+                                    "contributions"
+                                ]
+                            )
+                            > 10
+                        ):
+
+                            st.caption(
+                                "Each stacked segment represents one Location. "
+                                "Hover over a segment to see its contribution. "
+                                "Negative values represent removals or sequestration."
+                            )
+
+
+                        else:
+
+                            st.caption(
+                                "Each stacked segment represents one Location. "
+                                "Negative values represent removals or sequestration."
+                            )
+
+
+                    with chart_col_3:
+
+                        if _s31_year_is_target:
+                            st.markdown(
+                                "**2050 target: ≤ 4.000 Gt CO₂e**"
+                            )
+                        else:
+                            st.caption(
+                                "2030 outcome — 2050 GHG "
+                                "target applies only in 2050"
+                            )
 
                         st.caption(
-                            "Each bar is one Location. "
-                            "The overall target is met only when "
-                            "every Location is 10% to 50% above "
-                            "MDER in both 2030 and 2050."
+                            _s31_totals_caption(
+                                _s31_agri_totals
+                            )
+                        )
+
+                        st.plotly_chart(
+                            gt_agri_fig,
+                            use_container_width=True,
+                            key="gt_agri_chart",
                         )
 
 
-                    else:
+                        if (
+                            len(
+                                gt_agri[
+                                    "contributions"
+                                ]
+                            )
+                            > 10
+                        ):
 
-                        st.info(
-                            "No usable food security data is available."
-                        )
-
-
-                with chart_col_2:
-
-                    st.plotly_chart(
-                        gt_land_fig,
-                        use_container_width=True,
-                        key="gt_land_chart",
-                    )
-
-
-                    if (
-                        len(
-                            gt_land[
-                                "contributions"
-                            ]
-                        )
-                        > 10
-                    ):
-
-                        st.caption(
-                            "Each stacked segment represents one Location. "
-                            "Hover over a segment to see its contribution. "
-                            "Negative values represent removals or sequestration."
-                        )
+                            st.caption(
+                                "Each stacked segment represents one Location. "
+                                "Hover over a segment to see its contribution. "
+                                "The black diamond marks the global total."
+                            )
 
 
-                    else:
+                        else:
 
-                        st.caption(
-                            "Each stacked segment represents one Location. "
-                            "Negative values represent removals or sequestration."
-                        )
-
-
-                with chart_col_3:
-
-                    st.plotly_chart(
-                        gt_agri_fig,
-                        use_container_width=True,
-                        key="gt_agri_chart",
-                    )
+                            st.caption(
+                                "Each stacked segment represents one Location. "
+                                "The black diamond marks the global total."
+                            )
 
 
-                    if (
-                        len(
-                            gt_agri[
-                                "contributions"
-                            ]
-                        )
-                        > 10
-                    ):
-
-                        st.caption(
-                            "Each stacked segment represents one Location. "
-                            "Hover over a segment to see its contribution. "
-                            "The black diamond marks the global total."
-                        )
-
-
-                    else:
-
-                        st.caption(
-                            "Each stacked segment represents one Location. "
-                            "The black diamond marks the global total."
-                        )
-
-
-                # =================================================
-                # DETAIL TABLES
-                # =================================================
-
-                with st.expander(
-                    "Food security detail"
-                ):
-
-                    st.dataframe(
-                        pretty_dataframe(
-                            gt_food[
-                                "detail"
-                            ]
-                        ),
-                        use_container_width=True,
-                        hide_index=True,
-                    )
-
-
-                with st.expander(
-                    "Land use change contribution detail"
-                ):
-
-                    st.dataframe(
-                        pretty_dataframe(
-                            gt_land[
-                                "contributions"
-                            ]
-                        ),
-                        use_container_width=True,
-                        hide_index=True,
-                    )
-
-
-                with st.expander(
-                    "Agriculture contribution detail"
-                ):
-
-                    st.dataframe(
-                        pretty_dataframe(
-                            gt_agri[
-                                "contributions"
-                            ]
-                        ),
-                        use_container_width=True,
-                        hide_index=True,
-                    )
-
-
-                # =================================================
-                # QA
-                # =================================================
-
-                if not gt_result[
-                    "duplicate_rows"
-                ].empty:
-
-                    st.error(
-                        "Duplicate Region-Year aggregate records were detected."
-                    )
-
+                    # =================================================
+                    # DETAIL TABLES
+                    # =================================================
 
                     with st.expander(
-                        "View duplicate aggregate rows"
+                        "Food security detail"
                     ):
 
                         st.dataframe(
                             pretty_dataframe(
-                                gt_result[
-                                    "duplicate_rows"
+                                gt_food[
+                                    "detail"
                                 ]
                             ),
                             use_container_width=True,
@@ -6525,592 +9571,809 @@ with analytics_tab:
                         )
 
 
-            except Exception as exc:
-
-                st.error(
-                    "Global target assessment failed: "
-                    f"{exc}"
-                )
-
-
-    # ========================================================
-    # GLOBAL TARGETS DASHBOARD - END
-    # ========================================================
-
-    # ========================================================
-    # FLEXIBLE GLOBAL ANALYSIS STUDIO - BEGIN
-    # ========================================================
-
-    st.divider()
-
-    st.subheader(
-        "Global Analysis Studio"
-    )
-
-    st.caption(
-        "Explore how global conditions change across "
-        "iterations, pathways and trade adjustment stages. "
-        "Use the predefined progress view or build a custom comparison."
-    )
-
-
-    # ========================================================
-    # HELPERS
-    # ========================================================
-
-    def flex_iteration_sort_key(
-        value,
-    ):
-
-        text = str(
-            value
-        ).strip()
-
-
-        numeric_parts = (
-            "".join(
-                character
-                if character.isdigit()
-                else " "
-                for character in text
-            )
-            .split()
-        )
-
-
-        number = (
-            int(
-                numeric_parts[
-                    -1
-                ]
-            )
-            if numeric_parts
-            else 10**9
-        )
-
-
-        return (
-            number,
-            text.casefold(),
-        )
-
-
-    def flex_scope_label(
-        row,
-    ):
-
-        return plain_text_label(
-            (
-                f"{row['Iteration']} | "
-                f"{row['Pathway']} | "
-                f"{row['Stage']}"
-            )
-        )
-
-
-    def flex_prepare_figure(
-        fig,
-        *,
-        height=520,
-        tickangle=None,
-    ):
-
-        fig.update_layout(
-            height=height,
-            template="plotly_white",
-            font=dict(
-                color="#1F2937",
-                size=12,
-            ),
-            title_font=dict(
-                color="#111827",
-                size=16,
-            ),
-            margin=dict(
-                l=10,
-                r=10,
-                t=60,
-                b=70,
-            ),
-            legend_title_text="",
-        )
-
-        fig.update_xaxes(
-            tickfont=dict(
-                color="#374151",
-                size=11,
-            ),
-            title_font=dict(
-                color="#374151",
-                size=12,
-            ),
-        )
-
-        fig.update_yaxes(
-            tickfont=dict(
-                color="#374151",
-                size=11,
-            ),
-            title_font=dict(
-                color="#374151",
-                size=12,
-            ),
-        )
-
-        fig.update_annotations(
-            font=dict(
-                color="#374151",
-                size=11,
-            )
-        )
-
-
-        if tickangle is not None:
-
-            fig.update_xaxes(
-                tickangle=tickangle,
-                automargin=True,
-            )
-
-
-        return fig
-
-
-    # ========================================================
-    # LOAD / REFRESH ANALYTICS DATA
-    # ========================================================
-
-    flex_load_clicked = st.button(
-        "Load or refresh analysis data",
-        type="primary",
-        key="flex_load_analysis",
-    )
-
-
-    if flex_load_clicked:
-
-        try:
-
-            with st.status(
-                "Loading global analysis data...",
-                expanded=True,
-            ) as flex_status:
-
-                flex_progress = st.progress(
-                    0
-                )
-
-
-                # ------------------------------------------------
-                # STEP 1 - ITERATION CONFIGURATION
-                # ------------------------------------------------
-
-                flex_status.write(
-                    "Reading iteration configuration..."
-                )
-
-
-                flex_configs = (
-                    list_iteration_configs()
-                )
-
-
-                if local_global_fixture_enabled():
-
-                    flex_fixture_config = (
-                        local_global_fixture_config()
-                    )
-
-
-                    fixture_iteration = (
-                        flex_fixture_config.get(
-                            "iteration",
-                            "",
-                        )
-                    )
-
-
-                    existing_iterations = {
-                        str(
-                            config.get(
-                                "iteration",
-                                "",
-                            )
-                        ).strip()
-                        for config in flex_configs
-                    }
-
-
-                    if (
-                        fixture_iteration
-                        and fixture_iteration
-                        not in existing_iterations
+                    with st.expander(
+                        "Land use change contribution detail"
                     ):
 
-                        flex_configs = (
-                            [
-                                flex_fixture_config
-                            ]
-                            + flex_configs
+                        st.dataframe(
+                            pretty_dataframe(
+                                gt_land[
+                                    "contributions"
+                                ]
+                            ),
+                            use_container_width=True,
+                            hide_index=True,
                         )
 
 
-                flex_progress.progress(
-                    15
-                )
-
-
-                # ------------------------------------------------
-                # STEP 2 - EXPECTED PARTICIPANTS
-                # ------------------------------------------------
-
-                flex_status.write(
-                    "Preparing expected participant coverage..."
-                )
-
-
-                flex_expected_by_iteration = {}
-
-
-                for config in flex_configs:
-
-                    iteration_name = str(
-                        config.get(
-                            "iteration",
-                            "",
-                        )
-                    ).strip()
-
-
-                    if not iteration_name:
-
-                        continue
-
-
-                    flex_expected_by_iteration[
-                        iteration_name
-                    ] = [
-                        str(
-                            participant
-                        ).strip()
-                        for participant
-                        in (
-                            config.get(
-                                "participants",
-                                []
-                            )
-                            or []
-                        )
-                        if str(
-                            participant
-                        ).strip()
-                    ]
-
-
-                flex_progress.progress(
-                    30
-                )
-
-
-                # ------------------------------------------------
-                # STEP 3 - LOAD BOTH STAGES
-                # ------------------------------------------------
-
-                flex_status.write(
-                    "Loading Before and After submissions..."
-                )
-
-
-                flex_payloads = []
-
-
-                for config in flex_configs:
-
-                    iteration_name = str(
-                        config.get(
-                            "iteration",
-                            "",
-                        )
-                    ).strip()
-
-
-                    if not iteration_name:
-
-                        continue
-
-
-                    if (
-                        iteration_name
-                        == LOCAL_GLOBAL_FIXTURE_ITERATION
-                        and local_global_fixture_enabled()
+                    with st.expander(
+                        "Agriculture contribution detail"
                     ):
 
-                        fixture_payloads = (
-                            load_local_global_fixture_payloads()
+                        st.dataframe(
+                            pretty_dataframe(
+                                gt_agri[
+                                    "contributions"
+                                ]
+                            ),
+                            use_container_width=True,
+                            hide_index=True,
                         )
 
 
-                        flex_payloads.extend(
-                            fixture_payloads
+                    # =================================================
+                    # QA
+                    # =================================================
+
+                    if not gt_result[
+                        "duplicate_rows"
+                    ].empty:
+
+                        st.error(
+                            "Duplicate Region-Year aggregate records were detected."
                         )
 
 
-                        continue
+                        with st.expander(
+                            "View duplicate aggregate rows"
+                        ):
+
+                            st.dataframe(
+                                pretty_dataframe(
+                                    gt_result[
+                                        "duplicate_rows"
+                                    ]
+                                ),
+                                use_container_width=True,
+                                hide_index=True,
+                            )
 
 
-                    before_payloads = (
-                        list_submission_payloads(
-                            iteration_name,
-                            stage="before",
-                        )
+                except Exception as exc:
+
+                    st.error(
+                        "Global target assessment failed: "
+                        f"{exc}"
                     )
 
 
-                    after_payloads = (
-                        list_submission_payloads(
-                            iteration_name,
-                            stage="after",
-                        )
-                    )
+        # ========================================================
+        # GLOBAL TARGETS DASHBOARD - END
+        # ========================================================
 
+        # ========================================================
+        # FLEXIBLE GLOBAL ANALYSIS STUDIO - BEGIN
+        # ========================================================
 
-                    flex_payloads.extend(
-                        before_payloads
-                    )
+        st.divider()
 
-
-                    flex_payloads.extend(
-                        after_payloads
-                    )
-
-
-                flex_progress.progress(
-                    55
-                )
-
-
-                # ------------------------------------------------
-                # STEP 4 - NORMALIZED DATASET
-                # ------------------------------------------------
-
-                flex_status.write(
-                    "Building normalized analytics dataset..."
-                )
-
-
-                flex_normalized_df = (
-                    normalize_global_indicator_rows(
-                        flex_payloads
-                    )
-                )
-
-
-                flex_progress.progress(
-                    70
-                )
-
-
-                # ------------------------------------------------
-                # STEP 5 - SCOPE SUMMARY
-                # ------------------------------------------------
-
-                flex_status.write(
-                    "Calculating iteration and pathway summaries..."
-                )
-
-
-                flex_summary_df = (
-                    build_global_scope_summary(
-                        flex_payloads,
-                        expected_participants_by_iteration=(
-                            flex_expected_by_iteration
-                        ),
-                    )
-                )
-
-
-                flex_progress.progress(
-                    90
-                )
-
-
-                # ------------------------------------------------
-                # STORE
-                # ------------------------------------------------
-
-                st.session_state[
-                    "flex_global_normalized_df"
-                ] = flex_normalized_df
-
-
-                st.session_state[
-                    "flex_global_summary_df"
-                ] = flex_summary_df
-
-
-                st.session_state[
-                    "flex_global_expected"
-                ] = flex_expected_by_iteration
-
-
-                st.session_state[
-                    "flex_global_payload_count"
-                ] = len(
-                    flex_payloads
-                )
-
-
-                flex_progress.progress(
-                    100
-                )
-
-
-                flex_status.update(
-                    label=(
-                        "Global analysis data ready"
-                    ),
-                    state="complete",
-                    expanded=False,
-                )
-
-
-        except Exception as exc:
-
-            st.error(
-                "Could not prepare global analysis data: "
-                f"{exc}"
-            )
-
-
-    # ========================================================
-    # READ CACHED SESSION DATA
-    # ========================================================
-
-    flex_normalized_df = (
-        st.session_state.get(
-            "flex_global_normalized_df"
+        st.subheader(
+            "Global Analysis Studio"
         )
-    )
 
-
-    flex_summary_df = (
-        st.session_state.get(
-            "flex_global_summary_df"
-        )
-    )
-
-
-    if (
-        flex_normalized_df is None
-        or flex_summary_df is None
-    ):
-
-        st.info(
-            "Click Load or refresh analysis data "
-            "to prepare iteration and pathway comparisons."
+        st.caption(
+            "Explore how global conditions change across "
+            "iterations, pathways and trade adjustment stages. "
+            "Select iterations, pathways, participants and indicators to explore results."
         )
 
 
-    elif (
-        flex_normalized_df.empty
-        and flex_summary_df.empty
-    ):
+        # ========================================================
+        # HELPERS
+        # ========================================================
 
-        st.warning(
-            "No usable global indicator data is available yet."
-        )
+        # SECTION22_PATHWAY_ITERATION_EVOLUTION
 
+        def render_pathway_iteration_evolution():
 
-    else:
+            import re
 
-        flex_payload_count = (
-            st.session_state.get(
-                "flex_global_payload_count",
-                0,
-            )
-        )
-
-
-        flex_info_1, flex_info_2, flex_info_3 = (
-            st.columns(
-                3
-            )
-        )
-
-
-        flex_info_1.metric(
-            "Submission payloads",
-            flex_payload_count,
-        )
-
-
-        flex_info_2.metric(
-            "Iterations",
-            (
-                flex_summary_df[
-                    "Iteration"
-                ].nunique()
-                if not flex_summary_df.empty
-                else 0
-            ),
-        )
-
-
-        flex_info_3.metric(
-            "Pathways",
-            (
-                flex_summary_df[
-                    "Pathway"
-                ].nunique()
-                if not flex_summary_df.empty
-                else 0
-            ),
-        )
-
-
-        # ====================================================
-        # STUDIO TABS
-        # ====================================================
-
-        (
-            flex_progress_tab,
-            flex_custom_tab,
-        ) = st.tabs(
-            [
-                "Iteration progress",
-                "Custom analysis",
-            ]
-        )
-
-
-        # ====================================================
-        # TAB 1 - ITERATION PROGRESS
-        # ====================================================
-
-        with flex_progress_tab:
-
-            st.markdown(
-                "#### Iteration progress"
-            )
+            st.markdown("#### Build a comparison")
 
             st.caption(
-                "Track whether global conditions are moving "
-                "toward the targets from one iteration to the next."
+                "Compare the effects of trade adjustment "
+                "and sustainability outcomes across "
+                "pathways, participants and Scenathon rounds."
             )
 
+            # ----------------------------------------------------
+            # ITERATION CONFIGURATION
+            # ----------------------------------------------------
 
-            if flex_summary_df.empty:
+            configs = [
+                config
+                for config in list_iteration_configs()
+                if str(
+                    config.get("iteration", "")
+                ).strip()
+            ]
 
-                st.info(
-                    "No iteration summary is available."
+            def iteration_order(config):
+
+                name = str(
+                    config.get("iteration", "")
                 )
 
+                numbers = re.findall(
+                    r"\d+", name
+                )
+
+                return (
+                    int(numbers[-1])
+                    if numbers else 10**9,
+                    name.casefold(),
+                )
+
+            configs.sort(
+                key=iteration_order
+            )
+
+            config_lookup = {
+                str(config["iteration"]).strip(): config
+                for config in configs
+            }
+
+            iterations = list(
+                config_lookup
+            )
+
+            if not iterations:
+
+                st.info(
+                    "No configured iteration is available."
+                )
+
+                return
+
+            # ----------------------------------------------------
+            # SELECT ITERATIONS
+            # ----------------------------------------------------
+
+            _sc26_top = st.columns([2.2, 1], gap="medium")  # SECTION26_COMPACT_STUDIO
+            with _sc26_top[0]:
+                with st.container(border=True):
+                    selected_iterations = st.multiselect(
+                        "Iterations",
+                        iterations,
+                        default=iterations,
+                        key="pe22_iterations",
+                    )
+
+            if not selected_iterations:
+
+                st.info(
+                    "Select at least one iteration."
+                )
+
+                return
+
+            # ----------------------------------------------------
+            # READ-ONLY SNAPSHOT
+            # ----------------------------------------------------
+
+            session_id = str(
+                active_session_id()
+            )
+
+            snapshot_key = (
+                session_id,
+                tuple(selected_iterations),
+            )
+
+            with _sc26_top[1]:
+                with st.container(border=True):
+                    refresh_clicked = st.button(
+                        "Load / refresh comparison data",
+                        type="primary",
+                        key="pe22_refresh",
+                    )
+
+            snapshot = st.session_state.get(
+                "pe22_snapshot"
+            )
+
+            if refresh_clicked:
+
+                trade_records = []
+                global_records = []
+                diagnostics = []
+
+                stage_names = {
+                    "before": "Before trade adjustment",
+                    "after": "After trade adjustment",
+                }
+
+                with st.spinner(
+                    "Loading Scenathon comparison data..."
+                ):
+
+                    for iteration in selected_iterations:
+
+                        config = config_lookup[
+                            iteration
+                        ]
+
+                        expected_participants = {
+                            str(value).strip().casefold()
+                            for value in config.get(
+                                "participants", []
+                            )
+                            if str(value).strip()
+                        }
+
+                        expected_pathways = {
+                            str(value).strip().casefold()
+                            for value in config.get(
+                                "pathways", []
+                            )
+                            if str(value).strip()
+                        }
+
+                        # ----------------------------------------
+                        # CALCULATOR SUBMISSIONS
+                        # ----------------------------------------
+
+                        for stage, stage_label in (
+                            stage_names.items()
+                        ):
+
+                            try:
+
+                                submissions = (
+                                    list_submission_payloads(
+                                        iteration,
+                                        stage=stage,
+                                    )
+                                )
+
+                            except Exception as exc:
+
+                                diagnostics.append(
+                                    f"{iteration} / "
+                                    f"{stage_label}: {exc}"
+                                )
+
+                                continue
+
+                            for payload in submissions:
+
+                                participant = str(
+                                    payload.get(
+                                        "participant", ""
+                                    )
+                                ).strip()
+
+                                pathway = str(
+                                    payload.get(
+                                        "pathway", ""
+                                    )
+                                ).strip()
+
+                                if (
+                                    participant.casefold()
+                                    not in expected_participants
+                                    or pathway.casefold()
+                                    not in expected_pathways
+                                ):
+                                    continue
+
+                                metadata = {
+                                    "Iteration": iteration,
+                                    "Pathway": pathway,
+                                    "Participant": participant,
+                                    "Stage": stage_label,
+                                }
+
+                                # TRADE DATA
+
+                                for row in payload.get(
+                                    "rows", []
+                                ):
+
+                                    trade_records.append({
+                                        **metadata,
+
+                                        "Product": str(
+                                            row.get(
+                                                "Product", ""
+                                            )
+                                        ).strip().casefold(),
+
+                                        "Year": row.get(
+                                            "Year"
+                                        ),
+
+                                        "Imports": row.get(
+                                            "Import_quantity"
+                                        ),
+
+                                        "Exports": row.get(
+                                            "Export_quantity"
+                                        ),
+                                    })
+
+                                # GLOBAL INDICATORS
+
+                                for row in payload.get(
+                                    "aggregate_rows", []
+                                ):
+
+                                    global_records.append({
+                                        **metadata,
+
+                                        "Year": row.get(
+                                            "Year"
+                                        ),
+
+                                        "kcal_feas": row.get(
+                                            "kcal_feas"
+                                        ),
+
+                                        "kcal_mder": row.get(
+                                            "kcal_mder"
+                                        ),
+
+                                        "Agriculture": row.get(
+                                            "CalcAllAgriCO2e"
+                                        ),
+
+                                        "Land": row.get(
+                                            "CalcAllLandCO2e"
+                                        ),
+                                    })
+
+                        # ----------------------------------------
+                    # SECTION29_STUDIO_SUBMITTED_DATA_ONLY
+
+                    try:
+                        summary = (
+                            load_run_summary(iteration)
+                            or {}
+                        )
+
+                        stale = bool(
+                            load_stale_marker(iteration)
+                        )
+
+                        diagnostics.append(
+                            f"{iteration}: trade run "
+                            + (
+                                "STALE"
+                                if stale
+                                else str(
+                                    summary.get(
+                                        "status",
+                                        "NOT RUN",
+                                    )
+                                )
+                            )
+                            + "; QA blockers = "
+                            + str(
+                                summary.get(
+                                    "blocker_count",
+                                    "N/A",
+                                )
+                            )
+                        )
+
+                    except Exception as exc:
+
+                        diagnostics.append(
+                            f"{iteration}: "
+                            f"run status unavailable: {exc}"
+                        )
+
+                # PREPARE DATAFRAMES
+                # -----------------------------------------------
+
+                trade_df = pd.DataFrame(
+                    trade_records
+                )
+
+                global_df = pd.DataFrame(
+                    global_records
+                )
+
+                numeric_specs = [
+                    (
+                        trade_df,
+                        [
+                            "Year",
+                            "Imports",
+                            "Exports",
+                        ],
+                    ),
+                    (
+                        global_df,
+                        [
+                            "Year",
+                            "kcal_feas",
+                            "kcal_mder",
+                            "Agriculture",
+                            "Land",
+                        ],
+                    ),
+                ]
+
+                for df, columns in numeric_specs:
+
+                    if df.empty:
+
+                        continue
+
+                    for column in columns:
+
+                        df[column] = pd.to_numeric(
+                            df[column],
+                            errors="coerce",
+                        )
+
+                    df.dropna(
+                        subset=["Year"],
+                        inplace=True,
+                    )
+
+                    df["Year"] = (
+                        df["Year"].astype(int)
+                    )
+
+                snapshot = {
+                    "key": snapshot_key,
+                    "trade": trade_df,
+                    "indicators": global_df,
+                    "diagnostics": diagnostics,
+                }
+
+                st.session_state[
+                    "pe22_snapshot"
+                ] = snapshot
+
+                st.success(
+                    "Comparison data loaded successfully."
+                )
+
+            if (
+                not snapshot
+                or snapshot.get("key") != snapshot_key
+            ):
+
+                st.info(
+                    "Click Load / refresh comparison data "
+                    "to explore the selected iterations."
+                )
+
+                return
+
+            trade_df = snapshot["trade"]
+
+            global_df = snapshot[
+                "indicators"
+            ]
+
+            if (
+                trade_df.empty
+                and global_df.empty
+            ):
+
+                st.warning(
+                    "No usable comparison data is available."
+                )
+
+                return
+
+            with st.expander(
+                "Data freshness and calculation status"
+            ):
+
+                for message in snapshot[
+                    "diagnostics"
+                ]:
+
+                    st.caption(
+                        message
+                    )
+
+                st.caption(
+                    "This comparison uses a read-only snapshot. "
+                    "Refresh after new submissions or "
+                    "trade adjustment calculations."
+                )
+
+            # ====================================================
+            # COMPARISON MODE
+            # ====================================================
+
+            _sc26_first = st.columns([1.2, 1.45, 1], gap="medium")
+            with _sc26_first[0]:
+                with st.container(border=True):
+                    view = st.radio(
+                        "Comparison view",
+                        [
+                            "Within iteration",
+                            "Across iterations",
+                            "Participant journey",
+                        ],
+                        horizontal=False,
+                        key="pe22_view",
+                    )
+
+            # ----------------------------------------------------
+            # PATHWAY FILTER
+            # ----------------------------------------------------
+
+            pathway_values = set()
+
+            if not trade_df.empty:
+
+                pathway_values.update(
+                    trade_df[
+                        "Pathway"
+                    ].tolist()
+                )
+
+            if not global_df.empty:
+
+                pathway_values.update(
+                    global_df[
+                        "Pathway"
+                    ].tolist()
+                )
+
+            pathway_options = sorted(
+                pathway_values,
+                key=str.casefold,
+            )
+
+            with _sc26_first[1]:
+                with st.container(border=True):
+                    selected_pathways = st.multiselect(
+                        "Pathways",
+                        pathway_options,
+                        default=pathway_options,
+                        key="pe22_pathways",
+                    )
+
+            if not selected_pathways:
+
+                st.info(
+                    "Select at least one pathway."
+                )
+
+                return
+
+            # ----------------------------------------------------
+            # ITERATION SCOPE
+            # ----------------------------------------------------
+
+            if view == "Within iteration":
+
+                with _sc26_first[2]:
+                    with st.container(border=True):
+                        selected_iteration = st.selectbox(
+                            "Iteration",
+                            selected_iterations,
+                            key="pe22_single_iteration",
+                        )
+
+                iterations_in_view = [
+                    selected_iteration
+                ]
 
             else:
 
-                progress_pathways = sorted(
-                    flex_summary_df[
-                        "Pathway"
+                iterations_in_view = (
+                    selected_iterations
+                )
+
+            # ----------------------------------------------------
+            # PARTICIPANT SCOPE
+            # ----------------------------------------------------
+
+            participant_sets = [
+                {
+                    str(value).strip()
+                    for value in (
+                        config_lookup[iteration].get(
+                            "participants", []
+                        )
+                    )
+                    if str(value).strip()
+                }
+                for iteration in iterations_in_view
+            ]
+
+            common_participants = (
+                set.intersection(
+                    *participant_sets
+                )
+                if participant_sets
+                else set()
+            )
+
+            all_participants = sorted(
+                (
+                    set.union(
+                        *participant_sets
+                    )
+                    if participant_sets
+                    else set()
+                ),
+                key=str.casefold,
+            )
+
+            _sc26_second = st.columns([1, 1, 1.25], gap="medium")
+            with _sc26_second[0]:
+                with st.container(border=True):
+                    scope_mode = st.selectbox(
+                        "Participant scope",
+                        [
+                            "Common participants",
+                            "All configured participants",
+                            "Choose participants",
+                        ],
+                        index=(
+                            0
+                            if len(iterations_in_view) > 1
+                            else 1
+                        ),
+                        key="pe22_scope",
+                    )
+
+            if scope_mode == "Common participants":
+
+                selected_participants = sorted(
+                    common_participants,
+                    key=str.casefold,
+                )
+
+            elif scope_mode == "All configured participants":
+
+                selected_participants = (
+                    all_participants
+                )
+
+            else:
+
+                selected_participants = st.multiselect(
+                    "Participants",
+                    all_participants,
+                    default=all_participants,
+                    key="pe22_participants",
+                )
+
+            if not selected_participants:
+
+                st.warning(
+                    "No participants are available "
+                    "for the selected comparison scope."
+                )
+
+                return
+
+            if (
+                len(iterations_in_view) > 1
+                and scope_mode == "All configured participants"
+            ):
+
+                if any(
+                    group != participant_sets[0]
+                    for group in participant_sets[1:]
+                ):
+
+                    st.warning(
+                        "Participant membership differs across "
+                        "the selected iterations. "
+                        "Common participants provide a "
+                        "more comparable assessment."
+                    )
+
+            # ====================================================
+            # INDICATOR SELECTION
+            # ====================================================
+
+            with _sc26_second[1]:
+                with st.container(border=True):
+                    indicator = st.selectbox(
+                        "Indicator",
+                        [
+                            "Product-level trade imbalance",
+                            "Total exports",
+                            "Total imports",
+                            "Food security target achievement (%)",
+                            "Food security margin (%)",
+                            "Agriculture GHG (Gt CO2e)",
+                            "Land-use change GHG (Gt CO2e)",
+                        ],
+                        key="pe22_indicator",
+                    )
+
+            trade_indicators = {
+                "Product-level trade imbalance",
+                "Total exports",
+                "Total imports",
+            }
+
+            is_trade = (
+                indicator in trade_indicators
+            )
+
+            # SECTION28_STUDIO_STAGES
+            available_stages = [
+                "Before trade adjustment",
+                "After trade adjustment",
+            ]
+
+            with _sc26_second[2]:
+                with st.container(border=True):
+                    selected_stages = st.multiselect(
+                        "Results to compare",
+                        available_stages,
+                        default=available_stages,
+                        key=(
+                            "pe22_stages_trade"
+                            if is_trade
+                            else "pe22_stages_global"
+                        ),
+                    )
+
+            if not selected_stages:
+
+                st.info(
+                    "Select at least one result stage."
+                )
+
+                return
+
+            source_df = (
+                trade_df
+                if is_trade
+                else global_df
+            )
+
+            source_df = source_df[
+                source_df[
+                    "Iteration"
+                ].isin(
+                    iterations_in_view
+                )
+                &
+                source_df[
+                    "Pathway"
+                ].isin(
+                    selected_pathways
+                )
+                &
+                source_df[
+                    "Participant"
+                ].isin(
+                    selected_participants
+                )
+                &
+                source_df[
+                    "Stage"
+                ].isin(
+                    selected_stages
+                )
+            ].copy()
+
+            if source_df.empty:
+
+                st.info(
+                    "No matching data for the selected filters."
+                )
+
+                return
+
+            # ----------------------------------------------------
+            # PRODUCT FILTER
+            # ----------------------------------------------------
+
+            _sc26_third = st.columns([1.3, 1, 1], gap="medium")
+            if is_trade:
+
+                products = sorted(
+                    source_df[
+                        "Product"
                     ]
                     .dropna()
                     .astype(str)
@@ -7119,3092 +10382,1959 @@ with analytics_tab:
                     key=str.casefold,
                 )
 
-
-                progress_stages = [
-                    stage
-                    for stage in [
-                        "Before trade adjustment",
-                        "After trade adjustment",
-                    ]
-                    if stage
-                    in set(
-                        flex_summary_df[
-                            "Stage"
-                        ].astype(str)
-                    )
-                ]
-
-
-                progress_filter_1, progress_filter_2 = (
-                    st.columns(
-                        2
-                    )
-                )
-
-
-                with progress_filter_1:
-
-                    selected_progress_pathways = (
-                        st.multiselect(
-                            "Pathways",
-                            progress_pathways,
-                            default=progress_pathways,
-                            key=(
-                                "flex_progress_pathways"
-                            ),
-                            format_func=plain_text_label,
-                        )
-                    )
-
-
-                with progress_filter_2:
-
-                    default_progress_stage = (
-                        [
-                            "After trade adjustment"
-                        ]
-                        if (
-                            "After trade adjustment"
-                            in progress_stages
-                        )
-                        else progress_stages[:1]
-                    )
-
-
-                    selected_progress_stages = (
-                        st.multiselect(
-                            "Trade stages",
-                            progress_stages,
-                            default=progress_stages,
-                            key=(
-                                "flex_progress_stages"
-                            ),
-                            format_func=plain_text_label,
-                        )
-                    )
-
-
-                show_incomplete_progress = (
-                    st.checkbox(
-                        "Include incomplete iteration scopes",
-                        value=False,
-                        key=(
-                            "flex_progress_incomplete"
-                        ),
-                        help=(
-                            "Incomplete scopes do not yet contain "
-                            "all configured participant submissions."
-                        ),
-                    )
-                )
-
-
-                progress_df = (
-                    flex_summary_df[
-                        flex_summary_df[
-                            "Pathway"
-                        ].isin(
-                            selected_progress_pathways
-                        )
-                        &
-                        flex_summary_df[
-                            "Stage"
-                        ].isin(
-                            selected_progress_stages
-                        )
-                    ]
-                    .copy()
-                )
-
-
-                if not show_incomplete_progress:
-
-                    progress_df = (
-                        progress_df[
-                            progress_df[
-                                "Coverage complete"
-                            ]
-                            == True
-                        ]
-                        .copy()
-                    )
-
-
-                if progress_df.empty:
-
-                    st.info(
-                        "No matching complete iteration scope "
-                        "is available for this selection."
-                    )
-
-
-                else:
-
-                    progress_iteration_order = sorted(
-                        progress_df[
-                            "Iteration"
-                        ]
-                        .astype(str)
-                        .unique()
-                        .tolist(),
-                        key=flex_iteration_sort_key,
-                    )
-
-
-                    progress_df[
-                        "Iteration"
-                    ] = pd.Categorical(
-                        progress_df[
-                            "Iteration"
-                        ],
-                        categories=(
-                            progress_iteration_order
-                        ),
-                        ordered=True,
-                    )
-
-                    progress_df[
-                        "Iteration display"
-                    ] = (
-                        progress_df[
-                            "Iteration"
-                        ]
-                        .astype(str)
-                        .map(
-                            plain_text_label
-                        )
-                    )
-
-
-                    progress_df = (
-                        progress_df.sort_values(
-                            [
-                                "Iteration",
-                                "Pathway",
-                                "Stage",
-                            ]
-                        )
-                    )
-
-
-                    progress_df[
-                        "Series"
-                    ] = (
-                        (
-                            progress_df[
-                                "Pathway"
-                            ].astype(str)
-                            + " | "
-                            + progress_df[
-                                "Stage"
-                            ].astype(str)
-                        )
-                        .map(
-                            plain_text_label
-                        )
-                    )
-
-
-                    progress_df["Legend"] = (
-                        progress_df["Stage"]
-                        .astype(str)
-                        .map(plain_text_label)
-                    )
-
-
-                    # ----------------------------------------
-                    # FOOD SECURITY PROGRESS
-                    # ----------------------------------------
-
-                    progress_food_fig = (
-                        px.bar(
-                            progress_df,
-                            x="Iteration display",
-                            y=(
-                                "Food security passing percent"
-                            ),
-                            color="Legend",
-                            barmode="group",
-                            title=(
-                                "Food security progress"
-                            ),
-                            labels={
-                                "Food security passing percent": (
-                                    "Locations passing (%)"
-                                ),
-                                "Iteration display": (
-                                    "Iteration"
-                                ),
-                                "Legend": "",
-                            },
-                        )
-                    )
-
-
-                    progress_food_fig.add_hline(
-                        y=100,
-                        line_dash="dash",
-                        annotation_text=(
-                            "Target: 100% of locations"
-                        ),
-                        annotation_position="top left",
-                    )
-
-
-                    flex_prepare_figure(
-                        progress_food_fig,
-                        height=500,
-                    )
-
-
-                    progress_food_fig.update_layout(
-                        legend=dict(
-                            orientation="h",
-                            yanchor="top",
-                            y=-0.18,
-                            xanchor="center",
-                            x=0.5,
-                            title_text="",
-                        ),
-                        margin=dict(
-                            b=120,
-                        ),
-                    )
-
-
-                    # ----------------------------------------
-                    # AGRICULTURE GHG PROGRESS
-                    # ----------------------------------------
-
-                    progress_agri_fig = (
-                        px.bar(
-                            progress_df,
-                            x="Iteration display",
-                            y="Agriculture GHG",
-                            color="Legend",
-                            barmode="group",
-                            title=(
-                                "Agriculture GHG progress"
-                            ),
-                            labels={
-                                "Agriculture GHG": (
-                                    "Global total (Gt CO2e)"
-                                ),
-                                "Iteration display": (
-                                    "Iteration"
-                                ),
-                                "Legend": "",
-                            },
-                        )
-                    )
-
-
-                    progress_agri_fig.add_hline(
-                        y=4.0,
-                        line_dash="dash",
-                        annotation_text=(
-                            "Target: 4 Gt CO2e"
-                        ),
-                        annotation_position="top left",
-                    )
-
-
-                    flex_prepare_figure(
-                        progress_agri_fig,
-                        height=500,
-                    )
-
-
-                    progress_agri_fig.update_layout(
-                        legend=dict(
-                            orientation="h",
-                            yanchor="top",
-                            y=-0.18,
-                            xanchor="center",
-                            x=0.5,
-                            title_text="",
-                        ),
-                        margin=dict(
-                            b=120,
-                        ),
-                    )
-
-
-                    # ----------------------------------------
-                    # LAND GHG PROGRESS
-                    # ----------------------------------------
-
-                    progress_land_fig = (
-                        px.bar(
-                            progress_df,
-                            x="Iteration display",
-                            y="Land use change GHG",
-                            color="Legend",
-                            barmode="group",
-                            title=(
-                                "Land use change GHG progress"
-                            ),
-                            labels={
-                                "Land use change GHG": (
-                                    "Global total (Gt CO2e)"
-                                ),
-                                "Iteration display": (
-                                    "Iteration"
-                                ),
-                                "Legend": "",
-                            },
-                        )
-                    )
-
-
-                    progress_land_fig.add_hline(
-                        y=-1.0,
-                        line_dash="dash",
-                        annotation_text=(
-                            "Target: -1 Gt CO2e"
-                        ),
-                        annotation_position="bottom left",
-                    )
-
-
-                    flex_prepare_figure(
-                        progress_land_fig,
-                        height=500,
-                    )
-
-
-                    progress_land_fig.update_layout(
-                        legend=dict(
-                            orientation="h",
-                            yanchor="top",
-                            y=-0.18,
-                            xanchor="center",
-                            x=0.5,
-                            title_text="",
-                        ),
-                        margin=dict(
-                            b=120,
-                        ),
-                    )
-
-
-                    # ----------------------------------------
-                    # THREE SIDE BY SIDE
-                    # ----------------------------------------
-
-                    (
-                        progress_col_1,
-                        progress_col_2,
-                        progress_col_3,
-                    ) = st.columns(
-                        [
-                            1.25,
-                            1,
-                            1,
-                        ]
-                    )
-
-
-                    with progress_col_1:
-
-                        st.plotly_chart(
-                            progress_food_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_progress_food_chart"
-                            ),
-                        )
-
-
-                    with progress_col_2:
-
-                        st.plotly_chart(
-                            progress_agri_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_progress_agri_chart"
-                            ),
-                        )
-
-
-                    with progress_col_3:
-
-                        st.plotly_chart(
-                            progress_land_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_progress_land_chart"
-                            ),
-                        )
-
-
-                    with st.expander(
-                        "View iteration progress data"
-                    ):
-
-                        st.dataframe(
-                            pretty_dataframe(
-                                progress_df.drop(
-                                    columns=[
-                                        "Series"
-                                    ],
-                                    errors="ignore",
-                                )
-                            ),
-                            use_container_width=True,
-                            hide_index=True,
-                        )
-
-
-        # ====================================================
-        # TAB 2 - CUSTOM ANALYSIS
-        # ====================================================
-
-        with flex_custom_tab:
-
-            st.markdown(
-                "#### Custom analysis"
-            )
-
-            st.caption(
-                "Choose any combination of iterations, pathways "
-                "and trade stages. The three core indicators "
-                "update together."
-            )
-
-
-            custom_iterations = sorted(
-                flex_summary_df[
-                    "Iteration"
-                ]
-                .dropna()
-                .astype(str)
-                .unique()
-                .tolist(),
-                key=flex_iteration_sort_key,
-            )
-
-
-            custom_pathways = sorted(
-                flex_summary_df[
-                    "Pathway"
-                ]
-                .dropna()
-                .astype(str)
-                .unique()
-                .tolist(),
-                key=str.casefold,
-            )
-
-
-            custom_stages = [
-                stage
-                for stage in [
-                    "Before trade adjustment",
-                    "After trade adjustment",
-                ]
-                if stage
-                in set(
-                    flex_summary_df[
-                        "Stage"
-                    ].astype(str)
-                )
-            ]
-
-
-            (
-                custom_filter_1,
-                custom_filter_2,
-                custom_filter_3,
-            ) = st.columns(
-                3
-            )
-
-
-            with custom_filter_1:
-
-                default_iterations = (
-                    custom_iterations[
-                        -1:
-                    ]
-                )
-
-
-                selected_custom_iterations = (
-                    st.multiselect(
-                        "Iterations",
-                        custom_iterations,
-                        default=default_iterations,
-                        key=(
-                            "flex_custom_iterations"
-                        ),
-                        format_func=plain_text_label,
-                    )
-                )
-
-
-            with custom_filter_2:
-
-                selected_custom_pathways = (
-                    st.multiselect(
-                        "Pathways",
-                        custom_pathways,
-                        default=custom_pathways,
-                        key=(
-                            "flex_custom_pathways"
-                        ),
-                        format_func=plain_text_label,
-                    )
-                )
-
-
-            with custom_filter_3:
-
-                selected_custom_stages = (
-                    st.multiselect(
-                        "Trade stages",
-                        custom_stages,
-                        default=custom_stages,
-                        key=(
-                            "flex_custom_stages"
-                        ),
-                        format_func=plain_text_label,
-                    )
-                )
-
-
-            custom_level = (
-                st.radio(
-                    "Analysis level",
-                    [
-                        "Global comparison",
-                        "Location detail",
-                    ],
-                    horizontal=True,
-                    key="flex_custom_level",
-                )
-            )
-
-
-            # =================================================
-            # GLOBAL COMPARISON
-            # =================================================
-
-            if (
-                custom_level
-                == "Global comparison"
-            ):
-
-                custom_scope_df = (
-                    flex_summary_df[
-                        flex_summary_df[
-                            "Iteration"
-                        ].astype(str).isin(
-                            selected_custom_iterations
-                        )
-                        &
-                        flex_summary_df[
-                            "Pathway"
-                        ].astype(str).isin(
-                            selected_custom_pathways
-                        )
-                        &
-                        flex_summary_df[
-                            "Stage"
-                        ].astype(str).isin(
-                            selected_custom_stages
-                        )
-                    ]
-                    .copy()
-                )
-
-
-                if custom_scope_df.empty:
-
-                    st.info(
-                        "No global scope matches the current selection."
-                    )
-
-
-                else:
-
-                    custom_scope_df[
-                        "Scenario"
-                    ] = (
-                        custom_scope_df.apply(
-                            flex_scope_label,
-                            axis=1,
-                        )
-                    )
-
-
-                    custom_scope_df[
-                        "Food security"
-                    ] = (
-                        custom_scope_df[
-                            "Food security passing percent"
-                        ]
-                    )
-
-
-                    # -----------------------------------------
-                    # GLOBAL FOOD
-                    # -----------------------------------------
-
-                    custom_food_fig = (
-                        px.bar(
-                            custom_scope_df,
-                            x="Scenario",
-                            y="Food security",
-                            color="Stage",
-                            barmode="group",
-                            title=(
-                                "Food security comparison"
-                            ),
-                            labels={
-                                "Food security": (
-                                    "Locations passing (%)"
-                                ),
-                                "Scenario": (
-                                    "Scenario"
-                                ),
-                                "Stage": (
-                                    "Trade stage"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    custom_food_fig.add_hline(
-                        y=100,
-                        line_dash="dash",
-                        annotation_text=(
-                            "Target: 100%"
-                        ),
-                    )
-
-
-                    flex_prepare_figure(
-                        custom_food_fig,
-                        height=540,
-                        tickangle=-40,
-                    )
-
-
-                    # -----------------------------------------
-                    # GLOBAL AGRICULTURE
-                    # -----------------------------------------
-
-                    custom_agri_fig = (
-                        px.bar(
-                            custom_scope_df,
-                            x="Scenario",
-                            y="Agriculture GHG",
-                            color="Stage",
-                            barmode="group",
-                            title=(
-                                "Agriculture GHG comparison"
-                            ),
-                            labels={
-                                "Agriculture GHG": (
-                                    "Global total (Gt CO2e)"
-                                ),
-                                "Scenario": (
-                                    "Scenario"
-                                ),
-                                "Stage": (
-                                    "Trade stage"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    custom_agri_fig.add_hline(
-                        y=4.0,
-                        line_dash="dash",
-                        annotation_text=(
-                            "Target: 4 Gt CO2e"
-                        ),
-                    )
-
-
-                    flex_prepare_figure(
-                        custom_agri_fig,
-                        height=540,
-                        tickangle=-40,
-                    )
-
-
-                    # -----------------------------------------
-                    # GLOBAL LAND
-                    # -----------------------------------------
-
-                    custom_land_fig = (
-                        px.bar(
-                            custom_scope_df,
-                            x="Scenario",
-                            y="Land use change GHG",
-                            color="Stage",
-                            barmode="group",
-                            title=(
-                                "Land use change GHG comparison"
-                            ),
-                            labels={
-                                "Land use change GHG": (
-                                    "Global total (Gt CO2e)"
-                                ),
-                                "Scenario": (
-                                    "Scenario"
-                                ),
-                                "Stage": (
-                                    "Trade stage"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    custom_land_fig.add_hline(
-                        y=-1.0,
-                        line_dash="dash",
-                        annotation_text=(
-                            "Target: -1 Gt CO2e"
-                        ),
-                    )
-
-
-                    flex_prepare_figure(
-                        custom_land_fig,
-                        height=540,
-                        tickangle=-40,
-                    )
-
-
-                    # -----------------------------------------
-                    # THREE SIDE BY SIDE
-                    # -----------------------------------------
-
-                    (
-                        custom_col_1,
-                        custom_col_2,
-                        custom_col_3,
-                    ) = st.columns(
-                        [
-                            1.25,
-                            1,
-                            1,
-                        ]
-                    )
-
-
-                    with custom_col_1:
-
-                        st.plotly_chart(
-                            custom_food_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_custom_global_food"
-                            ),
-                        )
-
-
-                    with custom_col_2:
-
-                        st.plotly_chart(
-                            custom_agri_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_custom_global_agri"
-                            ),
-                        )
-
-
-                    with custom_col_3:
-
-                        st.plotly_chart(
-                            custom_land_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_custom_global_land"
-                            ),
-                        )
-
-
-                    incomplete_scopes = (
-                        custom_scope_df[
-                            custom_scope_df[
-                                "Coverage complete"
-                            ]
-                            != True
-                        ]
-                    )
-
-
-                    if not incomplete_scopes.empty:
-
-                        st.warning(
-                            "One or more selected scenarios are incomplete. "
-                            "Their values use only the submissions currently available."
-                        )
-
-
-                    with st.expander(
-                        "View global comparison data"
-                    ):
-
-                        st.dataframe(
-                            pretty_dataframe(
-                                custom_scope_df.drop(
-                                    columns=[
-                                        "Scenario"
-                                    ],
-                                    errors="ignore",
-                                )
-                            ),
-                            use_container_width=True,
-                            hide_index=True,
-                        )
-
-
-            # =================================================
-            # LOCATION DETAIL
-            # =================================================
-
-            else:
-
-                available_years = sorted(
-                    pd.to_numeric(
-                        flex_normalized_df[
-                            "Year"
-                        ],
-                        errors="coerce",
-                    )
-                    .dropna()
-                    .astype(int)
-                    .unique()
-                    .tolist()
-                )
-
-
-                year_filter_1, year_filter_2 = (
-                    st.columns(
-                        2
-                    )
-                )
-
-
-                with year_filter_1:
-
-                    food_default_index = (
-                        available_years.index(
-                            2050
-                        )
-                        if 2050 in available_years
-                        else (
-                            len(
-                                available_years
-                            )
-                            - 1
-                        )
-                    )
-
-
-                    custom_food_year = (
-                        st.selectbox(
-                            "Food security year",
-                            available_years,
-                            index=(
-                                food_default_index
-                            ),
-                            key=(
-                                "flex_custom_food_year"
-                            ),
-                        )
-                    )
-
-
-                with year_filter_2:
-
-                    ghg_default_index = (
-                        available_years.index(
-                            2050
-                        )
-                        if 2050 in available_years
-                        else (
-                            len(
-                                available_years
-                            )
-                            - 1
-                        )
-                    )
-
-
-                    custom_ghg_year = (
-                        st.selectbox(
-                            "GHG year",
-                            available_years,
-                            index=(
-                                ghg_default_index
-                            ),
-                            key=(
-                                "flex_custom_ghg_year"
-                            ),
-                        )
-                    )
-
-
-                custom_location_df = (
-                    filter_global_indicator_rows(
-                        flex_normalized_df,
-                        iterations=(
-                            selected_custom_iterations
-                        ),
-                        pathways=(
-                            selected_custom_pathways
-                        ),
-                        stages=(
-                            selected_custom_stages
-                        ),
-                    )
-                )
-
-
-                if custom_location_df.empty:
-
-                    st.info(
-                        "No Location-level data matches the current selection."
-                    )
-
-
-                else:
-
-                    custom_location_df[
-                        "Scenario"
-                    ] = (
-                        (
-                            custom_location_df[
-                                "Iteration"
-                            ].astype(str)
-                            + " | "
-                            + custom_location_df[
-                                "Pathway"
-                            ].astype(str)
-                            + " | "
-                            + custom_location_df[
-                                "Stage"
-                            ].astype(str)
-                        )
-                        .map(
-                            plain_text_label
-                        )
-                    )
-
-
-                    # -----------------------------------------
-                    # FOOD LOCATION DETAIL
-                    # -----------------------------------------
-
-                    location_food_df = (
-                        custom_location_df[
-                            (
-                                custom_location_df[
-                                    "Indicator"
-                                ]
-                                == (
-                                    "Food security margin"
-                                )
-                            )
-                            &
-                            (
-                                custom_location_df[
-                                    "Year"
-                                ]
-                                == custom_food_year
-                            )
-                        ]
-                        .copy()
-                    )
-
-
-                    location_food_fig = (
-                        px.bar(
-                            location_food_df,
-                            x="Location",
-                            y="Value",
-                            color="Scenario",
-                            barmode="group",
-                            title=(
-                                "Food security by Location"
-                            ),
-                            labels={
-                                "Value": (
-                                    "Food security margin (%)"
-                                ),
-                                "Location": (
-                                    "Location"
-                                ),
-                                "Scenario": (
-                                    "Scenario"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    location_food_fig.add_hline(
-                        y=10,
-                        line_dash="dash",
-                        annotation_text="10%",
-                    )
-
-
-                    location_food_fig.add_hline(
-                        y=50,
-                        line_dash="dash",
-                        annotation_text="50%",
-                    )
-
-
-                    flex_prepare_figure(
-                        location_food_fig,
-                        height=560,
-                        tickangle=-55,
-                    )
-
-
-                    # -----------------------------------------
-                    # AGRICULTURE LOCATION DETAIL
-                    # -----------------------------------------
-
-                    location_agri_df = (
-                        custom_location_df[
-                            (
-                                custom_location_df[
-                                    "Indicator"
-                                ]
-                                == (
-                                    "Agriculture GHG"
-                                )
-                            )
-                            &
-                            (
-                                custom_location_df[
-                                    "Year"
-                                ]
-                                == custom_ghg_year
-                            )
-                        ]
-                        .copy()
-                    )
-
-
-                    location_agri_fig = (
-                        px.bar(
-                            location_agri_df,
-                            x="Location",
-                            y="Value",
-                            color="Scenario",
-                            barmode="group",
-                            title=(
-                                "Agriculture GHG by Location"
-                            ),
-                            labels={
-                                "Value": (
-                                    "Contribution (Gt CO2e)"
-                                ),
-                                "Location": (
-                                    "Location"
-                                ),
-                                "Scenario": (
-                                    "Scenario"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    if (
-                        custom_ghg_year
-                        == 2050
-                    ):
-
-                        location_agri_fig.add_hline(
-                            y=4.0,
-                            line_dash="dash",
-                            annotation_text=(
-                                "Global target: 4 Gt CO2e"
-                            ),
-                        )
-
-
-                    flex_prepare_figure(
-                        location_agri_fig,
-                        height=560,
-                        tickangle=-55,
-                    )
-
-
-                    # -----------------------------------------
-                    # LAND LOCATION DETAIL
-                    # -----------------------------------------
-
-                    location_land_df = (
-                        custom_location_df[
-                            (
-                                custom_location_df[
-                                    "Indicator"
-                                ]
-                                == (
-                                    "Land use change GHG"
-                                )
-                            )
-                            &
-                            (
-                                custom_location_df[
-                                    "Year"
-                                ]
-                                == custom_ghg_year
-                            )
-                        ]
-                        .copy()
-                    )
-
-
-                    location_land_fig = (
-                        px.bar(
-                            location_land_df,
-                            x="Location",
-                            y="Value",
-                            color="Scenario",
-                            barmode="group",
-                            title=(
-                                "Land use change GHG by Location"
-                            ),
-                            labels={
-                                "Value": (
-                                    "Contribution (Gt CO2e)"
-                                ),
-                                "Location": (
-                                    "Location"
-                                ),
-                                "Scenario": (
-                                    "Scenario"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    if (
-                        custom_ghg_year
-                        == 2050
-                    ):
-
-                        location_land_fig.add_hline(
-                            y=-1.0,
-                            line_dash="dash",
-                            annotation_text=(
-                                "Global target: -1 Gt CO2e"
-                            ),
-                        )
-
-
-                    flex_prepare_figure(
-                        location_land_fig,
-                        height=560,
-                        tickangle=-55,
-                    )
-
-
-                    # -----------------------------------------
-                    # THREE SIDE BY SIDE
-                    # -----------------------------------------
-
-                    (
-                        location_col_1,
-                        location_col_2,
-                        location_col_3,
-                    ) = st.columns(
-                        [
-                            1.25,
-                            1,
-                            1,
-                        ]
-                    )
-
-
-                    with location_col_1:
-
-                        st.plotly_chart(
-                            location_food_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_location_food"
-                            ),
-                        )
-
-
-                    with location_col_2:
-
-                        st.plotly_chart(
-                            location_agri_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_location_agri"
-                            ),
-                        )
-
-
-                    with location_col_3:
-
-                        st.plotly_chart(
-                            location_land_fig,
-                            use_container_width=True,
-                            key=(
-                                "flex_location_land"
-                            ),
-                        )
-
-
-                    st.caption(
-                        "Location values are taken directly from the uploaded calculator. "
-                        "Country calculators show countries and regional calculators show regions."
-                    )
-
-
-                    with st.expander(
-                        "View selected Location data"
-                    ):
-
-                        st.dataframe(
-                            pretty_dataframe(
-                                custom_location_df.drop(
-                                    columns=[
-                                        "Scenario"
-                                    ],
-                                    errors="ignore",
-                                )
-                            ),
-                            use_container_width=True,
-                            hide_index=True,
-                        )
-
-
-    # ========================================================
-    # FLEXIBLE GLOBAL ANALYSIS STUDIO - END
-    # ========================================================
-
-
-    st.divider()
-
-
-    st.subheader("Trade Analytics")
-
-    st.caption(
-        "Interactive analysis of published trade adjustment runs. "
-        "This section is visible to all app users; admin access is "
-        "not required. Clicking Run Analysis only builds charts from "
-        "published results - it does not rerun the trade engine."
-    )
-
-    # --------------------------------------------------------
-    # Find iterations with a current analytics artifact
-    # --------------------------------------------------------
-
-    try:
-        analytics_configs = (
-            list_iteration_configs()
-        )
-
-    except Exception as exc:
-
-        analytics_configs = []
-
-        st.error(
-            f"Could not load iterations: {exc}"
-        )
-
-
-    available_analytics_iterations = []
-
-
-    for cfg in analytics_configs:
-
-        name = cfg.get(
-            "iteration",
-            "",
-        )
-
-        if not name:
-            continue
-
-        # Do not expose analytics from a stale run.
-        if load_stale_marker(name):
-            continue
-
-        try:
-
-            if github_get_file(
-                analytics_path(name)
-            ):
-
-                available_analytics_iterations.append(
-                    name
-                )
-
-        except Exception:
-            pass
-
-
-    # --------------------------------------------------------
-    # No analytics yet
-    # --------------------------------------------------------
-
-    if not available_analytics_iterations:
-
-        st.info(
-            "No current analytics dataset is available. "
-            "Run Trade Adjustment from the Admin tab. "
-            "An iteration created by an older app version "
-            "must be rerun once to generate its analytics file."
-        )
-
-
-    else:
-
-        # ====================================================
-        # FILTERS
-        # ====================================================
-
-        filter_c1, filter_c2, filter_c3 = (
-            st.columns(3)
-        )
-
-
-        with filter_c1:
-
-            selected_analytics_iteration = (
-                st.selectbox(
-                    "Iteration",
-                    available_analytics_iterations,
-                    key="analytics_iteration",
-                )
-            )
-
-
-        # ----------------------------------------------------
-        # Load current published iteration data.
-        # This is needed to populate pathway/product filters.
-        # ----------------------------------------------------
-
-        with st.spinner(
-            "Loading published analytics data..."
-        ):
-
-            analytics_df = (
-                load_iteration_analytics(
-                    selected_analytics_iteration
-                )
-            )
-
-            run_summary = (
-                load_run_summary(
-                    selected_analytics_iteration
-                )
-            )
-
-            analytics_config = (
-                load_iteration_config(
-                    selected_analytics_iteration
-                )
-                or {}
-            )
-
-
-        if analytics_df.empty:
-
-            st.warning(
-                "The selected iteration has an analytics file, "
-                "but no usable analytics rows were found. "
-                "Rerun Trade Adjustment from the Admin tab."
-            )
-
-
-        else:
-
-            pathway_options = sorted(
-                analytics_df[
-                    "Pathway"
-                ]
-                .dropna()
-                .astype(str)
-                .unique()
-            )
-
-
-            with filter_c2:
-
-                selected_analytics_pathway = (
-                    st.selectbox(
-                        "Pathway",
-                        pathway_options,
-                        key="analytics_pathway",
-                    )
-                )
-
-
-            product_options = sorted(
-                analytics_df.loc[
-                    (
-                        analytics_df[
-                            "Pathway"
-                        ].astype(str)
-                        == selected_analytics_pathway
-                    ),
-                    "ProductDisplay",
-                ]
-                .dropna()
-                .astype(str)
-                .unique(),
-                key=str.casefold,
-            )
-
-
-            with filter_c3:
-
-                selected_analytics_product = (
-                    st.selectbox(
-                        "Product",
-                        [
-                            "All products"
-                        ]
-                        + product_options,
-                        key="analytics_product",
-                    )
-                )
-
-
-            # =================================================
-            # RUN ANALYSIS BUTTON
-            # =================================================
-
-            analysis_token = (
-                f"{selected_analytics_iteration}|"
-                f"{selected_analytics_pathway}|"
-                f"{selected_analytics_product}"
-            )
-
-
-            run_analysis = st.button(
-                "Run Analysis",
-                type="primary",
-                key="run_trade_analytics",
-                help=(
-                    "Build the interactive charts for the "
-                    "selected iteration, pathway and product."
-                ),
-            )
-
-
-            if run_analysis:
-
-                st.session_state[
-                    "analytics_run_token"
-                ] = analysis_token
-
-
-            analysis_is_current = (
-                st.session_state.get(
-                    "analytics_run_token"
-                )
-                == analysis_token
-            )
-
-
-            if not analysis_is_current:
-
-                st.info(
-                    "Choose the filters above, then click "
-                    "Run Analysis to build the interactive charts."
-                )
-
-
-            else:
-
-                # =============================================
-                # LIVE ANALYSIS STATUS
-                # =============================================
-
-                with st.status(
-                    "Running trade analytics...",
-                    expanded=True,
-                ) as analysis_status:
-
-                    analysis_progress = (
-                        st.progress(0)
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 1
-                    # -----------------------------------------
-
-                    analysis_status.write(
-                        "Reading submission coverage "
-                        "and run metadata..."
-                    )
-
-                    submission_meta = (
-                        submission_metadata_df(
-                            selected_analytics_iteration
-                        )
-                    )
-
-
-                    submitted_participants = (
-                        submission_meta[
-                            "participant"
-                        ]
-                        .astype(str)
-                        .nunique()
-                        if not submission_meta.empty
-                        else 0
-                    )
-
-
-                    configured_participants = len(
-                        analytics_config.get(
-                            "participants",
-                            [],
-                        )
-                    )
-
-
-                    analysis_progress.progress(
-                        20
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 2
-                    # -----------------------------------------
-
-                    analysis_status.write(
-                        "Aggregating the selected pathway "
-                        "and product scope..."
-                    )
-
-
-                    selected_pathway_products = (
-                        analytics_df.loc[
-                            (
-                                analytics_df[
-                                    "Pathway"
-                                ].astype(str)
-                                == selected_analytics_pathway
-                            ),
+                with _sc26_third[0]:
+                    with st.container(border=True):
+                        selected_product = st.selectbox(
                             "Product",
-                        ]
-                        .astype(str)
-                        .nunique()
-                    )
-
-
-                    trade_view = (
-                        aggregate_trade_view(
-                            analytics_df,
-                            pathway=(
-                                selected_analytics_pathway
-                            ),
-                            product_display=(
-                                selected_analytics_product
-                            ),
+                            ["All products"] + products,
+                            key="pe22_product",
                         )
-                    )
 
+                if selected_product != "All products":
 
-                    analysis_progress.progress(
-                        40
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 3
-                    # -----------------------------------------
-
-                    analysis_status.write(
-                        "Preparing product impact "
-                        "and heatmap data..."
-                    )
-
-
-                    pathway_df = analytics_df[
-                        (
-                            analytics_df[
-                                "Pathway"
-                            ].astype(str)
-                            == selected_analytics_pathway
-                        )
+                    source_df = source_df[
+                        source_df[
+                            "Product"
+                        ] == selected_product
                     ].copy()
 
+            # ----------------------------------------------------
+            # YEAR FILTER
+            # ----------------------------------------------------
 
-                    product_impact = (
-                        pathway_df
-                        .groupby(
-                            [
-                                "Product",
-                                "ProductDisplay",
-                            ],
-                            as_index=False,
-                        )[
-                            "AbsoluteExportAdjustment"
-                        ]
-                        .sum(
-                            min_count=1
-                        )
-                        .sort_values(
-                            "AbsoluteExportAdjustment",
-                            ascending=False,
-                            na_position="last",
-                        )
+            years = sorted(
+                source_df[
+                    "Year"
+                ].dropna().unique().tolist()
+            )
+
+            if indicator.startswith(
+                "Food security"
+            ):
+
+                years = [
+                    year
+                    for year in years
+                    if year in (
+                        2030, 2050
                     )
+                ]
 
+            if not years:
 
-                    analysis_progress.progress(
-                        60
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 4 - PATHWAY COMPARISON DATA
-                    # -----------------------------------------
-
-                    analysis_status.write(
-                        "Preparing pathway and "
-                        "iteration comparisons..."
-                    )
-
-
-                    pathway_comparison_source = (
-                        analytics_df.copy()
-                    )
-
-
-                    if (
-                        selected_analytics_product
-                        != "All products"
-                    ):
-
-                        pathway_comparison_source = (
-                            pathway_comparison_source[
-                                (
-                                    pathway_comparison_source[
-                                        "ProductDisplay"
-                                    ].astype(str)
-                                    == selected_analytics_product
-                                )
-                            ].copy()
-                        )
-
-
-                    pathway_compare = (
-                        pathway_comparison_source
-                        .groupby(
-                            [
-                                "Pathway",
-                                "Year",
-                            ],
-                            as_index=False,
-                        )[
-                            [
-                                "ImportsOriginal",
-                                "ExportsOriginal",
-                                "ImportsAdj",
-                                "ExportsAdj",
-                            ]
-                        ]
-                        .sum(
-                            min_count=1
-                        )
-                    )
-
-
-                    if not pathway_compare.empty:
-
-                        pathway_compare[
-                            "TradeGapBefore"
-                        ] = (
-                            pathway_compare[
-                                "ImportsOriginal"
-                            ]
-                            - pathway_compare[
-                                "ExportsOriginal"
-                            ]
-                        ).abs()
-
-
-                        pathway_compare[
-                            "TradeGapAfter"
-                        ] = (
-                            pathway_compare[
-                                "ImportsAdj"
-                            ]
-                            - pathway_compare[
-                                "ExportsAdj"
-                            ]
-                        ).abs()
-
-
-                        pathway_compare[
-                            "ExportAdjustment"
-                        ] = (
-                            pathway_compare[
-                                "ExportsAdj"
-                            ]
-                            - pathway_compare[
-                                "ExportsOriginal"
-                            ]
-                        )
-
-
-                        pathway_compare[
-                            "GapReduction"
-                        ] = (
-                            pathway_compare[
-                                "TradeGapBefore"
-                            ]
-                            - pathway_compare[
-                                "TradeGapAfter"
-                            ]
-                        )
-
-
-                    all_analytics = (
-                        load_all_published_analytics()
-                    )
-
-
-                    analysis_progress.progress(
-                        85
-                    )
-
-
-                    # -----------------------------------------
-                    # STEP 5
-                    # -----------------------------------------
-
-                    analysis_status.write(
-                        "Building interactive Plotly figures..."
-                    )
-
-
-                    analysis_progress.progress(
-                        100
-                    )
-
-
-                    analysis_status.update(
-                        label="Analysis ready",
-                        state="complete",
-                        expanded=False,
-                    )
-
-
-                # =================================================
-                # RUN STATUS
-                # =================================================
-
-                complete = bool(
-                    run_summary.get(
-                        "complete",
-                        False,
-                    )
+                st.info(
+                    "No suitable years are available."
                 )
 
+                return
 
-                blocker_count = int(
-                    run_summary.get(
-                        "blocker_count",
-                        0,
-                    )
-                    or 0
-                )
-
-
-                expected_reports = int(
-                    run_summary.get(
-                        "expected_reports",
-                        0,
-                    )
-                    or 0
-                )
-
-
-                reports_used = int(
-                    run_summary.get(
-                        "submitted_reports",
-                        run_summary.get(
-                            "reports_used",
-                            0,
+            with _sc26_third[1]:
+                with st.container(border=True):
+                    selected_year = st.selectbox(
+                        "Year",
+                        years,
+                        index=(
+                            years.index(2050)
+                            if 2050 in years
+                            else len(years) - 1
+                        ),
+                        key=(
+                            "pe22_year_food"
+                            if indicator.startswith(
+                                "Food security"
+                            )
+                            else "pe22_year_other"
                         ),
                     )
-                    or 0
+
+            # ----------------------------------------------------
+            # VISUALIZATION CONTROLS
+            # ----------------------------------------------------
+
+            with _sc26_third[2]:
+                with st.container(border=True):
+                    chart_type = st.radio(
+                        "Chart type",
+                        [
+                            "Grouped bars",
+                            "Lines",
+                            "Data table",
+                        ],
+                        horizontal=False,
+                        key="pe22_chart",
+                    )
+
+            with _sc26_third[2]:
+                with st.container(border=True):
+                    show_time_series = st.checkbox(
+                        "Show changes over time",
+                        value=False,
+                        key="pe22_time_series",
+                        disabled=(
+                            chart_type == "Data table"
+                        ),
+                    )
+
+            if not show_time_series:
+
+                source_df = source_df[
+                    source_df[
+                        "Year"
+                    ] == int(selected_year)
+                ].copy()
+
+            # ====================================================
+            # BUILD COMPARABLE ANALYSIS
+            # ====================================================
+
+            group_columns = [
+                "Iteration",
+                "Pathway",
+                "Year",
+            ]
+
+            if (
+                view == "Participant journey"
+                or indicator == "Food security margin (%)"
+            ):
+
+                group_columns.append(
+                    "Participant"
                 )
 
+            output_rows = []
 
-                if (
-                    complete
-                    and blocker_count == 0
+            omitted_products = 0
+
+            incomplete_groups = 0
+
+            grouped = source_df.groupby(
+                group_columns,
+                dropna=False,
+                sort=False,
+            )
+
+            for identity, frame in grouped:
+
+                if not isinstance(
+                    identity, tuple
                 ):
 
-                    st.success(
-                        "FINAL run - all configured reports "
-                        "are present and the engine reported "
-                        "0 QA blockers."
+                    identity = (
+                        identity,
                     )
 
-
-                elif complete:
-
-                    st.warning(
-                        f"PROVISIONAL run - all configured "
-                        f"reports are present, but "
-                        f"{blocker_count} QA blocker(s) "
-                        "require review."
+                group_info = dict(
+                    zip(
+                        group_columns,
+                        identity,
                     )
+                )
 
+                iteration_name = group_info[
+                    "Iteration"
+                ]
+
+                # -----------------------------------------------
+                # REQUIRED PARTICIPANTS
+                # -----------------------------------------------
+
+                if "Participant" in group_info:
+
+                    required_participants = [
+                        group_info[
+                            "Participant"
+                        ]
+                    ]
 
                 else:
 
-                    st.warning(
-                        f"PROVISIONAL run - "
-                        f"{reports_used}/{expected_reports} "
-                        "configured reports were included "
-                        "and/or QA blockers are present."
-                    )
-
-
-                if blocker_count:
-
-                    st.warning(
-                        "Some blocker-affected ExportsAdj values "
-                        "may be blank. After-adjustment aggregates "
-                        "are therefore provisional and can be "
-                        "incomplete for affected "
-                        "product/pathway/year combinations."
-                    )
-
-
-                # =================================================
-                # KPI CARDS
-                # =================================================
-
-                latest_row = (
-                    trade_view
-                    .sort_values(
-                        "Year"
-                    )
-                    .tail(1)
-                    if not trade_view.empty
-                    else pd.DataFrame()
-                )
-
-
-                before_latest = (
-                    float(
-                        latest_row[
-                            "ExportsOriginal"
-                        ].iloc[0]
-                    )
-                    if not latest_row.empty
-                    else 0.0
-                )
-
-
-                after_latest = (
-                    float(
-                        latest_row[
-                            "ExportsAdj"
-                        ].iloc[0]
-                    )
-                    if (
-                        not latest_row.empty
-                        and pd.notna(
-                            latest_row[
-                                "ExportsAdj"
-                            ].iloc[0]
+                    configured = {
+                        str(value).strip()
+                        for value in (
+                            config_lookup[
+                                iteration_name
+                            ].get(
+                                "participants", []
+                            )
                         )
-                    )
-                    else float(
-                        "nan"
-                    )
-                )
+                    }
 
-
-                latest_adjustment = (
-                    after_latest
-                    - before_latest
-                    if pd.notna(
-                        after_latest
-                    )
-                    else float(
-                        "nan"
-                    )
-                )
-
-
-                k1, k2, k3, k4, k5 = (
-                    st.columns(5)
-                )
-
-
-                k1.metric(
-                    "Participants",
-                    (
-                        f"{submitted_participants}/"
-                        f"{configured_participants}"
-                        if configured_participants
-                        else str(
-                            submitted_participants
-                        )
-                    ),
-                )
-
-
-                k2.metric(
-                    "Products",
-                    int(
-                        selected_pathway_products
-                    ),
-                )
-
-
-                k3.metric(
-                    "Latest exports before",
-                    f"{before_latest:,.0f}",
-                )
-
-
-                k4.metric(
-                    "Latest exports after",
-                    (
-                        f"{after_latest:,.0f}"
-                        if pd.notna(
-                            after_latest
-                        )
-                        else "Unavailable"
-                    ),
-                )
-
-
-                k5.metric(
-                    "Latest export change",
-                    (
-                        f"{latest_adjustment:,.0f}"
-                        if pd.notna(
-                            latest_adjustment
-                        )
-                        else "Unavailable"
-                    ),
-                )
-
-
-                scope_label = (
-                    "All products"
-                    if (
-                        selected_analytics_product
-                        == "All products"
-                    )
-                    else selected_analytics_product
-                )
-
-
-                # =================================================
-                # PRODUCT-LEVEL TRADE BALANCE
-                # =================================================
-                #
-                # IMPORTANT:
-                # Calculate the import-export distance at
-                # Product x Year level first, then sum those
-                # product-level distances by Year.
-                #
-                # This avoids cancellation between products
-                # that can occur in aggregate net trade totals.
-                # =================================================
-
-                st.markdown(
-                    "### Product-level trade balance"
-                )
-
-
-                product_balance_df = (
-                    pathway_df
-                    .groupby(
-                        [
-                            "Product",
-                            "Year",
-                        ],
-                        as_index=False,
-                    )[
-                        [
-                            "ImportsOriginal",
-                            "ExportsOriginal",
-                            "ExportsAdj",
-                        ]
+                    required_participants = [
+                        participant
+                        for participant
+                        in selected_participants
+                        if participant in configured
                     ]
-                    .sum(
-                        min_count=1
-                    )
-                )
 
+                if (
+                    "Participant" not in group_info
+                    and scope_mode
+                    != "All configured participants"
+                    and len(required_participants)
+                    != len(selected_participants)
+                ):
 
-                product_balance_df[
-                    "GapBefore"
-                ] = (
-                    product_balance_df[
-                        "ImportsOriginal"
+                    incomplete_groups += 1
+
+                    continue
+
+                stage_data = {}
+
+                # -----------------------------------------------
+                # DATA AVAILABILITY BY STAGE
+                # -----------------------------------------------
+
+                for stage in selected_stages:
+
+                    stage_df = frame[
+                        frame[
+                            "Stage"
+                        ] == stage
                     ]
-                    - product_balance_df[
-                        "ExportsOriginal"
-                    ]
-                ).abs()
 
+                    if is_trade:
 
-                product_balance_df[
-                    "GapAfter"
-                ] = (
-                    product_balance_df[
-                        "ImportsOriginal"
-                    ]
-                    - product_balance_df[
-                        "ExportsAdj"
-                    ]
-                ).abs()
+                        product_data = {}
 
-
-                product_balance_yearly = (
-                    product_balance_df
-                    .groupby(
-                        "Year",
-                        as_index=False,
-                    )[
-                        [
-                            "GapBefore",
-                            "GapAfter",
-                        ]
-                    ]
-                    .sum(
-                        min_count=1
-                    )
-                    .sort_values(
-                        "Year"
-                    )
-                )
-
-
-                product_balance_fig = (
-                    go.Figure()
-                )
-
-
-                product_balance_fig.add_trace(
-                    go.Scatter(
-                        x=product_balance_yearly[
-                            "Year"
-                        ],
-                        y=product_balance_yearly[
-                            "GapBefore"
-                        ],
-                        mode="lines+markers",
-                        name=(
-                            "Exports before adjustment"
-                        ),
-                    )
-                )
-
-
-                product_balance_fig.add_trace(
-                    go.Scatter(
-                        x=product_balance_yearly[
-                            "Year"
-                        ],
-                        y=product_balance_yearly[
-                            "GapAfter"
-                        ],
-                        mode="lines+markers",
-                        name=(
-                            "Exports after adjustment"
-                        ),
-                    )
-                )
-
-
-                product_balance_fig.add_hline(
-                    y=0,
-                    line_dash="dash",
-                    annotation_text=(
-                        "Perfect balance"
-                    ),
-                    annotation_position=(
-                        "bottom left"
-                    ),
-                )
-
-
-                product_balance_fig.update_layout(
-                    title=(
-                        "Product-level trade balance"
-                    ),
-                    xaxis_title="Year",
-                    yaxis_title=(
-                        "Product-level import-export gap"
-                    ),
-                    hovermode="x unified",
-                    legend=dict(
-                        orientation="h",
-                        yanchor="top",
-                        y=-0.18,
-                        xanchor="center",
-                        x=0.5,
-                        title_text="",
-                    ),
-                    margin=dict(
-                        b=110,
-                    ),
-                )
-
-
-                st.plotly_chart(
-                    product_balance_fig,
-                    use_container_width=True,
-                    key=(
-                        "analytics_product_balance"
-                    ),
-                )
-
-
-                st.caption(
-                    "Lower is better. Zero represents perfect "
-                    "product-level import-export balance."
-                )
-
-
-                # =================================================
-                # 1. AGGREGATE TRADE TRAJECTORY
-                # =================================================
-
-                st.markdown(
-                    "### Aggregate trade trajectory"
-                )
-
-
-                trajectory_fig = (
-                    go.Figure()
-                )
-
-
-                trajectory_fig.add_trace(
-                    go.Scatter(
-                        x=trade_view[
-                            "Year"
-                        ],
-                        y=trade_view[
-                            "ImportsOriginal"
-                        ],
-                        mode="lines+markers",
-                        name="Imports",
-                    )
-                )
-
-
-                trajectory_fig.add_trace(
-                    go.Scatter(
-                        x=trade_view[
-                            "Year"
-                        ],
-                        y=trade_view[
-                            "ExportsOriginal"
-                        ],
-                        mode="lines+markers",
-                        name=(
-                            "Exports before adjustment"
-                        ),
-                    )
-                )
-
-
-                trajectory_fig.add_trace(
-                    go.Scatter(
-                        x=trade_view[
-                            "Year"
-                        ],
-                        y=trade_view[
-                            "ExportsAdj"
-                        ],
-                        mode="lines+markers",
-                        name=(
-                            "Exports after adjustment"
-                        ),
-                    )
-                )
-
-
-                if not trade_view.empty:
-
-                    trajectory_fig.add_vrect(
-                        x0=float(
-                            trade_view[
-                                "Year"
-                            ].min()
-                        ),
-                        x1=2020,
-                        opacity=0.08,
-                        line_width=0,
-                        annotation_text=(
-                            "Historical - unchanged"
-                        ),
-                        annotation_position=(
-                            "top left"
-                        ),
-                    )
-
-
-                trajectory_fig.update_layout(
-                    title=(
-                        "Submitted-participant aggregate | "
-                        f"{selected_analytics_iteration} | "
-                        f"{selected_analytics_pathway} | "
-                        f"{scope_label}"
-                    ),
-                    xaxis_title="Year",
-                    yaxis_title=(
-                        "Submitted-participant "
-                        "trade quantity"
-                    ),
-                    hovermode="x unified",
-                    legend_title_text="Series",
-                )
-
-
-                st.plotly_chart(
-                    trajectory_fig,
-                    use_container_width=True,
-                    key="analytics_trajectory",
-                )
-
-
-                # =================================================
-                # 2 + 3. ADJUSTMENT + GAP
-                # =================================================
-
-                chart_left, chart_right = (
-                    st.columns(2)
-                )
-
-
-                with chart_left:
-
-                    st.markdown(
-                        "### Adjustment by year"
-                    )
-
-
-                    adjustment_plot_df = (
-                        trade_view[
-                            [
-                                "Year",
-                                "ExportAdjustment",
-                            ]
-                        ].copy()
-                    )
-
-
-                    def _adjustment_direction(
-                        value
-                    ):
-
-                        if pd.isna(
-                            value
+                        for product, product_df in (
+                            stage_df.groupby(
+                                "Product"
+                            )
                         ):
-                            return "Unavailable"
 
-                        if value > 0:
-                            return "Increase"
-
-                        if value < 0:
-                            return "Decrease"
-
-                        return "No change"
-
-
-                    adjustment_plot_df[
-                        "Direction"
-                    ] = (
-                        adjustment_plot_df[
-                            "ExportAdjustment"
-                        ]
-                        .apply(
-                            _adjustment_direction
-                        )
-                    )
-
-
-                    adjustment_fig = (
-                        px.bar(
-                            adjustment_plot_df,
-                            x="Year",
-                            y="ExportAdjustment",
-                            color="Direction",
-                            color_discrete_map={
-                                "Increase": "#2ca02c",
-                                "Decrease": "#d62728",
-                                "No change": "#7f7f7f",
-                                "Unavailable": "#f0ad4e",
-                            },
-                            labels={
-                                "ExportAdjustment": (
-                                    "Adjusted exports - "
-                                    "original exports"
-                                ),
-                            },
-                        )
-                    )
-
-
-                    adjustment_fig.update_layout(
-                        legend_title_text=(
-                            "Direction"
-                        )
-                    )
-
-
-                    st.plotly_chart(
-                        adjustment_fig,
-                        use_container_width=True,
-                        key=(
-                            "analytics_adjustment_year"
-                        ),
-                    )
-
-
-                with chart_right:
-
-                    st.markdown(
-                        "### Import-export gap"
-                    )
-
-
-                    gap_long = (
-                        trade_view[
-                            [
-                                "Year",
-                                "TradeGapBefore",
-                                "TradeGapAfter",
-                            ]
-                        ]
-                        .melt(
-                            id_vars="Year",
-                            var_name="Stage",
-                            value_name=(
-                                "Absolute gap"
-                            ),
-                        )
-                    )
-
-
-                    gap_long[
-                        "Stage"
-                    ] = (
-                        gap_long[
-                            "Stage"
-                        ]
-                        .map(
-                            {
-                                "TradeGapBefore": (
-                                    "Before adjustment"
-                                ),
-                                "TradeGapAfter": (
-                                    "After adjustment"
-                                ),
-                            }
-                        )
-                    )
-
-
-                    gap_fig = px.bar(
-                        gap_long,
-                        x="Year",
-                        y="Absolute gap",
-                        color="Stage",
-                        barmode="group",
-                        labels={
-                            "Absolute gap": (
-                                "Absolute "
-                                "import-export gap"
-                            ),
-                        },
-                    )
-
-
-                    gap_fig.update_layout(
-                        title=(
-                            "Submitted-participant "
-                            "aggregate"
-                        )
-                    )
-
-
-                    st.plotly_chart(
-                        gap_fig,
-                        use_container_width=True,
-                        key="analytics_gap",
-                    )
-
-
-                # =================================================
-                # 4. TOP PRODUCTS
-                # =================================================
-
-                st.markdown(
-                    "### Top products affected"
-                )
-
-
-                impact_count = max(
-                    5,
-                    len(
-                        product_impact
-                    ),
-                )
-
-
-                top_n = st.slider(
-                    "Number of products to show",
-                    min_value=5,
-                    max_value=min(
-                        30,
-                        impact_count,
-                    ),
-                    value=min(
-                        15,
-                        impact_count,
-                    ),
-                    key="analytics_top_n",
-                )
-
-
-                top_products = (
-                    product_impact
-                    .head(
-                        top_n
-                    )
-                    .sort_values(
-                        "AbsoluteExportAdjustment",
-                        ascending=True,
-                        na_position="first",
-                    )
-                )
-
-
-                top_fig = px.bar(
-                    top_products,
-                    x="AbsoluteExportAdjustment",
-                    y="ProductDisplay",
-                    orientation="h",
-                    labels={
-                        "AbsoluteExportAdjustment": (
-                            "Absolute export adjustment"
-                        ),
-                        "ProductDisplay": (
-                            "Product"
-                        ),
-                    },
-                )
-
-
-                st.plotly_chart(
-                    top_fig,
-                    use_container_width=True,
-                    key=(
-                        "analytics_top_products"
-                    ),
-                )
-
-
-                # =================================================
-                # 5. HEATMAP
-                # =================================================
-
-                st.markdown(
-                    "### Product × Year adjustment heatmap"
-                )
-
-
-                heatmap_product_keys = set(
-                    product_impact
-                    .head(
-                        top_n
-                    )[
-                        "Product"
-                    ]
-                    .astype(str)
-                )
-
-
-                heatmap_df = (
-                    pathway_df[
-                        pathway_df[
-                            "Product"
-                        ]
-                        .astype(str)
-                        .isin(
-                            heatmap_product_keys
-                        )
-                    ]
-                    .copy()
-                )
-
-
-                heatmap_pivot = (
-                    heatmap_df
-                    .pivot_table(
-                        index="ProductDisplay",
-                        columns="Year",
-                        values=(
-                            "ExportAdjustment"
-                        ),
-                        aggfunc=(
-                            lambda values:
-                            values.sum(
-                                min_count=1
+                            complete = (
+                                product_df[
+                                    "Participant"
+                                ].nunique()
+                                == len(
+                                    required_participants
+                                )
+                                and not product_df[
+                                    "Imports"
+                                ].isna().any()
+                                and not product_df[
+                                    "Exports"
+                                ].isna().any()
                             )
-                        ),
-                    )
-                )
 
+                            if not complete:
 
-                if not heatmap_pivot.empty:
+                                continue
 
-                    heatmap_fig = (
-                        go.Figure(
-                            data=go.Heatmap(
-                                z=(
-                                    heatmap_pivot
-                                    .values
+                            product_data[
+                                product
+                            ] = (
+                                float(
+                                    product_df[
+                                        "Imports"
+                                    ].sum()
                                 ),
-                                x=[
-                                    int(
-                                        value
-                                    )
-                                    for value
-                                    in heatmap_pivot.columns
-                                ],
-                                y=list(
-                                    heatmap_pivot.index
-                                ),
-                                colorscale="RdBu",
-                                zmid=0,
-                                colorbar={
-                                    "title": (
-                                        "Export adjustment"
-                                    )
-                                },
-                                hovertemplate=(
-                                    "Product: %{y}<br>"
-                                    "Year: %{x}<br>"
-                                    "Adjustment: "
-                                    "%{z:,.2f}"
-                                    "<extra></extra>"
+
+                                float(
+                                    product_df[
+                                        "Exports"
+                                    ].sum()
                                 ),
                             )
-                        )
-                    )
 
-
-                    heatmap_fig.update_layout(
-                        xaxis_title="Year",
-                        yaxis_title="Product",
-                        height=max(
-                            450,
-                            (
-                                24
-                                * len(
-                                    heatmap_pivot.index
-                                )
-                                + 180
-                            ),
-                        ),
-                    )
-
-
-                    st.plotly_chart(
-                        heatmap_fig,
-                        use_container_width=True,
-                        key="analytics_heatmap",
-                    )
-
-
-                else:
-
-                    st.info(
-                        "No product-year adjustment "
-                        "values are available for "
-                        "the selected scope."
-                    )
-
-
-                # =================================================
-                # 6. PATHWAY COMPARISON
-                # =================================================
-
-                st.divider()
-
-                st.markdown(
-                    "## Pathway comparison"
-                )
-
-
-                st.caption(
-                    "Compare CurrentTrends, "
-                    "GlobalSustainability and "
-                    "NationalCommitments within the "
-                    "selected iteration. The Product "
-                    "filter above also applies here."
-                )
-
-
-                pathway_metric_label = (
-                    st.selectbox(
-                        "Compare pathways by",
-                        [
-                            "Adjusted exports",
-                            "Exports before adjustment",
-                            "Export adjustment",
-                            (
-                                "Import-export gap "
-                                "after adjustment"
-                            ),
-                            "Gap reduction",
-                        ],
-                        key=(
-                            "analytics_pathway_metric"
-                        ),
-                    )
-                )
-
-
-                pathway_metric_column = {
-                    "Adjusted exports": (
-                        "ExportsAdj"
-                    ),
-                    "Exports before adjustment": (
-                        "ExportsOriginal"
-                    ),
-                    "Export adjustment": (
-                        "ExportAdjustment"
-                    ),
-                    (
-                        "Import-export gap "
-                        "after adjustment"
-                    ): (
-                        "TradeGapAfter"
-                    ),
-                    "Gap reduction": (
-                        "GapReduction"
-                    ),
-                }[
-                    pathway_metric_label
-                ]
-
-
-                if pathway_compare.empty:
-
-                    st.info(
-                        "No pathway-comparison data "
-                        "is available for the selected "
-                        "product scope."
-                    )
-
-
-                else:
-
-                    pathway_line_fig = (
-                        px.line(
-                            pathway_compare,
-                            x="Year",
-                            y=(
-                                pathway_metric_column
-                            ),
-                            color="Pathway",
-                            markers=True,
-                            color_discrete_map={
-                                "CurrentTrends": (
-                                    "#1f77b4"
-                                ),
-                                "GlobalSustainability": (
-                                    "#2ca02c"
-                                ),
-                                "NationalCommitments": (
-                                    "#9467bd"
-                                ),
-                            },
-                            labels={
-                                pathway_metric_column: (
-                                    pathway_metric_label
-                                )
-                            },
-                        )
-                    )
-
-
-                    pathway_line_fig.update_layout(
-                        title=(
-                            f"{pathway_metric_label} "
-                            "across pathways | "
-                            f"{selected_analytics_iteration} "
-                            f"| {scope_label}"
-                        ),
-                        xaxis_title="Year",
-                        yaxis_title=(
-                            pathway_metric_label
-                        ),
-                        hovermode="x unified",
-                        legend_title_text=(
-                            "Pathway"
-                        ),
-                    )
-
-
-                    if (
-                        pathway_compare[
-                            "Year"
-                        ].min()
-                        <= 2020
-                    ):
-
-                        pathway_line_fig.add_vrect(
-                            x0=float(
-                                pathway_compare[
-                                    "Year"
-                                ].min()
-                            ),
-                            x1=2020,
-                            opacity=0.08,
-                            line_width=0,
-                            annotation_text=(
-                                "Historical - unchanged"
-                            ),
-                            annotation_position=(
-                                "top left"
-                            ),
-                        )
-
-
-                    st.plotly_chart(
-                        pathway_line_fig,
-                        use_container_width=True,
-                        key=(
-                            "analytics_pathway_line"
-                        ),
-                    )
-
-
-                    # -----------------------------------------
-                    # Selected year pathway comparison
-                    # -----------------------------------------
-
-                    available_years = sorted(
-                        pathway_compare[
-                            "Year"
-                        ]
-                        .dropna()
-                        .astype(int)
-                        .unique()
-                    )
-
-
-                    selected_compare_year = (
-                        st.selectbox(
-                            (
-                                "Year for pathway "
-                                "before-vs-after comparison"
-                            ),
-                            available_years,
-                            index=(
-                                len(
-                                    available_years
-                                )
-                                - 1
-                            ),
-                            key=(
-                                "analytics_pathway_year"
-                            ),
-                        )
-                    )
-
-
-                    pathway_year = (
-                        pathway_compare[
-                            (
-                                pathway_compare[
-                                    "Year"
-                                ].astype(int)
-                                == int(
-                                    selected_compare_year
-                                )
-                            )
-                        ][
-                            [
-                                "Pathway",
-                                "ExportsOriginal",
-                                "ExportsAdj",
-                            ]
-                        ]
-                        .copy()
-                    )
-
-
-                    pathway_year = (
-                        pathway_year
-                        .melt(
-                            id_vars="Pathway",
-                            var_name="Stage",
-                            value_name="Exports",
-                        )
-                    )
-
-
-                    pathway_year[
-                        "Stage"
-                    ] = (
-                        pathway_year[
-                            "Stage"
-                        ]
-                        .map(
-                            {
-                                "ExportsOriginal": (
-                                    "Before adjustment"
-                                ),
-                                "ExportsAdj": (
-                                    "After adjustment"
-                                ),
-                            }
-                        )
-                    )
-
-
-                    pathway_bar_fig = (
-                        px.bar(
-                            pathway_year,
-                            x="Pathway",
-                            y="Exports",
-                            color="Stage",
-                            barmode="group",
-                            labels={
-                                "Exports": (
-                                    "Export quantity"
-                                )
-                            },
-                        )
-                    )
-
-
-                    pathway_bar_fig.update_layout(
-                        title=(
-                            "Exports before vs after "
-                            "by pathway | "
-                            f"{selected_compare_year} "
-                            f"| {scope_label}"
-                        ),
-                        xaxis_title="Pathway",
-                        yaxis_title=(
-                            "Submitted-participant "
-                            "export quantity"
-                        ),
-                        legend_title_text="Stage",
-                    )
-
-
-                    st.plotly_chart(
-                        pathway_bar_fig,
-                        use_container_width=True,
-                        key=(
-                            "analytics_pathway_bar"
-                        ),
-                    )
-
-
-                # =================================================
-                # 7. ITERATION COMPARISON
-                # =================================================
-
-                st.divider()
-
-                st.markdown(
-                    "## Comparison across iterations"
-                )
-
-
-                metric_label = (
-                    st.selectbox(
-                        "Iteration comparison metric",
-                        [
-                            "Adjusted exports",
-                            "Original exports",
-                            (
-                                "Absolute import-export "
-                                "gap after"
-                            ),
-                            "Export adjustment",
-                        ],
-                        key=(
-                            "analytics_compare_metric"
-                        ),
-                    )
-                )
-
-
-                metric_column = {
-                    "Adjusted exports": (
-                        "ExportsAdj"
-                    ),
-                    "Original exports": (
-                        "ExportsOriginal"
-                    ),
-                    (
-                        "Absolute import-export "
-                        "gap after"
-                    ): (
-                        "TradeGapAfter"
-                    ),
-                    "Export adjustment": (
-                        "ExportAdjustment"
-                    ),
-                }[
-                    metric_label
-                ]
-
-
-                if all_analytics.empty:
-
-                    st.info(
-                        "No published iterations "
-                        "are available for comparison yet."
-                    )
-
-
-                else:
-
-                    comparison = (
-                        all_analytics[
-                            (
-                                all_analytics[
-                                    "Pathway"
-                                ].astype(str)
-                                == selected_analytics_pathway
-                            )
-                        ]
-                        .copy()
-                    )
-
-
-                    if (
-                        selected_analytics_product
-                        != "All products"
-                    ):
-
-                        comparison = (
-                            comparison[
-                                (
-                                    comparison[
-                                        "ProductDisplay"
-                                    ].astype(str)
-                                    == selected_analytics_product
-                                )
-                            ]
-                            .copy()
-                        )
-
-
-                    comparison = (
-                        comparison
-                        .groupby(
-                            [
-                                "Iteration",
-                                "Year",
-                            ],
-                            as_index=False,
-                        )[
-                            metric_column
-                        ]
-                        .sum(
-                            min_count=1
-                        )
-                    )
-
-
-                    if comparison.empty:
-
-                        st.info(
-                            "No comparable published data "
-                            "exists for the selected filters."
-                        )
-
+                        stage_data[
+                            stage
+                        ] = product_data
 
                     else:
 
-                        comparison_fig = (
-                            px.line(
-                                comparison,
-                                x="Year",
-                                y=metric_column,
-                                color="Iteration",
-                                markers=True,
-                                labels={
-                                    metric_column: (
-                                        metric_label
-                                    )
-                                },
+                        complete = (
+                            not stage_df.empty
+                            and stage_df[
+                                "Participant"
+                            ].nunique()
+                            == len(
+                                required_participants
                             )
                         )
 
+                        stage_data[
+                            stage
+                        ] = (
+                            stage_df
+                            if complete
+                            else None
+                        )
 
-                        comparison_fig.update_layout(
-                            hovermode="x unified",
-                            legend_title_text=(
-                                "Iteration"
+                # -----------------------------------------------
+                # COMMON PRODUCT COVERAGE
+                # -----------------------------------------------
+
+                if is_trade:
+
+                    available_sets = [
+                        set(product_data)
+                        for product_data in (
+                            stage_data.values()
+                        )
+                        if product_data
+                    ]
+
+                    if len(
+                        available_sets
+                    ) != len(
+                        selected_stages
+                    ):
+
+                        incomplete_groups += 1
+
+                        continue
+
+                    common_products = (
+                        set.intersection(
+                            *available_sets
+                        )
+                    )
+
+                    universe = set(
+                        source_df.loc[
+                            (
+                                source_df[
+                                    "Iteration"
+                                ] == group_info[
+                                    "Iteration"
+                                ]
+                            )
+                            &
+                            (
+                                source_df[
+                                    "Pathway"
+                                ] == group_info[
+                                    "Pathway"
+                                ]
+                            )
+                            &
+                            (
+                                source_df[
+                                    "Year"
+                                ] == group_info[
+                                    "Year"
+                                ]
                             ),
-                            title=(
-                                f"{selected_analytics_pathway} "
-                                f"| {scope_label}"
+                            "Product",
+                        ].unique()
+                    )
+
+                    omitted_products += max(
+                        0,
+                        len(universe)
+                        - len(common_products),
+                    )
+
+                    if not common_products:
+
+                        incomplete_groups += 1
+
+                        continue
+
+                # -----------------------------------------------
+                # CALCULATE INDICATORS
+                # -----------------------------------------------
+
+                for stage in selected_stages:
+
+                    values = stage_data.get(
+                        stage
+                    )
+
+                    if (
+                        values is None
+                        or (
+                            is_trade
+                            and not values
+                        )
+                    ):
+
+                        incomplete_groups += 1
+
+                        continue
+
+                    if is_trade:
+
+                        imports = sum(
+                            values[product][0]
+                            for product in common_products
+                        )
+
+                        exports = sum(
+                            values[product][1]
+                            for product in common_products
+                        )
+
+                        if indicator == "Total imports":
+
+                            result = imports
+
+                        elif indicator == "Total exports":
+
+                            result = exports
+
+                        else:
+
+                            result = sum(
+                                abs(
+                                    values[product][0]
+                                    - values[product][1]
+                                )
+                                for product in common_products
+                            )
+
+                        coverage = (
+                            f"{len(common_products)}/"
+                            f"{len(universe)} products"
+                        )
+
+                    else:
+
+                        data = values.copy()
+
+                        for column in [
+                            "kcal_feas",
+                            "kcal_mder",
+                            "Agriculture",
+                            "Land",
+                        ]:
+
+                            data[
+                                column
+                            ] = pd.to_numeric(
+                                data[column],
+                                errors="coerce",
+                            )
+
+                        if indicator.startswith(
+                            "Food security"
+                        ):
+
+                            invalid = (
+                                (
+                                    data[
+                                        "kcal_mder"
+                                    ] <= 0
+                                ).any()
+                                or data[
+                                    [
+                                        "kcal_feas",
+                                        "kcal_mder",
+                                    ]
+                                ].isna().any().any()
+                            )
+
+                            if invalid:
+
+                                incomplete_groups += 1
+
+                                continue
+
+                            margins = (
+                                (
+                                    data[
+                                        "kcal_feas"
+                                    ]
+                                    /
+                                    data[
+                                        "kcal_mder"
+                                    ]
+                                )
+                                - 1.0
+                            ) * 100.0
+
+                            if (
+                                indicator
+                                == "Food security margin (%)"
+                            ):
+
+                                if len(data) != 1:
+
+                                    incomplete_groups += 1
+
+                                    continue
+
+                                result = float(
+                                    margins.iloc[0]
+                                )
+
+                            else:
+
+                                result = float(
+                                    margins.between(
+                                        10, 50
+                                    ).mean()
+                                    * 100.0
+                                )
+
+                        else:
+
+                            column = (
+                                "Agriculture"
+                                if indicator.startswith(
+                                    "Agriculture"
+                                )
+                                else "Land"
+                            )
+
+                            if data[
+                                column
+                            ].isna().any():
+
+                                incomplete_groups += 1
+
+                                continue
+
+                            result = (
+                                float(
+                                    data[
+                                        column
+                                    ].sum()
+                                )
+                                / 1000.0
+                            )
+
+                        coverage = (
+                            f"{len(required_participants)} "
+                            "participants"
+                        )
+
+                    output_rows.append({
+                        **group_info,
+
+                        "Stage": stage,
+
+                        "Value": result,
+
+                        "Coverage": coverage,
+                    })
+
+            # ====================================================
+            # RESULTS
+            # ====================================================
+
+            plot_df = pd.DataFrame(
+                output_rows
+            )
+
+            if plot_df.empty:
+
+                st.warning(
+                    "No complete comparison is available "
+                    "for these filters. Try fewer stages, "
+                    "a specific product or common participants."
+                )
+
+                return
+
+            if omitted_products:
+
+                st.warning(
+                    f"{omitted_products} product-year "
+                    "comparisons were excluded because "
+                    "some calculated values were unavailable. "
+                    "The displayed totals use the same "
+                    "available products across compared stages."
+                )
+
+            if incomplete_groups:
+
+                st.warning(
+                    f"{incomplete_groups} incomplete "
+                    "scope/stage checks were excluded. "
+                    "Missing values were not treated as zero."
+                )
+
+            # ----------------------------------------------------
+            # CHART CATEGORIES
+            # ----------------------------------------------------
+
+            if view == "Within iteration":
+
+                if "Participant" in plot_df:
+
+                    plot_df[
+                        "Series"
+                    ] = (
+                        plot_df[
+                            "Participant"
+                        ].astype(str)
+                        + " | "
+                        + plot_df[
+                            "Stage"
+                        ]
+                    )
+
+                else:
+
+                    plot_df[
+                        "Series"
+                    ] = plot_df[
+                        "Stage"
+                    ]
+
+                plot_df[
+                    "Category"
+                ] = plot_df[
+                    "Pathway"
+                ]
+
+            elif view == "Across iterations":
+
+                if "Participant" in plot_df:
+
+                    prefix = (
+                        plot_df[
+                            "Participant"
+                        ].astype(str)
+                        + " | "
+                    )
+
+                else:
+
+                    prefix = ""
+
+                plot_df[
+                    "Series"
+                ] = (
+                    prefix
+                    + plot_df[
+                        "Pathway"
+                    ]
+                    + " | "
+                    + plot_df[
+                        "Stage"
+                    ]
+                )
+
+                plot_df[
+                    "Category"
+                ] = plot_df[
+                    "Iteration"
+                ]
+
+            else:
+
+                plot_df[
+                    "Series"
+                ] = (
+                    plot_df[
+                        "Participant"
+                    ].astype(str)
+                    + " | "
+                    + plot_df[
+                        "Pathway"
+                    ]
+                    + " | "
+                    + plot_df[
+                        "Stage"
+                    ]
+                )
+
+                plot_df[
+                    "Category"
+                ] = plot_df[
+                    "Iteration"
+                ]
+
+            # ----------------------------------------------------
+            # TIME SERIES MODE
+            # ----------------------------------------------------
+
+            if show_time_series:
+
+                plot_df[
+                    "Category"
+                ] = plot_df[
+                    "Year"
+                ].astype(int)
+
+                if view == "Within iteration":
+
+                    if "Participant" in plot_df:
+
+                        prefix = (
+                            plot_df[
+                                "Participant"
+                            ].astype(str)
+                            + " | "
+                        )
+
+                    else:
+
+                        prefix = ""
+
+                    plot_df[
+                        "Series"
+                    ] = (
+                        prefix
+                        + plot_df[
+                            "Pathway"
+                        ]
+                        + " | "
+                        + plot_df[
+                            "Stage"
+                        ]
+                    )
+
+                elif view == "Across iterations":
+
+                    plot_df[
+                        "Series"
+                    ] = (
+                        plot_df[
+                            "Iteration"
+                        ]
+                        + " | "
+                        + plot_df[
+                            "Pathway"
+                        ]
+                        + " | "
+                        + plot_df[
+                            "Stage"
+                        ]
+                    )
+
+                else:
+
+                    plot_df[
+                        "Series"
+                    ] = (
+                        plot_df[
+                            "Iteration"
+                        ]
+                        + " | "
+                        + plot_df[
+                            "Series"
+                        ]
+                    )
+
+            # ====================================================
+            # PLOTTING
+            # ====================================================
+
+            st.markdown(
+                "#### " + indicator
+            )
+
+            st.caption(
+                f"{view} | "
+                + (
+                    "All available years"
+                    if show_time_series
+                    else str(selected_year)
+                )
+                + " | "
+                + ", ".join(
+                    selected_stages
+                )
+            )
+
+            if chart_type != "Data table":
+
+                chart_kwargs = {
+                    "data_frame": plot_df,
+                    "x": "Category",
+                    "y": "Value",
+                    "color": "Series",
+                    "hover_data": [
+                        "Coverage",
+                        "Year",
+                        "Iteration",
+                        "Pathway",
+                        "Stage",
+                    ],
+                    "labels": {
+                        "Value": indicator,
+                        "Category": (
+                            "Year"
+                            if show_time_series
+                            else view
+                        ),
+                    },
+                }
+
+                # Consistent stage colors where practical.
+
+                if (
+                    view == "Within iteration"
+                    and "Participant" not in plot_df
+                ):
+
+                    chart_kwargs[
+                        "color_discrete_map"
+                    ] = {
+                        "Before trade adjustment": (
+                            "#4169A1"
+                        ),
+                        "After trade adjustment": (
+                            "#2C9077"
+                        ),
+                    }
+
+                if chart_type == "Grouped bars":
+
+                    figure = px.bar(
+                        **chart_kwargs,
+                        barmode="group",
+                    )
+
+                else:
+
+                    figure = px.line(
+                        **chart_kwargs,
+                        markers=True,
+                    )
+
+                # -----------------------------------------------
+                # SCIENTIFIC REFERENCE LINES
+                # -----------------------------------------------
+
+                if indicator == "Food security margin (%)":
+
+                    for threshold in (
+                        10, 50
+                    ):
+
+                        figure.add_hline(
+                            y=threshold,
+                            line_dash="dash",
+                            opacity=0.55,
+                        )
+
+                elif indicator == (
+                    "Food security target achievement (%)"
+                ):
+
+                    figure.add_hline(
+                        y=100,
+                        line_dash="dash",
+                        opacity=0.55,
+                    )
+
+                elif (
+                    not show_time_series
+                    and int(selected_year) == 2050
+                    and view != "Participant journey"
+                    and len(selected_participants)
+                        == len(all_participants)
+                ):
+
+                    if indicator.startswith(
+                        "Agriculture GHG"
+                    ):
+
+                        figure.add_hline(
+                            y=4.0,
+                            line_dash="dash",
+                            opacity=0.55,
+                        )
+
+                    elif indicator.startswith(
+                        "Land-use change GHG"
+                    ):
+
+                        figure.add_hline(
+                            y=-1.0,
+                            line_dash="dash",
+                            opacity=0.55,
+                        )
+
+                figure.update_layout(
+                    template="plotly_white",
+                    height=520,
+                    hovermode="x unified",
+                    legend_title_text="",
+                    margin={
+                        "l": 10,
+                        "r": 10,
+                        "t": 30,
+                        "b": 75,
+                    },
+                )
+
+                st.plotly_chart(
+                    figure,
+                    use_container_width=True,
+                    key="pe22_main_chart",
+                )
+
+            # ====================================================
+            # DATA TABLE + EXPORT
+            # ====================================================
+
+            display_columns = [
+                "Iteration",
+                "Pathway",
+                "Stage",
+                "Year",
+            ]
+
+            if "Participant" in plot_df:
+
+                display_columns.append(
+                    "Participant"
+                )
+
+            display_columns += [
+                "Value",
+                "Coverage",
+            ]
+
+            result_table = (
+                plot_df[
+                    display_columns
+                ].sort_values(
+                    [
+                        "Iteration",
+                        "Pathway",
+                        "Year",
+                        "Stage",
+                    ]
+                )
+            )
+
+            st.dataframe(
+                result_table,
+                hide_index=True,
+                use_container_width=True,
+            )
+
+            st.download_button(
+                "Download comparison CSV",
+                data=(
+                    result_table.to_csv(
+                        index=False
+                    ).encode(
+                        "utf-8-sig"
+                    )
+                ),
+                file_name=(
+                    "scenathon_pathway_iteration_comparison.csv"
+                ),
+                mime="text/csv",
+                key="pe22_download",
+            )
+
+            st.caption(
+                "Trade quantities retain their source units. "
+                "Food security target: 10%-50% above minimum "
+                "dietary energy requirement in 2030 and 2050. "
+                "Agriculture GHG target: at most 4 Gt CO2e "
+                "in 2050. Land-use GHG target: at most "
+                "-1 Gt CO2e in 2050. "
+                "Interpret global totals using the "
+                "selected participant coverage."
+            )
+
+        render_pathway_iteration_evolution()
+
+        st.divider()
+
+        # SECTION29_LEGACY_STUDIO_REMOVED
+        # One unified comparison workspace above.
+
+        # SECTION28_CALCULATOR_COMPARISON
+
+        st.divider()
+
+        st.subheader("Trade Analytics")
+
+        st.caption(
+            "Compare imports, exports and trade balance "
+            "using submitted FABLE-C calculator results "
+            "before and after trade adjustment."
+        )
+
+        configs = list_iteration_configs()
+
+        iterations = [
+            str(c["iteration"])
+            for c in configs
+            if str(c.get("iteration", "")).strip()
+        ]
+
+        if not iterations:
+
+            st.info(
+                "No iteration is available."
+            )
+
+        else:
+
+            c1, c2, c3 = st.columns(
+                [1, 1.5, 1]
+            )
+
+            with c1:
+
+                iteration = st.selectbox(
+                    "Iteration",
+                    iterations,
+                    key="sc28_iteration",
+                )
+
+            config = (
+                load_iteration_config(iteration)
+                or {}
+            )
+
+            pathways = [
+                str(p).strip()
+                for p in config.get(
+                    "pathways", []
+                )
+                if str(p).strip()
+            ]
+
+            with c2:
+
+                selected_pathway = st.selectbox(
+                    "Pathway",
+                    pathways,
+                    key="sc29_trade_pathway",
+                )
+
+                selected_pathways = (
+                    [selected_pathway]
+                    if selected_pathway
+                    else []
+                )
+
+            with c3:
+
+                st.write("")
+
+                refresh = st.button(
+                    "Load / Refresh",
+                    type="primary",
+                    key="sc28_refresh",
+                    use_container_width=True,
+                )
+
+            snapshot_key = (
+                iteration,
+                tuple(sorted(selected_pathways)),
+            )
+
+            snapshot = st.session_state.get(
+                "sc28_trade_snapshot"
+            )
+
+            # ================================================
+            # LOAD BEFORE AND AFTER WORKBOOK SUBMISSIONS
+            # ================================================
+
+            if refresh:
+
+                records = []
+                warnings = []
+
+                expected_participants = [
+                    str(p).strip()
+                    for p in config.get(
+                        "participants", []
+                    )
+                    if str(p).strip()
+                ]
+
+                stage_labels = {
+                    "before": "Before trade adjustment",
+                    "after": "After trade adjustment",
+                }
+
+                with st.spinner(
+                    "Loading submitted calculator results..."
+                ):
+
+                    for stage, label in (
+                        stage_labels.items()
+                    ):
+
+                        try:
+
+                            payloads = (
+                                list_submission_payloads(
+                                    iteration,
+                                    stage=stage,
+                                )
+                            )
+
+                        except Exception as exc:
+
+                            warnings.append(
+                                f"{label}: {exc}"
+                            )
+
+                            continue
+
+                        for payload in payloads:
+
+                            participant = str(
+                                payload.get(
+                                    "participant", ""
+                                )
+                            ).strip()
+
+                            pathway = str(
+                                payload.get(
+                                    "pathway", ""
+                                )
+                            ).strip()
+
+                            if (
+                                participant not in expected_participants
+                                or pathway not in selected_pathways
+                            ):
+                                continue
+
+                            for row in payload.get(
+                                "rows", []
+                            ):
+
+                                records.append({
+                                    "Iteration": iteration,
+                                    "Pathway": pathway,
+                                    "Participant": participant,
+                                    "Stage": label,
+
+                                    "Product": str(
+                                        row.get(
+                                            "Product", ""
+                                        )
+                                    ).strip().casefold(),
+
+                                    "Year": row.get(
+                                        "Year"
+                                    ),
+
+                                    "Imports": row.get(
+                                        "Import_quantity"
+                                    ),
+
+                                    "Exports": row.get(
+                                        "Export_quantity"
+                                    ),
+                                })
+
+                frame = pd.DataFrame(records)
+
+                if not frame.empty:
+
+                    for col in [
+                        "Year",
+                        "Imports",
+                        "Exports",
+                    ]:
+
+                        frame[col] = pd.to_numeric(
+                            frame[col],
+                            errors="coerce",
+                        )
+
+                    frame = frame.dropna(
+                        subset=["Year"]
+                    )
+
+                    frame["Year"] = (
+                        frame["Year"].astype(int)
+                    )
+
+                    duplicate = frame.duplicated(
+                        subset=[
+                            "Pathway",
+                            "Participant",
+                            "Stage",
+                            "Product",
+                            "Year",
+                        ],
+                        keep=False,
+                    )
+
+                    if duplicate.any():
+
+                        raise ValueError(
+                            "Duplicate product/year records "
+                            "found in submitted calculators."
+                        )
+
+                snapshot = {
+                    "key": snapshot_key,
+                    "data": frame,
+                    "warnings": warnings,
+                    "expected": expected_participants,
+                }
+
+                st.session_state[
+                    "sc28_trade_snapshot"
+                ] = snapshot
+
+            if not selected_pathways:
+
+                st.info(
+                    "Select at least one pathway."
+                )
+
+            elif (
+                snapshot is None
+                or snapshot.get("key") != snapshot_key
+            ):
+
+                st.info(
+                    "Click Load / Refresh to display "
+                    "trade analytics."
+                )
+
+            else:
+
+                df = snapshot["data"].copy()
+
+                for message in snapshot["warnings"]:
+                    st.warning(message)
+
+                if df.empty:
+
+                    st.info(
+                        "No matching calculator reports "
+                        "were found."
+                    )
+
+                else:
+
+                    # ========================================
+                    # FILTERS
+                    # ========================================
+
+                    products = sorted(
+                        df["Product"]
+                        .dropna()
+                        .unique()
+                        .tolist()
+                    )
+
+                    f1, f2 = st.columns(
+                        [1.8, 1]
+                    )
+
+                    with f1:
+
+                        selected_product = st.selectbox(
+                            "Product",
+                            ["All products"] + products,
+                            key="sc28_product",
+                        )
+
+                    with f2:
+
+                        years = sorted(
+                            df["Year"].unique().tolist()
+                        )
+
+                        selected_year = st.selectbox(
+                            "Focus year",
+                            years,
+                            index=(
+                                years.index(2050)
+                                if 2050 in years
+                                else len(years) - 1
+                            ),
+                            key="sc28_year",
+                        )
+
+
+                    if (
+                        selected_product
+                        != "All products"
+                    ):
+
+                        df = df[
+                            df["Product"]
+                            == selected_product
+                        ].copy()
+
+                    # ========================================
+                    # PAIRED DATA VALIDATION
+                    # ========================================
+
+                    expected = set(
+                        snapshot["expected"]
+                    )
+
+                    stages = [
+                        "Before trade adjustment",
+                        "After trade adjustment",
+                    ]
+
+                    # A product-year-pathway is comparable
+                    # only when both stages have complete
+                    # reports from all configured participants.
+
+                    summed = {}
+
+                    for identity, group in df.groupby(
+                        [
+                            "Pathway",
+                            "Product",
+                            "Year",
+                            "Stage",
+                        ],
+                        dropna=False,
+                    ):
+
+                        pathway, product, year, stage = identity
+
+                        complete = (
+                            set(group["Participant"])
+                            == expected
+                            and len(group) == len(expected)
+                            and group[
+                                ["Imports", "Exports"]
+                            ].notna().all().all()
+                        )
+
+                        if not complete:
+                            continue
+
+                        summed[identity] = (
+                            float(group["Imports"].sum()),
+                            float(group["Exports"].sum()),
+                        )
+
+                    # Keep the same product set
+                    # for every displayed year and stage.
+
+                    common = {}
+
+                    for pathway in selected_pathways:
+
+                        universe = set(
+                            df.loc[
+                                df["Pathway"] == pathway,
+                                "Product",
+                            ]
+                        )
+
+                        paired = set(universe)
+
+                        for year in years:
+
+                            for stage in stages:
+
+                                available_products = {
+                                    product
+                                    for (
+                                        pw, product, yr, stg
+                                    ) in summed
+                                    if (
+                                        pw == pathway
+                                        and yr == year
+                                        and stg == stage
+                                    )
+                                }
+
+                                paired &= available_products
+
+                        common[pathway] = paired
+
+                        if len(paired) < len(universe):
+
+                            st.warning(
+                                f"{pathway}: "
+                                f"{len(paired)}/{len(universe)} "
+                                "products have complete matching "
+                                "Before and After reports across "
+                                "all displayed years. "
+                                "Charts use only this common set."
+                            )
+
+                    # ========================================
+                    # YEARLY TRADE TOTALS AND GAPS
+                    # ========================================
+
+                    annual_rows = []
+                    product_rows = []
+
+                    for pathway in selected_pathways:
+
+                        paired_products = common[
+                            pathway
+                        ]
+
+                        for year in years:
+
+                            for stage in stages:
+
+                                if not paired_products:
+                                    continue
+
+                                imports = sum(
+                                    summed[
+                                        (
+                                            pathway,
+                                            p,
+                                            year,
+                                            stage,
+                                        )
+                                    ][0]
+                                    for p in paired_products
+                                )
+
+                                exports = sum(
+                                    summed[
+                                        (
+                                            pathway,
+                                            p,
+                                            year,
+                                            stage,
+                                        )
+                                    ][1]
+                                    for p in paired_products
+                                )
+
+                                gap = sum(
+                                    abs(
+                                        summed[
+                                            (
+                                                pathway,
+                                                p,
+                                                year,
+                                                stage,
+                                            )
+                                        ][0]
+                                        -
+                                        summed[
+                                            (
+                                                pathway,
+                                                p,
+                                                year,
+                                                stage,
+                                            )
+                                        ][1]
+                                    )
+                                    for p in paired_products
+                                )
+
+                                annual_rows.append({
+                                    "Pathway": pathway,
+                                    "Year": year,
+                                    "Stage": stage,
+                                    "Imports": imports,
+                                    "Exports": exports,
+                                    "Product-level gap": gap,
+                                    "Products compared": (
+                                        len(paired_products)
+                                    ),
+                                })
+
+                        # Product changes in selected year
+
+                        for product in paired_products:
+
+                            before_i, before_e = summed[
+                                (
+                                    pathway,
+                                    product,
+                                    selected_year,
+                                    stages[0],
+                                )
+                            ]
+
+                            after_i, after_e = summed[
+                                (
+                                    pathway,
+                                    product,
+                                    selected_year,
+                                    stages[1],
+                                )
+                            ]
+
+                            product_rows.append({
+                                "Pathway": pathway,
+                                "Product": product,
+                                "Import change": (
+                                    after_i - before_i
+                                ),
+                                "Export change": (
+                                    after_e - before_e
+                                ),
+                            })
+
+                    annual = pd.DataFrame(
+                        annual_rows
+                    )
+
+                    changes = pd.DataFrame(
+                        product_rows
+                    )
+
+                    if annual.empty:
+
+                        st.warning(
+                            "No complete Before/After comparison "
+                            "is available for this scope."
+                        )
+
+                    else:
+
+                        colors = {
+                            "Before trade adjustment": (
+                                "#406EA5"
+                            ),
+                            "After trade adjustment": (
+                                "#28886E"
+                            ),
+                        }
+
+                        # SECTION29_TRADE_SUMMARY
+
+                        _s29_focus = annual.loc[
+                            (
+                                annual["Pathway"]
+                                == selected_pathway
+                            )
+                            &
+                            (
+                                annual["Year"]
+                                == selected_year
+                            )
+                        ]
+
+                        _s29_gaps = dict(
+                            zip(
+                                _s29_focus["Stage"],
+                                _s29_focus[
+                                    "Product-level gap"
+                                ],
+                            )
+                        )
+
+                        _s29_before_gap = (
+                            _s29_gaps.get(
+                                "Before trade adjustment"
+                            )
+                        )
+
+                        _s29_after_gap = (
+                            _s29_gaps.get(
+                                "After trade adjustment"
+                            )
+                        )
+
+                        st.markdown(
+                            f"#### Trade balance summary "
+                            f"- {selected_year}"
+                        )
+
+                        if (
+                            _s29_before_gap is not None
+                            and _s29_after_gap is not None
+                        ):
+
+                            _s29_cols = st.columns(3)
+
+                            _s29_cols[0].metric(
+                                "Before adjustment",
+                                f"{_s29_before_gap:,.0f}",
+                            )
+
+                            _s29_cols[1].metric(
+                                "After adjustment",
+                                f"{_s29_after_gap:,.0f}",
+                            )
+
+                            if _s29_before_gap > 0:
+
+                                _s29_pct = (
+                                    (
+                                        _s29_before_gap
+                                        - _s29_after_gap
+                                    )
+                                    / _s29_before_gap
+                                    * 100.0
+                                )
+
+                                _s29_cols[2].metric(
+                                    "Imbalance reduction",
+                                    f"{_s29_pct:+.1f}%",
+                                )
+
+                            else:
+
+                                _s29_cols[2].metric(
+                                    "Imbalance reduction",
+                                    "N/A",
+                                )
+
+                            st.caption(
+                                f"{selected_pathway} | "
+                                f"{len(common[selected_pathway])} "
+                                "matched products | "
+                                f"{len(snapshot['expected'])} "
+                                "configured participants. "
+                                "Calculated as the sum of "
+                                "absolute global product gaps."
+                            )
+
+                        # ================================
+                        # PLOT 1 - IMPORT AND EXPORT TRENDS
+                        # ================================
+
+                        st.markdown(
+                            "### 1. Import and Export Trends"
+                        )
+
+                        st.caption(
+                            "Annual imports and exports from "
+                            "submitted calculators before "
+                            "and after trade adjustment."
+                        )
+
+                        trajectory = annual[
+                            annual["Pathway"]
+                            == selected_pathway
+                        ].copy()
+
+                        trajectory_long = trajectory.melt(
+                            id_vars=["Year", "Stage"],
+                            value_vars=[
+                                "Imports",
+                                "Exports",
+                            ],
+                            var_name="Trade flow",
+                            value_name="Quantity",
+                        )
+
+                        trajectory_long["Series"] = (
+                            trajectory_long["Trade flow"]
+                            + " - "
+                            + trajectory_long["Stage"].map({
+                                "Before trade adjustment": (
+                                    "Before"
+                                ),
+                                "After trade adjustment": (
+                                    "After"
+                                ),
+                            })
+                        )
+
+                        fig1 = px.line(
+                            trajectory_long,
+                            x="Year",
+                            y="Quantity",
+                            color="Series",
+                            markers=True,
+                            color_discrete_map={
+                                "Imports - Before": "#4474A5",
+                                "Exports - Before": "#779BC6",
+                                "Imports - After": "#236F5C",
+                                "Exports - After": "#43A384",
+                            },
+                        )
+
+                        # Before = dashed, After = solid.
+
+                        for _s29_trace in fig1.data:
+
+                            _s29_trace.line.dash = (
+                                "dash"
+                                if "Before" in _s29_trace.name
+                                else "solid"
+                            )
+
+                            _s29_trace.line.width = 2.6
+
+                        fig1.update_layout(
+                            template="plotly_white",
+                            height=450,
+                            legend_title_text="",
+                            hovermode="x unified",
+                            xaxis_title="Year",
+                            yaxis_title=(
+                                "Reported trade quantity"
                             ),
                         )
 
+                        # SECTION30_FIXED_VISUAL_POLISH : fig1
+                        fig1.update_layout(
+                            height=520,
+                            margin=dict(l=12, r=12, t=45, b=115),
+                            legend=dict(
+                                orientation="h", x=0.5, xanchor="center",
+                                y=-0.18, yanchor="top",
+                                font=dict(size=11, color="#182438"),
+                                title=None,
+                            ),
+                        )
 
                         st.plotly_chart(
-                            comparison_fig,
+                            fig1,
                             use_container_width=True,
-                            key=(
-                                "analytics_iteration_compare"
+                            key="sc28_trends",
+                        )
+
+                        # ================================
+                        # PLOT 2 - PRODUCT-LEVEL TRADE GAP
+                        # ================================
+
+                        st.markdown(
+                            "### 2. Product-Level Trade Imbalance"
+                        )
+
+                        st.caption(
+                            "Sum of absolute product-level "
+                            "import-export gaps. Lower values "
+                            "indicate a smaller imbalance."
+                        )
+
+                        gap_data = annual[
+                            annual["Pathway"]
+                            == selected_pathway
+                        ]
+
+                        fig2 = px.bar(
+                            gap_data,
+                            x="Year",
+                            y="Product-level gap",
+                            color="Stage",
+                            barmode="group",
+                            color_discrete_map=colors,
+                            hover_data=[
+                                "Products compared"
+                            ],
+                        )
+
+                        fig2.update_layout(
+                            template="plotly_white",
+                            height=430,
+                            legend_title_text="",
+                            yaxis_title=(
+                                "Absolute trade gap "
+                                "(reported units)"
                             ),
                         )
 
+                        # SECTION30_FIXED_VISUAL_POLISH : fig2
+                        fig2.update_layout(
+                            height=490,
+                            margin=dict(l=12, r=12, t=45, b=100),
+                            legend=dict(
+                                orientation="h", x=0.5, xanchor="center",
+                                y=-0.18, yanchor="top",
+                                font=dict(size=11, color="#182438"),
+                                title=None,
+                            ),
+                        )
 
-                # =================================================
-                # FOOTNOTE
-                # =================================================
+                        st.plotly_chart(
+                            fig2,
+                            use_container_width=True,
+                            key="sc28_gap",
+                        )
 
-                st.caption(
-                    "Historical years through 2020 are expected "
-                    "to remain unchanged under the validated "
-                    "trade adjustment method. Charts aggregate "
-                    "the participants included in the selected "
-                    "published run; they are not labelled global "
-                    "unless the configured coverage itself "
-                    "represents the full intended global set."
-                )
+                        # ================================
+                        # PLOT 3 - TRADE CHANGES BY PRODUCT
+                        # ================================
+
+                        st.markdown(
+                            "### 3. Changes in Trade by Product"
+                        )
+
+                        st.caption(
+                            "Difference between After and "
+                            "Before calculator results "
+                            f"for {selected_year}."
+                        )
+
+                        if selected_product == "All products":
+
+                            top_n = st.slider(
+                                "Number of products",
+                                min_value=5,
+                                max_value=25,
+                                value=10,
+                                key="sc28_top_n",
+                            )
+
+                        else:
+
+                            top_n = 1
+
+                        filtered_changes = changes[
+                            changes["Pathway"]
+                            == selected_pathway
+                        ].copy()
+
+                        if filtered_changes.empty:
+
+                            st.info(
+                                "No matched product changes "
+                                "are available."
+                            )
+
+                        else:
+
+                            filtered_changes[
+                                "Impact"
+                            ] = (
+                                filtered_changes[
+                                    "Import change"
+                                ].abs()
+                                +
+                                filtered_changes[
+                                    "Export change"
+                                ].abs()
+                            )
+
+                            filtered_changes = (
+                                filtered_changes.sort_values(
+                                    "Impact",
+                                    ascending=False,
+                                ).head(top_n)
+                            )
+
+                            change_long = (
+                                filtered_changes.melt(
+                                    id_vars=[
+                                        "Product"
+                                    ],
+                                    value_vars=[
+                                        "Import change",
+                                        "Export change",
+                                    ],
+                                    var_name="Trade flow",
+                                    value_name="Change",
+                                )
+                            )
+
+                            change_long[
+                                "Product label"
+                            ] = (
+                                change_long[
+                                    "Product"
+                                ].astype(str)
+                                .str.replace(
+                                    "_",
+                                    " ",
+                                    regex=False,
+                                )
+                                .str.title()
+                            )
+
+                            fig3 = px.bar(
+                                change_long,
+                                x="Change",
+                                y="Product label",
+                                color="Trade flow",
+                                orientation="h",
+                                barmode="group",
+                                color_discrete_map={
+                                    "Import change": "#4474A5",
+                                    "Export change": "#28886E",
+                                },
+                            )
+
+                            fig3.update_layout(
+                                template="plotly_white",
+                                height=480,
+                                legend_title_text="",
+                                yaxis={
+                                    "categoryorder": (
+                                        "total ascending"
+                                    )
+                                },
+                            )
+
+                            # Show increase and decrease
+                            # on a balanced horizontal axis.
+
+                            _s29_lim = max(
+                                abs(
+                                    float(
+                                        change_long[
+                                            "Change"
+                                        ].min()
+                                    )
+                                ),
+                                abs(
+                                    float(
+                                        change_long[
+                                            "Change"
+                                        ].max()
+                                    )
+                                ),
+                                1.0,
+                            ) * 1.15
+
+                            fig3.update_xaxes(
+                                range=[
+                                    -_s29_lim,
+                                    _s29_lim,
+                                ]
+                            )
+
+                            fig3.add_vline(
+                                x=0,
+                                line_color="#444444",
+                            )
+
+                            # SECTION30_FIXED_VISUAL_POLISH : fig3
+                            fig3.update_layout(
+                                height=535,
+                                margin=dict(l=12, r=12, t=45, b=110),
+                                legend=dict(
+                                    orientation="h", x=0.5, xanchor="center",
+                                    y=-0.2, yanchor="top",
+                                    font=dict(size=11, color="#182438"),
+                                    title=None,
+                                ),
+                            )
+
+                            st.plotly_chart(
+                                fig3,
+                                use_container_width=True,
+                                key="sc28_product_changes",
+                            )
+
+                        # ================================
+                        # DATA TABLE AND EXPORT
+                        # ================================
+
+                        with st.expander(
+                            "View data and download CSV"
+                        ):
+
+                            st.dataframe(
+                                annual,
+                                hide_index=True,
+                                use_container_width=True,
+                            )
+
+                            st.download_button(
+                                "Download trade comparison",
+                                data=annual.to_csv(
+                                    index=False
+                                ).encode(
+                                    "utf-8-sig"
+                                ),
+                                file_name=(
+                                    "scenathon_trade_before_after.csv"
+                                ),
+                                mime="text/csv",
+                                key="sc28_download",
+                            )
+
+                        st.caption(
+                            "All comparisons are based on "
+                            "submitted FABLE-C calculator "
+                            "results. Trade adjustment "
+                            "calculation outputs are not "
+                            "used as a separate chart series."
+                        )
+
+
+    _render_analytics_fragment()
 
 
 # ============================================================
@@ -10379,7 +12509,7 @@ with admin_tab:
             storage_tab,
         ) = st.tabs(
             [
-                "Configure Iteration",
+                "Control Center",
                 "Submission Progress",
                 "Storage",
             ]
@@ -10387,225 +12517,724 @@ with admin_tab:
 
 
         # =================================================
-        # 15A. CONFIGURE ITERATION
         # =================================================
+        # COMPACT CONTROL CENTER REPLACEMENT
+
+
+        # ====================================================
+        # COMPACT CONTROL CENTER 12B
+        # ====================================================
+
+
+
+        # ====================================================
+        # SCENATHON - SELECT / CREATE / EDIT / ACTIVATE
+        # Editing forms are displayed only on demand.
+        # ====================================================
 
         with config_tab:
 
-            st.markdown(
-                "### Create or update an iteration"
+            st.markdown("#### 1. Scenathon")
+
+            cc_sessions = {
+                item["id"]: item
+                for item in list_scenathon_sessions()
+            }
+
+            sid_options = list(cc_sessions)
+
+            published_sid = (
+                get_published_active_scenathon()
             )
 
-            configs = (
-                list_iteration_configs()
+            # Apply newly created session selection
+            # before rendering the selection widget.
+
+            next_sid = st.session_state.pop(
+                "_cc12d_select_new_sid",
+                None,
             )
 
-            existing_names = [
-                cfg["iteration"]
-                for cfg in configs
-            ]
+            if next_sid in sid_options:
 
-            mode = st.radio(
-                "Configuration",
-                [
-                    "Create new iteration",
-                    "Edit existing iteration",
-                ],
-                horizontal=True,
-            )
+                st.session_state[
+                    "cc12d_session_picker"
+                ] = next_sid
 
-
-            if (
-                mode
-                == "Edit existing iteration"
-                and existing_names
+            elif (
+                st.session_state.get(
+                    "cc12d_session_picker"
+                ) not in sid_options
             ):
 
-                editing_name = (
-                    st.selectbox(
-                        "Iteration",
-                        existing_names,
-                        key="edit_iteration",
-                    )
+                st.session_state.pop(
+                    "cc12d_session_picker",
+                    None,
                 )
 
-                editing_config = (
-                    load_iteration_config(
-                        editing_name
-                    )
+            choose_col, new_col, edit_col, close_col = (
+                st.columns(
+                    [5, 2, 2, 2],
+                    gap="small",
+                    vertical_alignment="bottom",
                 )
+            )
 
-                participant_default = (
-                    "\n".join(
-                        editing_config.get(
-                            "participants",
-                            [],
+            # -----------------------------------------------
+            # SCENATHON SELECTION
+            # -----------------------------------------------
+
+            with choose_col:
+
+                chosen_sid = st.selectbox(
+                    "Choose Scenathon",
+                    options=sid_options,
+                    index=(
+                        sid_options.index(published_sid)
+                        if published_sid in sid_options
+                        else 0
+                    ),
+                    format_func=lambda sid: (
+                        f"{cc_sessions[sid].get('name', sid)} "
+                        f"({cc_sessions[sid].get('status', '')})"
+                    ),
+                    placeholder="Create a Scenathon",
+                    key="cc12d_session_picker",
+                ) if sid_options else None
+
+            # -----------------------------------------------
+            # CREATE SCENATHON
+            # -----------------------------------------------
+
+            with new_col:
+
+                with st.popover(
+                    "+ New",
+                    use_container_width=True,
+                ):
+
+                    with st.form(
+                        "cc12d_new_session"
+                    ):
+
+                        new_name = st.text_input(
+                            "Scenathon name"
                         )
+
+                        new_day = st.date_input(
+                            "Date"
+                        )
+
+                        new_time = st.time_input(
+                            "Time"
+                        )
+
+                        make_session = (
+                            st.form_submit_button(
+                                "Create and activate"
+                            )
+                        )
+
+                    if make_session:
+
+                        try:
+
+                            item = create_scenathon_session(
+                                new_name,
+                                new_day,
+                                new_time,
+                            )
+
+                            set_published_active_scenathon(
+                                item["id"]
+                            )
+
+                            st.session_state[
+                                "_cc12d_select_new_sid"
+                            ] = item["id"]
+
+                            st.cache_data.clear()
+
+                            st.success(
+                                "Scenathon created and activated. "
+                                "Add an iteration below."
+                            )
+
+                            st.rerun()
+
+                        except Exception as exc:
+
+                            st.error(str(exc))
+
+            selected_session = cc_sessions.get(
+                chosen_sid
+            )
+
+            # -----------------------------------------------
+            # EDIT SCENATHON
+            # -----------------------------------------------
+
+            with edit_col:
+
+                with st.popover(
+                    "✏ Edit",
+                    use_container_width=True,
+                    disabled=not bool(selected_session),
+                ):
+
+                    if selected_session:
+
+                        from datetime import date, time
+
+                        try:
+
+                            day_value = date.fromisoformat(
+                                selected_session.get(
+                                    "date", ""
+                                )
+                            )
+
+                        except (ValueError, TypeError):
+
+                            day_value = date.today()
+
+                        try:
+
+                            time_value = time.fromisoformat(
+                                selected_session.get(
+                                    "time", ""
+                                )
+                            )
+
+                        except (ValueError, TypeError):
+
+                            time_value = time(10, 0)
+
+                        with st.form(
+                            f"cc12d_edit_session_{chosen_sid}"
+                        ):
+
+                            edit_name = st.text_input(
+                                "Name",
+                                value=selected_session.get(
+                                    "name", ""
+                                ),
+                            )
+
+                            edit_day = st.date_input(
+                                "Date",
+                                value=day_value,
+                            )
+
+                            edit_time = st.time_input(
+                                "Time",
+                                value=time_value,
+                            )
+
+                            save_session = (
+                                st.form_submit_button(
+                                    "Save changes"
+                                )
+                            )
+
+                        if save_session:
+
+                            try:
+
+                                cc12b_edit_session(
+                                    chosen_sid,
+                                    edit_name,
+                                    edit_day,
+                                    edit_time,
+                                )
+
+                                st.cache_data.clear()
+
+                                st.success(
+                                    "Scenathon updated"
+                                )
+
+                                st.rerun()
+
+                            except Exception as exc:
+
+                                st.error(str(exc))
+
+            # -----------------------------------------------
+            # CLOSE SCENATHON
+            # -----------------------------------------------
+
+            with close_col:
+
+                with st.popover(
+                    "Close",
+                    use_container_width=True,
+                    disabled=not (
+                        selected_session
+                        and selected_session.get("status")
+                        == "OPEN"
+                    ),
+                ):
+
+                    st.caption(
+                        "Close submissions for this Scenathon?"
+                    )
+
+                    confirmed_close = st.checkbox(
+                        "Yes, close it",
+                        key="cc12d_confirm_close",
+                    )
+
+                    if st.button(
+                        "Confirm close",
+                        disabled=not confirmed_close,
+                        key="cc12d_close",
+                    ):
+
+                        try:
+
+                            close_scenathon_session(
+                                chosen_sid
+                            )
+
+                            if published_sid == chosen_sid:
+
+                                set_published_active_scenathon(
+                                    "__no_active__"
+                                )
+
+                            st.cache_data.clear()
+
+                            st.success(
+                                "Scenathon closed"
+                            )
+
+                            st.rerun()
+
+                        except Exception as exc:
+
+                            st.error(str(exc))
+
+
+            # SECTION20_REOPEN_CONTROL
+            if (
+                selected_session
+                and selected_session.get("status") == "CLOSED"
+            ):
+
+                st.info(
+                    "This Scenathon is closed. "
+                    "You can reopen the same Scenathon "
+                    "without deleting its saved data."
+                )
+
+                confirm_reopen = st.checkbox(
+                    "Reopen this Scenathon and allow "
+                    "submissions to its OPEN iterations",
+                    value=False,
+                    key=(
+                        "sc20_reopen_"
+                        + safe_name(chosen_sid)
+                    ),
+                )
+
+                if st.button(
+                    "Reopen & Set Active",
+                    type="primary",
+                    disabled=not confirm_reopen,
+                    key=(
+                        "sc20_reopen_btn_"
+                        + safe_name(chosen_sid)
+                    ),
+                ):
+
+                    try:
+
+                        reopen_scenathon_session(
+                            chosen_sid
+                        )
+
+                        set_published_active_scenathon(
+                            chosen_sid
+                        )
+
+                        st.cache_data.clear()
+
+                        st.success(
+                            "Scenathon reopened and activated."
+                        )
+
+                        st.rerun()
+
+                    except Exception as exc:
+
+                        st.error(
+                            "Could not reopen Scenathon: "
+                            f"{exc}"
+                        )
+
+
+            # -----------------------------------------------
+            # ACTIVE SCENATHON STATUS
+            # -----------------------------------------------
+
+            if selected_session:
+
+                details = selected_session
+
+                live = (
+                    chosen_sid == published_sid
+                    and details.get("status") == "OPEN"
+                )
+
+                st.caption(
+                    f"{details.get('date', '')}  |  "
+                    f"{details.get('time', '')}  |  "
+                    + (
+                        "ACTIVE - submissions enabled"
+                        if live
+                        else "Not active for submissions"
                     )
                 )
 
-                pathway_default = (
-                    editing_config.get(
-                        "pathways",
-                        DEFAULT_PATHWAYS,
-                    )
+                if (
+                    details.get("status") == "OPEN"
+                    and not live
+                ):
+
+                    if st.button(
+                        "Set as active Scenathon",
+                        key="cc12d_activate",
+                    ):
+
+                        try:
+
+                            set_published_active_scenathon(
+                                chosen_sid
+                            )
+
+                            st.cache_data.clear()
+
+                            st.success(
+                                "Scenathon is now active"
+                            )
+
+                            st.rerun()
+
+                        except Exception as exc:
+
+                            st.error(str(exc))
+
+            else:
+
+                st.info(
+                    "Create a Scenathon first, "
+                    "then add an iteration."
                 )
 
-                open_default = (
-                    editing_config.get(
-                        "status"
-                    )
-                    == "OPEN"
+
+
+        # ====================================================
+        # ITERATION - SELECT / CREATE / EDIT / GO LIVE
+        # ====================================================
+
+        with config_tab:
+
+            st.markdown("#### 2. Iteration")
+
+            if not chosen_sid:
+
+                st.caption(
+                    "Choose or create a Scenathon above."
                 )
 
             else:
 
-                editing_name = ""
-                participant_default = ""
-                pathway_default = (
-                    DEFAULT_PATHWAYS
-                )
-                open_default = True
-
-
-            with st.form(
-                "iteration_config_form"
-            ):
-
-                iteration_name = (
-                    st.text_input(
-                        "Iteration name",
-                        value=editing_name,
-                        placeholder=(
-                            "e.g. Scenathon 2026 "
-                            "- Iteration 1"
-                        ),
+                iteration_map = (
+                    cc12b_iteration_configs(
+                        chosen_sid
                     )
                 )
 
-                participant_text = (
-                    st.text_area(
-                        "Expected participants / countries",
-                        value=(
-                            participant_default
-                        ),
-                        height=240,
-                        help=(
-                            "Enter one participant "
-                            "or country per line."
-                        ),
+                choices = [
+                    "+ New iteration"
+                ] + sorted(iteration_map)
+
+                iter_key = (
+                    f"cc12d_iteration_picker_{chosen_sid}"
+                )
+
+                next_iter = st.session_state.pop(
+                    "_cc12d_select_new_iter",
+                    None,
+                )
+
+                if (
+                    isinstance(next_iter, tuple)
+                    and next_iter[0] == chosen_sid
+                    and next_iter[1] in choices
+                ):
+
+                    st.session_state[
+                        iter_key
+                    ] = next_iter[1]
+
+                elif st.session_state.get(iter_key) not in choices:
+
+                    st.session_state.pop(
+                        iter_key,
+                        None,
+                    )
+
+                iter_col, configure_col = (
+                    st.columns(
+                        [5, 2],
+                        gap="small",
+                        vertical_alignment="bottom",
                     )
                 )
 
-                pathway_text = (
-                    st.text_area(
-                        "Required pathways",
-                        value=(
-                            "\n".join(
-                                pathway_default
+                # -------------------------------------------
+                # ITERATION SELECTION
+                # -------------------------------------------
+
+                with iter_col:
+
+                    chosen_iter = st.selectbox(
+                        "Choose iteration",
+                        choices,
+                        key=iter_key,
+                    )
+
+                is_new = (
+                    chosen_iter == "+ New iteration"
+                )
+
+                original_name = (
+                    "" if is_new else chosen_iter
+                )
+
+                original_cfg = (
+                    {}
+                    if is_new
+                    else iteration_map[original_name][1]
+                )
+
+                can_edit = bool(
+                    selected_session
+                    and selected_session.get("status")
+                    == "OPEN"
+                )
+
+                # -------------------------------------------
+                # CREATE OR EDIT ITERATION
+                # -------------------------------------------
+
+                with configure_col:
+
+                    with st.popover(
+                        (
+                            "+ Create"
+                            if is_new
+                            else "✏ Edit"
+                        ),
+                        use_container_width=True,
+                        disabled=not can_edit,
+                    ):
+
+                        with st.form(
+                            f"cc12d_iter_form_"
+                            f"{chosen_sid}_"
+                            f"{safe_name(chosen_iter)}"
+                        ):
+
+                            name_val = st.text_input(
+                                "Iteration name",
+                                value=original_name,
+                                placeholder="Iteration 1",
                             )
-                        ),
-                        height=150,
-                        help=(
-                            "Enter one pathway per line. "
-                            "The iteration configuration "
-                            "defines which pathways exist."
-                        ),
+
+                            participant_val = st.text_area(
+                                "Participants - one per line",
+                                value="\n".join(
+                                    original_cfg.get(
+                                        "participants", []
+                                    )
+                                ),
+                                height=110,
+                            )
+
+                            pathway_val = st.text_area(
+                                "Pathways - one per line",
+                                value="\n".join(
+                                    original_cfg.get(
+                                        "pathways",
+                                        DEFAULT_PATHWAYS,
+                                    )
+                                ),
+                                height=110,
+                            )
+
+                            open_val = st.checkbox(
+                                "Live - allow submissions",
+                                value=(
+                                    original_cfg.get(
+                                        "status", "OPEN"
+                                    ) == "OPEN"
+                                ),
+                            )
+
+                            save_iter = (
+                                st.form_submit_button(
+                                    "Create iteration"
+                                    if is_new
+                                    else "Save iteration"
+                                )
+                            )
+
+                        if save_iter:
+
+                            try:
+
+                                cc12b_save_iteration(
+                                    chosen_sid,
+                                    original_name,
+                                    name_val,
+                                    participant_val,
+                                    pathway_val,
+                                    open_val,
+                                )
+
+                                # Publish OPEN session for users.
+
+                                if open_val:
+
+                                    set_published_active_scenathon(
+                                        chosen_sid
+                                    )
+
+                                st.session_state[
+                                    "_cc12d_select_new_iter"
+                                ] = (
+                                    chosen_sid,
+                                    name_val.strip(),
+                                )
+
+                                st.cache_data.clear()
+
+                                st.success(
+                                    "Iteration saved. "
+                                    + (
+                                        "Submit Report is live."
+                                        if open_val
+                                        else
+                                        "Submissions are closed "
+                                        "for this iteration."
+                                    )
+                                )
+
+                                st.rerun()
+
+                            except Exception as exc:
+
+                                st.error(str(exc))
+
+                # -------------------------------------------
+                # ITERATION SUMMARY
+                # -------------------------------------------
+
+                if not is_new:
+
+                    live = (
+                        selected_session.get("status")
+                        == "OPEN"
+                        and original_cfg.get("status")
+                        == "OPEN"
+                        and get_published_active_scenathon()
+                        == chosen_sid
                     )
-                )
 
-                is_open = st.checkbox(
-                    "Open for submissions",
-                    value=open_default,
-                )
-
-                save_config = (
-                    st.form_submit_button(
-                        "Save iteration",
-                        type="primary",
-                    )
-                )
-
-
-            if save_config:
-
-                participants = (
-                    normalize_participants(
-                        participant_text
-                    )
-                )
-
-                selected_pathways = (
-                    normalize_participants(
-                        pathway_text
-                    )
-                )
-
-                if not iteration_name.strip():
-
-                    st.error(
-                        "Enter an iteration name."
+                    st.caption(
+                        f"{len(original_cfg.get('participants', []))} "
+                        "participants  |  "
+                        f"{len(original_cfg.get('pathways', []))} "
+                        "pathways  |  "
+                        + (
+                            "LIVE - available in Submit Report"
+                            if live
+                            else "Not live"
+                        )
                     )
 
-                elif not participants:
+                elif can_edit:
 
-                    st.error(
-                        "Add at least one participant."
-                    )
-
-                elif not selected_pathways:
-
-                    st.error(
-                        "Add at least one pathway."
+                    st.caption(
+                        "Click + Create to enter "
+                        "participants and pathways."
                     )
 
                 else:
 
-                    save_iteration_config(
-                        iteration_name=(
-                            iteration_name
-                        ),
-                        participants=participants,
-                        pathways=(
-                            selected_pathways
-                        ),
-                        is_open=is_open,
-                    )
-
-                    expected_reports = (
-                        len(participants)
-                        * len(
-                            selected_pathways
-                        )
-                    )
-
-                    st.success(
-                        "Iteration saved successfully."
-                    )
-
-                    c1, c2, c3 = (
-                        st.columns(3)
-                    )
-
-                    c1.metric(
-                        "Participants",
-                        len(participants),
-                    )
-
-                    c2.metric(
-                        "Pathways",
-                        len(
-                            selected_pathways
-                        ),
-                    )
-
-                    c3.metric(
-                        "Expected reports",
-                        expected_reports,
+                    st.warning(
+                        "This Scenathon is closed. "
+                        "Select or create an OPEN Scenathon "
+                        "to add iterations."
                     )
 
 
-        # =================================================
+        # ====================================================
+        # CC12C_CLEAR_BUTTON
+        # Single-page Admin Control Center
+        # ====================================================
+
+        with config_tab:
+
+            st.divider()
+
+            c_left, c_right = st.columns(
+                [2, 7],
+                vertical_alignment="center",
+            )
+
+            with c_left:
+
+                if st.button(
+                    "🗑 Clear Data",
+                    type="primary",
+                    key="cc12c_open_clear",
+                ):
+
+                    cc12c_clear_dialog()
+
+            with c_right:
+
+                st.caption(
+                    "Scenathon / Iteration / Pathway / "
+                    "Entire storage - password protected"
+                )
+
+            if st.session_state.get(
+                "cc12c_last_message"
+            ):
+
+                st.success(
+                    st.session_state[
+                        "cc12c_last_message"
+                    ]
+                )
+
+                if st.button(
+                    "Dismiss",
+                    key="cc12c_dismiss",
+                ):
+
+                    st.session_state.pop(
+                        "cc12c_last_message",
+                        None,
+                    )
+
+                    st.rerun()
+
         # 15B. SUBMISSION PROGRESS
         # =================================================
 
@@ -11609,134 +14238,166 @@ with admin_tab:
 
 
         # =================================================
-        # 15C. STORAGE
-        # =================================================
+
+        # ====================================================
+        # CC12C_STORAGE_READONLY
+        # Saved data, archives and reporting exports
+        # ====================================================
 
         with storage_tab:
 
             st.markdown(
-                "### GitHub storage"
+                "#### Saved Data and Archives"
             )
-
-            st.write(
-                "**Repository:** "
-                f"{GITHUB_OWNER}/{GITHUB_REPO}"
-            )
-
-            st.write(
-                "**Branch:** "
-                f"{GITHUB_BRANCH}"
-            )
-
-            st.write(
-                "**Storage folder:** "
-                f"`{STORAGE_ROOT}/`"
-            )
-
-            ok, message = (
-                github_connection_status()
-            )
-
-            if ok:
-
-                st.success(
-                    "GitHub storage connection "
-                    "is working."
-                )
-
-            else:
-
-                st.error(
-                    message
-                )
 
             st.caption(
-                "Only extracted SCENATHON trade "
-                "data and metadata are stored. "
-                "The original uploaded workbook "
-                "is not saved."
+                f"Repository: {GITHUB_OWNER}/{GITHUB_REPO} "
+                f"- branch: {GITHUB_BRANCH}"
             )
 
-            st.warning(
-                "Deleting data removes it from "
-                "the current repository state, "
-                "but older versions may remain "
-                "in Git history."
+            st.caption(
+                "Read-only inventory. "
+                "Clear Data is in Admin - Control Center."
             )
 
-            st.divider()
+            if st.button(
+                "Refresh saved data",
+                key="cc12c_storage_refresh",
+            ):
 
-            st.markdown(
-                "### Clear iteration data"
-            )
+                try:
 
-            configs = (
-                list_iteration_configs()
-            )
+                    st.session_state[
+                        "cc12c_storage_inventory"
+                    ] = cc12c_inventory()
 
-            clear_names = [
-                cfg["iteration"]
-                for cfg in configs
-            ]
+                except Exception as exc:
 
-            if clear_names:
-
-                clear_iteration = (
-                    st.selectbox(
-                        "Iteration",
-                        clear_names,
-                        key="clear_iteration",
+                    st.error(
+                        f"Could not read storage: {exc}"
                     )
+
+            saved = st.session_state.get(
+                "cc12c_storage_inventory"
+            )
+
+            if saved is not None:
+
+                archived = [
+                    p for p in saved
+                    if "/archives/" in p
+                ]
+
+                others = [
+                    p for p in saved
+                    if "/archives/" not in p
+                ]
+
+                a, b, c = st.columns(3)
+
+                a.metric(
+                    "All files",
+                    len(saved),
                 )
 
-                confirm_clear = (
-                    st.checkbox(
-                        "I understand that this "
-                        "will delete the current "
-                        "submission and result files "
-                        "for this iteration."
-                    )
+                b.metric(
+                    "Current files",
+                    len(others),
                 )
 
-                if st.button(
-                    "Clear submissions and results",
-                    disabled=(
-                        not confirm_clear
-                    ),
-                ):
+                c.metric(
+                    "Archive files",
+                    len(archived),
+                )
 
-                    deleted_submissions = (
-                        github_delete_tree(
-                            submission_folder(
-                                clear_iteration
-                            )
+                if not saved:
+
+                    st.info(
+                        "Storage is empty. "
+                        "No saved Scenathon data."
+                    )
+
+                else:
+
+                    with st.expander(
+                        "Saved data - file paths"
+                    ):
+
+                        st.code(
+                            "\n".join(
+                                sorted(others)
+                            ) or "(none)",
+                            language="text",
                         )
-                    )
 
-                    deleted_results = (
-                        github_delete_tree(
-                            result_folder(
-                                clear_iteration
-                            )
+                    with st.expander(
+                        "Archives - file paths"
+                    ):
+
+                        st.code(
+                            "\n".join(
+                                sorted(archived)
+                            ) or "(none)",
+                            language="text",
                         )
-                    )
-
-                    deleted_total = (
-                        deleted_submissions
-                        + deleted_results
-                    )
-
-                    st.success(
-                        "Current iteration data "
-                        f"cleared. Deleted files: "
-                        f"{deleted_total}"
-                    )
-
-                    st.rerun()
 
             else:
 
                 st.info(
-                    "No iterations exist yet."
+                    "Click Refresh saved data "
+                    "to view GitHub storage and archives."
                 )
+
+            # -----------------------------------------
+            # Completed Scenathon CSV exports
+            # -----------------------------------------
+
+            with st.expander(
+                "Completed Scenathon CSV exports"
+            ):
+
+                closed = {
+                    item["id"]: item.get(
+                        "name",
+                        item["id"],
+                    )
+                    for item in list_scenathon_sessions()
+                    if item.get("status") == "CLOSED"
+                }
+
+                if not closed:
+
+                    st.caption(
+                        "No closed Scenathon "
+                        "available for export."
+                    )
+
+                else:
+
+                    export_id = st.selectbox(
+                        "Closed Scenathon",
+                        list(closed),
+                        format_func=lambda sid: closed[sid],
+                        key="cc12c_closed_export",
+                    )
+
+                    if st.button(
+                        "Prepare reporting CSVs",
+                        key="cc12c_prepare_csv",
+                    ):
+
+                        st.session_state[
+                            "cc12c_download_session"
+                        ] = export_id
+
+                    if (
+                        st.session_state.get(
+                            "cc12c_download_session"
+                        ) == export_id
+                    ):
+
+                        render_scenathon_exports(
+                            export_id,
+                            key_prefix="cc12c_admin",
+                        )
 
