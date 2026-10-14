@@ -11732,7 +11732,6 @@ with analytics_tab:
 
                         else:
 
-                            import plotly.express as px
 
                             # ====================================
                             # GRAPH 1: GLOBAL TRADE CONSISTENCY
