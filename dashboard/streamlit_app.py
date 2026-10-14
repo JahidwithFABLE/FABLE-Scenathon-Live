@@ -9412,147 +9412,72 @@ with analytics_tab:
                         int(gt_year) == 2050
                     )
 
-                    # THREE SIDE BY SIDE
-                    # =================================================
+
+                    # SECTION32_FIXED_ALIGNED_CAPTIONS
+                    # All charts share the same top and bottom rows.
 
                     (
                         chart_col_1,
                         chart_col_2,
                         chart_col_3,
-                    ) = st.columns(
-                        [
-                            1.55,
-                            1,
-                            1,
-                        ]
-                    )
-
+                    ) = st.columns([1.55, 1, 1])
 
                     with chart_col_1:
-
                         if food_chart_ready:
-
                             st.plotly_chart(
                                 gt_food_fig,
                                 use_container_width=True,
                                 key="gt_food_chart",
                             )
-
-
-                            st.caption(
-                                "Each bar is one Location. "
-                                "The overall target is met only when "
-                                "every Location is 10% to 50% above "
-                                "MDER in both 2030 and 2050."
-                            )
-
-
                         else:
-
                             st.info(
-                                "No usable food security data is available."
+                                "No usable food security data "
+                                "is available."
                             )
-
 
                     with chart_col_2:
-
-                        if _s31_year_is_target:
-                            st.markdown(
-                                "**2050 target: ≤ −1.000 Gt CO₂e**"
-                            )
-                        else:
-                            st.caption(
-                                "2030 outcome — 2050 GHG "
-                                "target applies only in 2050"
-                            )
-
-                        st.caption(
-                            _s31_totals_caption(
-                                _s31_land_totals
-                            )
-                        )
-
                         st.plotly_chart(
                             gt_land_fig,
                             use_container_width=True,
                             key="gt_land_chart",
                         )
 
-
-                        if (
-                            len(
-                                gt_land[
-                                    "contributions"
-                                ]
-                            )
-                            > 10
-                        ):
-
-                            st.caption(
-                                "Each stacked segment represents one Location. "
-                                "Hover over a segment to see its contribution. "
-                                "Negative values represent removals or sequestration."
-                            )
-
-
-                        else:
-
-                            st.caption(
-                                "Each stacked segment represents one Location. "
-                                "Negative values represent removals or sequestration."
-                            )
-
-
                     with chart_col_3:
-
-                        if _s31_year_is_target:
-                            st.markdown(
-                                "**2050 target: ≤ 4.000 Gt CO₂e**"
-                            )
-                        else:
-                            st.caption(
-                                "2030 outcome — 2050 GHG "
-                                "target applies only in 2050"
-                            )
-
-                        st.caption(
-                            _s31_totals_caption(
-                                _s31_agri_totals
-                            )
-                        )
-
                         st.plotly_chart(
                             gt_agri_fig,
                             use_container_width=True,
                             key="gt_agri_chart",
                         )
 
+                    # All three explanations now start
+                    # in the SAME horizontal row.
+                    (
+                        note_col_1,
+                        note_col_2,
+                        note_col_3,
+                    ) = st.columns([1.55, 1, 1])
 
-                        if (
-                            len(
-                                gt_agri[
-                                    "contributions"
-                                ]
-                            )
-                            > 10
-                        ):
+                    with note_col_1:
+                        st.caption(
+                            "Each bar represents one region. "
+                            "The target margin is 10% to 50% "
+                            "above MDER in both 2030 and 2050."
+                        )
 
-                            st.caption(
-                                "Each stacked segment represents one Location. "
-                                "Hover over a segment to see its contribution. "
-                                "The black diamond marks the global total."
-                            )
+                    with note_col_2:
+                        st.caption(
+                            "Each stacked segment represents "
+                            "one region. Negative values "
+                            "indicate carbon removals."
+                        )
 
+                    with note_col_3:
+                        st.caption(
+                            "Each stacked segment represents "
+                            "one region. Black diamonds "
+                            "show global totals."
+                        )
 
-                        else:
-
-                            st.caption(
-                                "Each stacked segment represents one Location. "
-                                "The black diamond marks the global total."
-                            )
-
-
-                    # =================================================
                     # DETAIL TABLES
                     # =================================================
 
@@ -11336,303 +11261,218 @@ with analytics_tab:
         # SECTION29_LEGACY_STUDIO_REMOVED
         # One unified comparison workspace above.
 
-        # SECTION28_CALCULATOR_COMPARISON
+        # SECTION33_DYNAMIC_SCENATHON_TRADE
 
         st.divider()
-
         st.subheader("Trade Analytics")
 
         st.caption(
-            "Compare imports, exports and trade balance "
-            "using submitted FABLE-C calculator results "
-            "before and after trade adjustment."
+            "Explore global trade consistency, product-level differences "
+            "and Scenathon evolution using submitted FABLE-C results."
         )
 
-        configs = list_iteration_configs()
-
-        iterations = [
-            str(c["iteration"])
-            for c in configs
+        cfgs = [
+            c for c in list_iteration_configs()
             if str(c.get("iteration", "")).strip()
         ]
 
-        if not iterations:
-
-            st.info(
-                "No iteration is available."
-            )
+        if not cfgs:
+            st.info("No Scenathon iterations are configured.")
 
         else:
+            iters = list(dict.fromkeys(
+                str(c["iteration"]) for c in cfgs
+            ))
 
-            c1, c2, c3 = st.columns(
-                [1, 1.5, 1]
-            )
+            top_a, top_b = st.columns([3, 1])
 
-            with c1:
-
-                iteration = st.selectbox(
-                    "Iteration",
-                    iterations,
-                    key="sc28_iteration",
+            with top_a:
+                chosen_iters = st.multiselect(
+                    "Iterations",
+                    iters,
+                    default=iters,
+                    key="s33_iters",
                 )
 
-            config = (
-                load_iteration_config(iteration)
-                or {}
-            )
-
-            pathways = [
-                str(p).strip()
-                for p in config.get(
-                    "pathways", []
-                )
-                if str(p).strip()
-            ]
-
-            with c2:
-
-                selected_pathway = st.selectbox(
-                    "Pathway",
-                    pathways,
-                    key="sc29_trade_pathway",
-                )
-
-                selected_pathways = (
-                    [selected_pathway]
-                    if selected_pathway
-                    else []
-                )
-
-            with c3:
-
-                st.write("")
-
-                refresh = st.button(
+            with top_b:
+                reload_data = st.button(
                     "Load / Refresh",
                     type="primary",
-                    key="sc28_refresh",
+                    key="s33_reload",
                     use_container_width=True,
                 )
 
-            snapshot_key = (
-                iteration,
-                tuple(sorted(selected_pathways)),
-            )
+            token = tuple(sorted(chosen_iters))
+            snap = st.session_state.get("s33_snapshot")
 
-            snapshot = st.session_state.get(
-                "sc28_trade_snapshot"
-            )
+            if reload_data:
 
-            # ================================================
-            # LOAD BEFORE AND AFTER WORKBOOK SUBMISSIONS
-            # ================================================
+                raw = []
+                issues = []
+                expected_by_pair = {}
 
-            if refresh:
+                for it in chosen_iters:
 
-                records = []
-                warnings = []
+                    cfg = load_iteration_config(it) or {}
 
-                expected_participants = [
-                    str(p).strip()
-                    for p in config.get(
-                        "participants", []
-                    )
-                    if str(p).strip()
-                ]
+                    participants = {
+                        str(x).strip()
+                        for x in cfg.get("participants", [])
+                        if str(x).strip()
+                    }
 
-                stage_labels = {
-                    "before": "Before trade adjustment",
-                    "after": "After trade adjustment",
-                }
+                    pathways = {
+                        str(x).strip()
+                        for x in cfg.get("pathways", [])
+                        if str(x).strip()
+                    }
 
-                with st.spinner(
-                    "Loading submitted calculator results..."
-                ):
+                    if not participants or not pathways:
+                        issues.append(
+                            f"{it}: missing configured participants or pathways"
+                        )
+                        continue
 
-                    for stage, label in (
-                        stage_labels.items()
+                    for pw in pathways:
+                        expected_by_pair[(it, pw)] = participants
+
+                    for stage, stage_label in (
+                        ("before", "Before adjustment"),
+                        ("after", "After adjustment"),
                     ):
 
                         try:
-
-                            payloads = (
-                                list_submission_payloads(
-                                    iteration,
-                                    stage=stage,
-                                )
+                            payloads = list_submission_payloads(
+                                it,
+                                stage=stage,
                             )
-
                         except Exception as exc:
-
-                            warnings.append(
-                                f"{label}: {exc}"
+                            issues.append(
+                                f"{it} {stage}: {exc}"
                             )
-
                             continue
 
                         for payload in payloads:
 
-                            participant = str(
-                                payload.get(
-                                    "participant", ""
-                                )
+                            part = str(
+                                payload.get("participant", "")
                             ).strip()
 
-                            pathway = str(
-                                payload.get(
-                                    "pathway", ""
-                                )
+                            pw = str(
+                                payload.get("pathway", "")
                             ).strip()
 
-                            if (
-                                participant not in expected_participants
-                                or pathway not in selected_pathways
-                            ):
+                            if part not in participants:
                                 continue
 
-                            for row in payload.get(
-                                "rows", []
-                            ):
+                            if pw not in pathways:
+                                continue
 
-                                records.append({
-                                    "Iteration": iteration,
-                                    "Pathway": pathway,
-                                    "Participant": participant,
-                                    "Stage": label,
+                            for row in payload.get("rows", []):
 
+                                raw.append({
+                                    "Iteration": it,
+                                    "Pathway": pw,
+                                    "Participant": part,
+                                    "Stage": stage_label,
                                     "Product": str(
-                                        row.get(
-                                            "Product", ""
-                                        )
+                                        row.get("Product", "")
                                     ).strip().casefold(),
-
-                                    "Year": row.get(
-                                        "Year"
-                                    ),
-
+                                    "Year": row.get("Year"),
                                     "Imports": row.get(
                                         "Import_quantity"
                                     ),
-
                                     "Exports": row.get(
                                         "Export_quantity"
                                     ),
                                 })
 
-                frame = pd.DataFrame(records)
+                data = pd.DataFrame(raw)
 
-                if not frame.empty:
+                if not data.empty:
 
-                    for col in [
+                    for field in (
                         "Year",
                         "Imports",
                         "Exports",
-                    ]:
-
-                        frame[col] = pd.to_numeric(
-                            frame[col],
+                    ):
+                        data[field] = pd.to_numeric(
+                            data[field],
                             errors="coerce",
                         )
 
-                    frame = frame.dropna(
-                        subset=["Year"]
+                    data = data.dropna(
+                        subset=["Year", "Product"]
                     )
 
-                    frame["Year"] = (
-                        frame["Year"].astype(int)
-                    )
+                    data["Year"] = data["Year"].astype(int)
 
-                    duplicate = frame.duplicated(
-                        subset=[
-                            "Pathway",
-                            "Participant",
-                            "Stage",
-                            "Product",
-                            "Year",
-                        ],
-                        keep=False,
-                    )
-
-                    if duplicate.any():
-
-                        raise ValueError(
-                            "Duplicate product/year records "
-                            "found in submitted calculators."
-                        )
-
-                snapshot = {
-                    "key": snapshot_key,
-                    "data": frame,
-                    "warnings": warnings,
-                    "expected": expected_participants,
+                snap = {
+                    "token": token,
+                    "data": data,
+                    "issues": issues,
+                    "expected": expected_by_pair,
                 }
 
-                st.session_state[
-                    "sc28_trade_snapshot"
-                ] = snapshot
+                st.session_state["s33_snapshot"] = snap
 
-            if not selected_pathways:
+            if not chosen_iters:
 
-                st.info(
-                    "Select at least one pathway."
-                )
+                st.info("Select one or more iterations.")
 
-            elif (
-                snapshot is None
-                or snapshot.get("key") != snapshot_key
-            ):
+            elif snap is None or snap.get("token") != token:
 
                 st.info(
-                    "Click Load / Refresh to display "
-                    "trade analytics."
+                    "Click Load / Refresh to read the selected iterations."
                 )
 
             else:
 
-                df = snapshot["data"].copy()
+                for warning in snap["issues"]:
+                    st.warning(warning)
 
-                for message in snapshot["warnings"]:
-                    st.warning(message)
+                df = snap["data"]
 
                 if df.empty:
 
                     st.info(
-                        "No matching calculator reports "
-                        "were found."
+                        "No matching submitted calculator trade data found."
                     )
 
                 else:
 
-                    # ========================================
-                    # FILTERS
-                    # ========================================
+                    pathways = sorted(
+                        df["Pathway"].unique()
+                    )
 
                     products = sorted(
-                        df["Product"]
-                        .dropna()
-                        .unique()
-                        .tolist()
+                        x for x in df["Product"].unique()
+                        if x
                     )
 
-                    f1, f2 = st.columns(
-                        [1.8, 1]
+                    years = sorted(
+                        df["Year"].unique()
                     )
 
-                    with f1:
+                    c1, c2, c3 = st.columns(3)
 
-                        selected_product = st.selectbox(
+                    with c1:
+                        selected_pw = st.multiselect(
+                            "Pathways",
+                            pathways,
+                            default=pathways,
+                            key="s33_pathways",
+                        )
+
+                    with c2:
+                        product_choice = st.selectbox(
                             "Product",
                             ["All products"] + products,
-                            key="sc28_product",
+                            key="s33_product",
                         )
 
-                    with f2:
-
-                        years = sorted(
-                            df["Year"].unique().tolist()
-                        )
-
-                        selected_year = st.selectbox(
+                    with c3:
+                        focus_year = st.selectbox(
                             "Focus year",
                             years,
                             index=(
@@ -11640,41 +11480,55 @@ with analytics_tab:
                                 if 2050 in years
                                 else len(years) - 1
                             ),
-                            key="sc28_year",
+                            key="s33_year",
                         )
 
+                    c4, c5 = st.columns(2)
 
-                    if (
-                        selected_product
-                        != "All products"
-                    ):
+                    with c4:
+                        stage_choice = st.selectbox(
+                            "Stage",
+                            [
+                                "After adjustment",
+                                "Before adjustment",
+                            ],
+                            key="s33_stage",
+                        )
 
-                        df = df[
-                            df["Product"]
-                            == selected_product
-                        ].copy()
+                    with c5:
+                        chart_style = st.radio(
+                            "Chart style",
+                            ["Bar", "Line"],
+                            horizontal=True,
+                            key="s33_chart_style",
+                        )
 
-                    # ========================================
-                    # PAIRED DATA VALIDATION
-                    # ========================================
+                    data = df[
+                        df["Pathway"].isin(selected_pw)
+                    ].copy()
 
-                    expected = set(
-                        snapshot["expected"]
-                    )
+                    if product_choice != "All products":
+                        data = data[
+                            data["Product"] == product_choice
+                        ]
 
-                    stages = [
-                        "Before trade adjustment",
-                        "After trade adjustment",
-                    ]
+                    expected = snap["expected"]
 
-                    # A product-year-pathway is comparable
-                    # only when both stages have complete
-                    # reports from all configured participants.
+                    # ----------------------------------------
+                    # Validate complete participant coverage
+                    # ----------------------------------------
 
-                    summed = {}
+                    agg = {}
 
-                    for identity, group in df.groupby(
+                    for (
+                        it,
+                        pw,
+                        product,
+                        year,
+                        stage,
+                    ), group in data.groupby(
                         [
+                            "Iteration",
                             "Pathway",
                             "Product",
                             "Year",
@@ -11683,656 +11537,518 @@ with analytics_tab:
                         dropna=False,
                     ):
 
-                        pathway, product, year, stage = identity
-
-                        complete = (
-                            set(group["Participant"])
-                            == expected
-                            and len(group) == len(expected)
-                            and group[
-                                ["Imports", "Exports"]
-                            ].notna().all().all()
+                        required = expected.get(
+                            (it, pw),
+                            set(),
                         )
 
-                        if not complete:
-                            continue
-
-                        summed[identity] = (
-                            float(group["Imports"].sum()),
-                            float(group["Exports"].sum()),
+                        valid_participants = (
+                            required
+                            and len(group) == len(required)
+                            and set(
+                                group["Participant"]
+                            ) == required
                         )
 
-                    # Keep the same product set
-                    # for every displayed year and stage.
+                        valid_values = not group[
+                            ["Imports", "Exports"]
+                        ].isna().any().any()
 
-                    common = {}
+                        if valid_participants and valid_values:
 
-                    for pathway in selected_pathways:
+                            agg[
+                                (it, pw, product, year, stage)
+                            ] = (
+                                float(group["Imports"].sum()),
+                                float(group["Exports"].sum()),
+                            )
 
-                        universe = set(
-                            df.loc[
-                                df["Pathway"] == pathway,
-                                "Product",
-                            ]
-                        )
+                    # ----------------------------------------
+                    # Find comparable product coverage
+                    # ----------------------------------------
 
-                        paired = set(universe)
+                    pairs = sorted({
+                        (it, pw)
+                        for it, pw, _, _, _ in agg
+                    })
+
+                    common = None
+
+                    for it, pw in pairs:
 
                         for year in years:
 
-                            for stage in stages:
+                            for stage in (
+                                "Before adjustment",
+                                "After adjustment",
+                            ):
 
-                                available_products = {
-                                    product
+                                ps = {
+                                    p
                                     for (
-                                        pw, product, yr, stg
-                                    ) in summed
+                                        ii,
+                                        pp,
+                                        p,
+                                        yy,
+                                        ss,
+                                    ) in agg
                                     if (
-                                        pw == pathway
-                                        and yr == year
-                                        and stg == stage
+                                        ii == it
+                                        and pp == pw
+                                        and yy == year
+                                        and ss == stage
                                     )
                                 }
 
-                                paired &= available_products
-
-                        common[pathway] = paired
-
-                        if len(paired) < len(universe):
-
-                            st.warning(
-                                f"{pathway}: "
-                                f"{len(paired)}/{len(universe)} "
-                                "products have complete matching "
-                                "Before and After reports across "
-                                "all displayed years. "
-                                "Charts use only this common set."
-                            )
-
-                    # ========================================
-                    # YEARLY TRADE TOTALS AND GAPS
-                    # ========================================
-
-                    annual_rows = []
-                    product_rows = []
-
-                    for pathway in selected_pathways:
-
-                        paired_products = common[
-                            pathway
-                        ]
-
-                        for year in years:
-
-                            for stage in stages:
-
-                                if not paired_products:
-                                    continue
-
-                                imports = sum(
-                                    summed[
-                                        (
-                                            pathway,
-                                            p,
-                                            year,
-                                            stage,
-                                        )
-                                    ][0]
-                                    for p in paired_products
+                                common = (
+                                    ps
+                                    if common is None
+                                    else common & ps
                                 )
 
-                                exports = sum(
-                                    summed[
-                                        (
-                                            pathway,
-                                            p,
-                                            year,
-                                            stage,
-                                        )
-                                    ][1]
-                                    for p in paired_products
-                                )
+                    common = common or set()
 
-                                gap = sum(
-                                    abs(
-                                        summed[
-                                            (
-                                                pathway,
-                                                p,
-                                                year,
-                                                stage,
-                                            )
-                                        ][0]
-                                        -
-                                        summed[
-                                            (
-                                                pathway,
-                                                p,
-                                                year,
-                                                stage,
-                                            )
-                                        ][1]
-                                    )
-                                    for p in paired_products
-                                )
+                    universe = {
+                        p
+                        for _, _, p, _, _ in agg
+                    }
 
-                                annual_rows.append({
-                                    "Pathway": pathway,
-                                    "Year": year,
-                                    "Stage": stage,
-                                    "Imports": imports,
-                                    "Exports": exports,
-                                    "Product-level gap": gap,
-                                    "Products compared": (
-                                        len(paired_products)
-                                    ),
-                                })
-
-                        # Product changes in selected year
-
-                        for product in paired_products:
-
-                            before_i, before_e = summed[
-                                (
-                                    pathway,
-                                    product,
-                                    selected_year,
-                                    stages[0],
-                                )
-                            ]
-
-                            after_i, after_e = summed[
-                                (
-                                    pathway,
-                                    product,
-                                    selected_year,
-                                    stages[1],
-                                )
-                            ]
-
-                            product_rows.append({
-                                "Pathway": pathway,
-                                "Product": product,
-                                "Import change": (
-                                    after_i - before_i
-                                ),
-                                "Export change": (
-                                    after_e - before_e
-                                ),
-                            })
-
-                    annual = pd.DataFrame(
-                        annual_rows
+                    st.caption(
+                        f"Comparable products: {len(common)} "
+                        f"of {len(universe)}. "
+                        "All charts use the same complete product "
+                        "set across displayed rounds, pathways, "
+                        "years and stages."
                     )
 
-                    changes = pd.DataFrame(
-                        product_rows
-                    )
-
-                    if annual.empty:
+                    if not common:
 
                         st.warning(
-                            "No complete Before/After comparison "
-                            "is available for this scope."
+                            "No complete comparable product coverage. "
+                            "Choose fewer iterations/pathways or "
+                            "resolve missing submissions. "
+                            "Missing values are never replaced with zero."
                         )
 
                     else:
 
-                        colors = {
-                            "Before trade adjustment": (
-                                "#406EA5"
-                            ),
-                            "After trade adjustment": (
-                                "#28886E"
-                            ),
-                        }
+                        rows = []
+                        product_rows = []
 
-                        # SECTION29_TRADE_SUMMARY
+                        for it, pw in pairs:
 
-                        _s29_focus = annual.loc[
-                            (
-                                annual["Pathway"]
-                                == selected_pathway
-                            )
-                            &
-                            (
-                                annual["Year"]
-                                == selected_year
-                            )
-                        ]
+                            for year in years:
 
-                        _s29_gaps = dict(
-                            zip(
-                                _s29_focus["Stage"],
-                                _s29_focus[
-                                    "Product-level gap"
-                                ],
-                            )
-                        )
+                                for stage in (
+                                    "Before adjustment",
+                                    "After adjustment",
+                                ):
 
-                        _s29_before_gap = (
-                            _s29_gaps.get(
-                                "Before trade adjustment"
-                            )
-                        )
-
-                        _s29_after_gap = (
-                            _s29_gaps.get(
-                                "After trade adjustment"
-                            )
-                        )
-
-                        st.markdown(
-                            f"#### Trade balance summary "
-                            f"- {selected_year}"
-                        )
-
-                        if (
-                            _s29_before_gap is not None
-                            and _s29_after_gap is not None
-                        ):
-
-                            _s29_cols = st.columns(3)
-
-                            _s29_cols[0].metric(
-                                "Before adjustment",
-                                f"{_s29_before_gap:,.0f}",
-                            )
-
-                            _s29_cols[1].metric(
-                                "After adjustment",
-                                f"{_s29_after_gap:,.0f}",
-                            )
-
-                            if _s29_before_gap > 0:
-
-                                _s29_pct = (
-                                    (
-                                        _s29_before_gap
-                                        - _s29_after_gap
+                                    complete = all(
+                                        (
+                                            it,
+                                            pw,
+                                            p,
+                                            year,
+                                            stage,
+                                        ) in agg
+                                        for p in common
                                     )
-                                    / _s29_before_gap
-                                    * 100.0
-                                )
 
-                                _s29_cols[2].metric(
-                                    "Imbalance reduction",
-                                    f"{_s29_pct:+.1f}%",
+                                    if not complete:
+                                        continue
+
+                                    vals = [
+                                        agg[
+                                            (
+                                                it,
+                                                pw,
+                                                p,
+                                                year,
+                                                stage,
+                                            )
+                                        ]
+                                        for p in sorted(common)
+                                    ]
+
+                                    total_imports = sum(
+                                        x[0] for x in vals
+                                    )
+
+                                    total_exports = sum(
+                                        x[1] for x in vals
+                                    )
+
+                                    mismatch = sum(
+                                        abs(x[0] - x[1])
+                                        for x in vals
+                                    )
+
+                                    rows.append({
+                                        "Iteration": it,
+                                        "Pathway": pw,
+                                        "Year": year,
+                                        "Stage": stage,
+                                        "Imports": total_imports,
+                                        "Exports": total_exports,
+                                        "Trade mismatch": mismatch,
+                                    })
+
+                                    for p in common:
+
+                                        ii, ee = agg[
+                                            (
+                                                it,
+                                                pw,
+                                                p,
+                                                year,
+                                                stage,
+                                            )
+                                        ]
+
+                                        product_rows.append({
+                                            "Iteration": it,
+                                            "Pathway": pw,
+                                            "Year": year,
+                                            "Stage": stage,
+                                            "Product": p,
+                                            "Trade mismatch": abs(
+                                                ii - ee
+                                            ),
+                                            "Imports": ii,
+                                            "Exports": ee,
+                                        })
+
+                        summary = pd.DataFrame(rows)
+                        products_df = pd.DataFrame(
+                            product_rows
+                        )
+
+                        if summary.empty:
+
+                            st.warning(
+                                "No fully comparable observations."
+                            )
+
+                        else:
+
+                            import plotly.express as px
+
+                            # ====================================
+                            # GRAPH 1: GLOBAL TRADE CONSISTENCY
+                            # ====================================
+
+                            st.markdown(
+                                "#### 1. Global trade consistency"
+                            )
+
+                            st.caption(
+                                "Before and After global product-level "
+                                "import/export mismatch across model years."
+                            )
+
+                            pair_options = sorted({
+                                (
+                                    r["Iteration"],
+                                    r["Pathway"],
+                                )
+                                for _, r in summary.iterrows()
+                            })
+
+                            pair = st.selectbox(
+                                "Iteration and pathway",
+                                pair_options,
+                                format_func=lambda x: (
+                                    f"{x[0]} | {x[1]}"
+                                ),
+                                key="s33_pair",
+                            )
+
+                            series = summary[
+                                (
+                                    summary["Iteration"]
+                                    == pair[0]
+                                )
+                                & (
+                                    summary["Pathway"]
+                                    == pair[1]
+                                )
+                            ]
+
+                            if chart_style == "Bar":
+
+                                f = px.bar(
+                                    series,
+                                    x="Year",
+                                    y="Trade mismatch",
+                                    color="Stage",
+                                    barmode="group",
                                 )
 
                             else:
 
-                                _s29_cols[2].metric(
-                                    "Imbalance reduction",
-                                    "N/A",
+                                f = px.line(
+                                    series,
+                                    x="Year",
+                                    y="Trade mismatch",
+                                    color="Stage",
+                                    markers=True,
                                 )
 
-                            st.caption(
-                                f"{selected_pathway} | "
-                                f"{len(common[selected_pathway])} "
-                                "matched products | "
-                                f"{len(snapshot['expected'])} "
-                                "configured participants. "
-                                "Calculated as the sum of "
-                                "absolute global product gaps."
-                            )
-
-                        # ================================
-                        # PLOT 1 - IMPORT AND EXPORT TRENDS
-                        # ================================
-
-                        st.markdown(
-                            "### 1. Import and Export Trends"
-                        )
-
-                        st.caption(
-                            "Annual imports and exports from "
-                            "submitted calculators before "
-                            "and after trade adjustment."
-                        )
-
-                        trajectory = annual[
-                            annual["Pathway"]
-                            == selected_pathway
-                        ].copy()
-
-                        trajectory_long = trajectory.melt(
-                            id_vars=["Year", "Stage"],
-                            value_vars=[
-                                "Imports",
-                                "Exports",
-                            ],
-                            var_name="Trade flow",
-                            value_name="Quantity",
-                        )
-
-                        trajectory_long["Series"] = (
-                            trajectory_long["Trade flow"]
-                            + " - "
-                            + trajectory_long["Stage"].map({
-                                "Before trade adjustment": (
-                                    "Before"
-                                ),
-                                "After trade adjustment": (
-                                    "After"
-                                ),
-                            })
-                        )
-
-                        fig1 = px.line(
-                            trajectory_long,
-                            x="Year",
-                            y="Quantity",
-                            color="Series",
-                            markers=True,
-                            color_discrete_map={
-                                "Imports - Before": "#4474A5",
-                                "Exports - Before": "#779BC6",
-                                "Imports - After": "#236F5C",
-                                "Exports - After": "#43A384",
-                            },
-                        )
-
-                        # Before = dashed, After = solid.
-
-                        for _s29_trace in fig1.data:
-
-                            _s29_trace.line.dash = (
-                                "dash"
-                                if "Before" in _s29_trace.name
-                                else "solid"
-                            )
-
-                            _s29_trace.line.width = 2.6
-
-                        fig1.update_layout(
-                            template="plotly_white",
-                            height=450,
-                            legend_title_text="",
-                            hovermode="x unified",
-                            xaxis_title="Year",
-                            yaxis_title=(
-                                "Reported trade quantity"
-                            ),
-                        )
-
-                        # SECTION30_FIXED_VISUAL_POLISH : fig1
-                        fig1.update_layout(
-                            height=520,
-                            margin=dict(l=12, r=12, t=45, b=115),
-                            legend=dict(
-                                orientation="h", x=0.5, xanchor="center",
-                                y=-0.18, yanchor="top",
-                                font=dict(size=11, color="#182438"),
-                                title=None,
-                            ),
-                        )
-
-                        st.plotly_chart(
-                            fig1,
-                            use_container_width=True,
-                            key="sc28_trends",
-                        )
-
-                        # ================================
-                        # PLOT 2 - PRODUCT-LEVEL TRADE GAP
-                        # ================================
-
-                        st.markdown(
-                            "### 2. Product-Level Trade Imbalance"
-                        )
-
-                        st.caption(
-                            "Sum of absolute product-level "
-                            "import-export gaps. Lower values "
-                            "indicate a smaller imbalance."
-                        )
-
-                        gap_data = annual[
-                            annual["Pathway"]
-                            == selected_pathway
-                        ]
-
-                        fig2 = px.bar(
-                            gap_data,
-                            x="Year",
-                            y="Product-level gap",
-                            color="Stage",
-                            barmode="group",
-                            color_discrete_map=colors,
-                            hover_data=[
-                                "Products compared"
-                            ],
-                        )
-
-                        fig2.update_layout(
-                            template="plotly_white",
-                            height=430,
-                            legend_title_text="",
-                            yaxis_title=(
-                                "Absolute trade gap "
-                                "(reported units)"
-                            ),
-                        )
-
-                        # SECTION30_FIXED_VISUAL_POLISH : fig2
-                        fig2.update_layout(
-                            height=490,
-                            margin=dict(l=12, r=12, t=45, b=100),
-                            legend=dict(
-                                orientation="h", x=0.5, xanchor="center",
-                                y=-0.18, yanchor="top",
-                                font=dict(size=11, color="#182438"),
-                                title=None,
-                            ),
-                        )
-
-                        st.plotly_chart(
-                            fig2,
-                            use_container_width=True,
-                            key="sc28_gap",
-                        )
-
-                        # ================================
-                        # PLOT 3 - TRADE CHANGES BY PRODUCT
-                        # ================================
-
-                        st.markdown(
-                            "### 3. Changes in Trade by Product"
-                        )
-
-                        st.caption(
-                            "Difference between After and "
-                            "Before calculator results "
-                            f"for {selected_year}."
-                        )
-
-                        if selected_product == "All products":
-
-                            top_n = st.slider(
-                                "Number of products",
-                                min_value=5,
-                                max_value=25,
-                                value=10,
-                                key="sc28_top_n",
-                            )
-
-                        else:
-
-                            top_n = 1
-
-                        filtered_changes = changes[
-                            changes["Pathway"]
-                            == selected_pathway
-                        ].copy()
-
-                        if filtered_changes.empty:
-
-                            st.info(
-                                "No matched product changes "
-                                "are available."
-                            )
-
-                        else:
-
-                            filtered_changes[
-                                "Impact"
-                            ] = (
-                                filtered_changes[
-                                    "Import change"
-                                ].abs()
-                                +
-                                filtered_changes[
-                                    "Export change"
-                                ].abs()
-                            )
-
-                            filtered_changes = (
-                                filtered_changes.sort_values(
-                                    "Impact",
-                                    ascending=False,
-                                ).head(top_n)
-                            )
-
-                            change_long = (
-                                filtered_changes.melt(
-                                    id_vars=[
-                                        "Product"
-                                    ],
-                                    value_vars=[
-                                        "Import change",
-                                        "Export change",
-                                    ],
-                                    var_name="Trade flow",
-                                    value_name="Change",
-                                )
-                            )
-
-                            change_long[
-                                "Product label"
-                            ] = (
-                                change_long[
-                                    "Product"
-                                ].astype(str)
-                                .str.replace(
-                                    "_",
-                                    " ",
-                                    regex=False,
-                                )
-                                .str.title()
-                            )
-
-                            fig3 = px.bar(
-                                change_long,
-                                x="Change",
-                                y="Product label",
-                                color="Trade flow",
-                                orientation="h",
-                                barmode="group",
-                                color_discrete_map={
-                                    "Import change": "#4474A5",
-                                    "Export change": "#28886E",
-                                },
-                            )
-
-                            fig3.update_layout(
+                            f.update_layout(
                                 template="plotly_white",
-                                height=480,
-                                legend_title_text="",
-                                yaxis={
-                                    "categoryorder": (
-                                        "total ascending"
-                                    )
-                                },
-                            )
-
-                            # Show increase and decrease
-                            # on a balanced horizontal axis.
-
-                            _s29_lim = max(
-                                abs(
-                                    float(
-                                        change_long[
-                                            "Change"
-                                        ].min()
-                                    )
-                                ),
-                                abs(
-                                    float(
-                                        change_long[
-                                            "Change"
-                                        ].max()
-                                    )
-                                ),
-                                1.0,
-                            ) * 1.15
-
-                            fig3.update_xaxes(
-                                range=[
-                                    -_s29_lim,
-                                    _s29_lim,
-                                ]
-                            )
-
-                            fig3.add_vline(
-                                x=0,
-                                line_color="#444444",
-                            )
-
-                            # SECTION30_FIXED_VISUAL_POLISH : fig3
-                            fig3.update_layout(
-                                height=535,
-                                margin=dict(l=12, r=12, t=45, b=110),
                                 legend=dict(
-                                    orientation="h", x=0.5, xanchor="center",
-                                    y=-0.2, yanchor="top",
-                                    font=dict(size=11, color="#182438"),
-                                    title=None,
+                                    orientation="h",
+                                    y=-0.2,
+                                    x=0.5,
+                                    xanchor="center",
+                                ),
+                                height=450,
+                                yaxis_title=(
+                                    "Product-level global mismatch"
                                 ),
                             )
 
                             st.plotly_chart(
-                                fig3,
+                                f,
                                 use_container_width=True,
-                                key="sc28_product_changes",
+                                key="s33_consistency",
                             )
 
-                        # ================================
-                        # DATA TABLE AND EXPORT
-                        # ================================
+                            # ====================================
+                            # GRAPH 2: PRODUCT ANALYSIS
+                            # ====================================
 
-                        with st.expander(
-                            "View data and download CSV"
-                        ):
-
-                            st.dataframe(
-                                annual,
-                                hide_index=True,
-                                use_container_width=True,
+                            st.markdown(
+                                "#### 2. Product analysis"
                             )
+
+                            st.caption(
+                                "Which products contribute most to "
+                                "global trade mismatch in the "
+                                "selected round and year?"
+                            )
+
+                            pr = products_df[
+                                (
+                                    products_df["Iteration"]
+                                    == pair[0]
+                                )
+                                & (
+                                    products_df["Pathway"]
+                                    == pair[1]
+                                )
+                                & (
+                                    products_df["Year"]
+                                    == focus_year
+                                )
+                            ]
+
+                            pr = pr.sort_values(
+                                "Trade mismatch",
+                                ascending=False,
+                            ).head(20)
+
+                            if pr.empty:
+
+                                st.info(
+                                    "No comparable product results "
+                                    "for this year."
+                                )
+
+                            else:
+
+                                if chart_style == "Bar":
+
+                                    f = px.bar(
+                                        pr,
+                                        x="Product",
+                                        y="Trade mismatch",
+                                        color="Stage",
+                                        barmode="group",
+                                    )
+
+                                else:
+
+                                    f = px.line(
+                                        pr,
+                                        x="Product",
+                                        y="Trade mismatch",
+                                        color="Stage",
+                                        markers=True,
+                                    )
+
+                                f.update_layout(
+                                    template="plotly_white",
+                                    xaxis_tickangle=-35,
+                                    legend=dict(
+                                        orientation="h",
+                                        y=-0.25,
+                                        x=0.5,
+                                        xanchor="center",
+                                    ),
+                                    height=480,
+                                )
+
+                                st.plotly_chart(
+                                    f,
+                                    use_container_width=True,
+                                    key="s33_products",
+                                )
+
+                            # ====================================
+                            # GRAPH 3: SCENATHON EVOLUTION
+                            # ====================================
+
+                            st.markdown(
+                                "#### 3. Scenathon evolution"
+                            )
+
+                            st.caption(
+                                "Each iteration and pathway combination "
+                                "is shown separately. Missing combinations "
+                                "are not treated as zero."
+                            )
+
+                            metric = st.selectbox(
+                                "Indicator",
+                                [
+                                    "Trade mismatch",
+                                    "Imports",
+                                    "Exports",
+                                ],
+                                key="s33_metric",
+                            )
+
+                            evo = summary[
+                                (
+                                    summary["Year"]
+                                    == focus_year
+                                )
+                                & (
+                                    summary["Stage"]
+                                    == stage_choice
+                                )
+                            ].copy()
+
+                            order = {
+                                name: index
+                                for index, name in enumerate(iters)
+                            }
+
+                            evo["Round order"] = (
+                                evo["Iteration"].map(order)
+                            )
+
+                            evo = evo.sort_values(
+                                "Round order"
+                            )
+
+                            if evo.empty:
+
+                                st.info(
+                                    "No comparable iteration and "
+                                    "pathway results."
+                                )
+
+                            else:
+
+                                if chart_style == "Bar":
+
+                                    f = px.bar(
+                                        evo,
+                                        x="Iteration",
+                                        y=metric,
+                                        color="Pathway",
+                                        barmode="group",
+                                        category_orders={
+                                            "Iteration": iters
+                                        },
+                                    )
+
+                                else:
+
+                                    import pandas as _s33_pd
+
+                                    all_rounds = [
+                                        i for i in iters
+                                        if i in chosen_iters
+                                    ]
+
+                                    all_paths = sorted(
+                                        evo["Pathway"].unique()
+                                    )
+
+                                    full_index = (
+                                        _s33_pd.MultiIndex.from_product(
+                                            [
+                                                all_rounds,
+                                                all_paths,
+                                            ],
+                                            names=[
+                                                "Iteration",
+                                                "Pathway",
+                                            ],
+                                        )
+                                    )
+
+                                    evo_line = (
+                                        evo.set_index(
+                                            [
+                                                "Iteration",
+                                                "Pathway",
+                                            ]
+                                        )[[metric]]
+                                        .reindex(full_index)
+                                        .reset_index()
+                                    )
+
+                                    f = px.line(
+                                        evo_line,
+                                        x="Iteration",
+                                        y=metric,
+                                        color="Pathway",
+                                        markers=True,
+                                        category_orders={
+                                            "Iteration": iters
+                                        },
+                                    )
+
+                                    for tr in f.data:
+                                        tr.connectgaps = False
+
+                                f.update_layout(
+                                    template="plotly_white",
+                                    legend=dict(
+                                        orientation="h",
+                                        y=-0.23,
+                                        x=0.5,
+                                        xanchor="center",
+                                    ),
+                                    height=470,
+                                )
+
+                                st.plotly_chart(
+                                    f,
+                                    use_container_width=True,
+                                    key="s33_evolution",
+                                )
+
+                            # ====================================
+                            # DOWNLOAD
+                            # ====================================
 
                             st.download_button(
-                                "Download trade comparison",
-                                data=annual.to_csv(
+                                "Download comparable trade data",
+                                summary.to_csv(
                                     index=False
-                                ).encode(
-                                    "utf-8-sig"
-                                ),
+                                ).encode("utf-8"),
                                 file_name=(
-                                    "scenathon_trade_before_after.csv"
+                                    "scenathon_trade_analytics.csv"
                                 ),
                                 mime="text/csv",
-                                key="sc28_download",
+                                key="s33_download",
                             )
-
-                        st.caption(
-                            "All comparisons are based on "
-                            "submitted FABLE-C calculator "
-                            "results. Trade adjustment "
-                            "calculation outputs are not "
-                            "used as a separate chart series."
-                        )
-
 
     _render_analytics_fragment()
 
