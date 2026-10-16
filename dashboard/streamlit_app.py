@@ -218,7 +218,7 @@ def list_scenathon_sessions():
 
     for entry in github_list_dir(storage_path("sessions")):
         if entry.get("type") == "dir":
-            cfg = github_get_json(session_config_path(entry["name"]))
+            cfg = _v2p17_session_list_config(entry["name"])
 
             if cfg:
                 sessions.append(cfg)
@@ -490,6 +490,605 @@ def github_contents_url(path=""):
     return base
 
 
+
+# V2_PATCH_13_SAFE_GITHUB_GET_FINAL
+# Conditional GitHub GETs keep current data fresh while avoiding
+# primary-quota charges for authenticated HTTP 304 responses.
+# No cached response is used without GitHub revalidation, except
+# the successful, read-only repository connection probe (180 s).
+import threading as _gh13_threading
+import time as _gh13_time
+import os as _gh13_os
+from collections import OrderedDict as _gh13_OrderedDict
+
+@st.cache_resource(show_spinner=False)
+def _gh13_state():
+    return {
+        "lock": _gh13_threading.RLock(),
+        "stripes": [_gh13_threading.Lock() for _ in range(32)],
+        "cache": _gh13_OrderedDict(),
+        "healthy": {},
+        "report_time": 0.0,
+        "stats": {
+            "started_utc": datetime.now(timezone.utc).isoformat(),
+            "network_get_total": 0,
+            "status_200": 0,
+            "status_304": 0,
+            "status_404": 0,
+            "status_403": 0,
+            "other_status": 0,
+            "network_errors": 0,
+            "connection_checks_skipped": 0,
+            "latency_ms_sum": 0.0,
+            "latency_ms_max": 0.0,
+            "by_operation": {
+                "connection": 0,
+                "file": 0,
+                "directory": 0
+            },
+            "rate_limit_remaining": None,
+            "rate_limit_limit": None,
+            "rate_limit_reset_utc": None,
+        },
+    }
+
+
+def _gh13_get(kind, url, **kwargs):
+    # Only three existing GitHub read functions call this helper.
+    # Writes/deletes and their original fresh-SHA checks are untouched.
+    state = _gh13_state()
+    headers = dict(kwargs.get("headers") or {})
+    params = dict(kwargs.get("params") or {})
+
+    credential_id = hashlib.sha256(
+        str(headers.get("Authorization", "")).encode("utf-8")
+    ).hexdigest()
+
+    key = (
+        str(url),
+        tuple(
+            sorted(
+                (str(k), str(v))
+                for k, v in params.items()
+            )
+        ),
+        credential_id,
+    )
+
+    stripe = int(
+        hashlib.sha256(
+            repr(key).encode()
+        ).hexdigest()[:8],
+        16
+    ) % 32
+
+    with state["stripes"][stripe]:
+
+        # Cache only successful connection probes.
+        if kind == "connection":
+            with state["lock"]:
+                if (
+                    state["healthy"].get(key, 0.0)
+                    > _gh13_time.time()
+                ):
+                    state["stats"][
+                        "connection_checks_skipped"
+                    ] += 1
+
+                    cached = requests.Response()
+                    cached.status_code = 200
+                    cached._content = b"{}"
+                    cached.url = str(url)
+                    return cached
+
+        with state["lock"]:
+            entry = (
+                state["cache"].get(key)
+                if kind != "connection"
+                else None
+            )
+
+        if entry:
+            headers["If-None-Match"] = entry["etag"]
+
+        options = dict(kwargs)
+        options["headers"] = headers
+
+        started = _gh13_time.perf_counter()
+
+        try:
+            # Actual network request — no recursive call.
+            response = requests.get(
+                url,
+                **options
+            )
+
+        except Exception:
+            with state["lock"]:
+                state["stats"]["network_errors"] += 1
+            raise
+
+        elapsed = (
+            _gh13_time.perf_counter() - started
+        ) * 1000
+
+        actual_status = response.status_code
+
+        # --------------------------------------------
+        # Collect API performance statistics
+        # --------------------------------------------
+
+        with state["lock"]:
+
+            stats = state["stats"]
+
+            stats["network_get_total"] += 1
+            stats["by_operation"][kind] += 1
+            stats["latency_ms_sum"] += elapsed
+
+            stats["latency_ms_max"] = max(
+                stats["latency_ms_max"],
+                elapsed
+            )
+
+            stat_name = {
+                200: "status_200",
+                304: "status_304",
+                403: "status_403",
+                404: "status_404",
+            }.get(
+                actual_status,
+                "other_status"
+            )
+
+            stats[stat_name] += 1
+
+            for header, stat_key in (
+                (
+                    "X-RateLimit-Remaining",
+                    "rate_limit_remaining"
+                ),
+                (
+                    "X-RateLimit-Limit",
+                    "rate_limit_limit"
+                ),
+            ):
+
+                value = response.headers.get(header)
+
+                if value is not None:
+                    try:
+                        stats[stat_key] = int(value)
+                    except ValueError:
+                        pass
+
+            reset = response.headers.get(
+                "X-RateLimit-Reset"
+            )
+
+            if reset:
+                try:
+                    stats["rate_limit_reset_utc"] = (
+                        datetime.fromtimestamp(
+                            int(reset),
+                            timezone.utc
+                        ).isoformat()
+                    )
+                except (ValueError, OverflowError):
+                    pass
+
+        # --------------------------------------------
+        # Cache a successful connection check
+        # --------------------------------------------
+
+        if kind == "connection":
+
+            if actual_status == 200:
+                with state["lock"]:
+                    state["healthy"][key] = (
+                        _gh13_time.time() + 180
+                    )
+
+            else:
+                with state["lock"]:
+                    state["healthy"].pop(
+                        key,
+                        None
+                    )
+
+        # --------------------------------------------
+        # HTTP 304: GitHub confirms unchanged data
+        # --------------------------------------------
+
+        elif actual_status == 304 and entry is not None:
+
+            response.status_code = 200
+            response._content = entry["body"]
+
+            response.reason = (
+                "OK (GitHub 304: unchanged)"
+            )
+
+        # --------------------------------------------
+        # Store successful GitHub response ETag
+        # --------------------------------------------
+
+        elif actual_status == 200:
+
+            etag = response.headers.get("ETag")
+            body = response.content
+
+            with state["lock"]:
+
+                if etag and len(body) <= 1024 * 1024:
+
+                    state["cache"][key] = {
+                        "etag": etag,
+                        "body": body
+                    }
+
+                    state["cache"].move_to_end(key)
+
+                    while len(state["cache"]) > 64:
+                        state["cache"].popitem(
+                            last=False
+                        )
+
+                else:
+                    state["cache"].pop(
+                        key,
+                        None
+                    )
+
+        else:
+
+            # Do not serve stale content on errors.
+            with state["lock"]:
+                state["cache"].pop(
+                    key,
+                    None
+                )
+
+        # --------------------------------------------
+        # Save local performance measurements
+        # No credentials or submitted data stored.
+        # --------------------------------------------
+
+        with state["lock"]:
+
+            if (
+                _gh13_time.time()
+                - state["report_time"]
+                >= 20
+            ):
+
+                state["report_time"] = (
+                    _gh13_time.time()
+                )
+
+                stats = dict(state["stats"])
+
+                stats["by_operation"] = dict(
+                    stats["by_operation"]
+                )
+
+                try:
+
+                    folder = (
+                        Path(__file__).resolve()
+                        .parent.parent
+                        / "_local_performance"
+                    )
+
+                    folder.mkdir(
+                        parents=True,
+                        exist_ok=True
+                    )
+
+                    dest = (
+                        folder
+                        / "github_patch13_metrics.json"
+                    )
+
+                    tmp = (
+                        folder
+                        / "github_patch13_metrics.tmp"
+                    )
+
+                    tmp.write_text(
+                        json.dumps(
+                            stats,
+                            indent=2
+                        ),
+                        encoding="utf-8"
+                    )
+
+                    _gh13_os.replace(
+                        tmp,
+                        dest
+                    )
+
+                except OSError:
+                    # Monitoring must not stop the app.
+                    pass
+
+        return response
+
+
+# V2_PATCH_14_REQUEST_DIAGNOSTICS
+
+import threading as _gh14_threading
+import time as _gh14_time
+import json as _gh14_json
+
+from pathlib import Path as _gh14_Path
+from urllib.parse import urlsplit as _gh14_urlsplit
+from collections import deque as _gh14_deque
+
+@st.cache_resource(show_spinner=False)
+def _gh14_state():
+    return {
+        "lock": _gh14_threading.RLock(),
+        "started_utc": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "requests": 0,
+        "by_endpoint": {},
+        "recent": _gh14_deque(maxlen=300),
+        "last_save": 0.0,
+    }
+
+
+def _gh14_endpoint(url):
+    # Store only the GitHub API path.
+    # Never store tokens, query strings or credentials.
+
+    parsed = _gh14_urlsplit(str(url))
+
+    path = parsed.path or "/"
+
+    # Strip common API prefix for readability.
+    if path.startswith("/repos/"):
+        pieces = path.split("/")
+
+        if len(pieces) >= 5:
+            path = "/" + "/".join(pieces[4:])
+
+    return path[:240]
+
+
+# Preserve the original PATCH 13 implementation.
+_gh14_original_get = _gh13_get
+
+
+def _gh13_get(kind, url, **kwargs):
+    # Wrapper name deliberately matches PATCH 13.
+    # The original implementation remains available
+    # as _gh14_original_get.
+
+    started = _gh14_time.perf_counter()
+
+    try:
+        response = _gh14_original_get(
+            kind,
+            url,
+            **kwargs
+        )
+
+    except Exception:
+        elapsed_ms = (
+            _gh14_time.perf_counter() - started
+        ) * 1000
+
+        _gh14_record(
+            kind=kind,
+            url=url,
+            status="EXCEPTION",
+            elapsed_ms=elapsed_ms,
+        )
+
+        raise
+
+    elapsed_ms = (
+        _gh14_time.perf_counter() - started
+    ) * 1000
+
+    status = str(response.status_code)
+
+    # PATCH 13 converts 304 into a 200 response
+    # with a recognizable reason.
+    if "GitHub 304" in str(
+        getattr(response, "reason", "")
+    ):
+        status = "304"
+
+    _gh14_record(
+        kind=kind,
+        url=url,
+        status=status,
+        elapsed_ms=elapsed_ms,
+    )
+
+    return response
+
+
+def _gh14_record(kind, url, status, elapsed_ms):
+
+    state = _gh14_state()
+
+    endpoint = _gh14_endpoint(url)
+
+    key = str(kind) + " | " + endpoint
+
+    with state["lock"]:
+
+        state["requests"] += 1
+
+        if key not in state["by_endpoint"]:
+
+            state["by_endpoint"][key] = {
+                "operation": str(kind),
+                "endpoint": endpoint,
+                "calls": 0,
+                "status_200": 0,
+                "status_304": 0,
+                "status_403": 0,
+                "status_404": 0,
+                "errors": 0,
+                "total_ms": 0.0,
+                "max_ms": 0.0,
+            }
+
+        item = state["by_endpoint"][key]
+
+        item["calls"] += 1
+
+        item["total_ms"] += elapsed_ms
+
+        item["max_ms"] = max(
+            item["max_ms"],
+            elapsed_ms
+        )
+
+        field = {
+            "200": "status_200",
+            "304": "status_304",
+            "403": "status_403",
+            "404": "status_404",
+        }.get(status, "errors")
+
+        item[field] += 1
+
+        state["recent"].append({
+            "time_utc": datetime.now(
+                timezone.utc
+            ).isoformat(),
+            "operation": str(kind),
+            "endpoint": endpoint,
+            "status": status,
+            "elapsed_ms": round(elapsed_ms, 1),
+        })
+
+        now = _gh14_time.time()
+
+        # Save at most once every 10 seconds.
+        if now - state["last_save"] < 10:
+            return
+
+        state["last_save"] = now
+
+        rows = []
+
+        for value in state["by_endpoint"].values():
+
+            row = dict(value)
+
+            if row["calls"]:
+                row["avg_ms"] = round(
+                    row["total_ms"] / row["calls"],
+                    1
+                )
+            else:
+                row["avg_ms"] = 0.0
+
+            row["total_ms"] = round(
+                row["total_ms"],
+                1
+            )
+
+            row["max_ms"] = round(
+                row["max_ms"],
+                1
+            )
+
+            rows.append(row)
+
+        rows.sort(
+            key=lambda x: x["calls"],
+            reverse=True
+        )
+
+        report = {
+            "started_utc": state["started_utc"],
+            "total_helper_calls": state["requests"],
+            "unique_endpoints": len(rows),
+            "by_endpoint": rows,
+            "recent_requests": list(
+                state["recent"]
+            ),
+        }
+
+        try:
+
+            folder = (
+                _gh14_Path(__file__).resolve()
+                .parent.parent
+                / "_local_performance"
+            )
+
+            folder.mkdir(
+                parents=True,
+                exist_ok=True
+            )
+
+            destination = (
+                folder
+                / "github_patch14_diagnostics.json"
+            )
+
+            temporary = (
+                folder
+                / "github_patch14_diagnostics.tmp"
+            )
+
+            temporary.write_text(
+                _gh14_json.dumps(
+                    report,
+                    indent=2
+                ),
+                encoding="utf-8"
+            )
+
+            import os as _gh14_os
+
+            _gh14_os.replace(
+                temporary,
+                destination
+            )
+
+        except OSError:
+            # Diagnostics must never block app usage.
+            pass
+
+
+
+# V2_PATCH_17_SAFE_GITHUB_READS
+
+# UI connection checks only.
+# Does not change the underlying GitHub connection function.
+# A cached successful check can be up to 10 seconds old.
+
+@st.cache_data(ttl=10, show_spinner=False)
+def _v2p17_ui_connection_status():
+    return github_connection_status()
+
+
+# Read-only metadata cache for the session selector.
+# Never use this helper for submission authorization,
+# Admin destructive actions, or fresh write guards.
+
+@st.cache_data(ttl=15, show_spinner=False)
+def _v2p17_session_list_config(session_id):
+    return github_get_json(
+        session_config_path(session_id)
+    )
+
+
+def _v2p17_clear_ui_read_caches():
+    _v2p17_ui_connection_status.clear()
+    _v2p17_session_list_config.clear()
+
+
 def github_connection_status():
 
     if not GITHUB_TOKEN:
@@ -500,7 +1099,7 @@ def github_connection_status():
 
     try:
 
-        response = requests.get(
+        response = _gh13_get("connection", 
             github_repo_url(),
             headers=github_headers(),
             timeout=20,
@@ -528,7 +1127,7 @@ def github_connection_status():
 
 def github_get_file(path: str):
 
-    response = requests.get(
+    response = _gh13_get("file", 
         github_contents_url(path),
         headers=github_headers(),
         params={
@@ -567,7 +1166,7 @@ def github_get_file_readonly(path: str):
 @st.cache_data(ttl=90, show_spinner=False)
 def github_list_dir(path: str):
 
-    response = requests.get(
+    response = _gh13_get("directory", 
         github_contents_url(path),
         headers=github_headers(),
         params={
@@ -3773,6 +4372,32 @@ DATA_REVISION_PATH = (
 )
 
 
+
+
+# V2_PATCH_15_SAFE_UI_CACHE
+
+@st.cache_data(
+    ttl=3,
+    show_spinner=False
+)
+def _v2p15_ui_active_scenathon():
+    """
+    UI-only cached lookup.
+
+    IMPORTANT:
+    Do not use for submission authorization,
+    destructive Admin actions or write guards.
+    """
+    return get_published_active_scenathon()
+
+
+def _v2p15_clear_ui_cache():
+    """
+    Clear the shared UI cache after Admin
+    successfully publishes a new active session.
+    """
+    _v2p15_ui_active_scenathon.clear()
+
 def get_published_active_scenathon():
     """
     Read the Admin-selected active session from GitHub.
@@ -3824,6 +4449,23 @@ def set_published_active_scenathon(session_id):
         "Admin: update active Scenathon",
     )
 
+    # PATCH 15: invalidate UI cache after success
+    _v2p15_clear_ui_cache()
+
+
+
+# V2_PATCH_16_SAFE_UI_CONTROL_CACHE
+# Cache only the public UI revision check.
+# Admin and write operations retain their original logic.
+
+@st.cache_data(ttl=3, show_spinner=False)
+def _v2p16_ui_data_revision():
+    return get_data_revision()
+
+
+def _v2p16_clear_ui_revision_cache():
+    _v2p16_ui_data_revision.clear()
+
 
 def get_data_revision():
     """
@@ -3857,6 +4499,9 @@ def bump_data_revision():
         },
         "Admin: invalidate Scenathon analytics",
     )
+
+    # PATCH 16: refresh UI revision cache after Admin update
+    _v2p16_clear_ui_revision_cache()
 
 
 def reset_loaded_dashboard_data():
@@ -5244,7 +5889,7 @@ with st.spinner(
 ):
 
     connection_ok, connection_message = (
-        github_connection_status()
+        _v2p17_ui_connection_status()
     )
 
 if not connection_ok:
@@ -5275,7 +5920,7 @@ if not connection_ok:
 try:
 
     _selected_session = (
-        get_published_active_scenathon()
+        _v2p15_ui_active_scenathon()
     )
 
     if _selected_session != NO_ACTIVE_SCENATHON:
@@ -5291,7 +5936,7 @@ try:
         ):
             _selected_session = NO_ACTIVE_SCENATHON
 
-    _current_revision = get_data_revision()
+    _current_revision = _v2p16_ui_data_revision()
 
 except Exception as exc:
 
@@ -5472,9 +6117,7 @@ with submit_tab:
         )
 
 
-        with st.form(
-            "submission_form"
-        ):
+        with st.container():
 
             col1, col2 = (
                 st.columns(
@@ -5535,9 +6178,27 @@ with submit_tab:
                 )
 
 
+            # The key changes whenever the submission context changes.
+            # This discards only the browser widget selection, not stored data.
+            _v2_upload_context = (
+                str(st.session_state.get("active_scenathon_id", "")),
+                str(selected_iteration),
+                str(username).strip(),
+                str(participant),
+                str(pathway),
+                str(stage_label),
+            )
+            if st.session_state.get("_v2_upload_context") != _v2_upload_context:
+                st.session_state["_v2_upload_context"] = _v2_upload_context
+                st.session_state["_v2_upload_generation"] = (
+                    st.session_state.get("_v2_upload_generation", 0) + 1
+                )
+            _v2_upload_key = f"v2_calculator_upload_{st.session_state.get('_v2_upload_generation', 0)}"
+
             uploaded_file = (
                 st.file_uploader(
                     "Upload full FABLE-C calculator",
+                    key=_v2_upload_key,
                     type=[
                         "xlsx",
                         "xlsm",
@@ -5567,7 +6228,7 @@ with submit_tab:
 
 
             submitted = (
-                st.form_submit_button(
+                st.button(
                     "Submit calculator",
                     type="primary",
                 )
@@ -5928,6 +6589,12 @@ with submit_tab:
                         )
 
 
+                    # V2: clear uploader at next interaction after a saved result.
+                    # Also applies to DUPLICATE, which is already present in storage.
+                    st.session_state["_v2_upload_generation"] = (
+                        st.session_state.get("_v2_upload_generation", 0) + 1
+                    )
+
                     # =========================================
                     # RESULT MESSAGE
                     # =========================================
@@ -6100,32 +6767,12 @@ with submit_tab:
                     )
 
 
-                    st.caption(
-                        "Stored in private runtime storage:"
-                    )
+                    # V2_PATCH_05_HIDE_STORAGE_PATH
+                    # Internal storage path hidden from participants.
 
+                    # V2_PATCH_04_INDIVIDUAL_DOWNLOADS_REMOVED
+                    # Individual CSV downloads are hidden after submission.
 
-                    st.code(
-                        stored_path
-                    )
-
-                    st.markdown("#### Download your submitted SCENATHON report")
-                    left_csv, right_csv = st.columns(2)
-                    left_csv.download_button(
-                        "Download my REPORTING_AGGREGATE.csv",
-                        data=csv_bytes(aggregate_df),
-                        file_name=f"{safe_name(participant)}_{safe_name(pathway)}_{submission_stage}_AGGREGATE.csv",
-                        mime="text/csv", key="my_submitted_aggregate_csv", on_click="ignore",
-                    )
-                    right_csv.download_button(
-                        "Download my REPORTING_BYPRODUCT.csv",
-                        data=csv_bytes(trade_df),
-                        file_name=f"{safe_name(participant)}_{safe_name(pathway)}_{submission_stage}_BYPRODUCT.csv",
-                        mime="text/csv", key="my_submitted_byproduct_csv", on_click="ignore",
-                    )
-
-
-                    # =========================================
                     # OPTIONAL DATA PREVIEW
                     # =========================================
 
@@ -12052,6 +12699,109 @@ with analytics_tab:
     _render_analytics_fragment()
 
 
+
+# V2_PATCH_06_PERSISTENT_ADMIN_LOGIN
+# V2_PATCH_07_COOKIE_COMPATIBILITY
+
+import base64 as _fs_b64
+import hashlib as _fs_hash
+import hmac as _fs_hmac
+import json as _fs_json
+import time as _fs_time
+import uuid as _fs_uuid
+
+# Compatibility with older streamlit-cookies-manager
+if not hasattr(st, "cache"):
+    st.cache = st.cache_resource
+
+from streamlit_cookies_manager import EncryptedCookieManager
+
+_fs_key = st.secrets["persistent_auth"]["cookie_secret"]
+
+_fs_cookie = EncryptedCookieManager(
+    prefix="fable_scenathon_v2_",
+    password=_fs_key,
+)
+
+_fs_name = "admin_auth_v2"
+_fs_lifetime = 8 * 3600
+
+
+def _fs_signature(data):
+    return _fs_hmac.new(
+        _fs_key.encode(),
+        data.encode(),
+        _fs_hash.sha256,
+    ).hexdigest()
+
+
+def _fs_issue_token():
+    t = int(_fs_time.time())
+
+    data = _fs_json.dumps(
+        {
+            "iat": t,
+            "exp": t + _fs_lifetime,
+            "id": _fs_uuid.uuid4().hex,
+        },
+        separators=(",", ":"),
+    )
+
+    data = _fs_b64.urlsafe_b64encode(
+        data.encode()
+    ).decode()
+
+    return data + "." + _fs_signature(data)
+
+
+def _fable_admin_session_valid():
+    try:
+        data, signature = (
+            _fs_cookie.get(_fs_name, "").rsplit(".", 1)
+        )
+
+        if not _fs_hmac.compare_digest(
+            signature,
+            _fs_signature(data),
+        ):
+            return False
+
+        obj = _fs_json.loads(
+            _fs_b64.urlsafe_b64decode(data)
+        )
+
+        t = int(_fs_time.time())
+
+        return (
+            isinstance(obj["iat"], int)
+            and isinstance(obj["exp"], int)
+            and obj["iat"] <= t < obj["exp"]
+            and obj["exp"] - obj["iat"] == _fs_lifetime
+        )
+
+    except Exception:
+        return False
+
+
+def _fable_save_admin_login():
+    if not _fs_cookie.ready():
+        raise RuntimeError(
+            "Cookie component not ready"
+        )
+
+    _fs_cookie[_fs_name] = _fs_issue_token()
+    _fs_cookie.save()
+
+
+def _fable_clear_admin_login():
+    if (
+        _fs_cookie.ready()
+        and _fs_name in _fs_cookie
+    ):
+        del _fs_cookie[_fs_name]
+        _fs_cookie.save()
+
+# V2_PATCH_10_AUTH_RECOVERY
 # ============================================================
 # 16. ADMIN
 # ============================================================
@@ -12076,6 +12826,15 @@ with admin_tab:
             "fable_admin_authenticated"
         ] = False
 
+
+    if not _fs_cookie.ready():
+        st.info('Initializing secure Admin session...')
+        st.stop()
+    # V2_PATCH_08_FIX_ADMIN_LOGOUT
+    if st.session_state.get("_fable_logout_pending", False):
+        st.session_state["fable_admin_authenticated"] = False
+    else:
+        st.session_state["fable_admin_authenticated"] = _fable_admin_session_valid()
 
     # ========================================================
     # LOGIN VIEW
@@ -12161,6 +12920,8 @@ with admin_tab:
                         st.session_state[
                             "fable_admin_authenticated"
                         ] = True
+                        _fable_save_admin_login()
+                        st.session_state["_fable_logout_pending"] = False
 
 
                         login_status.update(
@@ -12211,6 +12972,8 @@ with admin_tab:
                 use_container_width=True,
             ):
 
+                st.session_state["_fable_logout_pending"] = True
+                _fable_clear_admin_login()
                 st.session_state[
                     "fable_admin_authenticated"
                 ] = False
@@ -12898,6 +13661,705 @@ with admin_tab:
 
 
         # ====================================================
+
+        # V2_PATCH_09_ADMIN_FAIR_SHARE
+        # Scenathon-level Fair Share configuration.
+        # Local preview: no shared storage writes.
+
+        with config_tab:
+
+            st.markdown("#### 3. Fair Share")
+            st.caption(
+                "Global Targets · Fair Share Configuration · 2025–2050"
+            )
+
+            if not chosen_sid or chosen_sid == "legacy":
+
+                st.info("Choose a Scenathon first.")
+
+            else:
+
+                import io as _fs_io
+                import math as _fs_math
+                import os as _fs_os
+                from pathlib import Path as _FSPath
+
+                _fs_dir = (
+                    REPO_ROOT
+                    / "_local_fair_share"
+                    / safe_name(chosen_sid)
+                )
+
+                _fs_file = _fs_dir / "configuration.json"
+
+                _fs_saved = {}
+
+                if _fs_file.exists():
+                    try:
+                        _fs_saved = json.loads(
+                            _fs_file.read_text(encoding="utf-8")
+                        )
+                    except Exception as exc:
+                        st.error(
+                            f"Cannot read existing Fair Share data: {exc}"
+                        )
+                        st.stop()
+
+                # -----------------------------------------------
+                # PARTICIPANTS FROM CONTROL CENTER
+                # -----------------------------------------------
+
+                _fs_iterations = sorted(iteration_map)
+
+                if not _fs_iterations:
+
+                    st.info(
+                        "Create an iteration and configure "
+                        "participants before setting Fair Share."
+                    )
+
+                else:
+
+                    # V2_PATCH_12_AUTO_PARTICIPANTS
+                    # First configured iteration defines participants.
+                    _fs_iteration = _fs_iterations[0]
+                    _fs_cfg = iteration_map[_fs_iteration][1]
+                    _fs_reference_names = [
+                        str(p).strip()
+                        for p in _fs_cfg.get("participants", [])
+                        if str(p).strip()
+                    ]
+                    _fs_reference_set = {
+                        p.casefold() for p in _fs_reference_names
+                    }
+                    _fs_mismatch_iterations = []
+                    for _fs_other_iteration in _fs_iterations:
+                        _fs_other_cfg = iteration_map[_fs_other_iteration][1]
+                        _fs_other_set = {
+                            str(p).strip().casefold()
+                            for p in _fs_other_cfg.get("participants", [])
+                            if str(p).strip()
+                        }
+                        if _fs_other_set != _fs_reference_set:
+                            _fs_mismatch_iterations.append(
+                                str(_fs_other_iteration)
+                            )
+                    st.caption(
+                        "Participants automatically taken from the "
+                        "first configured iteration: "
+                        + str(_fs_iteration)
+                    )
+                    if _fs_mismatch_iterations:
+                        st.error(
+                            "Participant mismatch in iteration(s): "
+                            + ", ".join(_fs_mismatch_iterations)
+                        )
+
+                    _fs_participants = [
+                        str(p).strip()
+                        for p in _fs_cfg.get("participants", [])
+                        if str(p).strip()
+                    ]
+
+                    _fs_approaches = [
+                        "Historical responsibility",
+                        "Equality",
+                        "Capability",
+                    ]
+
+                    _fs_expected = len(_fs_participants) * 3
+
+                    # -----------------------------------------------
+                    # GLOBAL CARBON BUDGET
+                    # -----------------------------------------------
+
+                    col_budget, col_count = st.columns(
+                        [3, 1]
+                    )
+
+                    with col_budget:
+
+                        _fs_budget = st.number_input(
+                            "Global AFOLU Carbon Budget (MtCO₂e)",
+                            min_value=0.0,
+                            value=float(
+                                _fs_saved.get(
+                                    "global_carbon_budget_mtco2e",
+                                    0.0,
+                                )
+                            ),
+                            step=1000.0,
+                            key=f"fs09_budget_{safe_name(chosen_sid)}",
+                            help=(
+                                "Cumulative budget for 2025–2050. "
+                                "Enter the agreed target."
+                            ),
+                        )
+
+                    with col_count:
+
+                        st.metric(
+                            "Expected FS data rows",
+                            _fs_expected,
+                        )
+
+                        st.caption(
+                            f"{len(_fs_participants)} participants × "
+                            "3 approaches"
+                        )
+
+                    if not _fs_participants:
+                        st.warning(
+                            "This iteration has no participants."
+                        )
+                    else:
+                        st.caption(
+                            "Expected region names: "
+                            + ", ".join(_fs_participants)
+                        )
+
+                    # -----------------------------------------------
+                    # DOWNLOAD TEMPLATE
+                    # -----------------------------------------------
+
+                    _fs_template = [
+                        "Region,Approach,FS"
+                    ]
+
+                    # V2_PATCH_11_APPROACH_WISE_TEMPLATE
+                    _fs_template_approaches = (
+                        "Capability",
+                        "Equality",
+                        "Responsibility",
+                    )
+
+                    for _fs_approach_name in _fs_template_approaches:
+                        for _fs_region_name in _fs_participants:
+                            _fs_template.append(f"{_fs_region_name},{_fs_approach_name},")
+
+                    st.download_button(
+                        "Download Fair Share Upload Template",
+                        data=(
+                            "\n".join(_fs_template) + "\n"
+                        ).encode("utf-8-sig"),
+                        file_name="fair_share_template.csv",
+                        mime="text/csv",
+                        key=f"fs09_template_{safe_name(chosen_sid)}",
+                    )
+
+                    # -----------------------------------------------
+                    # FILE UPLOADER
+                    # -----------------------------------------------
+
+                    _fs_upload = st.file_uploader(
+                        "Upload Fair Share percentages",
+                        type=["xlsx", "csv"],
+                        key=f"fs09_upload_{safe_name(chosen_sid)}",
+                        help=(
+                            "Required columns: Region, Approach, FS. "
+                            "Header is not counted as a data row."
+                        ),
+                    )
+
+                    # -----------------------------------------------
+                    # READ UPLOADED EXCEL OR CSV
+                    # -----------------------------------------------
+
+                    def _fs_read_upload(upload):
+
+                        content = upload.getvalue()
+
+                        if upload.name.lower().endswith(".csv"):
+
+                            sheets = {
+                                "CSV": pd.read_csv(
+                                    _fs_io.BytesIO(content),
+                                    header=None,
+                                    dtype=object,
+                                    encoding="utf-8-sig",
+                                    sep=None,
+                                    engine="python",
+                                )
+                            }
+
+                        else:
+
+                            sheets = pd.read_excel(
+                                _fs_io.BytesIO(content),
+                                sheet_name=None,
+                                header=None,
+                                dtype=object,
+                            )
+
+                        aliases = {
+                            "Region": {
+                                "region", "country", "participant"
+                            },
+                            "Approach": {
+                                "approach", "fairness approach"
+                            },
+                            "FS": {
+                                "fs", "fair share",
+                                "fair shares",
+                                "fair share percentage"
+                            },
+                        }
+
+                        for sheet_name, sheet in sheets.items():
+
+                            for row_idx, row in sheet.head(40).iterrows():
+
+                                labels = [
+                                    str(v).strip().casefold()
+                                    if pd.notna(v) else ""
+                                    for v in row
+                                ]
+
+                                cols = {}
+
+                                for col_name, options in aliases.items():
+
+                                    matches = [
+                                        i for i, value in enumerate(labels)
+                                        if value in options
+                                    ]
+
+                                    if matches:
+                                        cols[col_name] = matches[0]
+
+                                if (
+                                    len(cols) == 3
+                                    and len(set(cols.values())) == 3
+                                ):
+
+                                    data = sheet.iloc[
+                                        row_idx + 1:,
+                                        [cols[c] for c in
+                                         ["Region", "Approach", "FS"]]
+                                    ].copy()
+
+                                    data.columns = [
+                                        "Region", "Approach", "FS"
+                                    ]
+
+                                    data = data.dropna(
+                                        how="all"
+                                    ).reset_index(drop=True)
+
+                                    return data, sheet_name
+
+                        raise ValueError(
+                            "Could not find Region, Approach, FS headers."
+                        )
+
+                    # -----------------------------------------------
+                    # NORMALIZE FAIR SHARE PERCENTAGES
+                    # -----------------------------------------------
+
+                    def _fs_normalize_percentage(value):
+
+                        if pd.isna(value):
+                            raise ValueError("Missing FS percentage")
+
+                        text = str(value).strip()
+
+                        if not text:
+                            raise ValueError("Empty FS percentage")
+
+                        has_percent = text.endswith("%")
+
+                        number = float(
+                            text.rstrip("%").replace(",", "")
+                        )
+
+                        if not _fs_math.isfinite(number):
+                            raise ValueError("Non-finite FS value")
+
+                        if number < 0:
+                            raise ValueError("Negative FS value")
+
+                        # Supports:
+                        # 15.1% -> 0.151
+                        # 15.1  -> 0.151
+                        # 0.151 -> 0.151
+
+                        fraction = (
+                            number / 100.0
+                            if has_percent or number > 1
+                            else number
+                        )
+
+                        if fraction > 1:
+                            raise ValueError(
+                                "FS cannot exceed 100%"
+                            )
+
+                        return fraction
+
+                    # -----------------------------------------------
+                    # VALIDATE PARTICIPANTS AND APPROACHES
+                    # -----------------------------------------------
+
+                    def _fs_validate(df):
+
+                        errors = []
+                        records = []
+                        seen = set()
+
+                        region_map = {
+                            p.casefold(): p
+                            for p in _fs_participants
+                        }
+
+                        approach_map = {
+                            "historical responsibility":
+                                "Historical responsibility",
+                            "responsibility": "Historical responsibility",
+                            "historical responsibility (hr)":
+                                "Historical responsibility",
+                            "hr":
+                                "Historical responsibility",
+                            "equality":
+                                "Equality",
+                            "equality (eq)":
+                                "Equality",
+                            "eq":
+                                "Equality",
+                            "capability":
+                                "Capability",
+                            "ability to pay":
+                                "Capability",
+                            "ap":
+                                "Capability",
+                        }
+
+                        for idx, row in df.iterrows():
+
+                            region = str(row["Region"]).strip()
+                            approach = str(row["Approach"]).strip()
+
+                            region_key = region.casefold()
+
+                            approach_name = approach_map.get(
+                                approach.casefold()
+                            )
+
+                            if region_key not in region_map:
+                                errors.append(
+                                    f"Row {idx+1}: Unknown region '{region}'"
+                                )
+                                continue
+
+                            if approach_name is None:
+                                errors.append(
+                                    f"Row {idx+1}: Unknown approach '{approach}'"
+                                )
+                                continue
+
+                            combination = (
+                                region_key,
+                                approach_name,
+                            )
+
+                            if combination in seen:
+                                errors.append(
+                                    f"Row {idx+1}: Duplicate "
+                                    f"{region} / {approach_name}"
+                                )
+                                continue
+
+                            seen.add(combination)
+
+                            try:
+                                fraction = _fs_normalize_percentage(
+                                    row["FS"]
+                                )
+
+                            except Exception as exc:
+                                errors.append(
+                                    f"Row {idx+1}: {exc}"
+                                )
+                                continue
+
+                            records.append({
+                                "Region": region_map[region_key],
+                                "Approach": approach_name,
+                                "FS_fraction": round(fraction, 12),
+                            })
+
+                        required = {
+                            (r.casefold(), a)
+                            for r in _fs_participants
+                            for a in _fs_approaches
+                        }
+
+                        missing = required - seen
+
+                        for region_key, approach in sorted(missing):
+
+                            errors.append(
+                                "Missing: "
+                                + region_map[region_key]
+                                + " / "
+                                + approach
+                            )
+
+                        if len(df) != _fs_expected:
+                            errors.append(
+                                f"Expected {_fs_expected} data rows, "
+                                f"found {len(df)}."
+                            )
+
+                        if not errors:
+
+                            for approach in _fs_approaches:
+
+                                total = sum(
+                                    r["FS_fraction"]
+                                    for r in records
+                                    if r["Approach"] == approach
+                                )
+
+                                if total > 1.005:
+                                    errors.append(
+                                        f"{approach}: FS total "
+                                        f"{total:.2%} exceeds 100%."
+                                    )
+
+                        return records, errors
+
+                    # -----------------------------------------------
+                    # PREVIEW AND VALIDATE
+                    # -----------------------------------------------
+
+                    _fs_records = []
+                    _fs_errors = []
+                    _fs_source = ""
+
+                    if _fs_upload is not None:
+
+                        try:
+
+                            table, sheet_name = _fs_read_upload(
+                                _fs_upload
+                            )
+
+                            _fs_records, _fs_errors = _fs_validate(
+                                table
+                            )
+
+                            _fs_source = (
+                                f"{_fs_upload.name} / {sheet_name}"
+                            )
+
+                        except Exception as exc:
+
+                            _fs_errors = [
+                                f"Upload error: {exc}"
+                            ]
+
+                    elif _fs_saved.get("shares"):
+
+                        previous = pd.DataFrame([
+                            {
+                                "Region": r["Region"],
+                                "Approach": r["Approach"],
+                                "FS": r["FS_fraction"],
+                            }
+                            for r in _fs_saved["shares"]
+                        ])
+
+                        _fs_records, _fs_errors = _fs_validate(
+                            previous
+                        )
+
+                        _fs_source = "Saved configuration"
+
+                    # -----------------------------------------------
+                    # PROFESSIONAL SUMMARY
+                    # -----------------------------------------------
+
+                    count_valid = len(_fs_records)
+
+                    m1, m2, m3 = st.columns(3)
+
+                    m1.metric(
+                        "Participating Regions",
+                        len(_fs_participants),
+                    )
+
+                    m2.metric(
+                        "Expected Combinations",
+                        _fs_expected,
+                    )
+
+                    m3.metric(
+                        "Valid Combinations",
+                        count_valid,
+                    )
+
+                    if _fs_records:
+
+                        preview = pd.DataFrame([
+                            {
+                                "Region": r["Region"],
+                                "Approach": r["Approach"],
+                                "Fair Share (%)": round(
+                                    r["FS_fraction"] * 100, 5
+                                ),
+                            }
+                            for r in _fs_records
+                        ])
+
+                        st.dataframe(
+                            preview,
+                            hide_index=True,
+                            use_container_width=True,
+                        )
+
+                        st.caption(
+                            f"Source: {_fs_source}"
+                        )
+
+                    if _fs_errors:
+
+                        st.error(
+                            "Fair Share validation failed. "
+                            "Configuration cannot be saved."
+                        )
+
+                        for error in _fs_errors[:20]:
+                            st.write("• " + error)
+
+                    elif (
+                        _fs_records
+                        and count_valid == _fs_expected
+                    ):
+
+                        st.success(
+                            f"Validation passed: "
+                            f"{len(_fs_participants)} participants × "
+                            f"3 approaches = {_fs_expected} rows."
+                        )
+
+                        for approach in _fs_approaches:
+
+                            total = sum(
+                                r["FS_fraction"]
+                                for r in _fs_records
+                                if r["Approach"] == approach
+                            )
+
+                            if abs(total - 1.0) > 0.005:
+
+                                st.warning(
+                                    f"{approach}: "
+                                    f"FS total = {total:.2%}. "
+                                    "This may represent partial "
+                                    "global coverage."
+                                )
+
+                    if _fs_saved:
+
+                        st.caption(
+                            "Saved version: "
+                            + str(_fs_saved.get("version", "?"))
+                        )
+
+                    # -----------------------------------------------
+                    # SAVE CONFIGURATION — LOCAL PREVIEW ONLY
+                    # -----------------------------------------------
+
+                    can_save = (
+                        not _fs_mismatch_iterations
+                        and bool(_fs_participants)
+                        and count_valid == _fs_expected
+                        and not _fs_errors
+                        and _fs_budget > 0
+                        and selected_session is not None
+                        and selected_session.get("status") == "OPEN"
+                    )
+
+                    if _fs_budget <= 0:
+                        st.info(
+                            "Enter a positive Global Carbon Budget."
+                        )
+
+                    if st.button(
+                        "Save Fair Share Configuration",
+                        type="primary",
+                        disabled=not can_save,
+                        key=f"fs09_save_{safe_name(chosen_sid)}",
+                    ):
+
+                        _fs_dir.mkdir(
+                            parents=True,
+                            exist_ok=True,
+                        )
+
+                        version = (
+                            int(_fs_saved.get("version", 0)) + 1
+                        )
+
+                        config = {
+                            "scenathon_id": chosen_sid,
+                            "version": version,
+                            "participant_reference_iteration":
+                                _fs_iteration,
+                            "participants": _fs_participants,
+                            "approaches": _fs_approaches,
+                            "global_carbon_budget_mtco2e":
+                                float(_fs_budget),
+                            "period": "2025-2050",
+                            "shares": _fs_records,
+                            "saved_at_utc":
+                                datetime.now(timezone.utc).isoformat(),
+                        }
+
+                        content = json.dumps(
+                            config,
+                            indent=2,
+                            ensure_ascii=False,
+                        )
+
+                        version_file = (
+                            _fs_dir
+                            / f"configuration_v{version:03d}.json"
+                        )
+
+                        version_file.write_text(
+                            content,
+                            encoding="utf-8",
+                        )
+
+                        temp_file = (
+                            _fs_dir / "configuration.tmp"
+                        )
+
+                        temp_file.write_text(
+                            content,
+                            encoding="utf-8",
+                        )
+
+                        _fs_os.replace(
+                            temp_file,
+                            _fs_file,
+                        )
+
+                        st.success(
+                            f"Fair Share configuration saved. "
+                            f"Version {version}."
+                        )
+
+                        st.rerun()
+
+                    st.caption(
+                        "Local V2 preview only. "
+                        "Fair Share configuration is saved locally; "
+                        "shared GitHub storage is unchanged."
+                    )
+
+
         # CC12C_CLEAR_BUTTON
         # Single-page Admin Control Center
         # ====================================================
@@ -12953,1006 +14415,1012 @@ with admin_tab:
         # 15B. SUBMISSION PROGRESS
         # =================================================
 
-        with progress_tab:
+        @st.fragment(run_every="20s")
+        def _v2_auto_refresh_submission_progress():
+            # Streamlit reruns this read-only progress panel every 20 seconds.
 
-            st.markdown(
-                "### Submission progress"
-            )
-
-            configs = (
-                list_iteration_configs()
-            )
-
-            names = [
-                cfg["iteration"]
-                for cfg in configs
-            ]
-
-            if not names:
-
-                st.info(
-                    "Create an iteration first."
+                st.markdown(
+                    "### Submission progress"
                 )
 
-            else:
+                configs = (
+                    list_iteration_configs()
+                )
 
-                progress_iteration = (
-                    st.selectbox(
-                        "Iteration",
-                        names,
-                        key="progress_iteration",
+                names = [
+                    cfg["iteration"]
+                    for cfg in configs
+                ]
+
+                if not names:
+
+                    st.info(
+                        "Create an iteration first."
                     )
-                )
-
-                config = (
-                    load_iteration_config(
-                        progress_iteration
-                    )
-                )
-
-                participants = (
-                    config.get(
-                        "participants",
-                        [],
-                    )
-                )
-
-                pathways = (
-                    config.get(
-                        "pathways",
-                        [],
-                    )
-                )
-
-                submissions = (
-                    submission_metadata_df(
-                        progress_iteration,
-                        stage="before",
-                    )
-                )
-
-                after_submissions = (
-                    submission_metadata_df(
-                        progress_iteration,
-                        stage="after",
-                    )
-                )
-
-                expected = (
-                    build_expected_matrix(
-                        participants,
-                        pathways,
-                    )
-                )
-
-                expected_reports = (
-                    len(expected)
-                )
-
-                submitted_reports = (
-                    len(submissions)
-                )
-
-                participant_total = (
-                    len(participants)
-                )
-
-                if submissions.empty:
-
-                    submitted_participants = 0
 
                 else:
 
-                    submitted_participants = (
-                        submissions[
-                            "participant"
-                        ].nunique()
-                    )
-
-
-                participant_completion = (
-                    submitted_participants
-                    / participant_total
-                    if participant_total
-                    else 0
-                )
-
-                report_completion = (
-                    submitted_reports
-                    / expected_reports
-                    if expected_reports
-                    else 0
-                )
-
-
-                c1, c2, c3, c4 = (
-                    st.columns(4)
-                )
-
-                c1.metric(
-                    "Participants submitted",
-                    (
-                        f"{submitted_participants}"
-                        f" / {participant_total}"
-                    ),
-                )
-
-                c2.metric(
-                    "Reports received",
-                    (
-                        f"{submitted_reports}"
-                        f" / {expected_reports}"
-                    ),
-                )
-
-                c3.metric(
-                    "Participant completion",
-                    (
-                        f"{participant_completion * 100:.0f}%"
-                    ),
-                )
-
-                c4.metric(
-                    "Report completion",
-                    (
-                        f"{report_completion * 100:.0f}%"
-                    ),
-                )
-
-
-                st.markdown(
-                    "#### Overall report progress"
-                )
-
-                st.progress(
-                    min(
-                        report_completion,
-                        1.0,
-                    )
-                )
-
-
-                # -----------------------------------------
-                # BEFORE / AFTER WORKFLOW STATUS
-                # -----------------------------------------
-
-                st.markdown(
-                    "#### Before and After workflow"
-                )
-
-
-                def admin_submission_lookup(
-                    frame,
-                ):
-
-                    if frame.empty:
-
-                        return {}
-
-                    return {
-                        (
-                            str(
-                                row.get(
-                                    "participant",
-                                    "",
-                                )
-                            ).strip(),
-                            str(
-                                row.get(
-                                    "pathway",
-                                    "",
-                                )
-                            ).strip(),
-                        ): row
-                        for row
-                        in frame.to_dict(
-                            orient="records"
-                        )
-                    }
-
-
-                before_lookup = (
-                    admin_submission_lookup(
-                        submissions
-                    )
-                )
-
-                after_lookup = (
-                    admin_submission_lookup(
-                        after_submissions
-                    )
-                )
-
-
-                workflow_rows = []
-
-
-                for _, expected_row in (
-                    expected.iterrows()
-                ):
-
-                    participant_name = str(
-                        expected_row[
-                            "participant"
-                        ]
-                    ).strip()
-
-                    pathway_name = str(
-                        expected_row[
-                            "pathway"
-                        ]
-                    ).strip()
-
-                    key = (
-                        participant_name,
-                        pathway_name,
-                    )
-
-                    before_row = (
-                        before_lookup.get(
-                            key
+                    progress_iteration = (
+                        st.selectbox(
+                            "Iteration",
+                            names,
+                            key="progress_iteration",
                         )
                     )
 
-                    after_row = (
-                        after_lookup.get(
-                            key
+                    config = (
+                        load_iteration_config(
+                            progress_iteration
                         )
                     )
 
-                    before_ok = (
-                        before_row
-                        is not None
-                    )
-
-                    after_ok = (
-                        after_row
-                        is not None
-                    )
-
-
-                    if (
-                        before_ok
-                        and after_ok
-                    ):
-
-                        workflow_status = (
-                            "Before and After complete"
-                        )
-
-                    elif before_ok:
-
-                        workflow_status = (
-                            "Before only"
-                        )
-
-                    elif after_ok:
-
-                        workflow_status = (
-                            "After without Before"
-                        )
-
-                    else:
-
-                        workflow_status = (
-                            "Not submitted"
-                        )
-
-
-                    workflow_rows.append(
-                        {
-                            "Participant": (
-                                participant_name
-                            ),
-                            "Pathway": (
-                                pathway_name
-                            ),
-                            "Before": (
-                                "Submitted"
-                                if before_ok
-                                else "Missing"
-                            ),
-                            "After": (
-                                "Submitted"
-                                if after_ok
-                                else "Missing"
-                            ),
-                            "Workflow status": (
-                                workflow_status
-                            ),
-                            "Before submitted": (
-                                before_row.get(
-                                    "submitted_at_utc",
-                                    "",
-                                )
-                                if before_ok
-                                else ""
-                            ),
-                            "After submitted": (
-                                after_row.get(
-                                    "submitted_at_utc",
-                                    "",
-                                )
-                                if after_ok
-                                else ""
-                            ),
-                        }
-                    )
-
-
-                workflow_df = (
-                    pd.DataFrame(
-                        workflow_rows
-                    )
-                )
-
-
-                after_reports = (
-                    len(
-                        after_submissions
-                    )
-                )
-
-
-                complete_pairs = (
-                    int(
-                        (
-                            (
-                                workflow_df[
-                                    "Before"
-                                ]
-                                == "Submitted"
-                            )
-                            &
-                            (
-                                workflow_df[
-                                    "After"
-                                ]
-                                == "Submitted"
-                            )
-                        ).sum()
-                    )
-                    if not workflow_df.empty
-                    else 0
-                )
-
-
-                workflow_metric_1, workflow_metric_2, workflow_metric_3 = (
-                    st.columns(
-                        3
-                    )
-                )
-
-
-                workflow_metric_1.metric(
-                    "Before reports",
-                    (
-                        f"{submitted_reports}"
-                        f" / {expected_reports}"
-                    ),
-                )
-
-
-                workflow_metric_2.metric(
-                    "After reports",
-                    (
-                        f"{after_reports}"
-                        f" / {expected_reports}"
-                    ),
-                )
-
-
-                workflow_metric_3.metric(
-                    "Before and After complete",
-                    (
-                        f"{complete_pairs}"
-                        f" / {expected_reports}"
-                    ),
-                )
-
-
-                progress_before_col, progress_after_col = (
-                    st.columns(
-                        2
-                    )
-                )
-
-
-                with progress_before_col:
-
-                    st.caption(
-                        "Before trade adjustment"
-                    )
-
-                    st.progress(
-                        min(
-                            (
-                                submitted_reports
-                                / expected_reports
-                            )
-                            if expected_reports
-                            else 0,
-                            1.0,
+                    participants = (
+                        config.get(
+                            "participants",
+                            [],
                         )
                     )
 
-
-                with progress_after_col:
-
-                    st.caption(
-                        "After trade adjustment"
-                    )
-
-                    st.progress(
-                        min(
-                            (
-                                after_reports
-                                / expected_reports
-                            )
-                            if expected_reports
-                            else 0,
-                            1.0,
+                    pathways = (
+                        config.get(
+                            "pathways",
+                            [],
                         )
                     )
 
-
-                if not workflow_df.empty:
-
-                    st.dataframe(
-                        workflow_df,
-                        use_container_width=True,
-                        hide_index=True,
-                    )
-
-
-                    after_without_before = (
-                        workflow_df[
-                            workflow_df[
-                                "Workflow status"
-                            ]
-                            == "After without Before"
-                        ]
-                    )
-
-
-                    if not after_without_before.empty:
-
-                        st.warning(
-                            "An After submission exists without "
-                            "a matching Before submission for the "
-                            "same iteration, participant and pathway."
-                        )
-
-
-                pathway_stage_rows = []
-
-
-                for pathway_name in pathways:
-
-                    before_count = (
-                        int(
-                            (
-                                submissions[
-                                    "pathway"
-                                ]
-                                == pathway_name
-                            ).sum()
-                        )
-                        if not submissions.empty
-                        else 0
-                    )
-
-                    after_count = (
-                        int(
-                            (
-                                after_submissions[
-                                    "pathway"
-                                ]
-                                == pathway_name
-                            ).sum()
-                        )
-                        if not after_submissions.empty
-                        else 0
-                    )
-
-
-                    pathway_stage_rows.extend(
-                        [
-                            {
-                                "Pathway": (
-                                    plain_text_label(
-                                        pathway_name
-                                    )
-                                ),
-                                "Trade stage": (
-                                    "Before trade adjustment"
-                                ),
-                                "Submitted": (
-                                    before_count
-                                ),
-                            },
-                            {
-                                "Pathway": (
-                                    plain_text_label(
-                                        pathway_name
-                                    )
-                                ),
-                                "Trade stage": (
-                                    "After trade adjustment"
-                                ),
-                                "Submitted": (
-                                    after_count
-                                ),
-                            },
-                        ]
-                    )
-
-
-                pathway_stage_df = (
-                    pd.DataFrame(
-                        pathway_stage_rows
-                    )
-                )
-
-
-                if not pathway_stage_df.empty:
-
-                    pathway_stage_fig = (
-                        px.bar(
-                            pathway_stage_df,
-                            x="Pathway",
-                            y="Submitted",
-                            color="Trade stage",
-                            barmode="group",
-                            title=(
-                                "Before and After submissions by pathway"
-                            ),
-                            labels={
-                                "Submitted": (
-                                    "Reports submitted"
-                                ),
-                                "Trade stage": (
-                                    ""
-                                ),
-                            },
+                    submissions = (
+                        submission_metadata_df(
+                            progress_iteration,
+                            stage="before",
                         )
                     )
 
-
-                    pathway_stage_fig.update_layout(
-                        template="plotly_white",
-                        height=360,
-                        margin=dict(
-                            l=10,
-                            r=10,
-                            t=55,
-                            b=70,
-                        ),
-                        legend_title_text="",
+                    after_submissions = (
+                        submission_metadata_df(
+                            progress_iteration,
+                            stage="after",
+                        )
                     )
 
-
-                    st.plotly_chart(
-                        pathway_stage_fig,
-                        use_container_width=True,
-                        key=(
-                            "admin_before_after_pathway_chart"
-                        ),
+                    expected = (
+                        build_expected_matrix(
+                            participants,
+                            pathways,
+                        )
                     )
 
+                    expected_reports = (
+                        len(expected)
+                    )
 
-                # -----------------------------------------
-                # PATHWAY VISUALIZATION
-                # -----------------------------------------
+                    submitted_reports = (
+                        len(submissions)
+                    )
 
-                st.markdown(
-                    "#### Reports by pathway"
-                )
-
-                pathway_rows = []
-
-                for pathway in pathways:
+                    participant_total = (
+                        len(participants)
+                    )
 
                     if submissions.empty:
-                        count = 0
+
+                        submitted_participants = 0
+
                     else:
-                        count = len(
+
+                        submitted_participants = (
                             submissions[
-                                submissions[
-                                    "pathway"
-                                ]
-                                == pathway
-                            ]
+                                "participant"
+                            ].nunique()
                         )
 
-                    pathway_rows.append(
-                        {
-                            "Pathway": pathway,
-                            "Submitted": count,
-                            "Expected": (
-                                participant_total
-                            ),
+
+                    participant_completion = (
+                        submitted_participants
+                        / participant_total
+                        if participant_total
+                        else 0
+                    )
+
+                    report_completion = (
+                        submitted_reports
+                        / expected_reports
+                        if expected_reports
+                        else 0
+                    )
+
+
+                    c1, c2, c3, c4 = (
+                        st.columns(4)
+                    )
+
+                    c1.metric(
+                        "Participants submitted",
+                        (
+                            f"{submitted_participants}"
+                            f" / {participant_total}"
+                        ),
+                    )
+
+                    c2.metric(
+                        "Reports received",
+                        (
+                            f"{submitted_reports}"
+                            f" / {expected_reports}"
+                        ),
+                    )
+
+                    c3.metric(
+                        "Participant completion",
+                        (
+                            f"{participant_completion * 100:.0f}%"
+                        ),
+                    )
+
+                    c4.metric(
+                        "Report completion",
+                        (
+                            f"{report_completion * 100:.0f}%"
+                        ),
+                    )
+
+
+                    st.markdown(
+                        "#### Overall report progress"
+                    )
+
+                    st.progress(
+                        min(
+                            report_completion,
+                            1.0,
+                        )
+                    )
+
+
+                    # -----------------------------------------
+                    # BEFORE / AFTER WORKFLOW STATUS
+                    # -----------------------------------------
+
+                    st.markdown(
+                        "#### Before and After workflow"
+                    )
+
+
+                    def admin_submission_lookup(
+                        frame,
+                    ):
+
+                        if frame.empty:
+
+                            return {}
+
+                        return {
+                            (
+                                str(
+                                    row.get(
+                                        "participant",
+                                        "",
+                                    )
+                                ).strip(),
+                                str(
+                                    row.get(
+                                        "pathway",
+                                        "",
+                                    )
+                                ).strip(),
+                            ): row
+                            for row
+                            in frame.to_dict(
+                                orient="records"
+                            )
                         }
-                    )
 
 
-                pathway_df = (
-                    pd.DataFrame(
-                        pathway_rows
-                    )
-                )
-
-                if not pathway_df.empty:
-
-                    st.bar_chart(
-                        pathway_df.set_index(
-                            "Pathway"
-                        )[
-                            [
-                                "Submitted",
-                                "Expected",
-                            ]
-                        ]
-                    )
-
-
-                # -----------------------------------------
-                # MISSING SUBMISSIONS
-                # -----------------------------------------
-
-                st.markdown(
-                    "#### Missing submissions"
-                )
-
-                if submissions.empty:
-
-                    missing_df = (
-                        expected.copy()
-                    )
-
-                else:
-
-                    submitted_keys = (
-                        submissions[
-                            [
-                                "participant",
-                                "pathway",
-                            ]
-                        ]
-                        .drop_duplicates()
-                    )
-
-                    merged = (
-                        expected.merge(
-                            submitted_keys,
-                            on=[
-                                "participant",
-                                "pathway",
-                            ],
-                            how="left",
-                            indicator=True,
+                    before_lookup = (
+                        admin_submission_lookup(
+                            submissions
                         )
                     )
 
-                    missing_df = (
-                        merged[
-                            merged["_merge"]
-                            == "left_only"
-                        ][
-                            [
-                                "participant",
-                                "pathway",
+                    after_lookup = (
+                        admin_submission_lookup(
+                            after_submissions
+                        )
+                    )
+
+
+                    workflow_rows = []
+
+
+                    for _, expected_row in (
+                        expected.iterrows()
+                    ):
+
+                        participant_name = str(
+                            expected_row[
+                                "participant"
                             ]
-                        ]
-                    )
+                        ).strip()
 
-
-                if missing_df.empty:
-
-                    st.success(
-                        "All expected reports "
-                        "have been submitted."
-                    )
-
-                else:
-
-                    st.dataframe(
-                        missing_df,
-                        use_container_width=True,
-                        hide_index=True,
-                    )
-
-
-                # -----------------------------------------
-                # SUBMISSION DETAILS
-                # -----------------------------------------
-
-                st.markdown(
-                    "#### Submission details"
-                )
-
-                if submissions.empty:
-
-                    st.info(
-                        "No submissions yet."
-                    )
-
-                else:
-
-                    st.dataframe(
-                        submissions[
-                            [
-                                "participant",
-                                "pathway",
-                                "username",
-                                "submitted_at_utc",
-                                "row_count",
+                        pathway_name = str(
+                            expected_row[
+                                "pathway"
                             ]
-                        ],
-                        use_container_width=True,
-                        hide_index=True,
-                    )
+                        ).strip()
+
+                        key = (
+                            participant_name,
+                            pathway_name,
+                        )
+
+                        before_row = (
+                            before_lookup.get(
+                                key
+                            )
+                        )
+
+                        after_row = (
+                            after_lookup.get(
+                                key
+                            )
+                        )
+
+                        before_ok = (
+                            before_row
+                            is not None
+                        )
+
+                        after_ok = (
+                            after_row
+                            is not None
+                        )
 
 
-                # -----------------------------------------
-                # TRADE ADJUSTMENT
-                # -----------------------------------------
+                        if (
+                            before_ok
+                            and after_ok
+                        ):
 
-                st.divider()
+                            workflow_status = (
+                                "Before and After complete"
+                            )
 
-                st.markdown(
-                    "### Trade adjustment"
-                )
+                        elif before_ok:
 
+                            workflow_status = (
+                                "Before only"
+                            )
 
-                missing_count = len(
-                    missing_df
-                )
+                        elif after_ok:
 
-                submitted_count = (
-                    submitted_reports
-                )
+                            workflow_status = (
+                                "After without Before"
+                            )
 
+                        else:
 
-                # =========================================
-                # COMPLETENESS INFORMATION
-                # =========================================
-
-                if missing_count == 0:
-
-                    st.success(
-                        "All expected reports have "
-                        "been submitted."
-                    )
-
-                else:
-
-                    st.warning(
-                        f"{missing_count} expected "
-                        f"report(s) are still missing. "
-                        "The administrator can run "
-                        "a provisional adjustment "
-                        "using the reports currently "
-                        "available."
-                    )
+                            workflow_status = (
+                                "Not submitted"
+                            )
 
 
-                m1, m2 = (
-                    st.columns(2)
-                )
-
-                m1.metric(
-                    "Reports available",
-                    submitted_count,
-                )
-
-                m2.metric(
-                    "Reports missing",
-                    missing_count,
-                )
-
-
-                # =========================================
-                # RUN BUTTON
-                # =========================================
-
-                if submitted_count == 0:
-
-                    st.button(
-                        "Run Trade Adjustment",
-                        disabled=True,
-                        type="primary",
-                    )
-
-                    st.info(
-                        "At least one report "
-                        "must be submitted first."
-                    )
-
-                else:
-
-                    button_label = (
-                        "Run Trade Adjustment"
-                        if missing_count == 0
-                        else
-                        "Run Trade Adjustment Anyway"
-                    )
-
-
-                    run_trade = st.button(
-                        button_label,
-                        type="primary",
-                        key="run_trade_adjustment",
-                    )
-
-
-                    if run_trade:
-
-                        try:
-
-                            with st.spinner(
-                                "Running trade adjustment..."
-                            ):
-
-                                run_result = (
-                                    run_iteration_trade_adjustment(
-                                        progress_iteration
+                        workflow_rows.append(
+                            {
+                                "Participant": (
+                                    participant_name
+                                ),
+                                "Pathway": (
+                                    pathway_name
+                                ),
+                                "Before": (
+                                    "Submitted"
+                                    if before_ok
+                                    else "Missing"
+                                ),
+                                "After": (
+                                    "Submitted"
+                                    if after_ok
+                                    else "Missing"
+                                ),
+                                "Workflow status": (
+                                    workflow_status
+                                ),
+                                "Before submitted": (
+                                    before_row.get(
+                                        "submitted_at_utc",
+                                        "",
                                     )
+                                    if before_ok
+                                    else ""
+                                ),
+                                "After submitted": (
+                                    after_row.get(
+                                        "submitted_at_utc",
+                                        "",
+                                    )
+                                    if after_ok
+                                    else ""
+                                ),
+                            }
+                        )
+
+
+                    workflow_df = (
+                        pd.DataFrame(
+                            workflow_rows
+                        )
+                    )
+
+
+                    after_reports = (
+                        len(
+                            after_submissions
+                        )
+                    )
+
+
+                    complete_pairs = (
+                        int(
+                            (
+                                (
+                                    workflow_df[
+                                        "Before"
+                                    ]
+                                    == "Submitted"
                                 )
-
-
-                            if run_result.get("status") == "FINAL":
-
-                                st.success(
-                                    "FINAL trade adjustment completed. "
-                                    "Participant result files and the "
-                                    "analytics dataset were published."
+                                &
+                                (
+                                    workflow_df[
+                                        "After"
+                                    ]
+                                    == "Submitted"
                                 )
+                            ).sum()
+                        )
+                        if not workflow_df.empty
+                        else 0
+                    )
 
-                            else:
 
-                                st.warning(
-                                    "PROVISIONAL trade adjustment completed. "
-                                    "Participant result files and the analytics "
-                                    "dataset were published, but QA blockers "
-                                    "and/or incomplete coverage require review."
+                    workflow_metric_1, workflow_metric_2, workflow_metric_3 = (
+                        st.columns(
+                            3
+                        )
+                    )
+
+
+                    workflow_metric_1.metric(
+                        "Before reports",
+                        (
+                            f"{submitted_reports}"
+                            f" / {expected_reports}"
+                        ),
+                    )
+
+
+                    workflow_metric_2.metric(
+                        "After reports",
+                        (
+                            f"{after_reports}"
+                            f" / {expected_reports}"
+                        ),
+                    )
+
+
+                    workflow_metric_3.metric(
+                        "Before and After complete",
+                        (
+                            f"{complete_pairs}"
+                            f" / {expected_reports}"
+                        ),
+                    )
+
+
+                    progress_before_col, progress_after_col = (
+                        st.columns(
+                            2
+                        )
+                    )
+
+
+                    with progress_before_col:
+
+                        st.caption(
+                            "Before trade adjustment"
+                        )
+
+                        st.progress(
+                            min(
+                                (
+                                    submitted_reports
+                                    / expected_reports
                                 )
+                                if expected_reports
+                                else 0,
+                                1.0,
+                            )
+                        )
 
 
-                            r1, r2, r3, r4 = (
-                                st.columns(4)
+                    with progress_after_col:
+
+                        st.caption(
+                            "After trade adjustment"
+                        )
+
+                        st.progress(
+                            min(
+                                (
+                                    after_reports
+                                    / expected_reports
+                                )
+                                if expected_reports
+                                else 0,
+                                1.0,
+                            )
+                        )
+
+
+                    if not workflow_df.empty:
+
+                        st.dataframe(
+                            workflow_df,
+                            use_container_width=True,
+                            hide_index=True,
+                        )
+
+
+                        after_without_before = (
+                            workflow_df[
+                                workflow_df[
+                                    "Workflow status"
+                                ]
+                                == "After without Before"
+                            ]
+                        )
+
+
+                        if not after_without_before.empty:
+
+                            st.warning(
+                                "An After submission exists without "
+                                "a matching Before submission for the "
+                                "same iteration, participant and pathway."
                             )
 
 
-                            r1.metric(
-                                "Engine version",
-                                run_result[
-                                    "engine_version"
-                                ],
+                    pathway_stage_rows = []
+
+
+                    for pathway_name in pathways:
+
+                        before_count = (
+                            int(
+                                (
+                                    submissions[
+                                        "pathway"
+                                    ]
+                                    == pathway_name
+                                ).sum()
                             )
+                            if not submissions.empty
+                            else 0
+                        )
 
-
-                            r2.metric(
-                                "Input rows",
-                                run_result[
-                                    "input_rows"
-                                ],
+                        after_count = (
+                            int(
+                                (
+                                    after_submissions[
+                                        "pathway"
+                                    ]
+                                    == pathway_name
+                                ).sum()
                             )
+                            if not after_submissions.empty
+                            else 0
+                        )
 
 
-                            r3.metric(
-                                "Adjusted rows",
-                                run_result[
-                                    "adjusted_rows"
-                                ],
+                        pathway_stage_rows.extend(
+                            [
+                                {
+                                    "Pathway": (
+                                        plain_text_label(
+                                            pathway_name
+                                        )
+                                    ),
+                                    "Trade stage": (
+                                        "Before trade adjustment"
+                                    ),
+                                    "Submitted": (
+                                        before_count
+                                    ),
+                                },
+                                {
+                                    "Pathway": (
+                                        plain_text_label(
+                                            pathway_name
+                                        )
+                                    ),
+                                    "Trade stage": (
+                                        "After trade adjustment"
+                                    ),
+                                    "Submitted": (
+                                        after_count
+                                    ),
+                                },
+                            ]
+                        )
+
+
+                    pathway_stage_df = (
+                        pd.DataFrame(
+                            pathway_stage_rows
+                        )
+                    )
+
+
+                    if not pathway_stage_df.empty:
+
+                        pathway_stage_fig = (
+                            px.bar(
+                                pathway_stage_df,
+                                x="Pathway",
+                                y="Submitted",
+                                color="Trade stage",
+                                barmode="group",
+                                title=(
+                                    "Before and After submissions by pathway"
+                                ),
+                                labels={
+                                    "Submitted": (
+                                        "Reports submitted"
+                                    ),
+                                    "Trade stage": (
+                                        ""
+                                    ),
+                                },
                             )
+                        )
 
 
-                            r4.metric(
-                                "Result files",
-                                run_result[
-                                    "participants"
-                                ],
-                            )
+                        pathway_stage_fig.update_layout(
+                            template="plotly_white",
+                            height=360,
+                            margin=dict(
+                                l=10,
+                                r=10,
+                                t=55,
+                                b=70,
+                            ),
+                            legend_title_text="",
+                        )
 
 
-                            # -----------------------------
-                            # BLOCKERS
-                            # -----------------------------
+                        st.plotly_chart(
+                            pathway_stage_fig,
+                            use_container_width=True,
+                            key=(
+                                "admin_before_after_pathway_chart"
+                            ),
+                        )
 
-                            blockers = (
-                                run_result[
-                                    "blockers"
+
+                    # -----------------------------------------
+                    # PATHWAY VISUALIZATION
+                    # -----------------------------------------
+
+                    st.markdown(
+                        "#### Reports by pathway"
+                    )
+
+                    pathway_rows = []
+
+                    for pathway in pathways:
+
+                        if submissions.empty:
+                            count = 0
+                        else:
+                            count = len(
+                                submissions[
+                                    submissions[
+                                        "pathway"
+                                    ]
+                                    == pathway
                                 ]
                             )
 
-
-                            if blockers:
-
-                                st.warning(
-                                    f"Engine completed with "
-                                    f"{len(blockers)} QA "
-                                    "blocker(s). Blocker-affected "
-                                    "product/pathway/year cases can "
-                                    "have blank ExportsAdj values; "
-                                    "treat the published run and its "
-                                    "analytics as provisional."
-                                )
+                        pathway_rows.append(
+                            {
+                                "Pathway": pathway,
+                                "Submitted": count,
+                                "Expected": (
+                                    participant_total
+                                ),
+                            }
+                        )
 
 
-                                blocker_df = (
-                                    pd.DataFrame(
-                                        blockers
-                                    )
-                                )
+                    pathway_df = (
+                        pd.DataFrame(
+                            pathway_rows
+                        )
+                    )
+
+                    if not pathway_df.empty:
+
+                        st.bar_chart(
+                            pathway_df.set_index(
+                                "Pathway"
+                            )[
+                                [
+                                    "Submitted",
+                                    "Expected",
+                                ]
+                            ]
+                        )
 
 
-                                st.dataframe(
-                                    blocker_df,
-                                    use_container_width=True,
-                                    hide_index=True,
-                                )
+                    # -----------------------------------------
+                    # MISSING SUBMISSIONS
+                    # -----------------------------------------
 
+                    st.markdown(
+                        "#### Missing submissions"
+                    )
 
-                            else:
+                    if submissions.empty:
 
-                                st.success(
-                                    "Engine QA: "
-                                    "0 blockers."
-                                )
+                        missing_df = (
+                            expected.copy()
+                        )
 
+                    else:
 
-                            # -----------------------------
-                            # PUBLISHED FILES
-                            # -----------------------------
+                        submitted_keys = (
+                            submissions[
+                                [
+                                    "participant",
+                                    "pathway",
+                                ]
+                            ]
+                            .drop_duplicates()
+                        )
 
-                            st.markdown(
-                                "#### Published participant results"
+                        merged = (
+                            expected.merge(
+                                submitted_keys,
+                                on=[
+                                    "participant",
+                                    "pathway",
+                                ],
+                                how="left",
+                                indicator=True,
                             )
+                        )
+
+                        missing_df = (
+                            merged[
+                                merged["_merge"]
+                                == "left_only"
+                            ][
+                                [
+                                    "participant",
+                                    "pathway",
+                                ]
+                            ]
+                        )
 
 
-                            published_df = (
-                                pd.DataFrame(
+                    if missing_df.empty:
+
+                        st.success(
+                            "All expected reports "
+                            "have been submitted."
+                        )
+
+                    else:
+
+                        st.dataframe(
+                            missing_df,
+                            use_container_width=True,
+                            hide_index=True,
+                        )
+
+
+                    # -----------------------------------------
+                    # SUBMISSION DETAILS
+                    # -----------------------------------------
+
+                    st.markdown(
+                        "#### Submission details"
+                    )
+
+                    if submissions.empty:
+
+                        st.info(
+                            "No submissions yet."
+                        )
+
+                    else:
+
+                        st.dataframe(
+                            submissions[
+                                [
+                                    "participant",
+                                    "pathway",
+                                    "username",
+                                    "submitted_at_utc",
+                                    "row_count",
+                                ]
+                            ],
+                            use_container_width=True,
+                            hide_index=True,
+                        )
+
+
+                    # -----------------------------------------
+                    # TRADE ADJUSTMENT
+                    # -----------------------------------------
+
+                    st.divider()
+
+                    st.markdown(
+                        "### Trade adjustment"
+                    )
+
+
+                    missing_count = len(
+                        missing_df
+                    )
+
+                    submitted_count = (
+                        submitted_reports
+                    )
+
+
+                    # =========================================
+                    # COMPLETENESS INFORMATION
+                    # =========================================
+
+                    if missing_count == 0:
+
+                        st.success(
+                            "All expected reports have "
+                            "been submitted."
+                        )
+
+                    else:
+
+                        st.warning(
+                            f"{missing_count} expected "
+                            f"report(s) are still missing. "
+                            "The administrator can run "
+                            "a provisional adjustment "
+                            "using the reports currently "
+                            "available."
+                        )
+
+
+                    m1, m2 = (
+                        st.columns(2)
+                    )
+
+                    m1.metric(
+                        "Reports available",
+                        submitted_count,
+                    )
+
+                    m2.metric(
+                        "Reports missing",
+                        missing_count,
+                    )
+
+
+                    # =========================================
+                    # RUN BUTTON
+                    # =========================================
+
+                    if submitted_count == 0:
+
+                        st.button(
+                            "Run Trade Adjustment",
+                            disabled=True,
+                            type="primary",
+                        )
+
+                        st.info(
+                            "At least one report "
+                            "must be submitted first."
+                        )
+
+                    else:
+
+                        button_label = (
+                            "Run Trade Adjustment"
+                            if missing_count == 0
+                            else
+                            "Run Trade Adjustment Anyway"
+                        )
+
+
+                        run_trade = st.button(
+                            button_label,
+                            type="primary",
+                            key="run_trade_adjustment",
+                        )
+
+
+                        if run_trade:
+
+                            try:
+
+                                with st.spinner(
+                                    "Running trade adjustment..."
+                                ):
+
+                                    run_result = (
+                                        run_iteration_trade_adjustment(
+                                            progress_iteration
+                                        )
+                                    )
+
+
+                                if run_result.get("status") == "FINAL":
+
+                                    st.success(
+                                        "FINAL trade adjustment completed. "
+                                        "Participant result files and the "
+                                        "analytics dataset were published."
+                                    )
+
+                                else:
+
+                                    st.warning(
+                                        "PROVISIONAL trade adjustment completed. "
+                                        "Participant result files and the analytics "
+                                        "dataset were published, but QA blockers "
+                                        "and/or incomplete coverage require review."
+                                    )
+
+
+                                r1, r2, r3, r4 = (
+                                    st.columns(4)
+                                )
+
+
+                                r1.metric(
+                                    "Engine version",
                                     run_result[
-                                        "published_files"
+                                        "engine_version"
+                                    ],
+                                )
+
+
+                                r2.metric(
+                                    "Input rows",
+                                    run_result[
+                                        "input_rows"
+                                    ],
+                                )
+
+
+                                r3.metric(
+                                    "Adjusted rows",
+                                    run_result[
+                                        "adjusted_rows"
+                                    ],
+                                )
+
+
+                                r4.metric(
+                                    "Result files",
+                                    run_result[
+                                        "participants"
+                                    ],
+                                )
+
+
+                                # -----------------------------
+                                # BLOCKERS
+                                # -----------------------------
+
+                                blockers = (
+                                    run_result[
+                                        "blockers"
                                     ]
                                 )
-                            )
 
 
-                            if not published_df.empty:
+                                if blockers:
 
-                                st.dataframe(
-                                    published_df[
-                                        [
-                                            "participant",
-                                            "rows",
-                                            "path",
-                                        ]
-                                    ],
-                                    use_container_width=True,
-                                    hide_index=True,
+                                    st.warning(
+                                        f"Engine completed with "
+                                        f"{len(blockers)} QA "
+                                        "blocker(s). Blocker-affected "
+                                        "product/pathway/year cases can "
+                                        "have blank ExportsAdj values; "
+                                        "treat the published run and its "
+                                        "analytics as provisional."
+                                    )
+
+
+                                    blocker_df = (
+                                        pd.DataFrame(
+                                            blockers
+                                        )
+                                    )
+
+
+                                    st.dataframe(
+                                        blocker_df,
+                                        use_container_width=True,
+                                        hide_index=True,
+                                    )
+
+
+                                else:
+
+                                    st.success(
+                                        "Engine QA: "
+                                        "0 blockers."
+                                    )
+
+
+                                # -----------------------------
+                                # PUBLISHED FILES
+                                # -----------------------------
+
+                                st.markdown(
+                                    "#### Published participant results"
                                 )
 
 
-                            st.info(
-                                "Users can now open "
-                                "'Download Result', select "
-                                "their iteration and country, "
-                                "and download the copy-ready "
-                                "FullDataTradeAdj CSV."
-                            )
+                                published_df = (
+                                    pd.DataFrame(
+                                        run_result[
+                                            "published_files"
+                                        ]
+                                    )
+                                )
 
 
-                        except Exception as exc:
+                                if not published_df.empty:
 
-                            st.error(
-                                "Trade adjustment failed: "
-                                f"{exc}"
-                            )
+                                    st.dataframe(
+                                        published_df[
+                                            [
+                                                "participant",
+                                                "rows",
+                                                "path",
+                                            ]
+                                        ],
+                                        use_container_width=True,
+                                        hide_index=True,
+                                    )
 
 
-        # =================================================
+                                st.info(
+                                    "Users can now open "
+                                    "'Download Result', select "
+                                    "their iteration and country, "
+                                    "and download the copy-ready "
+                                    "FullDataTradeAdj CSV."
+                                )
+
+
+                            except Exception as exc:
+
+                                st.error(
+                                    "Trade adjustment failed: "
+                                    f"{exc}"
+                                )
+
+
+            # =================================================
+
+        with progress_tab:
+            _v2_auto_refresh_submission_progress()
+
 
         # ====================================================
         # CC12C_STORAGE_READONLY
